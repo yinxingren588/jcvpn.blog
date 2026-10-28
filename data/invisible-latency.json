@@ -1,0 +1,521 @@
+{
+  "brand": "隐形人机场 Invisible Network",
+  "dataset_id": "owner-peak-screenshots-01",
+  "mode": "snapshot",
+  "metric": "截图客户端显示的延迟",
+  "unit": "ms",
+  "source": "第三方提供的6张截图，按可见数值重绘",
+  "period": "晚高峰（品牌方说明）",
+  "measured_date": "2026-10-28",
+  "measured_time_range": null,
+  "timezone": "Asia/Shanghai",
+  "location": "上海",
+  "isp": "电信",
+  "client": "Windows版“隐形人”客户端",
+  "client_platform": "Windows",
+  "client_name": "隐形人",
+  "client_version": null,
+  "measurement_method": null,
+  "prepared_on": "2026-10-28",
+  "live_endpoint": null,
+  "independent_measurement": false,
+  "excluded_items": {
+    "count": 1,
+    "reason": "账户剩余流量展示项不是节点，未计入"
+  },
+  "summary": {
+    "node_count": 60,
+    "response_count": 58,
+    "timeout_count": 2,
+    "min_ms": 10,
+    "max_ms": 102,
+    "median_ms": 35.0
+  },
+  "regions": [
+    {
+      "region": "香港",
+      "count": 20,
+      "response_count": 20,
+      "timeout_count": 0,
+      "median_ms": 30.0,
+      "min_ms": 24,
+      "max_ms": 32,
+      "mean_ms": 28.9
+    },
+    {
+      "region": "台湾",
+      "count": 10,
+      "response_count": 10,
+      "timeout_count": 0,
+      "median_ms": 38.5,
+      "min_ms": 35,
+      "max_ms": 43,
+      "mean_ms": 38.6
+    },
+    {
+      "region": "日本",
+      "count": 10,
+      "response_count": 10,
+      "timeout_count": 0,
+      "median_ms": 47.0,
+      "min_ms": 43,
+      "max_ms": 50,
+      "mean_ms": 47.1
+    },
+    {
+      "region": "新加坡",
+      "count": 10,
+      "response_count": 8,
+      "timeout_count": 2,
+      "median_ms": 14.5,
+      "min_ms": 10,
+      "max_ms": 23,
+      "mean_ms": 14.75
+    },
+    {
+      "region": "美国",
+      "count": 10,
+      "response_count": 10,
+      "timeout_count": 0,
+      "median_ms": 99.0,
+      "min_ms": 98,
+      "max_ms": 102,
+      "mean_ms": 99.3
+    }
+  ],
+  "records": [
+    {
+      "id": "HK01",
+      "region": "香港",
+      "label": "香港01",
+      "latency_ms": 31,
+      "result": "response"
+    },
+    {
+      "id": "HK02",
+      "region": "香港",
+      "label": "香港02",
+      "latency_ms": 30,
+      "result": "response"
+    },
+    {
+      "id": "HK03",
+      "region": "香港",
+      "label": "香港03",
+      "latency_ms": 31,
+      "result": "response"
+    },
+    {
+      "id": "HK04",
+      "region": "香港",
+      "label": "香港04",
+      "latency_ms": 30,
+      "result": "response"
+    },
+    {
+      "id": "HK05",
+      "region": "香港",
+      "label": "香港05",
+      "latency_ms": 27,
+      "result": "response"
+    },
+    {
+      "id": "HK06",
+      "region": "香港",
+      "label": "香港06",
+      "latency_ms": 32,
+      "result": "response"
+    },
+    {
+      "id": "HK07",
+      "region": "香港",
+      "label": "香港07",
+      "latency_ms": 31,
+      "result": "response"
+    },
+    {
+      "id": "HK08",
+      "region": "香港",
+      "label": "香港08",
+      "latency_ms": 29,
+      "result": "response"
+    },
+    {
+      "id": "HK09",
+      "region": "香港",
+      "label": "香港09",
+      "latency_ms": 29,
+      "result": "response"
+    },
+    {
+      "id": "HK10",
+      "region": "香港",
+      "label": "香港10",
+      "latency_ms": 31,
+      "result": "response"
+    },
+    {
+      "id": "HK11",
+      "region": "香港",
+      "label": "香港11",
+      "latency_ms": 27,
+      "result": "response"
+    },
+    {
+      "id": "HK12",
+      "region": "香港",
+      "label": "香港12",
+      "latency_ms": 30,
+      "result": "response"
+    },
+    {
+      "id": "HK13",
+      "region": "香港",
+      "label": "香港13",
+      "latency_ms": 30,
+      "result": "response"
+    },
+    {
+      "id": "HK14",
+      "region": "香港",
+      "label": "香港14",
+      "latency_ms": 24,
+      "result": "response"
+    },
+    {
+      "id": "HK15",
+      "region": "香港",
+      "label": "香港15",
+      "latency_ms": 26,
+      "result": "response"
+    },
+    {
+      "id": "HK16",
+      "region": "香港",
+      "label": "香港16",
+      "latency_ms": 29,
+      "result": "response"
+    },
+    {
+      "id": "HK17",
+      "region": "香港",
+      "label": "香港17",
+      "latency_ms": 25,
+      "result": "response"
+    },
+    {
+      "id": "HK18",
+      "region": "香港",
+      "label": "香港18",
+      "latency_ms": 30,
+      "result": "response"
+    },
+    {
+      "id": "HK19",
+      "region": "香港",
+      "label": "香港19",
+      "latency_ms": 25,
+      "result": "response"
+    },
+    {
+      "id": "HK20",
+      "region": "香港",
+      "label": "香港20",
+      "latency_ms": 31,
+      "result": "response"
+    },
+    {
+      "id": "TW01",
+      "region": "台湾",
+      "label": "台湾01",
+      "latency_ms": 42,
+      "result": "response"
+    },
+    {
+      "id": "TW02",
+      "region": "台湾",
+      "label": "台湾02",
+      "latency_ms": 37,
+      "result": "response"
+    },
+    {
+      "id": "TW03",
+      "region": "台湾",
+      "label": "台湾03",
+      "latency_ms": 39,
+      "result": "response"
+    },
+    {
+      "id": "TW04",
+      "region": "台湾",
+      "label": "台湾04",
+      "latency_ms": 40,
+      "result": "response"
+    },
+    {
+      "id": "TW05",
+      "region": "台湾",
+      "label": "台湾05",
+      "latency_ms": 38,
+      "result": "response"
+    },
+    {
+      "id": "TW06",
+      "region": "台湾",
+      "label": "台湾06",
+      "latency_ms": 35,
+      "result": "response"
+    },
+    {
+      "id": "TW07",
+      "region": "台湾",
+      "label": "台湾07",
+      "latency_ms": 39,
+      "result": "response"
+    },
+    {
+      "id": "TW08",
+      "region": "台湾",
+      "label": "台湾08",
+      "latency_ms": 43,
+      "result": "response"
+    },
+    {
+      "id": "TW09",
+      "region": "台湾",
+      "label": "台湾09",
+      "latency_ms": 38,
+      "result": "response"
+    },
+    {
+      "id": "TW10",
+      "region": "台湾",
+      "label": "台湾10",
+      "latency_ms": 35,
+      "result": "response"
+    },
+    {
+      "id": "JP01",
+      "region": "日本",
+      "label": "日本01",
+      "latency_ms": 43,
+      "result": "response"
+    },
+    {
+      "id": "JP02",
+      "region": "日本",
+      "label": "日本02",
+      "latency_ms": 47,
+      "result": "response"
+    },
+    {
+      "id": "JP03",
+      "region": "日本",
+      "label": "日本03",
+      "latency_ms": 47,
+      "result": "response"
+    },
+    {
+      "id": "JP04",
+      "region": "日本",
+      "label": "日本04",
+      "latency_ms": 47,
+      "result": "response"
+    },
+    {
+      "id": "JP05",
+      "region": "日本",
+      "label": "日本05",
+      "latency_ms": 44,
+      "result": "response"
+    },
+    {
+      "id": "JP06",
+      "region": "日本",
+      "label": "日本06",
+      "latency_ms": 47,
+      "result": "response"
+    },
+    {
+      "id": "JP07",
+      "region": "日本",
+      "label": "日本07",
+      "latency_ms": 50,
+      "result": "response"
+    },
+    {
+      "id": "JP08",
+      "region": "日本",
+      "label": "日本08",
+      "latency_ms": 50,
+      "result": "response"
+    },
+    {
+      "id": "JP09",
+      "region": "日本",
+      "label": "日本09",
+      "latency_ms": 49,
+      "result": "response"
+    },
+    {
+      "id": "JP10",
+      "region": "日本",
+      "label": "日本10",
+      "latency_ms": 47,
+      "result": "response"
+    },
+    {
+      "id": "SG01",
+      "region": "新加坡",
+      "label": "新加坡01",
+      "latency_ms": 23,
+      "result": "response"
+    },
+    {
+      "id": "SG02",
+      "region": "新加坡",
+      "label": "新加坡02",
+      "latency_ms": 17,
+      "result": "response"
+    },
+    {
+      "id": "SG03",
+      "region": "新加坡",
+      "label": "新加坡03",
+      "latency_ms": 11,
+      "result": "response"
+    },
+    {
+      "id": "SG04",
+      "region": "新加坡",
+      "label": "新加坡04",
+      "latency_ms": 17,
+      "result": "response"
+    },
+    {
+      "id": "SG05",
+      "region": "新加坡",
+      "label": "新加坡05",
+      "latency_ms": 12,
+      "result": "response"
+    },
+    {
+      "id": "SG06",
+      "region": "新加坡",
+      "label": "新加坡06",
+      "latency_ms": 10,
+      "result": "response"
+    },
+    {
+      "id": "SG07",
+      "region": "新加坡",
+      "label": "新加坡07",
+      "latency_ms": 11,
+      "result": "response"
+    },
+    {
+      "id": "SG08",
+      "region": "新加坡",
+      "label": "新加坡08",
+      "latency_ms": null,
+      "result": "timeout"
+    },
+    {
+      "id": "SG09",
+      "region": "新加坡",
+      "label": "新加坡09",
+      "latency_ms": null,
+      "result": "timeout"
+    },
+    {
+      "id": "SG10",
+      "region": "新加坡",
+      "label": "新加坡10",
+      "latency_ms": 17,
+      "result": "response"
+    },
+    {
+      "id": "US01",
+      "region": "美国",
+      "label": "美国01",
+      "latency_ms": 100,
+      "result": "response"
+    },
+    {
+      "id": "US02",
+      "region": "美国",
+      "label": "美国02",
+      "latency_ms": 100,
+      "result": "response"
+    },
+    {
+      "id": "US03",
+      "region": "美国",
+      "label": "美国03",
+      "latency_ms": 100,
+      "result": "response"
+    },
+    {
+      "id": "US04",
+      "region": "美国",
+      "label": "美国04",
+      "latency_ms": 98,
+      "result": "response"
+    },
+    {
+      "id": "US05",
+      "region": "美国",
+      "label": "美国05",
+      "latency_ms": 98,
+      "result": "response"
+    },
+    {
+      "id": "US06",
+      "region": "美国",
+      "label": "美国06",
+      "latency_ms": 101,
+      "result": "response"
+    },
+    {
+      "id": "US07",
+      "region": "美国",
+      "label": "美国07",
+      "latency_ms": 98,
+      "result": "response"
+    },
+    {
+      "id": "US08",
+      "region": "美国",
+      "label": "美国08",
+      "latency_ms": 98,
+      "result": "response"
+    },
+    {
+      "id": "US09",
+      "region": "美国",
+      "label": "美国09",
+      "latency_ms": 98,
+      "result": "response"
+    },
+    {
+      "id": "US10",
+      "region": "美国",
+      "label": "美国10",
+      "latency_ms": 102,
+      "result": "response"
+    }
+  ],
+  "method_notes": [
+    "每个节点一条截图记录，不构成时间序列。",
+    "中位数和范围仅统计有数值的记录，超时单列，不作为0ms。",
+    "用户确认采样时间为2026-10-28 19:00（北京时间）、上海电信网络、晚高峰；客户端为Windows版“隐形人”；客户端版本和检测方式尚未提供。",
+    "截图记录不是实时监测，不推导下载/上传速率、丢包率或长期可用性。",
+    "未重新测量网络；图表由提供的数据重绘，未部署原截图。"
+  ],
+  "source_attribution_basis": "用户补充说明",
+  "source_provider_name": null,
+  "source_publication_url": null,
+  "source_independence_verified": false,
+  "measured_time": "19:00",
+  "reported_time_precision": "hour"
+}

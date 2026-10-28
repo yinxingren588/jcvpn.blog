@@ -1,0 +1,17 @@
+{
+  "brand_id": "yinxingren",
+  "placement": "隐形人品牌页左侧浮动卡",
+  "recommended_plan_id": "starlight-annual",
+  "price_display": "annual_monthly_equivalent",
+  "source": "博客站长提供的套餐与优惠规则",
+  "confirmed_on": "2026-10-28",
+  "coupon": {
+    "code": "yxr888",
+    "label": "8折",
+    "pay_rate": "0.8",
+    "applies_to": "all_plans",
+    "expires_on": null,
+    "expiry_policy": "无到期限制（博客站长确认）"
+  },
+  "notes": "优惠码按用户提供内容填写，不携带花括号。券后年付金额由已有套餐价格乘以0.8计算，主价格显示该年度金额除以12的月均值，同时展示券后年度合计；实际结算以官网为准。品牌入口保留原推广参数，不自动代填优惠码或下单。"
+}

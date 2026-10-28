@@ -1,0 +1,43 @@
+{
+  "brand": "隐形人机场 Invisible Network",
+  "source": "品牌方在对话中确认的业务规则",
+  "confirmed_on": "2026-10-28",
+  "traffic_exhaustion": {
+    "confirmed": true,
+    "options": ["购买流量重置包", "升级套餐"],
+    "reset_package_price": "所有流量重置包与所购买套餐的价格相同",
+    "reset_package_effect": "购买后立即恢复对应套餐的完整流量额度",
+    "reset_package_applicability": "按账户后台提供的重置操作购买",
+    "reset_validity_effect": null,
+    "reset_scheduled_refresh_effect": null
+  },
+  "early_renewal": {
+    "confirmed": true,
+    "extends_validity": true,
+    "immediately_resets_traffic": false,
+    "display": "提前续费会延长套餐有效期，但不会立即刷新流量；需要等到下一个流量刷新周期。"
+  },
+  "upgrade": {
+    "available": true,
+    "owner_original_statement": "能够升级，并且升级会扣掉原本配套的差价，套餐的流量会更换继续使用，剩余时间会变成升级当下的时间。",
+    "payment_policy": "先支付新套餐金额，付款后平台退回差价",
+    "credit_calculation": null,
+    "credit_destination": null,
+    "credit_timing": null,
+    "new_traffic_calculation": "新套餐额度扣除本周期已用流量",
+    "validity_calculation": "以升级当天作为新套餐起算日，重新计算所选周期有效期",
+    "clarification_status": "支付流程、流量扣除和有效期起算已确认；差价具体算法、退回渠道及到账时间未提供，不推算"
+  },
+  "refund": {
+    "supported": true,
+    "condition": "购买后因技术问题，尝试处理后仍完全无法使用",
+    "application_channel": "客服",
+    "application_deadline": null,
+    "amount_calculation": "符合上述技术问题条件时全额退款",
+    "refund_destination": null,
+    "processing_time": null,
+    "confirmed_on": "2026-10-28",
+    "source": "品牌方在对话中直接确认"
+  },
+  "notes": "重置包同价规则、立即恢复完整流量，以及技术问题导致尝试处理后仍完全无法使用时通过客服申请全额退款，均已确认；未提供其他付费周期具体金额、重置对有效期及原定刷新日的影响、退款申请时限与到账时间及降级规则，不推算。续费说明面向周期订阅；一次性总额度不因本条说明变为自动按月刷新。"
+}

@@ -1,0 +1,84 @@
+{
+  "id": "yinxingren",
+  "name": "隐形人机场",
+  "english_name": "Invisible Network",
+  "source_type": "品牌所有者提供",
+  "source_date": "2026-10-28",
+  "relationship": "站长自有品牌",
+  "featured": true,
+  "independent_testing": false,
+  "service_type": "跨境网络加速、周期订阅与一次性流量包",
+  "network": [
+    "IEPL专线",
+    "智能负载均衡",
+    "三网入口优化"
+  ],
+  "owner_reported_specs": {
+    "independent_ip_nodes": "60+",
+    "aggregate_bandwidth": "2Gbps+",
+    "peak_redundancy": "500Mbps级"
+  },
+  "regions": [
+    "香港",
+    "台湾",
+    "日本",
+    "新加坡",
+    "美国",
+    "韩国",
+    "阿根廷",
+    "马来西亚",
+    "越南",
+    "菲律宾",
+    "泰国",
+    "印度",
+    "德国",
+    "法国",
+    "英国"
+  ],
+  "platforms": [
+    "Netflix",
+    "YouTube",
+    "Disney+",
+    "TikTok",
+    "ChatGPT"
+  ],
+  "devices": [
+    "iOS",
+    "Android",
+    "Windows",
+    "macOS",
+    "路由器"
+  ],
+  "payments": [
+    "支付宝",
+    "USDT"
+  ],
+  "support": [
+    "海外技术团队全天候维护（品牌方说明）",
+    "工单",
+    "在线客服"
+  ],
+  "telegram": "https://t.me/+diFXhmhTx-E4Mjc1",
+  "entry_url": "https://varnexa.invisibleaff.com/#/?code=JF4seZUy",
+  "pricing": {
+    "source": "data/invisible-plans.json",
+    "plan_count": 9,
+    "device_policy": "不限设备数（品牌方确认）",
+    "line_type": "IEPL专线",
+    "provided_on": "2026-10-28"
+  },
+  "notes": "节点、平台支持和规格为品牌方提供资料，非独立实测；实时节点与在售套餐以后端显示为准。",
+  "line_type": "IEPL专线",
+  "client_configuration": "Windows、macOS和Android使用品牌自研客户端“隐形人”，以官网账号登录；只有iOS使用合作客户端Nextin，登录前先填写识别码yxr，再登录自己的账号。官网提供后台入口，具体版本、获取方式与操作按品牌当前指引选择。",
+  "clients_source": "data/invisible-clients.json",
+  "client_connection": "Windows、macOS、Android的隐形人与iOS的Nextin均需在登录后选择节点，再点击连接。",
+  "access_records_source": "data/invisible-access-records.json",
+  "editorial_source": "data/invisible-editorial.json",
+  "logo": {
+    "path": "assets/invisible-network-logo.jpg",
+    "alt": "隐形人机场Logo",
+    "source": "品牌方提供的原始Logo",
+    "provided_on": "2026-10-28",
+    "preserved_original_file": true
+  }
+}

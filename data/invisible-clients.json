@@ -1,0 +1,86 @@
+{
+  "brand": "隐形人机场 Invisible Network",
+  "confirmed_on": "2026-10-28",
+  "source": "博客站长在对话中确认",
+  "desktop": {
+    "platforms": [
+      "Windows",
+      "macOS"
+    ],
+    "description": "隐形人自研客户端",
+    "relationship": "品牌自研",
+    "application_display_name": "隐形人",
+    "login_method": "使用官网账号登录",
+    "connection_steps": [
+      "使用官网账号登录隐形人客户端",
+      "选择节点",
+      "点击连接"
+    ],
+    "requires_node_selection_and_connect_after_login": true,
+    "backend_access": "从官方网站获取后台入口",
+    "manual_subscription_import_requirement": null,
+    "download_url": null,
+    "current_version": null,
+    "minimum_system_version": null
+  },
+  "mobile": {
+    "platforms": [
+      "iOS"
+    ],
+    "name_as_provided": "nextin",
+    "display_name": "Nextin",
+    "relationship": "合作客户端",
+    "identification_code": "yxr",
+    "identification_code_required_before_login": true,
+    "login_method": "登录前先填写识别码yxr，再登录自己的账号",
+    "login_steps": [
+      "打开Nextin",
+      "登录前填写识别码yxr",
+      "登录自己的账号"
+    ],
+    "connection_steps": [
+      "打开Nextin",
+      "登录前填写识别码yxr",
+      "登录自己的账号",
+      "选择节点",
+      "点击连接"
+    ],
+    "requires_node_selection_and_connect_after_login": true,
+    "download_urls": {
+      "iOS": null
+    },
+    "current_versions": {
+      "iOS": null
+    },
+    "minimum_system_versions": {
+      "iOS": null
+    }
+  },
+  "router": "固件、设备资源与配置支持以品牌后台当前指引为准；本次未补充具体客户端名称",
+  "pending_information": [
+    "各系统直接下载链接及后台具体获取步骤",
+    "实际版本、系统要求及安装与配置界面",
+    "各客户端当前版本的安装与连接界面细节"
+  ],
+  "notes": "Windows、macOS和Android均为品牌自研“隐形人”客户端，使用官网账号登录后选择节点并点击连接；只有iOS使用合作客户端Nextin，先填写识别码yxr再登录账号、选择节点并点击连接。此为品牌方补充确认，版本与实际安装界面另按当前资料补充。",
+  "android": {
+    "platforms": [
+      "Android"
+    ],
+    "description": "隐形人Android自研客户端",
+    "relationship": "品牌自研",
+    "application_display_name": "隐形人",
+    "login_method": "使用官网账号登录",
+    "connection_steps": [
+      "使用官网账号登录隐形人客户端",
+      "选择节点",
+      "点击连接"
+    ],
+    "requires_node_selection_and_connect_after_login": true,
+    "backend_access": "从官方网站获取后台入口",
+    "manual_subscription_import_requirement": null,
+    "download_url": null,
+    "current_version": null,
+    "minimum_system_version": null
+  }
+}

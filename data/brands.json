@@ -1,0 +1,75 @@
+{
+  "site_name": "叮当观察",
+  "domain": "jcvpn.blog",
+  "recorded_on": "2026-10-28",
+  "source": "用户提供",
+  "order": "用户提供顺序，不代表排名",
+  "brands": [
+    {
+      "id": "yinxingren",
+      "name": "隐形人机场",
+      "url": "https://varnexa.invisibleaff.com/#/?code=JF4seZUy",
+      "verification_status": "owner_provided_not_independently_tested",
+      "commercial_relationship": "站长自有品牌；本站主推推广",
+      "planned_path": "/evidence/yinxingren/",
+      "profile_path": "brand-yinxingren.html",
+      "profile_status": "owner_provided_profile",
+      "page_checked_on": "2026-10-28",
+      "page_observation": "本次公开页面查询未取得可核验的介绍内容。这表示当前资料不足，不代表已确认其服务不可用。",
+      "english_name": "Invisible Network",
+      "featured": true,
+      "ownership": "站长自有品牌（用户确认）",
+      "source_type": "品牌所有者提供",
+      "source_date": "2026-10-28",
+      "logo_path": "assets/invisible-network-logo.jpg"
+    },
+    {
+      "id": "breezenet",
+      "name": "微风网络 Breezenet",
+      "url": "https://edp01.breezenetaff.com/#/?code=4KDOroY0",
+      "verification_status": "unverified",
+      "commercial_relationship": "unconfirmed",
+      "planned_path": "/evidence/breezenet/",
+      "profile_path": "brand-breezenet.html",
+      "profile_status": "initial_record",
+      "page_checked_on": "2026-10-28",
+      "page_observation": "本次公开页面查询呈现“线路检测”界面，属于入口观察，尚未取得可用于核实套餐、客户端支持或性能的介绍页。"
+    },
+    {
+      "id": "feimaoyun",
+      "name": "飞猫云",
+      "url": "https://flycat1.flycatvipaff.cc/#/?code=Os3T3OxW",
+      "verification_status": "unverified",
+      "commercial_relationship": "unconfirmed",
+      "planned_path": "/evidence/feimaoyun/",
+      "profile_path": "brand-feimaoyun.html",
+      "profile_status": "initial_record",
+      "page_checked_on": "2026-10-28",
+      "page_observation": "本次查询涉及页面跳转，未取得可核验的品牌介绍与套餐内容。此记录不用于判断其实际运行状态。"
+    },
+    {
+      "id": "muguang",
+      "name": "暮光网络",
+      "url": "https://varnexa.twilightaff.com/#/?code=3qqonTlH",
+      "verification_status": "unverified",
+      "commercial_relationship": "unconfirmed",
+      "planned_path": "/evidence/muguang/",
+      "profile_path": "brand-muguang.html",
+      "profile_status": "initial_record",
+      "page_checked_on": "2026-10-28",
+      "page_observation": "本次公开页面查询未取得可核验的介绍内容。本站不据此宣称品牌停用，也不以其他服务的规则代填。"
+    },
+    {
+      "id": "lingdongyun",
+      "name": "灵动云",
+      "url": "https://varnexa.lingdongaff.com/#/?code=QcRK6OPG",
+      "verification_status": "unverified",
+      "commercial_relationship": "unconfirmed",
+      "planned_path": "/evidence/lingdongyun/",
+      "profile_path": "brand-lingdongyun.html",
+      "profile_status": "initial_record",
+      "page_checked_on": "2026-10-28",
+      "page_observation": "本次公开页面查询未取得可核验的介绍内容。后续需以可确认的品牌来源补充，当前不作价格或速度结论。"
+    }
+  ]
+}

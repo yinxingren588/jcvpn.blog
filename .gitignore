@@ -1,0 +1,23 @@
+# Local working state and build packages
+.release/
+.indexnow-state.json
+__pycache__/
+*.pyc
+*.zip
+.env
+.env.*
+!.env.example
+# Historical previews and delivery notes stay on the local computer
+/*.png
+/00-*.md
+/02-*.md
+/05-*.md
+/06-*.md
+/07-*.md
+/08-*.md
+/09-*.md
+/1[0-9]-*.md
+/20-*.md
+/21-*.md
+/materials/
+/templates/

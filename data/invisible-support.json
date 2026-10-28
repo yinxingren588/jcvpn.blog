@@ -1,0 +1,24 @@
+{
+  "brand": "隐形人机场 Invisible Network",
+  "source": "品牌方在对话中提供的客服处理经验",
+  "provided_on": "2026-10-28",
+  "cases": [
+    {
+      "id": "all-nodes-timeout",
+      "customer_question": "为什么我的节点全是超时的？",
+      "source_type": "常见问题与客服排查流程，未提供具体客户身份或单次工单",
+      "owner_reported_pattern": "通常都是连接限流的问题，只需要更换热点即可解决问题",
+      "public_framing": "按品牌客服经验，优先检查当前接入网络的限制或限流情况，通过更换热点进行对比排查；实际原因及处理结果以排查为准",
+      "owner_confirmed_actions": ["了解客户当前使用的设备", "了解客户当前连接的网络", "更换热点后重试"],
+      "guide_steps": ["确认设备与客户端", "确认当前接入网络", "更换可用热点，选择节点并点击连接，对比是否仍超时"],
+      "if_resolved": "记录原网络和更换热点后的结果，反馈客服，便于判断接入网络因素",
+      "if_unresolved": "继续联系客服，提供设备、客户端、网络类型、发生时间及更换热点前后的现象",
+      "cause_independently_verified": false,
+      "customer_event_date": null,
+      "customer_location_and_isp": null,
+      "resolution_rate": null,
+      "resolution_time": null
+    }
+  ],
+  "notes": "公开内容依据品牌客服提供的流程整理，不将所有超时确诊为限流，不保证更换热点必然恢复，不补造客户身份、日期、运营商、成功率或维修时长。"
+}

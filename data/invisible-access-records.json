@@ -1,0 +1,35 @@
+{
+  "brand": "隐形人机场 Invisible Network",
+  "source": "第三方提供的实际使用反馈，由站方转交",
+  "prepared_on": "2026-10-28",
+  "timezone": "Asia/Shanghai",
+  "records": [
+    {
+      "id": "chatgpt-sg-20261028",
+      "platform": "ChatGPT",
+      "tested_on": "2026-10-28",
+      "date_basis": "用户回答今天，按对话中的Asia/Shanghai日期换算",
+      "node_region": "新加坡",
+      "node_identifier": null,
+      "task": "发送问题并收到回答",
+      "result": "正常",
+      "status": "third_party_reported_success",
+      "independently_retested": false,
+      "client_name": null,
+      "client_platform": null,
+      "test_location": null,
+      "isp": null,
+      "tested_time": null,
+      "account_plan": null,
+      "browser_or_app": null,
+      "evidence_attachment": null,
+      "scope": "2026-10-28新加坡地区节点下的ChatGPT问答操作；不外推其他节点、时段、平台或功能",
+      "reported_feedback": "可以正常，没有任何问题"
+    }
+  ],
+  "notes": "本批访问记录与晚高峰延迟数据分别存储，不复用后者的上海、电信或Windows客户端作为本次测试环境。未补造登录、注册、付费、API、响应速度或流媒体播放结果。 来源按用户补充说明归为第三方使用反馈，未提供具体第三方名称或原始发布链接。",
+  "source_attribution_basis": "用户补充说明",
+  "source_provider_name": null,
+  "source_publication_url": null,
+  "source_independence_verified": false
+}

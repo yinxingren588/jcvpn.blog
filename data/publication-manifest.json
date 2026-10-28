@@ -1,0 +1,385 @@
+{
+  "origin": "https://jcvpn.blog",
+  "pages": {
+    "https://jcvpn.blog/article-after-update.html": {
+      "file": "article-after-update.html",
+      "sha256": "1861a7a839eadf0b52aa4e1b64533c97ad0d787adb30eddd6bd98c9de415c10a",
+      "lastmod": "2026-10-28T21:39:13+08:00"
+    },
+    "https://jcvpn.blog/article-audit-report-reading.html": {
+      "file": "article-audit-report-reading.html",
+      "sha256": "be5af501b90df9d17044ab0f4e3c7a9457a1b22bf82b324c5c5d8e68b2c3f6d4",
+      "lastmod": "2026-10-28T21:39:13+08:00"
+    },
+    "https://jcvpn.blog/article-brand-record-template.html": {
+      "file": "article-brand-record-template.html",
+      "sha256": "5cbe65e7ed350ae2fc3cfa031720566f17c1bb928cc5de17487e1a47313969bc",
+      "lastmod": "2026-10-28T21:39:13+08:00"
+    },
+    "https://jcvpn.blog/article-browser-proxy-scope.html": {
+      "file": "article-browser-proxy-scope.html",
+      "sha256": "7ba1128c9c25a6572831262b445b1361fa3fcb5cc9cc6424de7e096c19575842",
+      "lastmod": "2026-10-28T21:39:13+08:00"
+    },
+    "https://jcvpn.blog/article-certificate-warnings.html": {
+      "file": "article-certificate-warnings.html",
+      "sha256": "9f65fc027dab149dc06284a44abd4dee4ee3f790ff73078674935c2e47b780d9",
+      "lastmod": "2026-10-28T21:39:13+08:00"
+    },
+    "https://jcvpn.blog/article-configuration-backup.html": {
+      "file": "article-configuration-backup.html",
+      "sha256": "e7a10291deda97bc429da56c6f02ceffd179b920bf1670b01bebd850e36f501f",
+      "lastmod": "2026-10-28T21:39:13+08:00"
+    },
+    "https://jcvpn.blog/article-conflicting-sources.html": {
+      "file": "article-conflicting-sources.html",
+      "sha256": "1855f21f8942c4cd5319c1b990ba76dfd4c3b20e780e7c490c2951f7c9a728f1",
+      "lastmod": "2026-10-28T21:39:13+08:00"
+    },
+    "https://jcvpn.blog/article-connected-no-web.html": {
+      "file": "article-connected-no-web.html",
+      "sha256": "867c49d052605806cf67117367975f1b1e600a90e3e6375964320eacddad757c",
+      "lastmod": "2026-10-28T21:39:13+08:00"
+    },
+    "https://jcvpn.blog/article-cookies-and-ip.html": {
+      "file": "article-cookies-and-ip.html",
+      "sha256": "87daeb84ff3e1a93bac03279932ecfbc252cb7c7afb865a5839eadfddc869d38",
+      "lastmod": "2026-10-28T21:39:13+08:00"
+    },
+    "https://jcvpn.blog/article-correction-workflow.html": {
+      "file": "article-correction-workflow.html",
+      "sha256": "200421259841429bd50ad8087c7b684d9f15a831acf4007956c8014aafde26c1",
+      "lastmod": "2026-10-28T21:39:13+08:00"
+    },
+    "https://jcvpn.blog/article-credential-exposure-response.html": {
+      "file": "article-credential-exposure-response.html",
+      "sha256": "9b2cbe103db5270b17654da91454c7d08e6ef8dddc1535c98c4549be1881cfaf",
+      "lastmod": "2026-10-28T21:39:13+08:00"
+    },
+    "https://jcvpn.blog/article-device-comparison.html": {
+      "file": "article-device-comparison.html",
+      "sha256": "008eb2455213201d4ab565147cceb8fe2f0dc1faff3748101e69874da6cc1505",
+      "lastmod": "2026-10-28T21:39:13+08:00"
+    },
+    "https://jcvpn.blog/article-devices-and-sharing.html": {
+      "file": "article-devices-and-sharing.html",
+      "sha256": "1206ea48a9f253c7556819cd817c2319d7ed7a8d4668c2bee76f9abb5f28ed38",
+      "lastmod": "2026-10-28T21:39:13+08:00"
+    },
+    "https://jcvpn.blog/article-dns-cache-observation.html": {
+      "file": "article-dns-cache-observation.html",
+      "sha256": "bf91015a3bc4bb1c1dab8aacbacea05f0d63fd168f2a00ef5e3e3dcaf4eb3c93",
+      "lastmod": "2026-10-28T21:39:13+08:00"
+    },
+    "https://jcvpn.blog/article-dns-connection.html": {
+      "file": "article-dns-connection.html",
+      "sha256": "8f0e7682b0642d93bf073ce99e4b0cb51f354fa6e1c4b1fbad66d9488153adb7",
+      "lastmod": "2026-10-28T21:39:13+08:00"
+    },
+    "https://jcvpn.blog/article-download-source-check.html": {
+      "file": "article-download-source-check.html",
+      "sha256": "7e72dc65ab2c29a51576ebf501ca8541759b552d11ae95cef22016385ff1e56a",
+      "lastmod": "2026-10-28T21:39:13+08:00"
+    },
+    "https://jcvpn.blog/article-error-message-map.html": {
+      "file": "article-error-message-map.html",
+      "sha256": "6a271fdcf87ac1ebc8a21b2b7990b92b16929c5d53dd8b5fc5bf085ec1ce86be",
+      "lastmod": "2026-10-28T21:39:13+08:00"
+    },
+    "https://jcvpn.blog/article-evidence-levels.html": {
+      "file": "article-evidence-levels.html",
+      "sha256": "e108007d316f00586e539b8ea2dae8e3dc9557b875851749929256ee883036f7",
+      "lastmod": "2026-10-28T21:39:13+08:00"
+    },
+    "https://jcvpn.blog/article-extension-isolation.html": {
+      "file": "article-extension-isolation.html",
+      "sha256": "d39bb6fd737454b450190ca8aa7ac4c1d2efd56d2adb95451bd5d07d73865ab2",
+      "lastmod": "2026-10-28T21:39:13+08:00"
+    },
+    "https://jcvpn.blog/article-extension-permissions.html": {
+      "file": "article-extension-permissions.html",
+      "sha256": "d9960415ae56fa4a52d46eb7e04ea1d44ef8bf0f94bce76efe580729a51574c7",
+      "lastmod": "2026-10-28T21:39:13+08:00"
+    },
+    "https://jcvpn.blog/article-fair-comparison.html": {
+      "file": "article-fair-comparison.html",
+      "sha256": "d8acedb3ee0a1e667cef14dc493dd4efdb87bdb11653950538be4cd07a310c10",
+      "lastmod": "2026-10-28T21:39:13+08:00"
+    },
+    "https://jcvpn.blog/article-five-brand-reading.html": {
+      "file": "article-five-brand-reading.html",
+      "sha256": "474e8171de54d8790d82a1915629dae2058a55078756cfa600d08c6d4c34b4c1",
+      "lastmod": "2026-10-28T21:39:13+08:00"
+    },
+    "https://jcvpn.blog/article-hostname-ip-node.html": {
+      "file": "article-hostname-ip-node.html",
+      "sha256": "4a6aa5c4610c602395e1faec85ea488fcd1929a06a592ffa10c873ffe8aa2300",
+      "lastmod": "2026-10-28T21:39:13+08:00"
+    },
+    "https://jcvpn.blog/article-https-vpn.html": {
+      "file": "article-https-vpn.html",
+      "sha256": "88aac3d0313fd4508f62350f841103e445d8165e4d516ef786e80190d16558a5",
+      "lastmod": "2026-10-28T21:39:13+08:00"
+    },
+    "https://jcvpn.blog/article-intermittent-log.html": {
+      "file": "article-intermittent-log.html",
+      "sha256": "261136d688f9d9d1c1e805afd28da423fa78890c85c1bb9be8e0cfdb9b34c043",
+      "lastmod": "2026-10-28T21:39:13+08:00"
+    },
+    "https://jcvpn.blog/article-ipv4-ipv6-context.html": {
+      "file": "article-ipv4-ipv6-context.html",
+      "sha256": "64651fc18560f81f64706c6be57bef947d22f74256dbed25b3600aaa4bcc65f1",
+      "lastmod": "2026-10-28T21:39:13+08:00"
+    },
+    "https://jcvpn.blog/article-loaded-latency.html": {
+      "file": "article-loaded-latency.html",
+      "sha256": "0d1f95f2e6272b1eb0dc3bf370d5420ef8e476f4921f2aa88f6c84758c8ccf88",
+      "lastmod": "2026-10-28T21:39:13+08:00"
+    },
+    "https://jcvpn.blog/article-median-and-range.html": {
+      "file": "article-median-and-range.html",
+      "sha256": "641cfd503c025c7bea353bdd1c62220e9789000309586f4fef5363573398789f",
+      "lastmod": "2026-10-28T21:39:13+08:00"
+    },
+    "https://jcvpn.blog/article-metrics-explained.html": {
+      "file": "article-metrics-explained.html",
+      "sha256": "0e9baa655868b6849dcc3c66894b61dad6e5d8b6f97168c4250d7cffd2a8b01d",
+      "lastmod": "2026-10-28T21:39:13+08:00"
+    },
+    "https://jcvpn.blog/article-minimum-support-data.html": {
+      "file": "article-minimum-support-data.html",
+      "sha256": "d65843456ce3f3864432593b57810ec18a0a952af3f599313319923076ffea30",
+      "lastmod": "2026-10-28T21:39:13+08:00"
+    },
+    "https://jcvpn.blog/article-monthly-annual-cost.html": {
+      "file": "article-monthly-annual-cost.html",
+      "sha256": "03ce262b603d5f902fe1c5a3b5c1c0ddb22812862272b54ef7ab966ce2f97598",
+      "lastmod": "2026-10-28T21:39:13+08:00"
+    },
+    "https://jcvpn.blog/article-network-switch.html": {
+      "file": "article-network-switch.html",
+      "sha256": "16c4aa28f0e7d9b776110fe8f39e54c23a4a58c353ab3090bba165f719763266",
+      "lastmod": "2026-10-28T21:39:13+08:00"
+    },
+    "https://jcvpn.blog/article-plan-comparison-sheet.html": {
+      "file": "article-plan-comparison-sheet.html",
+      "sha256": "1e85857af9f8da574d37267e4137c771a5ec007ee0928c921bbb8245f7ab4090",
+      "lastmod": "2026-10-28T21:39:13+08:00"
+    },
+    "https://jcvpn.blog/article-private-window-boundary.html": {
+      "file": "article-private-window-boundary.html",
+      "sha256": "780e15db3acd3dbd2fea316eef750a482d718c0de918237d796aebed52bd9f29",
+      "lastmod": "2026-10-28T21:39:13+08:00"
+    },
+    "https://jcvpn.blog/article-promotion-disclosure.html": {
+      "file": "article-promotion-disclosure.html",
+      "sha256": "b9846cae7f24ba18764c76e16ab31870e4743a460fac908be56ca910c94926e9",
+      "lastmod": "2026-10-28T21:39:13+08:00"
+    },
+    "https://jcvpn.blog/article-protocol-and-quality.html": {
+      "file": "article-protocol-and-quality.html",
+      "sha256": "c813ec41a8d05145e170230dff82d3777c01fe7d09804415814d00416f95e4b3",
+      "lastmod": "2026-10-28T21:39:13+08:00"
+    },
+    "https://jcvpn.blog/article-quota-estimate.html": {
+      "file": "article-quota-estimate.html",
+      "sha256": "4bc5e9c6b6c3a3da80771f8f5bc8cb18c6571246af0768d4d41bdad4a07260f0",
+      "lastmod": "2026-10-28T21:39:13+08:00"
+    },
+    "https://jcvpn.blog/article-rate-units.html": {
+      "file": "article-rate-units.html",
+      "sha256": "97869083868723bbf48c8e8b53dfcc9579b8bd11a763e387f1c1f846ff0aa8eb",
+      "lastmod": "2026-10-28T21:39:13+08:00"
+    },
+    "https://jcvpn.blog/article-read-speed-chart.html": {
+      "file": "article-read-speed-chart.html",
+      "sha256": "11bb14983ebee8f1c196736d027de4cc24cc3cbd0d3e00eda9ea5ecd0747356d",
+      "lastmod": "2026-10-28T21:39:13+08:00"
+    },
+    "https://jcvpn.blog/article-read-subscription-file.html": {
+      "file": "article-read-subscription-file.html",
+      "sha256": "62cea9fd91db7d48b7c107d940e3066682d94fb9453f5817427a2016b336816f",
+      "lastmod": "2026-10-28T21:39:13+08:00"
+    },
+    "https://jcvpn.blog/article-redact-support-files.html": {
+      "file": "article-redact-support-files.html",
+      "sha256": "d3e582bb06b8d5c5c4719ba29900967744e13502cb5c2b6d18c06e59cdf66357",
+      "lastmod": "2026-10-28T21:39:13+08:00"
+    },
+    "https://jcvpn.blog/article-refund-rule-reading.html": {
+      "file": "article-refund-rule-reading.html",
+      "sha256": "6a4974a6f40419398614f3f3f7342da71b00f45d96bd0440d1e0f301101c3412",
+      "lastmod": "2026-10-28T21:39:13+08:00"
+    },
+    "https://jcvpn.blog/article-renewal-price-record.html": {
+      "file": "article-renewal-price-record.html",
+      "sha256": "135f0e9bcaaffd79f9e5f94c733fc6678e595a300eb8df761c1825de5e4e6382",
+      "lastmod": "2026-10-28T21:39:13+08:00"
+    },
+    "https://jcvpn.blog/article-reproducible-report.html": {
+      "file": "article-reproducible-report.html",
+      "sha256": "2039ae9d158e1dfd2d826758c0d9c9248b2921b61a698e4afdd63e052d3febf8",
+      "lastmod": "2026-10-28T21:39:13+08:00"
+    },
+    "https://jcvpn.blog/article-revision-log.html": {
+      "file": "article-revision-log.html",
+      "sha256": "0c8da0906ecb07fddb67e2a41c4f4ebed408b5ec0bb79037ac4114772e8783ed",
+      "lastmod": "2026-10-28T21:39:13+08:00"
+    },
+    "https://jcvpn.blog/article-sampling-notebook.html": {
+      "file": "article-sampling-notebook.html",
+      "sha256": "244794af9c39d05a2e1618d11b99bbe664c6a904036a150e97006d9f48df819b",
+      "lastmod": "2026-10-28T21:39:13+08:00"
+    },
+    "https://jcvpn.blog/article-sampling-selection.html": {
+      "file": "article-sampling-selection.html",
+      "sha256": "dcf0b293e06ff73dbf1fcb7a2181158b9267ee8f0a67b973c44bd72cf874e01a",
+      "lastmod": "2026-10-28T21:39:13+08:00"
+    },
+    "https://jcvpn.blog/article-service-client-protocol.html": {
+      "file": "article-service-client-protocol.html",
+      "sha256": "8d2112820976fca8ebdd0bf22a616a69eb1f26e5db732c630782f88e1ab73075",
+      "lastmod": "2026-10-28T21:39:13+08:00"
+    },
+    "https://jcvpn.blog/article-service-migration.html": {
+      "file": "article-service-migration.html",
+      "sha256": "77d0ee4ca0e0dccb7a8242ec1dd833fbc0e51ba705e842e0425948e633db7cd4",
+      "lastmod": "2026-10-28T21:39:13+08:00"
+    },
+    "https://jcvpn.blog/article-service-status-evidence.html": {
+      "file": "article-service-status-evidence.html",
+      "sha256": "882e39f764fb143ef51e871eb66b7a81dea1a26b6338fc4e3fafeac593a3c8e7",
+      "lastmod": "2026-10-28T21:39:13+08:00"
+    },
+    "https://jcvpn.blog/article-single-site-failure.html": {
+      "file": "article-single-site-failure.html",
+      "sha256": "bd1f3891c8aa2796bc89fed4472333724141a0661fe111c099241d3a383f920d",
+      "lastmod": "2026-10-28T21:39:13+08:00"
+    },
+    "https://jcvpn.blog/article-slow-baseline.html": {
+      "file": "article-slow-baseline.html",
+      "sha256": "5b0dac150db75ef749410ec66ff055ca76e63807c4a5320849b4013b03030432",
+      "lastmod": "2026-10-28T21:39:13+08:00"
+    },
+    "https://jcvpn.blog/article-subscription-import.html": {
+      "file": "article-subscription-import.html",
+      "sha256": "c3d70a7024588d7cf8970d516074462f1c2ba280a2170199da336444c50e93d0",
+      "lastmod": "2026-10-28T21:39:13+08:00"
+    },
+    "https://jcvpn.blog/article-terms-snapshot.html": {
+      "file": "article-terms-snapshot.html",
+      "sha256": "553b1c20d7da7966d4648aa661ad0993ff6f2be60080bb15ff87415265f62cc3",
+      "lastmod": "2026-10-28T21:39:13+08:00"
+    },
+    "https://jcvpn.blog/article-test-target-bias.html": {
+      "file": "article-test-target-bias.html",
+      "sha256": "131d6bedef3b1a7aa040801703ca7d5dfabd9c6d7fe49afa86ccabd8d46f73a0",
+      "lastmod": "2026-10-28T21:39:13+08:00"
+    },
+    "https://jcvpn.blog/article-traffic-accounting.html": {
+      "file": "article-traffic-accounting.html",
+      "sha256": "7b4ac3d2790f02361ee725ed2e4eb7312be2ecc7e584af2953b4b9ce32b4394e",
+      "lastmod": "2026-10-28T21:39:13+08:00"
+    },
+    "https://jcvpn.blog/article-trial-evaluation.html": {
+      "file": "article-trial-evaluation.html",
+      "sha256": "f734fd1903e87131cea6476993a94a18c4f4ee9f85312daa13f0fcb1a342bb19",
+      "lastmod": "2026-10-28T21:39:13+08:00"
+    },
+    "https://jcvpn.blog/article-upgrade-plan-checklist.html": {
+      "file": "article-upgrade-plan-checklist.html",
+      "sha256": "42b9e78298932b74dbf1ebbaf0219735c043d58ea2bf773a74ab49b53ea96185",
+      "lastmod": "2026-10-28T21:39:13+08:00"
+    },
+    "https://jcvpn.blog/article-url-components.html": {
+      "file": "article-url-components.html",
+      "sha256": "fa6c15fc3d3bce7d994d17d03dcaba2abcfae2b092db643fe48310b7cc6e255c",
+      "lastmod": "2026-10-28T21:39:13+08:00"
+    },
+    "https://jcvpn.blog/article-vpn-scope.html": {
+      "file": "article-vpn-scope.html",
+      "sha256": "df5474fbbf0011db90d8fa5a7e3c931e5da7a530a0079b69da35754b0d6c24bd",
+      "lastmod": "2026-10-28T21:39:13+08:00"
+    },
+    "https://jcvpn.blog/blog.html": {
+      "file": "blog.html",
+      "sha256": "5ea5a21edc5d14954f4831de8d2b558a46061fe6b9784199d52286cae1d46cbf",
+      "lastmod": "2026-10-28T21:39:13+08:00"
+    },
+    "https://jcvpn.blog/brand-breezenet.html": {
+      "file": "brand-breezenet.html",
+      "sha256": "4ae11c53b8b6d765687593de8581a5cc30ae09975c7f877f74cd2d3b8235351b",
+      "lastmod": "2026-10-28T21:39:13+08:00"
+    },
+    "https://jcvpn.blog/brand-feimaoyun.html": {
+      "file": "brand-feimaoyun.html",
+      "sha256": "f64f84f40b151071f4f753c6c9636297f569bcad3434949354570a0fec3f7904",
+      "lastmod": "2026-10-28T21:39:13+08:00"
+    },
+    "https://jcvpn.blog/brand-lingdongyun.html": {
+      "file": "brand-lingdongyun.html",
+      "sha256": "651a58b7caa04c32c44ceda2c36c856806a310f516edb0f6ff3f1aef636b6082",
+      "lastmod": "2026-10-28T21:39:13+08:00"
+    },
+    "https://jcvpn.blog/brand-muguang.html": {
+      "file": "brand-muguang.html",
+      "sha256": "730baecd0e249721e84e0f6b1cc6519a20bea90e027bcd52089ef3dcee6d2481",
+      "lastmod": "2026-10-28T21:39:13+08:00"
+    },
+    "https://jcvpn.blog/brand-yinxingren.html": {
+      "file": "brand-yinxingren.html",
+      "sha256": "67bb55cc406f61c0566f6a4bd6394889d8e958e61d61a0811516b1292a78f78b",
+      "lastmod": "2026-10-28T21:39:13+08:00"
+    },
+    "https://jcvpn.blog/brands.html": {
+      "file": "brands.html",
+      "sha256": "45010b8df3a466f1f3835ed64556cd0686da92f3f183009e7744f009bdfdd27a",
+      "lastmod": "2026-10-28T21:39:13+08:00"
+    },
+    "https://jcvpn.blog/faq.html": {
+      "file": "faq.html",
+      "sha256": "7bc0d774316b7d8d42957d7088927f8f35a2440a5a7628cf076bca0497da9a3e",
+      "lastmod": "2026-10-28T21:39:13+08:00"
+    },
+    "https://jcvpn.blog/": {
+      "file": "index.html",
+      "sha256": "ba8b8496bf41950b1a78daf823a98c1872ed1a821ec8f085099fb83a9521ed72",
+      "lastmod": "2026-10-28T21:39:13+08:00"
+    },
+    "https://jcvpn.blog/topic-basics.html": {
+      "file": "topic-basics.html",
+      "sha256": "9a906752a6655cdf48a08bfeb987d857aebac47b45359f7e89c0cde06bd3af72",
+      "lastmod": "2026-10-28T21:39:13+08:00"
+    },
+    "https://jcvpn.blog/topic-brands.html": {
+      "file": "topic-brands.html",
+      "sha256": "bb503ddaa31516d242b3aaeee71d46d67ff416a5748f07b8baff6425a179ac44",
+      "lastmod": "2026-10-28T21:39:13+08:00"
+    },
+    "https://jcvpn.blog/topic-diagnostics.html": {
+      "file": "topic-diagnostics.html",
+      "sha256": "2dbf1e8a964c74e1c911c19d246fbe841eab2dfdec0b96634518b5139caaa54c",
+      "lastmod": "2026-10-28T21:39:13+08:00"
+    },
+    "https://jcvpn.blog/topic-plans.html": {
+      "file": "topic-plans.html",
+      "sha256": "23fcb48a7a9c8589b5afbf711b7bbbf81b63332fee95beb09dd8e5663c3cbf29",
+      "lastmod": "2026-10-28T21:39:13+08:00"
+    },
+    "https://jcvpn.blog/topic-privacy.html": {
+      "file": "topic-privacy.html",
+      "sha256": "e0f59a790bded1955b379a546015f669714b873bdfb0ccf84fa4c28785512d3e",
+      "lastmod": "2026-10-28T21:39:13+08:00"
+    },
+    "https://jcvpn.blog/topic-testing.html": {
+      "file": "topic-testing.html",
+      "sha256": "ea26003869b90322863fd92938ab213cea023c57c2e395d28845e799201f2424",
+      "lastmod": "2026-10-28T21:39:13+08:00"
+    },
+    "https://jcvpn.blog/topics.html": {
+      "file": "topics.html",
+      "sha256": "891324d87972c47991ba3e02e1d00c57835281569a7c36ddd7c83440625ab212",
+      "lastmod": "2026-10-28T21:39:13+08:00"
+    }
+  }
+}

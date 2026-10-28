@@ -1,0 +1,313 @@
+{
+  "brand": "隐形人机场 Invisible Network",
+  "source": "品牌方提供的9张套餐截图及后续文字确认",
+  "provided_on": "2026-10-28",
+  "price_scope": "图片中明确展示的计费周期价格，未查询后台实时报价",
+  "currency": "CNY",
+  "line_type": "IEPL专线",
+  "device_policy": "9款均不限设备数",
+  "confirmed_corrections": [
+    "三款一次性流量包均不限设备数，以品牌方补充确认为准。",
+    "109元年付套餐统一使用IEPL专线描述。",
+    "109元年付除以12约为9.08元/月，仅为等效折算，实际年付109元。"
+  ],
+  "unknown_fields": [
+    "季付、半年付、年付的其他周期具体报价（109元年付除外）",
+    "未单独说明的流量重置日期与计费倍率",
+    "退款申请时限与到账时间、共享及其他未提供条款"
+  ],
+  "plans": [
+    {
+      "id": "starlight-annual",
+      "name": "星耀风暴 365天不熄",
+      "category": "subscription",
+      "price": 109,
+      "billing": "year",
+      "billing_label": "年付",
+      "price_unit": "年",
+      "traffic_gb": 80,
+      "traffic_type": "recurring",
+      "traffic_label": "80GB / 每30天",
+      "reset": "从购买日起每30天刷新流量",
+      "cycles": [
+        "年付"
+      ],
+      "monthly_equivalent": 9.08,
+      "multiplier": "全节点1×",
+      "featured": true,
+      "tagline": "面向小流量与新用户的年度入门方案。",
+      "description": "按年支付，流量从购买日起每30天刷新。适合用量相对稳定、希望以年度周期管理订阅的用户。",
+      "features": [
+        "每30天提供80GB流量，按周期刷新",
+        "全节点1×计费倍率，套餐标注不限速",
+        "面向主流流媒体及AI工具访问需求"
+      ],
+      "source_image": 1,
+      "currency": "CNY",
+      "speed_policy": "不限速（品牌套餐标注）",
+      "device_limit": null,
+      "device_policy": "不限设备数（品牌方补充确认）",
+      "line_type": "IEPL专线（品牌方确认）"
+    },
+    {
+      "id": "silver-era",
+      "name": "白银纪元",
+      "category": "subscription",
+      "price": 24,
+      "billing": "month",
+      "billing_label": "月付",
+      "price_unit": "月",
+      "traffic_gb": 144,
+      "traffic_type": "recurring",
+      "traffic_label": "144GB / 月",
+      "reset": "每月提供额度；具体重置日期以后台规则为准",
+      "cycles": [
+        "月付",
+        "季付",
+        "半年付",
+        "年付"
+      ],
+      "multiplier": "节点统一1×",
+      "featured": false,
+      "tagline": "日常浏览、视频会议与AI工具的基础流量方案。",
+      "description": "每月144GB流量，支持按使用周期选择付费方式。适合需要多设备接入，并兼顾日常浏览、会议和工具访问的场景。",
+      "features": [
+        "每月144GB流量，节点统一1×计费",
+        "多链路调度与专线方案（套餐资料）",
+        "资料列出Netflix、Prime Video、BBC、Abema、TVer及ChatGPT、GitHub Copilot、Hugging Face等访问方向"
+      ],
+      "source_image": 2,
+      "currency": "CNY",
+      "speed_policy": "不限速（品牌套餐标注）",
+      "device_limit": null,
+      "device_policy": "不限设备数（品牌方补充确认）",
+      "line_type": "IEPL专线（品牌方确认）"
+    },
+    {
+      "id": "gold-sequence",
+      "name": "黄金序列",
+      "category": "subscription",
+      "price": 48,
+      "billing": "month",
+      "billing_label": "月付",
+      "price_unit": "月",
+      "traffic_gb": 360,
+      "traffic_type": "recurring",
+      "traffic_label": "360GB / 月",
+      "reset": "每月提供额度；具体重置日期以后台规则为准",
+      "cycles": [
+        "月付",
+        "季付",
+        "半年付",
+        "年付"
+      ],
+      "multiplier": null,
+      "featured": false,
+      "tagline": "为视频与流媒体使用较多的日常场景增加流量余量。",
+      "description": "每月360GB流量，套餐资料包含BGP三网优化与专线出口。适合在常规浏览之外，有较多视频、流媒体与持续传输需求的用户。",
+      "features": [
+        "每月360GB流量",
+        "BGP三网优化与专线出口（套餐资料）",
+        "面向高清视频与流媒体使用场景"
+      ],
+      "source_image": 3,
+      "currency": "CNY",
+      "speed_policy": "不限速（品牌套餐标注）",
+      "device_limit": null,
+      "device_policy": "不限设备数（品牌方补充确认）",
+      "line_type": "IEPL专线（品牌方确认）"
+    },
+    {
+      "id": "platinum-zenith",
+      "name": "铂金至臻",
+      "category": "subscription",
+      "price": 105,
+      "billing": "month",
+      "billing_label": "月付",
+      "price_unit": "月",
+      "traffic_gb": 750,
+      "traffic_type": "recurring",
+      "traffic_label": "750GB / 月",
+      "reset": "每月提供额度；具体重置日期以后台规则为准",
+      "cycles": [
+        "月付",
+        "季付",
+        "半年付",
+        "年付"
+      ],
+      "multiplier": "全节点1×",
+      "featured": false,
+      "tagline": "兼顾高频网络使用、远程办公与大文件传输。",
+      "description": "每月750GB流量，适合使用频率较高、需要较大月度额度的场景。套餐资料提供多线调度与专线出口，并标注全节点1×计费。",
+      "features": [
+        "每月750GB流量，全节点1×计费",
+        "多线调度与专线网络出口（套餐资料）",
+        "可按远程办公、视频与大文件任务评估用量"
+      ],
+      "source_image": 4,
+      "currency": "CNY",
+      "speed_policy": "不限速（品牌套餐标注）",
+      "device_limit": null,
+      "device_policy": "不限设备数（品牌方补充确认）",
+      "line_type": "IEPL专线（品牌方确认）"
+    },
+    {
+      "id": "diamond-dome",
+      "name": "钻石穹顶",
+      "category": "subscription",
+      "price": 185,
+      "billing": "month",
+      "billing_label": "月付",
+      "price_unit": "月",
+      "traffic_gb": 1600,
+      "traffic_type": "recurring",
+      "traffic_label": "1600GB / 月",
+      "reset": "每月提供额度；具体重置日期以后台规则为准",
+      "cycles": [
+        "月付",
+        "季付",
+        "半年付",
+        "年付"
+      ],
+      "multiplier": "流量不放大（套餐原文）",
+      "featured": false,
+      "tagline": "为团队协作与高强度传输提供更大的月度额度。",
+      "description": "每月1600GB流量，套餐中也以1.6TB标注。适合多人多设备任务、内容工作室或高频传输需求；具体账号使用规则仍以品牌说明为准。",
+      "features": [
+        "每月1600GB，按套餐标注为1.6TB",
+        "BGP智能路由与专线出口（套餐资料）",
+        "套餐说明强调流量不放大与多设备场景"
+      ],
+      "source_image": 5,
+      "currency": "CNY",
+      "speed_policy": "不限速（品牌套餐标注）",
+      "device_limit": null,
+      "device_policy": "不限设备数（品牌方补充确认）",
+      "line_type": "IEPL专线（品牌方确认）"
+    },
+    {
+      "id": "king-custom",
+      "name": "王者定制版",
+      "category": "business",
+      "price": 680,
+      "billing": "month",
+      "billing_label": "月付",
+      "price_unit": "月",
+      "traffic_gb": 500,
+      "traffic_type": "recurring",
+      "traffic_label": "500GB / 月",
+      "reset": "每月提供额度；具体重置日期以后台规则为准",
+      "cycles": [
+        "月付"
+      ],
+      "multiplier": null,
+      "featured": false,
+      "tagline": "面向商业连接需求的独立带宽方案。",
+      "description": "每月500GB流量，套餐资料强调独立带宽与商业连接用途。适合对连接方案有定制需求的业务场景，具体带宽规格和交付范围需与品牌方确认。",
+      "features": [
+        "每月500GB流量",
+        "独立带宽与专线方案（套餐资料）",
+        "支持按商业用途进一步确认交付与服务范围"
+      ],
+      "source_image": 6,
+      "currency": "CNY",
+      "speed_policy": "不限速（品牌套餐标注）",
+      "device_limit": null,
+      "device_policy": "不限设备数（品牌方补充确认）",
+      "line_type": "IEPL专线（品牌方确认）"
+    },
+    {
+      "id": "oneoff-small",
+      "name": "一次性小流量",
+      "category": "oneoff",
+      "price": 229,
+      "billing": "once",
+      "billing_label": "一次性",
+      "price_unit": "次",
+      "traffic_gb": 160,
+      "traffic_type": "oneoff",
+      "traffic_label": "160GB / 一次性",
+      "reset": "买断总额度，不按月刷新",
+      "cycles": [
+        "一次性"
+      ],
+      "multiplier": null,
+      "featured": false,
+      "tagline": "为备用连接与间歇使用保留一份独立流量额度。",
+      "description": "一次购买160GB总额度，不按月重置，资料标注没有固定到期时间。适合需要备用额度或不连续使用的情境，设备数按品牌方最新确认为不限。",
+      "features": [
+        "一次购买160GB，不是每月160GB",
+        "资料标注不设固定到期时间",
+        "品牌方已确认不限设备数"
+      ],
+      "source_image": 7,
+      "currency": "CNY",
+      "speed_policy": "不限速（品牌套餐标注）",
+      "device_limit": null,
+      "device_policy": "不限设备数（品牌方补充确认）",
+      "line_type": "IEPL专线（品牌方确认）"
+    },
+    {
+      "id": "oneoff-standard",
+      "name": "一次性标准流量包",
+      "category": "oneoff",
+      "price": 549,
+      "billing": "once",
+      "billing_label": "一次性",
+      "price_unit": "次",
+      "traffic_gb": 420,
+      "traffic_type": "oneoff",
+      "traffic_label": "420GB / 一次性",
+      "reset": "买断总额度，不按月刷新",
+      "cycles": [
+        "一次性"
+      ],
+      "multiplier": null,
+      "featured": false,
+      "tagline": "面向差旅、跨期使用和多设备任务的中档买断额度。",
+      "description": "一次购买420GB总额度，不按月重置，资料标注没有固定到期时间。适合希望按实际消耗安排使用、避免将月度额度闲置的情境。",
+      "features": [
+        "一次购买420GB总额度",
+        "资料标注优先带宽方案，不作实测速率保证",
+        "品牌方已确认不限设备数"
+      ],
+      "source_image": 9,
+      "currency": "CNY",
+      "speed_policy": "不限速（品牌套餐标注）",
+      "device_limit": null,
+      "device_policy": "不限设备数（品牌方补充确认）",
+      "line_type": "IEPL专线（品牌方确认）"
+    },
+    {
+      "id": "oneoff-elite",
+      "name": "一次性精英流量包",
+      "category": "oneoff",
+      "price": 1199,
+      "billing": "once",
+      "billing_label": "一次性",
+      "price_unit": "次",
+      "traffic_gb": 1000,
+      "traffic_type": "oneoff",
+      "traffic_label": "1000GB / 一次性",
+      "reset": "买断总额度，不按月刷新",
+      "cycles": [
+        "一次性"
+      ],
+      "multiplier": null,
+      "featured": false,
+      "tagline": "为较高总用量与跨周期任务准备大容量买断流量。",
+      "description": "一次购买1000GB总额度，套餐中也以1TB标注。资料标注没有固定到期时间，面向高强度工作或较大累计传输需求；不限设备数以品牌方补充确认为准。",
+      "features": [
+        "一次购买1000GB，按套餐标注为1TB",
+        "买断额度，不是每月自动补充",
+        "品牌方已确认不限设备数"
+      ],
+      "source_image": 8,
+      "currency": "CNY",
+      "speed_policy": "不限速（品牌套餐标注）",
+      "device_limit": null,
+      "device_policy": "不限设备数（品牌方补充确认）",
+      "line_type": "IEPL专线（品牌方确认）"
+    }
+  ]
+}
