@@ -30,6 +30,24 @@ IndexNow的提交成功表示搜索引擎收到通知，不代表已经收录，
 
 如果原有内容生成脚本重新输出了本地预览页面，在最后再运行准备工具即可重新应用正式收录设置。复制站点或从GitHub重新下载后，保留`data/publication-manifest.json`和现有验证文件，避免重建修改日期或更换验证密钥。
 
+## 从GitHub部署到Cloudflare Pages
+
+Cloudflare项目的“构建和部署”设置应填写：
+
+| 设置 | 内容 |
+| --- | --- |
+| 生产分支 | `main` |
+| 框架预设 | `None` / 无 |
+| 构建命令 | `npm run build` |
+| 构建输出目录 | `dist` |
+| 根目录 | 留空，使用仓库根目录 |
+
+仓库已提供`package.json`和无第三方依赖的构建脚本。`npm run build`会检查现有正式页面，再把网站文件复制到`dist`；不需要React、Vite或其他框架。制作记录、维护脚本与仓库配置不会进入`dist`。
+
+若之前出现`Could not read package.json`或`ENOENT`，是旧版本尚未提供npm构建入口。请使用本次修复后的提交，确认以上设置后重新部署。不要仅重试旧提交。构建通过后，仍需在Cloudflare中绑定自定义域名并完成Bing验证。
+
+自动部署连接已开启时，今后推送GitHub可能触发Cloudflare部署。部署完成后再运行IndexNow提交工具；npm构建本身不会向搜索引擎提交网址。
+
 ## 命令行等价操作
 
 ```text

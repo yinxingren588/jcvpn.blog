@@ -1,0 +1,12 @@
+{
+  "name": "dingdang-observation-blog",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static publication package for jcvpn.blog",
+  "scripts": {
+    "build": "node tools/build_static.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

@@ -1,5 +1,7 @@
 # Local working state and build packages
 .release/
+dist/
+node_modules/
 .indexnow-state.json
 __pycache__/
 *.pyc
