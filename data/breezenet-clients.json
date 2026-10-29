@@ -1,0 +1,18 @@
+{
+  "brand_id": "breezenet",
+  "updated_on": "2026-10-29",
+  "source": "博客站长确认的Windows客户端下载、登录与连接流程",
+  "independently_verified": false,
+  "platforms": [
+    {
+      "os": "Windows",
+      "client_name": "微风网络",
+      "login_method": "website_account",
+      "login_description": "打开Windows版微风网络客户端，直接使用微风官网账号登录。",
+      "connection_steps": ["选择节点", "点击连接"],
+      "download_source": "微风官网首页直接下载",
+      "download_url": null,
+      "self_developed": null
+    }
+  ]
+}

@@ -17,7 +17,7 @@ def coupon_price(plan, coupon):
     return (Decimal(str(plan['price'])) * Decimal(coupon['pay_multiplier'])).quantize(Decimal('.01'), rounding=ROUND_HALF_UP)
 
 
-def faqs(data, latency=None, coupon=None, profile=None):
+def faqs(data, latency=None, coupon=None, profile=None, clients=None):
     questions = [
         ('微风网络的这批套餐分别多少钱？', '清风137元/年、乘风25元/月、破风55元/月、御风125元/月；信风·不限时为200元一次性、270GB总流量，长风·不限时为370元一次性、570GB总流量。价格来自本次第三方套餐资料，实际在售及结算金额以微风后台为准。'),
         ('清风年付的100GB，是全年总量还是每月额度？', '是每月100GB。截图写明年付价格137元、每月流量100GB，并注明从购买日起自动重置。年付是付款周期，月流量是额度周期，两者需要分开理解。'),
@@ -47,6 +47,8 @@ def faqs(data, latency=None, coupon=None, profile=None):
         ]
     if profile:
         questions.append(('微风网络是否提供原生IP节点？', '根据博客站长于2026-10-29补充的资料，微风提供原生IP节点选择，面向关注IP属性的用户。本站尚未逐节点核验，不将原生IP扩写为独享IP、住宅IP或特定平台永久可用。'))
+    if clients:
+        questions.append(('微风Windows客户端如何下载、登录和连接？', '在微风官网首页直接下载Windows版“微风网络”客户端。打开后使用微风官网账号登录，选择节点，再点击“连接”。该流程由博客站长于' + clients['updated_on'] + '确认。'))
     return questions
 
 
@@ -59,6 +61,8 @@ def build_breezenet_profile(root):
     profile = json.loads(profile_path.read_text(encoding='utf-8')) if profile_path.exists() else None
     coupon_path = root / 'data/breezenet-coupon.json'
     coupon = json.loads(coupon_path.read_text(encoding='utf-8')) if coupon_path.exists() else None
+    clients_path = root / 'data/breezenet-clients.json'
+    clients = json.loads(clients_path.read_text(encoding='utf-8')) if clients_path.exists() else None
     plans = data['plans']
     url = e(data['entry_url'], quote=True)
     labels = {'year': '年付 · 每月流量', 'month': '月付 · 每月流量', 'once': '一次性 · 总流量'}
@@ -75,7 +79,7 @@ def build_breezenet_profile(root):
         english = e(plan['english_name'] or 'TRAFFIC PACK')
         cards.append(f'''<article class="breeze-plan" data-billing="{kind}" id="breeze-plan-{plan['id']}"><span class="breeze-plan-kind">{labels[kind]}</span><h3>{e(plan['name'])}</h3><span class="breeze-plan-english">{english}</span><p class="breeze-plan-tagline">{e(plan['tagline'])}</p><div class="breeze-price"><span>¥</span><strong>{plan['price']}</strong><small>/{e(plan['price_unit'])}</small></div><p class="breeze-price-note">{e(price_note)}</p><div class="breeze-quota"><div><strong>{plan['traffic_gb']:,}</strong><span>GB</span></div><small>{period}</small></div><p class="breeze-reset">{e(plan['reset_rule'])}</p><p class="breeze-plan-copy">{e(plan['description'])}</p><a class="breeze-plan-action" href="{url}" target="_blank" rel="sponsored noopener noreferrer" aria-label="前往微风入口查看{e(plan['name'], quote=True)}套餐">前往查看套餐 <span aria-hidden="true">↗</span></a></article>''')
         rows.append(f'''<tr><th scope="row">{e(plan['name'])}</th><td>¥{plan['price']} / {e(plan['price_unit'])}</td><td>{plan['traffic_gb']:,}GB<br>{period}</td><td>{e(plan['reset_rule'])}</td></tr>''')
-    faq_items = ''.join('<details class="breeze-faq"><summary>' + e(question) + '</summary><p>' + e(answer) + '</p></details>' for question, answer in faqs(data, latency_data, coupon, profile))
+    faq_items = ''.join('<details class="breeze-faq"><summary>' + e(question) + '</summary><p>' + e(answer) + '</p></details>' for question, answer in faqs(data, latency_data, coupon, profile, clients))
     body = f'''<section class="breeze-hero"><div class="breeze-intro"><span class="overline">BREEZENET / PLANS & CONNECTION</span><div class="breeze-heading"><span class="breeze-mark" aria-hidden="true">B</span><div><h1>微风网络 Breezenet</h1><span class="breeze-english">选择流量，也选择适合自己的使用节奏</span></div></div><p>本页整理微风网络的6款套餐，覆盖年付、月付和一次性流量。周期套餐每月100GB至1,200GB，一次性套餐按270GB或570GB总量使用，方便按实际用量和付费方式选择。</p><div class="breeze-hero-actions"><a class="btn" href="#breeze-plans">查看6款套餐 <span aria-hidden="true">↓</span></a><a class="textlink" href="{url}" target="_blank" rel="sponsored noopener noreferrer">访问微风入口 ↗</a></div></div><aside class="breeze-spotlight" aria-label="清风套餐计费与流量示例"><span class="overline">PAYMENT ≠ TRAFFIC CYCLE</span><h2>年付金额与每月额度，<br>分开看更清楚。</h2><div class="breeze-sample"><div><small>清风 · 全年支付</small><strong>137<span>元 / 年</span></strong><small>折算约11.42元 / 月</small></div><div><small>清风 · 每月额度</small><strong>100<span>GB / 月</span></strong><small>购买日起按月重置</small></div></div><p>137元是年付金额，100GB是每月额度；一次性流量包则按整包总量扣减。</p></aside></section>
 <nav class="breeze-jumps" aria-label="微风页面目录"><a href="#breeze-plans">套餐价格</a><a href="#breeze-comparison">快速对比</a><a href="#breeze-plan-guide">如何选择</a><a href="#breeze-faq">常见问题</a><a href="#breeze-sources">资料来源</a></nav>
 <section class="section" id="breeze-plans" aria-labelledby="breeze-plans-title"><div class="breeze-section-title"><span class="overline">SIX PLANS / THREE BILLING OPTIONS</span><h2 id="breeze-plans-title">微风网络套餐价格与流量</h2><p>先选付费方式，再看每月额度或一次性总量。</p></div><p class="breeze-source-line">资料来源：第三方提供的2张套餐截图，经站长转交整理 · 整理日期：{data['updated_on']}</p><div class="breeze-shared-features"><span>IPLC专线 · 资料标注</span><span>不限设备同时接入</span><span>套餐标注不限速</span></div><div class="breeze-filters" role="group" aria-label="微风套餐类型"><button type="button" data-breeze-filter="all" aria-pressed="true">全部套餐 <span>6</span></button><button type="button" data-breeze-filter="year" aria-pressed="false">年付套餐 <span>1</span></button><button type="button" data-breeze-filter="month" aria-pressed="false">月付套餐 <span>3</span></button><button type="button" data-breeze-filter="once" aria-pressed="false">一次性流量 <span>2</span></button></div><p class="breeze-count" id="breeze-plan-count" aria-live="polite">全部套餐 · 共6款</p><div class="breeze-pricing-grid">{''.join(cards)}</div></section>
@@ -110,6 +114,11 @@ def build_breezenet_profile(root):
         body = re.sub(r'<aside class="breeze-spotlight".*?</aside>', lambda _: spotlight, body, count=1, flags=re.S)
         body = body.replace('先选付费方式，再看每月额度或一次性总量。', '先选付费方式，再看每月额度或一次性总量。以下保留套餐原价，已确认的券后价格另行注明。', 1)
         body = body.replace('客户端使用方式、优惠活动和售后规则请以微风后台现行指引为准。', '优惠码由站长补充，结算金额以后台为准；客户端使用方式和售后规则请以微风后台现行指引为准。')
+    if clients:
+        client_section = '<section class="section" id="breeze-clients"><div class="breeze-section-title"><span class="overline">WINDOWS / CONNECT IN THREE STEPS</span><h2>从官网下载，选好节点再连接。</h2><p>Windows版客户端名称为“微风网络”，使用微风官网账号登录。</p></div><div class="breeze-guide-grid"><article><h3>01 · 从官网首页下载</h3><p>在微风官网首页找到Windows版“微风网络”客户端下载入口，下载并打开客户端。</p><a href="' + url + '" target="_blank" rel="sponsored noopener noreferrer">访问微风入口 ↗</a></article><article><h3>02 · 使用官网账号登录</h3><p>直接使用微风官网账号登录客户端。</p></article><article><h3>03 · 选择节点并连接</h3><p>登录成功后，先选择节点，再点击“连接”。</p></article></div><p class="breeze-source-line">下载入口与使用流程由博客站长于' + e(clients['updated_on']) + '确认。</p></section>'
+        body = body.replace('<section class="section" id="breeze-faq">', client_section + '<section class="section" id="breeze-faq">', 1)
+        body = body.replace('<a href="#breeze-faq">常见问题</a>', '<a href="#breeze-clients">使用教程</a><a href="#breeze-faq">常见问题</a>', 1)
+        body = body.replace('客户端使用方式和售后规则请以微风后台现行指引为准。', 'Windows客户端下载、账号登录及节点连接流程由站长确认；其他系统的客户端指引和售后规则以微风后台现行说明为准。')
     page = '<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>微风网络 Breezenet｜套餐价格、IPLC线路与流量说明｜叮当观察</title><meta name="description" content="' + e(description, quote=True) + '"><link rel="stylesheet" href="assets/site-base.css"><link rel="stylesheet" href="assets/doraemon-theme.css"><link rel="stylesheet" href="assets/topics.css"><link rel="stylesheet" href="assets/breezenet.css"><script src="assets/breezenet.js" defer></script></head><body><div class="shell">' + header('brands') + '<main>' + body + '</main>' + footer() + '</div></body></html>'
     if latency_data:
         page = page.replace('套餐价格、IPLC线路与流量说明', '套餐价格、IPLC资料与节点延迟', 1)
@@ -159,11 +168,13 @@ def build_breezenet_profile(root):
     markdown += '## 套餐说明\n\n' + ''.join('### ' + plan['name'] + '\n\n' + plan['description'] + '\n\n' for plan in plans)
     if coupon:
         markdown += f'## 清风年付优惠\n\n优惠码：{coupon["code"]}，{coupon["discount_label"]}。清风原价137元/年、每月100GB，券后按原价计算为{annual_paid}元/年，折算约{monthly_paid}元/月，实际按年支付。{scope}；{expiry}。来源：{coupon["source"]}。\n\n'
-    markdown += '## 常见问题\n\n' + ''.join('### ' + question + '\n\n' + answer + '\n\n' for question, answer in faqs(data, latency_data, coupon, profile))
+    if clients:
+        markdown += '## Windows客户端使用教程\n\n1. 在微风官网首页直接下载Windows版“微风网络”客户端，下载并打开。\n2. 直接使用微风官网账号登录。\n3. 选择节点，再点击“连接”。\n\n下载入口与使用流程由博客站长于' + clients['updated_on'] + '确认。\n\n'
+    markdown += '## 常见问题\n\n' + ''.join('### ' + question + '\n\n' + answer + '\n\n' for question, answer in faqs(data, latency_data, coupon, profile, clients))
     if latency_data:
         from breeze_latency import markdown as latency_markdown
         markdown += latency_markdown(root)
-    markdown += '## 入口与资料边界\n\n[微风访问入口](' + data['entry_url'] + ')。入口保留原推广参数。套餐截图与延迟截图分别注明来源；未提供的其他周期价格、客户端使用方式及售后规则不自行填写。\n'
+    markdown += '## 入口与资料边界\n\n[微风访问入口](' + data['entry_url'] + ')。入口保留原推广参数。套餐截图与延迟截图分别注明来源；未提供的其他周期价格、其他系统客户端指引及售后规则不自行填写。\n'
     folder = root / 'content/brands'
     folder.mkdir(parents=True, exist_ok=True)
     write_changed(folder / 'breezenet.md', markdown)
