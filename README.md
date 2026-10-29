@@ -37,6 +37,8 @@ IndexNow的提交成功表示搜索引擎收到通知，不代表已经收录，
 
 栏目页搜索摘要在`data/page-descriptions.json`维护。准备工具会将各页对应的独立摘要写入HTML，避免重新生成页面时退回只含标题的简短描述。
 
+微风网络的6款套餐资料在`data/breezenet-plans.json`维护，来源为站长转交的第三方截图。准备工具会重建微风品牌页、对比CSV和可编辑文案`content/brands/breezenet.md`；原照片不会进入网站。微风资料采用IPLC表述，与隐形人的IEPL资料分别维护。
+
 ## 从GitHub部署到Cloudflare Pages
 
 Cloudflare项目的“构建和部署”设置应填写：

@@ -1,0 +1,110 @@
+{
+  "brand_name": "微风网络 Breezenet",
+  "brand_id": "breezenet",
+  "entry_url": "https://edp01.breezenetaff.com/#/?code=4KDOroY0",
+  "updated_on": "2026-10-29",
+  "currency": "CNY",
+  "source": {
+    "type": "third_party_screenshots",
+    "description": "第三方提供的2张套餐截图，经博客站长转交整理",
+    "screenshot_count": 2,
+    "provided_on": "2026-10-29",
+    "screenshot_capture_date": null,
+    "provider_name": null,
+    "independently_verified": false,
+    "original_images_published": false
+  },
+  "shared_features": {
+    "line_type": "IPLC专线",
+    "line_source": "全部6款套餐截图均标注全IPLC专线",
+    "simultaneous_devices": "不限设备同时接入",
+    "speed_policy": "套餐标注不限速",
+    "measured_speed": null
+  },
+  "plans": [
+    {
+      "id": "breeze-year",
+      "name": "清风",
+      "english_name": "Breeze",
+      "billing": "year",
+      "price": 137,
+      "price_unit": "年",
+      "traffic_gb": 100,
+      "traffic_period": "monthly",
+      "reset_rule": "购买日起按月自动重置100GB额度",
+      "tagline": "年付一次，每月按额度使用",
+      "description": "适合预计持续使用、每月流量需求较低的读者。137元是全年支付金额，100GB是每月额度，选择时应分别核对付费周期与流量周期。"
+    },
+    {
+      "id": "riding-month",
+      "name": "乘风",
+      "english_name": "Riding",
+      "billing": "month",
+      "price": 25,
+      "price_unit": "月",
+      "traffic_gb": 200,
+      "traffic_period": "monthly",
+      "reset_rule": "每月提供200GB，具体刷新日期以后台为准",
+      "tagline": "月付入门，按月安排使用",
+      "description": "每月25元、200GB额度。适合希望按月付费、每月用量在该额度内的读者；可先记录实际消耗，再决定后续是否需要更大的流量档位。"
+    },
+    {
+      "id": "breaking-month",
+      "name": "破风",
+      "english_name": "Breaking",
+      "billing": "month",
+      "price": 55,
+      "price_unit": "月",
+      "traffic_gb": 500,
+      "traffic_period": "monthly",
+      "reset_rule": "每月提供500GB，具体刷新日期以后台为准",
+      "tagline": "增加流量空间，保留月付节奏",
+      "description": "每月55元、500GB额度。适合月度需求高于200GB、希望为较频繁使用留出额度的读者；是否合适应结合自己的实际流量记录判断。"
+    },
+    {
+      "id": "mastery-month",
+      "name": "御风",
+      "english_name": "Mastery",
+      "billing": "month",
+      "price": 125,
+      "price_unit": "月",
+      "traffic_gb": 1200,
+      "traffic_period": "monthly",
+      "reset_rule": "每月提供1200GB，具体刷新日期以后台为准",
+      "tagline": "较大月度额度，按实际需求选择",
+      "description": "每月125元、1,200GB额度，截图同时写作1.2TB。适合已有较大月度流量需求的读者；高额度不代表固定带宽或单用户测速保证。"
+    },
+    {
+      "id": "trade-wind-once",
+      "name": "信风·不限时",
+      "english_name": null,
+      "billing": "once",
+      "price": 200,
+      "price_unit": "一次性",
+      "traffic_gb": 270,
+      "traffic_period": "total",
+      "reset_rule": "270GB一次性总额度，不限时，流量用完为止",
+      "tagline": "按总量使用，适合低频或备用",
+      "description": "一次支付200元，获得270GB总流量。资料标注流量不过期、用完为止；这里的270GB是整包额度，不是每月恢复的月流量。"
+    },
+    {
+      "id": "long-wind-once",
+      "name": "长风·不限时",
+      "english_name": null,
+      "billing": "once",
+      "price": 370,
+      "price_unit": "一次性",
+      "traffic_gb": 570,
+      "traffic_period": "total",
+      "reset_rule": "570GB一次性总额度，不限时，流量用完为止",
+      "tagline": "较大备用额度，按总量逐步消耗",
+      "description": "一次支付370元，获得570GB总流量。适合希望准备较大一次性额度的读者；按实际消耗扣减，不应当作每月新增570GB理解。"
+    }
+  ],
+  "notes": [
+    "清风的购买日起按月重置，不改写为固定每30天，也不将年付误写成全年只有100GB。",
+    "截图出现季度、半年等筛选项，但未提供对应套餐价格，不按月付金额推算其他周期报价。",
+    "没有提供优惠码、节点地区、客户端、退款或升级规则，不套用隐形人机场的资料。",
+    "不限速为套餐资料表述，不等于固定带宽、实测速度或长期可用性保证。"
+  ]
+}
