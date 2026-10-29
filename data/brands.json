@@ -52,13 +52,14 @@
       "commercial_relationship": "unconfirmed",
       "planned_path": "/evidence/feimaoyun/",
       "profile_path": "brand-feimaoyun.html",
-      "profile_status": "station_supplied_introduction",
+      "profile_status": "station_supplied_introduction_and_7_plans",
       "page_checked_on": "2026-10-29",
       "page_observation": "原始入口经线路检测页进入标题为飞猫云的进入确认页，未查看套餐与客户端详情。",
-      "source_type": "博客站长提供的飞猫云品牌介绍与节点分布",
+      "source_type": "博客站长提供的飞猫云品牌介绍与节点分布；博客站长提供的3张飞猫云套餐截图及价格确认",
       "source_date": "2026-10-29",
       "line_type_from_materials": "IPLC专线",
-      "listed_region_count": 15
+      "listed_region_count": 15,
+      "plan_count": 7
     },
     {
       "id": "muguang",

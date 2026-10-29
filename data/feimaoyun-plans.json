@@ -1,0 +1,96 @@
+{
+  "brand_id": "feimaoyun",
+  "provided_on": "2026-10-29",
+  "source": "博客站长提供的3张飞猫云套餐截图及价格确认",
+  "independently_verified": false,
+  "currency": "CNY",
+  "pricing_confirmation": {
+    "student_annual_price_is_final": true,
+    "student_additional_annual_discount": false,
+    "other_periodic_plans_display_monthly_price_only": true,
+    "long_cycle_totals": null,
+    "coupon_code": null
+  },
+  "common_features": {
+    "line_type": "IPLC专线",
+    "device_limit": null,
+    "device_limit_label": "不限设备连接数量",
+    "traffic_multiplier": 1,
+    "advertised_maximum_gbps_for_standard_plans": 2.5,
+    "bandwidth_basis": "截图中的最高规格，不作为实测下载速度或单用户持续速率保证",
+    "native_ip_support": "常规套餐列明原生IP线路；定制方案列明独享原生IP",
+    "platforms_in_service_description": ["Netflix", "Disney+", "ChatGPT", "TikTok"]
+  },
+  "plans": [
+    {
+      "id": "student", "name": "飞猫·学生版", "kind": "periodic",
+      "price_cny": 84, "payment_unit": "年", "traffic_gb": 50,
+      "traffic_scope": "每月", "renewal": "年付",
+      "reset_rule": "每月自动刷新，具体刷新日期以后台为准。",
+      "audience": "适合每月用量较少、希望控制年度预算的用户。",
+      "detail": "84元为已确认的最终年付价，年付折合7元/月。每月50GB，并非全年只有50GB。"
+    },
+    {
+      "id": "starlight", "name": "飞猫·星耀版", "kind": "periodic",
+      "price_cny": 25, "payment_unit": "月", "traffic_gb": 150,
+      "traffic_scope": "每月", "renewal": "月付报价",
+      "reset_rule": "截图列明季付及以上从购买日起每30天自动刷新；月付的具体刷新日期以后台为准。",
+      "audience": "适合浏览、在线工具与适量视频交替使用的日常场景。",
+      "detail": "每月150GB，适合从低流量年付转向更充裕的月度额度。"
+    },
+    {
+      "id": "starring", "name": "飞猫·星环版", "kind": "periodic",
+      "price_cny": 45, "payment_unit": "月", "traffic_gb": 300,
+      "traffic_scope": "每月", "renewal": "月付报价",
+      "reset_rule": "截图列明季付及以上从购买日起每30天自动刷新；月付的具体刷新日期以后台为准。",
+      "audience": "适合视频观看较频繁、同时使用多台设备的用户。",
+      "detail": "每月300GB，给日常访问和流媒体观看留出更多流量空间。"
+    },
+    {
+      "id": "galaxy", "name": "飞猫·银河版", "kind": "periodic",
+      "price_cny": 85, "payment_unit": "月", "traffic_gb": 600,
+      "traffic_scope": "每月", "renewal": "月付报价",
+      "reset_rule": "截图列明季付及以上从购买日起每30天自动刷新；月付的具体刷新日期以后台为准。",
+      "audience": "适合多设备、高频视频及较大文件传输等流量需求。",
+      "detail": "每月600GB，选择前可先查看自己近一个月的实际用量。"
+    },
+    {
+      "id": "universe", "name": "飞猫·宇宙版", "kind": "periodic",
+      "price_cny": 150, "payment_unit": "月", "traffic_gb": 1000,
+      "traffic_scope": "每月", "renewal": "月付报价",
+      "reset_rule": "截图列明季付及以上从购买日起每30天自动刷新；月付的具体刷新日期以后台为准。",
+      "audience": "适合月度流量需求较高、需要集中管理多端用量的用户。",
+      "detail": "每月1000GB（图示1.0TB）。额度较大，仍需按自己的使用量选择。"
+    },
+    {
+      "id": "timeless", "name": "飞猫·不限时套餐", "kind": "one_time",
+      "price_cny": 680, "payment_unit": "一次性", "traffic_gb": 1000,
+      "traffic_scope": "总额度", "renewal": "一次性购买",
+      "reset_rule": "无使用时间限制，用完为止；购买后不按月自动刷新。支持付费手动重置，按原价90%收取612元。",
+      "manual_reset_price_cny": 612, "manual_reset_ratio": 0.9,
+      "long_cycle_discounts_apply": false,
+      "audience": "适合用量不固定、希望按总流量长期使用的场景。",
+      "detail": "1000GB为一次性总额度，不是每月1000GB。该套餐不适用周期套餐的年付、两年付及三年付折扣。",
+      "plan_specific_regions": {"香港":20,"台湾":10,"日本":10,"新加坡":10,"美国":10,"韩国":2,"马来西亚":2,"越南":1,"菲律宾":1,"泰国":1,"印度":1,"德国":1,"法国":1,"英国":1,"阿根廷":2}
+    },
+    {
+      "id": "custom", "name": "飞猫·定制套餐", "kind": "custom",
+      "price_cny": 550, "payment_unit": "月", "traffic_gb": 500,
+      "traffic_scope": "图示月度配置", "renewal": "按配置确认",
+      "reset_rule": "流量、带宽、地区与价格按需求调整；具体额度及刷新方式向客服确认。",
+      "audience": "面向跨境电商、TikTok直播、社媒推广及远程办公等有专门IP与带宽需求的场景。",
+      "detail": "图示配置为550元/月、500GB。提供专属定制节点、独享原生IP与独立带宽；实际配置及报价由客服确认。",
+      "customizable": ["流量额度", "带宽", "节点地区"],
+      "example_regions": ["香港", "日本", "美国", "新加坡"],
+      "support_in_materials": "一对一技术支持与优先客服通道"
+    }
+  ],
+  "notes": [
+    "截图仅作为资料来源，原照片不作为博客图片发布。",
+    "学生版84元/年为最终价，不另叠加年付8折。",
+    "其余四款周期套餐按站长要求只保留图示月价，不推算长周期成交总价。",
+    "品牌介绍及周期套餐列韩国3个节点，不限时套餐截图列韩国2个；按套餐分别保留，具体以后台为准。",
+    "定制套餐550元/月为截图所示配置报价，不标注为起价。",
+    "本次没有提供优惠码、客户端教程、售后规则或实际测试记录。"
+  ]
+}
