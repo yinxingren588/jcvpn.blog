@@ -34,10 +34,12 @@
       "profile_status": "third_party_plan_catalog",
       "page_checked_on": "2026-10-29",
       "page_observation": "入口经线路检测后可跳转微风网络注册页，并保留邀请码；套餐数据来自第三方截图，未登录后台独立核价。",
-      "source_type": "第三方套餐截图，经站长转交",
+      "source_type": "第三方套餐及延迟截图，经站长转交",
       "source_date": "2026-10-29",
       "plan_count": 6,
-      "line_type_from_materials": "IPLC专线"
+      "line_type_from_materials": "IPLC专线",
+      "latency_node_count": 52,
+      "latency_recorded_at": "2026-10-29 12:00（北京时间）"
     },
     {
       "id": "feimaoyun",

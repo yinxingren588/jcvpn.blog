@@ -39,6 +39,10 @@ IndexNow的提交成功表示搜索引擎收到通知，不代表已经收录，
 
 微风网络的6款套餐资料在`data/breezenet-plans.json`维护，来源为站长转交的第三方截图。准备工具会重建微风品牌页、对比CSV和可编辑文案`content/brands/breezenet.md`；原照片不会进入网站。微风资料采用IPLC表述，与隐形人的IEPL资料分别维护。
 
+微风的2026-10-29 12:00上海电信延迟快照在`data/breezenet-latency.json`维护：52个节点、39条数值、13条超时，日本直连另组。PNG/SVG概览图保存在`assets/breezenet-latency.*`，CSV保留全部记录；原始截图不发布，也不把记录标为实时监测或下载测速。
+
+更换这批延迟资料时，需要同时重绘并核对PNG/SVG导出图，不能只改JSON数值。`tools/export_breeze_latency.py`用于生成SVG（需要ReportLab）；已有图表文件随仓库保存，Cloudflare构建不依赖该绘图环境。
+
 ## 从GitHub部署到Cloudflare Pages
 
 Cloudflare项目的“构建和部署”设置应填写：

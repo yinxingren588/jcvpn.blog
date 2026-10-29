@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg role="img" aria-label="微风网络午间节点延迟记录" width="1400" height="1060" preserveAspectRatio="xMinYMin meet" viewBox="0 0 1400 1060" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>微风网络2026年10月29日午间延迟记录</title><style>text{font-family:"Microsoft YaHei","Noto Sans CJK SC",sans-serif!important}</style>
+	<desc>2026年10月29日12:00北京时间，上海电信，Windows版微风网络客户端，第三方截图记录52个节点，39条数值、13条超时；日本直连单列。不是实时监测。</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="1400" height="1060"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-1060)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="0" width="1400" height="1060" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(94%,96%,98%); fill-rule: evenodd;"/>
+			<rect x="30" y="30" width="1340" height="1000" rx="22" ry="22" style="stroke: rgb(86%,90%,94%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="74" y="987" style="font-family: Helvetica; font-size: 13px;fill: rgb(27%,53%,57%); stroke:none;" transform="translate(0,1974) scale(1,-1)">BREEZENET  /  MIDDAY NODE LATENCY</text>
+			<text x="74" y="934" style="font-family: STSong-Light; font-size: 37px;fill: rgb(8%,23%,35%); stroke:none;" transform="translate(0,1868) scale(1,-1)">微风网络 · 午间节点延迟记录</text>
+			<text x="74" y="898" style="font-family: STSong-Light; font-size: 17px;fill: rgb(40%,52%,61%); stroke:none;" transform="translate(0,1796) scale(1,-1)">第三方截图数据重绘  |  2026-10-29 12:00（北京时间）  |  单位 ms</text>
+			<rect x="74" y="765" width="298" height="101" rx="14" ry="14" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(94%,97%,100%); fill-rule: evenodd;"/>
+			<text x="96" y="830" style="font-family: STSong-Light; font-size: 15px;fill: rgb(40%,52%,61%); stroke:none;" transform="translate(0,1660) scale(1,-1)">记录节点</text>
+			<text x="96" y="790" style="font-family: Helvetica-Bold; font-size: 29px;fill: rgb(13%,42%,63%); stroke:none;" transform="translate(0,1580) scale(1,-1)">52</text>
+			<rect x="390" y="765" width="298" height="101" rx="14" ry="14" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(94%,97%,100%); fill-rule: evenodd;"/>
+			<text x="412" y="830" style="font-family: STSong-Light; font-size: 15px;fill: rgb(40%,52%,61%); stroke:none;" transform="translate(0,1660) scale(1,-1)">有延迟数值</text>
+			<text x="412" y="790" style="font-family: Helvetica-Bold; font-size: 29px;fill: rgb(13%,42%,63%); stroke:none;" transform="translate(0,1580) scale(1,-1)">39</text>
+			<rect x="706" y="765" width="298" height="101" rx="14" ry="14" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,96%,90%); fill-rule: evenodd;"/>
+			<text x="728" y="830" style="font-family: STSong-Light; font-size: 15px;fill: rgb(40%,52%,61%); stroke:none;" transform="translate(0,1660) scale(1,-1)">超时记录</text>
+			<text x="728" y="790" style="font-family: Helvetica-Bold; font-size: 29px;fill: rgb(79%,49%,13%); stroke:none;" transform="translate(0,1580) scale(1,-1)">13</text>
+			<rect x="1022" y="765" width="298" height="101" rx="14" ry="14" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(94%,97%,100%); fill-rule: evenodd;"/>
+			<text x="1044" y="830" style="font-family: STSong-Light; font-size: 15px;fill: rgb(40%,52%,61%); stroke:none;" transform="translate(0,1660) scale(1,-1)">最低延迟</text>
+			<text x="1044" y="790" style="font-family: Helvetica-Bold; font-size: 29px;fill: rgb(13%,42%,63%); stroke:none;" transform="translate(0,1580) scale(1,-1)">11 ms</text>
+			<text x="74" y="722" style="font-family: STSong-Light; font-size: 23px;fill: rgb(14%,30%,42%); stroke:none;" transform="translate(0,1444) scale(1,-1)">各分组延迟中位数</text>
+			<text x="1129.0" y="723" style="font-family: STSong-Light; font-size: 13px;fill: rgb(47%,58%,65%); stroke:none;" transform="translate(0,1446) scale(1,-1)">仅统计有数值记录；日本直连单列</text>
+			<path d="M 230,392 L 230,687 Z" style="stroke: rgb(90%,94%,96%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="226.942" y="374" style="font-family: Helvetica; font-size: 11px;fill: rgb(54%,63%,70%); stroke:none;" transform="translate(0,748) scale(1,-1)">0</text>
+			<path d="M 370,392 L 370,687 Z" style="stroke: rgb(90%,94%,96%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="363.884" y="374" style="font-family: Helvetica; font-size: 11px;fill: rgb(54%,63%,70%); stroke:none;" transform="translate(0,748) scale(1,-1)">20</text>
+			<path d="M 510,392 L 510,687 Z" style="stroke: rgb(90%,94%,96%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="503.884" y="374" style="font-family: Helvetica; font-size: 11px;fill: rgb(54%,63%,70%); stroke:none;" transform="translate(0,748) scale(1,-1)">40</text>
+			<path d="M 650,392 L 650,687 Z" style="stroke: rgb(90%,94%,96%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="643.884" y="374" style="font-family: Helvetica; font-size: 11px;fill: rgb(54%,63%,70%); stroke:none;" transform="translate(0,748) scale(1,-1)">60</text>
+			<path d="M 790,392 L 790,687 Z" style="stroke: rgb(90%,94%,96%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="783.884" y="374" style="font-family: Helvetica; font-size: 11px;fill: rgb(54%,63%,70%); stroke:none;" transform="translate(0,748) scale(1,-1)">80</text>
+			<path d="M 930,392 L 930,687 Z" style="stroke: rgb(90%,94%,96%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="920.826" y="374" style="font-family: Helvetica; font-size: 11px;fill: rgb(54%,63%,70%); stroke:none;" transform="translate(0,748) scale(1,-1)">100</text>
+			<path d="M 1070,392 L 1070,687 Z" style="stroke: rgb(90%,94%,96%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="1060.826" y="374" style="font-family: Helvetica; font-size: 11px;fill: rgb(54%,63%,70%); stroke:none;" transform="translate(0,748) scale(1,-1)">120</text>
+			<text x="1132" y="695" style="font-family: STSong-Light; font-size: 11px;fill: rgb(44%,56%,64%); stroke:none;" transform="translate(0,1390) scale(1,-1)">数值 / 总数</text>
+			<text x="1256.0" y="695" style="font-family: STSong-Light; font-size: 11px;fill: rgb(44%,56%,64%); stroke:none;" transform="translate(0,1390) scale(1,-1)">超时</text>
+			<text x="74" y="660" style="font-family: STSong-Light; font-size: 17px;fill: rgb(19%,36%,46%); stroke:none;" transform="translate(0,1320) scale(1,-1)">香港</text>
+			<rect x="230" y="655" width="182.0" height="21" rx="4" ry="4" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(14%,51%,77%); fill-rule: evenodd;"/>
+			<text x="424.0" y="660" style="font-family: Helvetica-Bold; font-size: 14px;fill: rgb(21%,42%,54%); stroke:none;" transform="translate(0,1320) scale(1,-1)">26 ms</text>
+			<text x="1142.065" y="660" style="font-family: Helvetica; font-size: 15px;fill: rgb(25%,42%,53%); stroke:none;" transform="translate(0,1320) scale(1,-1)">11 / 13</text>
+			<text x="1262.83" y="660" style="font-family: Helvetica-Bold; font-size: 15px;fill: rgb(81%,48%,12%); stroke:none;" transform="translate(0,1320) scale(1,-1)">2</text>
+			<text x="74" y="614" style="font-family: STSong-Light; font-size: 17px;fill: rgb(19%,36%,46%); stroke:none;" transform="translate(0,1228) scale(1,-1)">台湾</text>
+			<rect x="230" y="609" width="287.0" height="21" rx="4" ry="4" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(19%,63%,65%); fill-rule: evenodd;"/>
+			<text x="529.0" y="614" style="font-family: Helvetica-Bold; font-size: 14px;fill: rgb(21%,42%,54%); stroke:none;" transform="translate(0,1228) scale(1,-1)">41 ms</text>
+			<text x="1150.405" y="614" style="font-family: Helvetica; font-size: 15px;fill: rgb(25%,42%,53%); stroke:none;" transform="translate(0,1228) scale(1,-1)">4 / 5</text>
+			<text x="1262.83" y="614" style="font-family: Helvetica-Bold; font-size: 15px;fill: rgb(81%,48%,12%); stroke:none;" transform="translate(0,1228) scale(1,-1)">1</text>
+			<text x="74" y="568" style="font-family: STSong-Light; font-size: 17px;fill: rgb(19%,36%,46%); stroke:none;" transform="translate(0,1136) scale(1,-1)">新加坡</text>
+			<rect x="230" y="563" width="98.0" height="21" rx="4" ry="4" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(88%,63%,28%); fill-rule: evenodd;"/>
+			<text x="340.0" y="568" style="font-family: Helvetica-Bold; font-size: 14px;fill: rgb(21%,42%,54%); stroke:none;" transform="translate(0,1136) scale(1,-1)">14 ms</text>
+			<text x="1142.065" y="568" style="font-family: Helvetica; font-size: 15px;fill: rgb(25%,42%,53%); stroke:none;" transform="translate(0,1136) scale(1,-1)">10 / 10</text>
+			<text x="1262.83" y="568" style="font-family: Helvetica-Bold; font-size: 15px;fill: rgb(51%,63%,71%); stroke:none;" transform="translate(0,1136) scale(1,-1)">0</text>
+			<text x="74" y="522" style="font-family: STSong-Light; font-size: 17px;fill: rgb(19%,36%,46%); stroke:none;" transform="translate(0,1044) scale(1,-1)">日本</text>
+			<rect x="230" y="515" width="840" height="24" rx="5" ry="5" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,96%,91%); fill-rule: evenodd;"/>
+			<text x="248" y="522" style="font-family: STSong-Light; font-size: 14px;fill: rgb(69%,54%,33%); stroke:none;" transform="translate(0,1044) scale(1,-1)">无数值 · 全部超时</text>
+			<text x="1146.235" y="522" style="font-family: Helvetica; font-size: 15px;fill: rgb(25%,42%,53%); stroke:none;" transform="translate(0,1044) scale(1,-1)">0 / 10</text>
+			<text x="1258.66" y="522" style="font-family: Helvetica-Bold; font-size: 15px;fill: rgb(81%,48%,12%); stroke:none;" transform="translate(0,1044) scale(1,-1)">10</text>
+			<text x="74" y="476" style="font-family: STSong-Light; font-size: 17px;fill: rgb(19%,36%,46%); stroke:none;" transform="translate(0,952) scale(1,-1)">美国</text>
+			<rect x="230" y="471" width="721.0" height="21" rx="4" ry="4" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(34%,47%,58%); fill-rule: evenodd;"/>
+			<text x="963.0" y="476" style="font-family: Helvetica-Bold; font-size: 14px;fill: rgb(21%,42%,54%); stroke:none;" transform="translate(0,952) scale(1,-1)">103 ms</text>
+			<text x="1142.065" y="476" style="font-family: Helvetica; font-size: 15px;fill: rgb(25%,42%,53%); stroke:none;" transform="translate(0,952) scale(1,-1)">10 / 10</text>
+			<text x="1262.83" y="476" style="font-family: Helvetica-Bold; font-size: 15px;fill: rgb(51%,63%,71%); stroke:none;" transform="translate(0,952) scale(1,-1)">0</text>
+			<text x="74" y="430" style="font-family: STSong-Light; font-size: 17px;fill: rgb(19%,36%,46%); stroke:none;" transform="translate(0,860) scale(1,-1)">日本·直连</text>
+			<rect x="230" y="425" width="406.0" height="21" rx="4" ry="4" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(45%,41%,76%); fill-rule: evenodd;"/>
+			<text x="648.0" y="430" style="font-family: Helvetica-Bold; font-size: 14px;fill: rgb(21%,42%,54%); stroke:none;" transform="translate(0,860) scale(1,-1)">58 ms</text>
+			<text x="1150.405" y="430" style="font-family: Helvetica; font-size: 15px;fill: rgb(25%,42%,53%); stroke:none;" transform="translate(0,860) scale(1,-1)">4 / 4</text>
+			<text x="1262.83" y="430" style="font-family: Helvetica-Bold; font-size: 15px;fill: rgb(51%,63%,71%); stroke:none;" transform="translate(0,860) scale(1,-1)">0</text>
+			<rect x="74" y="185" width="1250" height="150" rx="14" ry="14" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(96%,97%,99%); fill-rule: evenodd;"/>
+			<text x="96" y="301" style="font-family: STSong-Light; font-size: 18px;fill: rgb(20%,37%,49%); stroke:none;" transform="translate(0,602) scale(1,-1)">采样条件与统计口径</text>
+			<text x="96" y="271" style="font-family: STSong-Light; font-size: 15px;fill: rgb(39%,51%,60%); stroke:none;" transform="translate(0,542) scale(1,-1)">上海 / 电信 · Windows版“微风网络”客户端 · 39条数值范围11—111ms。</text>
+			<text x="96" y="243" style="font-family: STSong-Light; font-size: 15px;fill: rgb(39%,51%,60%); stroke:none;" transform="translate(0,486) scale(1,-1)">日本01—10本次均超时，日本01—04-直连另列；香港13未在资料中展示。</text>
+			<text x="96" y="215" style="font-family: STSong-Light; font-size: 15px;fill: rgb(39%,51%,60%); stroke:none;" transform="translate(0,430) scale(1,-1)">超时不作0ms；单次延迟不代表下载速度、长期可用率或实时监测。</text>
+			<text x="74" y="146" style="font-family: STSong-Light; font-size: 13px;fill: rgb(47%,57%,65%); stroke:none;" transform="translate(0,292) scale(1,-1)">依据第三方提供的5张截图整理，未重新测量，未发布原照片。</text>
+			<text x="74" y="110" style="font-family: STSong-Light; font-size: 15px;fill: rgb(25%,43%,55%); stroke:none;" transform="translate(0,220) scale(1,-1)">叮当观察  /  jcvpn.blog</text>
+			<text x="1106.164" y="110" style="font-family: STSong-Light; font-size: 12px;fill: rgb(49%,59%,66%); stroke:none;" transform="translate(0,220) scale(1,-1)">2026-10-29 12:00（北京时间） · 上海电信</text>
+		</g>
+	</g>
+</svg>

@@ -1,0 +1,632 @@
+{
+  "brand": "微风网络 Breezenet",
+  "dataset_id": "breezenet-third-party-20261029-1200",
+  "mode": "snapshot",
+  "metric": "截图客户端显示的节点延迟",
+  "unit": "ms",
+  "source": "第三方提供的5张截图，经博客站长转交整理",
+  "source_screenshot_count": 5,
+  "source_attribution_basis": "用户说明",
+  "source_provider_name": null,
+  "source_publication_url": null,
+  "source_independence_verified": false,
+  "measured_date": "2026-10-29",
+  "measured_time": "12:00",
+  "reported_time_precision": "hour",
+  "period": "午间",
+  "timezone": "Asia/Shanghai",
+  "location": "上海",
+  "isp": "电信",
+  "client": "Windows版“微风网络”客户端",
+  "client_platform": "Windows",
+  "client_name": "微风网络",
+  "client_version": null,
+  "measurement_method": null,
+  "prepared_on": "2026-10-29",
+  "live_endpoint": null,
+  "independent_measurement": false,
+  "original_images_published": false,
+  "not_observed_labels": [
+    "香港13"
+  ],
+  "summary": {
+    "node_count": 52,
+    "response_count": 39,
+    "timeout_count": 13,
+    "min_ms": 11,
+    "max_ms": 111,
+    "median_ms": 28
+  },
+  "regions": [
+    {
+      "region": "香港",
+      "geographic_region": "香港",
+      "count": 13,
+      "response_count": 11,
+      "timeout_count": 2,
+      "median_ms": 26,
+      "min_ms": 25,
+      "max_ms": 29
+    },
+    {
+      "region": "台湾",
+      "geographic_region": "台湾",
+      "count": 5,
+      "response_count": 4,
+      "timeout_count": 1,
+      "median_ms": 41.0,
+      "min_ms": 38,
+      "max_ms": 42
+    },
+    {
+      "region": "新加坡",
+      "geographic_region": "新加坡",
+      "count": 10,
+      "response_count": 10,
+      "timeout_count": 0,
+      "median_ms": 14.0,
+      "min_ms": 11,
+      "max_ms": 17
+    },
+    {
+      "region": "日本",
+      "geographic_region": "日本",
+      "count": 10,
+      "response_count": 0,
+      "timeout_count": 10,
+      "median_ms": null,
+      "min_ms": null,
+      "max_ms": null
+    },
+    {
+      "region": "美国",
+      "geographic_region": "美国",
+      "count": 10,
+      "response_count": 10,
+      "timeout_count": 0,
+      "median_ms": 103.0,
+      "min_ms": 95,
+      "max_ms": 111
+    },
+    {
+      "region": "日本·直连",
+      "geographic_region": "日本",
+      "count": 4,
+      "response_count": 4,
+      "timeout_count": 0,
+      "median_ms": 58.0,
+      "min_ms": 57,
+      "max_ms": 64
+    }
+  ],
+  "records": [
+    {
+      "id": "HK01",
+      "label": "香港01",
+      "region": "香港",
+      "group": "香港",
+      "node_number": 1,
+      "latency_ms": null,
+      "result": "timeout",
+      "connection_label": null
+    },
+    {
+      "id": "HK02",
+      "label": "香港02",
+      "region": "香港",
+      "group": "香港",
+      "node_number": 2,
+      "latency_ms": null,
+      "result": "timeout",
+      "connection_label": null
+    },
+    {
+      "id": "HK03",
+      "label": "香港03",
+      "region": "香港",
+      "group": "香港",
+      "node_number": 3,
+      "latency_ms": 26,
+      "result": "response",
+      "connection_label": null
+    },
+    {
+      "id": "HK04",
+      "label": "香港04",
+      "region": "香港",
+      "group": "香港",
+      "node_number": 4,
+      "latency_ms": 29,
+      "result": "response",
+      "connection_label": null
+    },
+    {
+      "id": "HK05",
+      "label": "香港05",
+      "region": "香港",
+      "group": "香港",
+      "node_number": 5,
+      "latency_ms": 28,
+      "result": "response",
+      "connection_label": null
+    },
+    {
+      "id": "HK06",
+      "label": "香港06",
+      "region": "香港",
+      "group": "香港",
+      "node_number": 6,
+      "latency_ms": 26,
+      "result": "response",
+      "connection_label": null
+    },
+    {
+      "id": "HK07",
+      "label": "香港07",
+      "region": "香港",
+      "group": "香港",
+      "node_number": 7,
+      "latency_ms": 25,
+      "result": "response",
+      "connection_label": null
+    },
+    {
+      "id": "HK08",
+      "label": "香港08",
+      "region": "香港",
+      "group": "香港",
+      "node_number": 8,
+      "latency_ms": 26,
+      "result": "response",
+      "connection_label": null
+    },
+    {
+      "id": "HK09",
+      "label": "香港09",
+      "region": "香港",
+      "group": "香港",
+      "node_number": 9,
+      "latency_ms": 26,
+      "result": "response",
+      "connection_label": null
+    },
+    {
+      "id": "HK10",
+      "label": "香港10",
+      "region": "香港",
+      "group": "香港",
+      "node_number": 10,
+      "latency_ms": 28,
+      "result": "response",
+      "connection_label": null
+    },
+    {
+      "id": "HK11",
+      "label": "香港11",
+      "region": "香港",
+      "group": "香港",
+      "node_number": 11,
+      "latency_ms": 28,
+      "result": "response",
+      "connection_label": null
+    },
+    {
+      "id": "HK12",
+      "label": "香港12",
+      "region": "香港",
+      "group": "香港",
+      "node_number": 12,
+      "latency_ms": 27,
+      "result": "response",
+      "connection_label": null
+    },
+    {
+      "id": "HK14",
+      "label": "香港14",
+      "region": "香港",
+      "group": "香港",
+      "node_number": 14,
+      "latency_ms": 25,
+      "result": "response",
+      "connection_label": null
+    },
+    {
+      "id": "TW01",
+      "label": "台湾01",
+      "region": "台湾",
+      "group": "台湾",
+      "node_number": 1,
+      "latency_ms": 38,
+      "result": "response",
+      "connection_label": null
+    },
+    {
+      "id": "TW02",
+      "label": "台湾02",
+      "region": "台湾",
+      "group": "台湾",
+      "node_number": 2,
+      "latency_ms": null,
+      "result": "timeout",
+      "connection_label": null
+    },
+    {
+      "id": "TW03",
+      "label": "台湾03",
+      "region": "台湾",
+      "group": "台湾",
+      "node_number": 3,
+      "latency_ms": 41,
+      "result": "response",
+      "connection_label": null
+    },
+    {
+      "id": "TW04",
+      "label": "台湾04",
+      "region": "台湾",
+      "group": "台湾",
+      "node_number": 4,
+      "latency_ms": 42,
+      "result": "response",
+      "connection_label": null
+    },
+    {
+      "id": "TW05",
+      "label": "台湾05",
+      "region": "台湾",
+      "group": "台湾",
+      "node_number": 5,
+      "latency_ms": 41,
+      "result": "response",
+      "connection_label": null
+    },
+    {
+      "id": "SG01",
+      "label": "新加坡01",
+      "region": "新加坡",
+      "group": "新加坡",
+      "node_number": 1,
+      "latency_ms": 12,
+      "result": "response",
+      "connection_label": null
+    },
+    {
+      "id": "SG02",
+      "label": "新加坡02",
+      "region": "新加坡",
+      "group": "新加坡",
+      "node_number": 2,
+      "latency_ms": 12,
+      "result": "response",
+      "connection_label": null
+    },
+    {
+      "id": "SG03",
+      "label": "新加坡03",
+      "region": "新加坡",
+      "group": "新加坡",
+      "node_number": 3,
+      "latency_ms": 14,
+      "result": "response",
+      "connection_label": null
+    },
+    {
+      "id": "SG04",
+      "label": "新加坡04",
+      "region": "新加坡",
+      "group": "新加坡",
+      "node_number": 4,
+      "latency_ms": 14,
+      "result": "response",
+      "connection_label": null
+    },
+    {
+      "id": "SG05",
+      "label": "新加坡05",
+      "region": "新加坡",
+      "group": "新加坡",
+      "node_number": 5,
+      "latency_ms": 17,
+      "result": "response",
+      "connection_label": null
+    },
+    {
+      "id": "SG06",
+      "label": "新加坡06",
+      "region": "新加坡",
+      "group": "新加坡",
+      "node_number": 6,
+      "latency_ms": 11,
+      "result": "response",
+      "connection_label": null
+    },
+    {
+      "id": "SG07",
+      "label": "新加坡07",
+      "region": "新加坡",
+      "group": "新加坡",
+      "node_number": 7,
+      "latency_ms": 17,
+      "result": "response",
+      "connection_label": null
+    },
+    {
+      "id": "SG08",
+      "label": "新加坡08",
+      "region": "新加坡",
+      "group": "新加坡",
+      "node_number": 8,
+      "latency_ms": 13,
+      "result": "response",
+      "connection_label": null
+    },
+    {
+      "id": "SG09",
+      "label": "新加坡09",
+      "region": "新加坡",
+      "group": "新加坡",
+      "node_number": 9,
+      "latency_ms": 14,
+      "result": "response",
+      "connection_label": null
+    },
+    {
+      "id": "SG10",
+      "label": "新加坡10",
+      "region": "新加坡",
+      "group": "新加坡",
+      "node_number": 10,
+      "latency_ms": 15,
+      "result": "response",
+      "connection_label": null
+    },
+    {
+      "id": "JP01",
+      "label": "日本01",
+      "region": "日本",
+      "group": "日本",
+      "node_number": 1,
+      "latency_ms": null,
+      "result": "timeout",
+      "connection_label": null
+    },
+    {
+      "id": "JP02",
+      "label": "日本02",
+      "region": "日本",
+      "group": "日本",
+      "node_number": 2,
+      "latency_ms": null,
+      "result": "timeout",
+      "connection_label": null
+    },
+    {
+      "id": "JP03",
+      "label": "日本03",
+      "region": "日本",
+      "group": "日本",
+      "node_number": 3,
+      "latency_ms": null,
+      "result": "timeout",
+      "connection_label": null
+    },
+    {
+      "id": "JP04",
+      "label": "日本04",
+      "region": "日本",
+      "group": "日本",
+      "node_number": 4,
+      "latency_ms": null,
+      "result": "timeout",
+      "connection_label": null
+    },
+    {
+      "id": "JP05",
+      "label": "日本05",
+      "region": "日本",
+      "group": "日本",
+      "node_number": 5,
+      "latency_ms": null,
+      "result": "timeout",
+      "connection_label": null
+    },
+    {
+      "id": "JP06",
+      "label": "日本06",
+      "region": "日本",
+      "group": "日本",
+      "node_number": 6,
+      "latency_ms": null,
+      "result": "timeout",
+      "connection_label": null
+    },
+    {
+      "id": "JP07",
+      "label": "日本07",
+      "region": "日本",
+      "group": "日本",
+      "node_number": 7,
+      "latency_ms": null,
+      "result": "timeout",
+      "connection_label": null
+    },
+    {
+      "id": "JP08",
+      "label": "日本08",
+      "region": "日本",
+      "group": "日本",
+      "node_number": 8,
+      "latency_ms": null,
+      "result": "timeout",
+      "connection_label": null
+    },
+    {
+      "id": "JP09",
+      "label": "日本09",
+      "region": "日本",
+      "group": "日本",
+      "node_number": 9,
+      "latency_ms": null,
+      "result": "timeout",
+      "connection_label": null
+    },
+    {
+      "id": "JP10",
+      "label": "日本10",
+      "region": "日本",
+      "group": "日本",
+      "node_number": 10,
+      "latency_ms": null,
+      "result": "timeout",
+      "connection_label": null
+    },
+    {
+      "id": "US01",
+      "label": "美国01",
+      "region": "美国",
+      "group": "美国",
+      "node_number": 1,
+      "latency_ms": 95,
+      "result": "response",
+      "connection_label": null
+    },
+    {
+      "id": "US02",
+      "label": "美国02",
+      "region": "美国",
+      "group": "美国",
+      "node_number": 2,
+      "latency_ms": 111,
+      "result": "response",
+      "connection_label": null
+    },
+    {
+      "id": "US03",
+      "label": "美国03",
+      "region": "美国",
+      "group": "美国",
+      "node_number": 3,
+      "latency_ms": 103,
+      "result": "response",
+      "connection_label": null
+    },
+    {
+      "id": "US04",
+      "label": "美国04",
+      "region": "美国",
+      "group": "美国",
+      "node_number": 4,
+      "latency_ms": 103,
+      "result": "response",
+      "connection_label": null
+    },
+    {
+      "id": "US05",
+      "label": "美国05",
+      "region": "美国",
+      "group": "美国",
+      "node_number": 5,
+      "latency_ms": 103,
+      "result": "response",
+      "connection_label": null
+    },
+    {
+      "id": "US06",
+      "label": "美国06",
+      "region": "美国",
+      "group": "美国",
+      "node_number": 6,
+      "latency_ms": 105,
+      "result": "response",
+      "connection_label": null
+    },
+    {
+      "id": "US07",
+      "label": "美国07",
+      "region": "美国",
+      "group": "美国",
+      "node_number": 7,
+      "latency_ms": 99,
+      "result": "response",
+      "connection_label": null
+    },
+    {
+      "id": "US08",
+      "label": "美国08",
+      "region": "美国",
+      "group": "美国",
+      "node_number": 8,
+      "latency_ms": 103,
+      "result": "response",
+      "connection_label": null
+    },
+    {
+      "id": "US09",
+      "label": "美国09",
+      "region": "美国",
+      "group": "美国",
+      "node_number": 9,
+      "latency_ms": 96,
+      "result": "response",
+      "connection_label": null
+    },
+    {
+      "id": "US10",
+      "label": "美国10",
+      "region": "美国",
+      "group": "美国",
+      "node_number": 10,
+      "latency_ms": 95,
+      "result": "response",
+      "connection_label": null
+    },
+    {
+      "id": "JP-DIRECT01",
+      "label": "日本01-直连",
+      "region": "日本",
+      "group": "日本·直连",
+      "node_number": 1,
+      "latency_ms": 57,
+      "result": "response",
+      "connection_label": "直连"
+    },
+    {
+      "id": "JP-DIRECT02",
+      "label": "日本02-直连",
+      "region": "日本",
+      "group": "日本·直连",
+      "node_number": 2,
+      "latency_ms": 64,
+      "result": "response",
+      "connection_label": "直连"
+    },
+    {
+      "id": "JP-DIRECT03",
+      "label": "日本03-直连",
+      "region": "日本",
+      "group": "日本·直连",
+      "node_number": 3,
+      "latency_ms": 58,
+      "result": "response",
+      "connection_label": "直连"
+    },
+    {
+      "id": "JP-DIRECT04",
+      "label": "日本04-直连",
+      "region": "日本",
+      "group": "日本·直连",
+      "node_number": 4,
+      "latency_ms": 58,
+      "result": "response",
+      "connection_label": "直连"
+    }
+  ],
+  "method_notes": [
+    "每个节点仅有一条截图记录，不构成时间序列或长期可用率。",
+    "超时单列，不当作0ms，也不参与延迟中位数或范围计算。",
+    "日本01—10为超时；名称带直连的日本01—04另作一组，不与前者混算。",
+    "香港13未出现在本次资料中，不添加节点，也不推断其状态。",
+    "日期、时间、上海电信网络及Windows版微风网络客户端由用户补充说明；未重新测量。",
+    "延迟ms不表示下载或上传速度，不推导带宽、丢包率或实时监测结果。"
+  ]
+}

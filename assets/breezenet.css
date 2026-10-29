@@ -1,3 +1,4 @@
+.breeze-latency .lat-region-track.is-unmeasured{background:repeating-linear-gradient(135deg,#fff7eb 0,#fff7eb 5px,#f1e7d8 5px,#f1e7d8 6px)}
 .breeze-hero{margin-top:26px;display:grid;grid-template-columns:1.45fr 1fr;gap:25px;align-items:stretch}
 .breeze-intro,.breeze-spotlight{border:1px solid #fff;border-radius:25px;background:#fffffff2;padding:32px;box-shadow:0 12px 40px #1477bb14;min-width:0}
 .breeze-intro .overline{color:#398b8c}.breeze-heading{display:flex;align-items:center;gap:17px;margin:22px 0}.breeze-mark{display:grid;place-items:center;flex:none;width:60px;height:60px;background:#e5f4ee;color:#397b68;border-radius:19px;font-size:34px;font-weight:650}
