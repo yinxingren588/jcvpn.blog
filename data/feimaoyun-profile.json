@@ -27,7 +27,7 @@
     {"name": "ChatGPT", "category": "AI工具访问"},
     {"name": "TikTok", "category": "短视频平台"}
   ],
-  "platform_support_basis": "站长提供的品牌服务说明，尚未提供逐平台实际访问记录",
+  "platform_support_basis": "平台支持方向按站长提供的品牌服务说明整理；另有2026-10-29上海电信、新加坡节点的ChatGPT问答反馈，见feimaoyun-access-records.json",
   "regions": [
     {"name": "香港", "reported_node_count": 20},
     {"name": "台湾", "reported_node_count": 10},
@@ -55,9 +55,10 @@
     "保留站长提供的原始推广入口及code参数。",
     "地区数量指本次资料列明的15个地区，不作为完整地区总数或在线节点数。",
     "仅六个地区提供了节点数量，其余地区不补造数量。",
-    "线路、原生IP、设备和平台支持按品牌介绍整理，不等于本站已完成测速或解锁测试。",
+    "线路、原生IP、设备和平台支持按品牌介绍整理；ChatGPT问答另有站长使用反馈，不等于本站已完成测速或其他平台访问测试。",
     "套餐已按站长提供的3张截图与价格确认整理，详见feimaoyun-plans.json。",
     "客户端类型、iOS识别码与各平台登录连接流程已按站长确认整理，详见feimaoyun-clients.json。",
-    "自研客户端从官网首页直接下载；iOS具体下载页面、优惠码与实际测试记录等待飞猫云自身资料补充；已确认的售后规则见feimaoyun-service-rules.json。"
+    "自研客户端从官网首页直接下载；iOS具体下载页面与优惠码等待飞猫云自身资料补充；已确认的售后规则见feimaoyun-service-rules.json。",
+    "已记录2026-10-29上海电信、新加坡节点的ChatGPT成功问答反馈，未提供延迟或下载速度数值。"
   ]
 }

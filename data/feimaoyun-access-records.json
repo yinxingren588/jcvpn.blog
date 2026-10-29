@@ -1,0 +1,37 @@
+{
+  "brand_id": "feimaoyun",
+  "brand": "飞猫云",
+  "source": "博客站长提供的实际使用反馈",
+  "prepared_on": "2026-10-29",
+  "timezone": "Asia/Shanghai",
+  "source_independence_verified": false,
+  "records": [
+    {
+      "id": "chatgpt-sg-shanghai-telecom-20261029",
+      "platform": "ChatGPT",
+      "tested_on": "2026-10-29",
+      "tested_time": null,
+      "test_location": "上海",
+      "isp": "电信",
+      "node_region": "新加坡",
+      "node_identifier": null,
+      "task": "发送问题并收到回答",
+      "result": "可以正常发送问题，并收到回答",
+      "status": "reported_success",
+      "independently_retested": false,
+      "client_name": null,
+      "client_platform": null,
+      "account_plan": null,
+      "browser_or_app": null,
+      "evidence_attachment": null,
+      "scope": "2026-10-29，在上海使用电信网络，连接飞猫云新加坡地区节点的ChatGPT问答操作"
+    }
+  ],
+  "notes": [
+    "依据站长确认的当天日期、上海所在地、电信运营商、新加坡节点及实际问答结果整理。",
+    "只记录站长提供的使用反馈，未由本站重新测试。",
+    "没有提供具体时刻、节点编号、客户端、账户套餐或截图，不填造这些信息。",
+    "本条问答反馈不推断API、付费功能、流媒体播放、其他节点或其他时段的结果。",
+    "没有延迟或下载速度数值，不作为测速记录。"
+  ]
+}
