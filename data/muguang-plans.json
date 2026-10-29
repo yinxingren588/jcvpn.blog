@@ -5,6 +5,15 @@
   "currency": "CNY",
   "independently_verified": false,
   "coupon": null,
+  "periodic_reset_policy": {
+    "scope": "周期套餐",
+    "eligible_plan_ids": ["light-year", "basic", "standard", "flagship", "supreme"],
+    "price_basis": "与所购套餐同价",
+    "activation": "购买后立即恢复该套餐完整流量额度",
+    "description": "周期套餐的流量用完后，可购买与所购套餐同价的流量重置包；购买后立即恢复该套餐的完整流量额度。",
+    "confirmed_by": "博客站长",
+    "confirmed_on": "2026-10-29"
+  },
   "standard_traffic_confirmation": {
     "screenshot_header_gb": 240,
     "screenshot_detail_gb": 300,
