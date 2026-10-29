@@ -50,6 +50,9 @@ def faqs(data, latency=None, coupon=None, profile=None, clients=None):
     if clients:
         questions.append(('微风Windows客户端如何下载、登录和连接？', '在微风官网首页直接下载Windows版“微风网络”客户端。打开后使用微风官网账号登录，选择节点，再点击“连接”。该流程由博客站长于' + clients['updated_on'] + '确认。'))
         questions.append(('微风在Android、macOS和iOS分别使用什么客户端？', 'Windows、macOS与Android使用“微风网络”客户端，直接使用微风官网账号登录；iOS使用Nextin应用。客户端名称与登录方式由博客站长确认。'))
+        identifier = next((item.get('brand_identifier') for item in clients['platforms'] if item['os'] == 'iOS'), None)
+        if identifier:
+            questions.append(('微风iOS用户在Nextin填写什么品牌识别码？', f'微风的Nextin品牌识别码是{identifier}。打开Nextin应用，在登录前的品牌识别步骤填写{identifier}，再继续登录。这是客户端品牌识别码；套餐优惠码为weifeng90。'))
     return questions
 
 
@@ -118,6 +121,9 @@ def build_breezenet_profile(root):
     if clients:
         client_section = '<section class="section" id="breeze-clients"><div class="breeze-section-title"><span class="overline">WINDOWS / CONNECT IN THREE STEPS</span><h2>从官网下载，选好节点再连接。</h2><p>Windows版客户端名称为“微风网络”，使用微风官网账号登录。</p></div><div class="breeze-guide-grid"><article><h3>01 · 从官网首页下载</h3><p>在微风官网首页找到Windows版“微风网络”客户端下载入口，下载并打开客户端。</p><a href="' + url + '" target="_blank" rel="sponsored noopener noreferrer">访问微风入口 ↗</a></article><article><h3>02 · 使用官网账号登录</h3><p>直接使用微风官网账号登录客户端。</p></article><article><h3>03 · 选择节点并连接</h3><p>登录成功后，先选择节点，再点击“连接”。</p></article></div><p class="breeze-source-line">下载入口与使用流程由博客站长于' + e(clients['updated_on']) + '确认。</p></section>'
         platform_section = '<div class="breeze-section-title"><span class="overline">CLIENTS & PLATFORMS</span><h2>按设备选择客户端，再查看使用流程。</h2><p>Windows、macOS与Android使用微风网络客户端；iOS使用Nextin。</p></div><div class="breeze-source-grid"><div><h3>Windows / macOS / Android · 微风网络</h3><p>这三个系统均使用“微风网络”客户端，直接使用微风官网账号登录。</p></div><div><h3>iOS · Nextin</h3><p>iOS使用Nextin应用。</p></div></div>'
+        identifier = next((item.get('brand_identifier') for item in clients['platforms'] if item['os'] == 'iOS'), None)
+        if identifier:
+            platform_section = platform_section.replace('<p>iOS使用Nextin应用。</p>', '<p>iOS使用Nextin应用。登录前先填写品牌识别码 <code>' + e(identifier) + '</code>，再继续登录。</p>')
         client_section = client_section.replace('<div class="breeze-section-title"><span class="overline">WINDOWS / CONNECT IN THREE STEPS</span>', platform_section + '<div class="breeze-section-title" style="margin-top:26px"><span class="overline">WINDOWS / CONNECT IN THREE STEPS</span>', 1)
         client_section = client_section.replace('<h2>从官网下载，选好节点再连接。</h2>', '<h3>Windows：从官网下载，选好节点再连接。</h3>', 1)
         body = body.replace('<section class="section" id="breeze-faq">', client_section + '<section class="section" id="breeze-faq">', 1)
@@ -173,7 +179,8 @@ def build_breezenet_profile(root):
     if coupon:
         markdown += f'## 清风年付优惠\n\n优惠码：{coupon["code"]}，{coupon["discount_label"]}。清风原价137元/年、每月100GB，券后按原价计算为{annual_paid}元/年，折算约{monthly_paid}元/月，实际按年支付。{scope}；{expiry}。来源：{coupon["source"]}。\n\n'
     if clients:
-        markdown += '## 各系统客户端\n\n| 系统 | 客户端 | 已确认的登录方式 |\n| --- | --- | --- |\n| Windows / macOS / Android | 微风网络 | 直接使用微风官网账号登录 |\n| iOS | Nextin | 具体登录步骤待补充 |\n\n'
+        ios_login = '登录前先填写品牌识别码 ' + identifier + '，再继续登录' if identifier else '具体登录步骤待补充'
+        markdown += '## 各系统客户端\n\n| 系统 | 客户端 | 已确认的登录方式 |\n| --- | --- | --- |\n| Windows / macOS / Android | 微风网络 | 直接使用微风官网账号登录 |\n| iOS | Nextin | ' + ios_login + ' |\n\n'
         markdown += '## Windows客户端使用教程\n\n1. 在微风官网首页直接下载Windows版“微风网络”客户端，下载并打开。\n2. 直接使用微风官网账号登录。\n3. 选择节点，再点击“连接”。\n\n下载入口与使用流程由博客站长于' + clients['updated_on'] + '确认。\n\n'
     markdown += '## 常见问题\n\n' + ''.join('### ' + question + '\n\n' + answer + '\n\n' for question, answer in faqs(data, latency_data, coupon, profile, clients))
     if latency_data:

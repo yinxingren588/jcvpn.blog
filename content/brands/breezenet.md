@@ -68,7 +68,7 @@
 | 系统 | 客户端 | 已确认的登录方式 |
 | --- | --- | --- |
 | Windows / macOS / Android | 微风网络 | 直接使用微风官网账号登录 |
-| iOS | Nextin | 具体登录步骤待补充 |
+| iOS | Nextin | 登录前先填写品牌识别码 wfwl，再继续登录 |
 
 ## Windows客户端使用教程
 
@@ -155,6 +155,10 @@
 ### 微风在Android、macOS和iOS分别使用什么客户端？
 
 Windows、macOS与Android使用“微风网络”客户端，直接使用微风官网账号登录；iOS使用Nextin应用。客户端名称与登录方式由博客站长确认。
+
+### 微风iOS用户在Nextin填写什么品牌识别码？
+
+微风的Nextin品牌识别码是wfwl。打开Nextin应用，在登录前的品牌识别步骤填写wfwl，再继续登录。这是客户端品牌识别码；套餐优惠码为weifeng90。
 
 
 ## 午间节点延迟记录
