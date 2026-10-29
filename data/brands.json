@@ -91,7 +91,8 @@
       "line_type_from_materials": "IPLC专线",
       "listed_region_count": 15,
       "advertised_single_node_peak_gbps": 2.5,
-      "plan_count": 9
+      "plan_count": 9,
+      "access_record_count": 1
     },
     {
       "id": "lingdongyun",

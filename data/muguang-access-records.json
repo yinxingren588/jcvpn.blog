@@ -1,0 +1,39 @@
+{
+  "brand_id": "muguang",
+  "brand": "暮光网络",
+  "source": "博客站长提供的实际使用反馈",
+  "prepared_on": "2026-10-29",
+  "timezone": "Asia/Shanghai",
+  "source_independence_verified": false,
+  "records": [
+    {
+      "id": "chatgpt-sg-shanghai-telecom-20261029-2300",
+      "platform": "ChatGPT",
+      "tested_on": "2026-10-29",
+      "tested_time": "23:00",
+      "tested_at": "2026-10-29T23:00:00+08:00",
+      "time_period_from_source": "晚高峰",
+      "test_location": "上海",
+      "isp": "电信",
+      "node_region": "新加坡",
+      "node_identifier": null,
+      "task": "发送问题并收到回答",
+      "result": "能够正常发送问题，并收到回答",
+      "status": "reported_success",
+      "independently_retested": false,
+      "client_name": null,
+      "client_platform": null,
+      "account_plan": null,
+      "browser_or_app": null,
+      "evidence_attachment": null,
+      "scope": "2026-10-29 23:00（北京时间），在上海使用电信网络，连接暮光网络新加坡节点的ChatGPT问答操作"
+    }
+  ],
+  "notes": [
+    "日期、晚上十一点、晚高峰、上海、电信、新加坡节点及问答成功结果均由站长提供；晚上十一点记为北京时间23:00。",
+    "按实际使用反馈整理，本站未重新测试。",
+    "未提供客户端、版本、节点编号、账户套餐或截图，不从品牌客户端介绍推断这些信息。",
+    "本次问答反馈不推断API、付费功能、流媒体播放、其他节点或其他时段的结果。",
+    "本条不包含延迟或下载速度数据，不作为测速记录。"
+  ]
+}
