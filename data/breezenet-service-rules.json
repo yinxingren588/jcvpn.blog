@@ -1,7 +1,7 @@
 {
   "brand_id": "breezenet",
   "updated_on": "2026-10-29",
-  "source": "博客站长确认的微风流量重置、套餐升级、提前续费及技术问题退款规则",
+  "source": "博客站长确认的微风流量重置、套餐升级、提前续费、技术问题退款规则及官网客服入口",
   "independently_verified": false,
   "scope": "流量重置、套餐升级、提前续费及技术问题退款的已确认规则",
   "exhausted_traffic_options": ["购买流量重置包", "升级套餐"],
@@ -25,10 +25,16 @@
   "refund": {
     "supported": true,
     "condition": "技术问题经客服协助后仍完全无法使用",
-    "application_channel": "通过客服申请",
+    "application_channel": "通过微风官网内的客服入口申请",
     "amount_rule": "全额退款",
     "application_deadline": null,
     "application_deadline_status": "待确认",
     "refund_destination": null
+  },
+  "support": {
+    "channel": "微风官网内的客服入口",
+    "description": "售后咨询和符合条件的退款申请，均通过微风官网内的客服入口联系",
+    "direct_support_url": null,
+    "public_telegram_account": null
   }
 }

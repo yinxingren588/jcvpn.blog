@@ -67,6 +67,8 @@ def faqs(data, latency=None, coupon=None, profile=None, clients=None, rules=None
         if rules.get('refund'):
             refund = rules['refund']
             questions.append(('微风出现技术问题时支持退款吗？', '支持。在' + refund['condition'] + '的情况下，可' + refund['application_channel'] + refund['amount_rule'] + '。申请期限尚未确认，申请前请向客服核对。该规则由博客站长确认。'))
+        if rules.get('support'):
+            questions.append(('微风售后咨询或退款申请在哪里联系？', rules['support']['description'] + '。进入微风官网后，找到站内客服入口沟通。'))
     return questions
 
 
@@ -168,6 +170,9 @@ def build_breezenet_profile(root):
             rules_section = rules_section.replace('重置、升级与续费，分清流量和有效期。', '流量、续费与售后，把规则说清楚。', 1)
             rules_section = rules_section.replace('月流量用完后可选择重置或升级；提前续费只延长有效期。', '对照流量重置、套餐升级、提前续费与技术问题退款的处理方式。', 1)
             rules_section = rules_section.replace('TRAFFIC, RENEWAL & UPGRADE', 'TRAFFIC & SERVICE RULES', 1)
+        if rules.get('support'):
+            support_html = '<p class="breeze-reading-note">' + e(rules['support']['description']) + '。</p><div class="breeze-source-links"><a href="' + url + '" target="_blank" rel="sponsored noopener noreferrer">前往微风官网 ↗</a></div>'
+            rules_section = rules_section.replace('</section>', support_html + '</section>', 1)
         body = body.replace('<section class="section" id="breeze-faq">', rules_section + '<section class="section" id="breeze-faq">', 1)
         body = body.replace('<a href="#breeze-faq">常见问题</a>', '<a href="#breeze-rules">流量规则</a><a href="#breeze-faq">常见问题</a>', 1)
     page = '<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>微风网络 Breezenet｜套餐价格、IPLC线路与流量说明｜叮当观察</title><meta name="description" content="' + e(description, quote=True) + '"><link rel="stylesheet" href="assets/site-base.css"><link rel="stylesheet" href="assets/doraemon-theme.css"><link rel="stylesheet" href="assets/topics.css"><link rel="stylesheet" href="assets/breezenet.css"><script src="assets/breezenet.js" defer></script></head><body><div class="shell">' + header('brands') + '<main>' + body + '</main>' + footer() + '</div></body></html>'
@@ -236,6 +241,8 @@ def build_breezenet_profile(root):
         if rules.get('refund'):
             refund = rules['refund']
             markdown += '### 技术问题退款\n\n在' + refund['condition'] + '的情况下，可' + refund['application_channel'] + refund['amount_rule'] + '。申请期限尚未确认，申请前请向客服核对。\n\n'
+        if rules.get('support'):
+            markdown += '### 售后客服入口\n\n' + rules['support']['description'] + '。\n\n[前往微风官网](' + data['entry_url'] + ')。进入官网后，找到站内客服入口沟通。\n\n'
     markdown += '## 常见问题\n\n' + ''.join('### ' + question + '\n\n' + answer + '\n\n' for question, answer in faqs(data, latency_data, coupon, profile, clients, rules))
     if latency_data:
         from breeze_latency import markdown as latency_markdown
