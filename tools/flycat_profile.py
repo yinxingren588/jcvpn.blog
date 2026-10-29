@@ -34,6 +34,11 @@ def build_flycat_profile(root):
     access = json.loads((root / 'data/feimaoyun-access-records.json').read_text(encoding='utf-8'))
     coupon = json.loads((root / 'data/feimaoyun-coupon.json').read_text(encoding='utf-8'))
     url = e(data['entry_url'], quote=True)
+    logo = data['logo']
+    logo_revision = sha256((root / logo['image']).read_bytes()).hexdigest()[:12]
+    logo_image = '<img class="feimaoyun-logo-image" src="' + e(logo['image'], quote=True) + '?v=' + logo_revision + '" alt="飞猫云Logo" width="' + str(logo['width']) + '" height="' + str(logo['height']) + '" decoding="async">'
+    logo_css_revision = sha256((root / 'assets/flycat-logo.css').read_bytes()).hexdigest()[:12]
+    logo_css = '<link rel="stylesheet" href="assets/flycat-logo.css?v=' + logo_css_revision + '">'
     features = ''.join('<article><h3>' + e(item['title']) + '</h3><p>' + e(item['description']) + '</p></article>' for item in data['features'])
     counted = ''.join('<article class="flycat-region"><h3>' + e(item['name']) + '</h3><strong>' + str(item['reported_node_count']) + '<small>个</small></strong></article>' for item in data['regions'] if item['reported_node_count'] is not None)
     other_regions = ''.join('<span>' + e(item['name']) + '</span>' for item in data['regions'] if item['reported_node_count'] is None)
@@ -44,7 +49,7 @@ def build_flycat_profile(root):
     client_section = render_clients(clients)
     service_section = render_service(service, url)
     access_section = render_access(access)
-    body = f'''<section class="flycat-hero" id="flycat-about"><span class="overline">FLYCAT / BRAND PROFILE</span><h1>飞猫云</h1><p class="flycat-tagline">原生IP与多地区节点，面向多端使用。</p><p class="flycat-intro">{e(data['intro'])}</p><div class="flycat-highlights"><span>IPLC专线</span><span>原生IP线路</span><span>不限设备连接</span><span>{len(data['regions'])}个资料列明地区</span></div><div class="flycat-actions"><a class="btn" href="{url}" target="_blank" rel="sponsored noopener noreferrer">访问飞猫云入口 <span aria-hidden="true">↗</span></a><a class="textlink" href="#flycat-regions">查看节点地区 →</a></div><p class="flycat-date">品牌资料由站长提供 · 整理日期：{data['updated_on']}</p></section>
+    body = f'''<section class="flycat-hero" id="flycat-about"><span class="overline">FLYCAT / BRAND PROFILE</span><div class="flycat-brand-heading"><span class="feimaoyun-logo-frame">{logo_image}</span><div><h1>飞猫云</h1><p class="flycat-tagline">原生IP与多地区节点，面向多端使用。</p></div></div><p class="flycat-intro">{e(data['intro'])}</p><div class="flycat-highlights"><span>IPLC专线</span><span>原生IP线路</span><span>不限设备连接</span><span>{len(data['regions'])}个资料列明地区</span></div><div class="flycat-actions"><a class="btn" href="{url}" target="_blank" rel="sponsored noopener noreferrer">访问飞猫云入口 <span aria-hidden="true">↗</span></a><a class="textlink" href="#flycat-regions">查看节点地区 →</a></div><p class="flycat-date">品牌资料由站长提供 · 整理日期：{data['updated_on']}</p></section>
 <nav class="flycat-jumps" aria-label="飞猫云页面目录"><a href="#flycat-about">品牌介绍</a><a href="#flycat-coupon">九折优惠码</a><a href="#flycat-plans">7款套餐</a><a href="#flycat-compare">价格对比</a><a href="#flycat-choose">如何选择</a><a href="#flycat-clients">客户端教程</a><a href="#flycat-features">线路与设备</a><a href="#flycat-regions">节点地区</a><a href="#flycat-platforms">平台支持</a><a href="#flycat-access-records">ChatGPT记录</a><a href="#flycat-service">流量规则</a><a href="#flycat-faq">常见问题</a><a href="#flycat-sources">资料来源</a></nav>
 {coupon_section}
 {packages}
@@ -60,20 +65,25 @@ def build_flycat_profile(root):
     description = '飞猫云机场套餐与使用指南：学生版84元/年、每月50GB；优惠码flycat888享九折，适用于学生版以外6款套餐。对比月付、不限时与定制价格，了解IPLC、客户端教程、流量重置与24小时技术问题退款条件，并查看ChatGPT使用记录。'
     floating_revision = sha256((root / 'assets/flycat-floating.js').read_bytes()).hexdigest()[:12]
     floating_css_revision = sha256((root / 'assets/invisible-floating.css').read_bytes()).hexdigest()[:12]
-    page = '<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>飞猫云机场套餐价格｜IPLC专线、原生IP与节点介绍｜叮当观察</title><meta name="description" content="' + e(description, quote=True) + '"><link rel="stylesheet" href="assets/site-base.css"><link rel="stylesheet" href="assets/doraemon-theme.css"><link rel="stylesheet" href="assets/topics.css"><link rel="stylesheet" href="assets/invisible-access.css"><link rel="stylesheet" href="assets/invisible-floating.css?v=' + floating_css_revision + '"><link rel="stylesheet" href="assets/flycat.css?v=' + revision + '"></head><body class="has-floating-promo has-flycat-floating">' + render_floating(url, coupon) + '<div class="shell">' + header('brands') + '<main>' + body + '</main>' + footer() + '</div><script src="assets/flycat-floating.js?v=' + floating_revision + '" defer></script></body></html>'
+    page = '<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>飞猫云机场套餐价格｜IPLC专线、原生IP与节点介绍｜叮当观察</title><meta name="description" content="' + e(description, quote=True) + '"><link rel="stylesheet" href="assets/site-base.css"><link rel="stylesheet" href="assets/doraemon-theme.css"><link rel="stylesheet" href="assets/topics.css"><link rel="stylesheet" href="assets/invisible-access.css"><link rel="stylesheet" href="assets/invisible-floating.css?v=' + floating_css_revision + '"><link rel="stylesheet" href="assets/flycat.css?v=' + revision + '">' + logo_css + '</head><body class="has-floating-promo has-flycat-floating">' + render_floating(url, coupon, logo_image) + '<div class="shell">' + header('brands') + '<main>' + body + '</main>' + footer() + '</div><script src="assets/flycat-floating.js?v=' + floating_revision + '" defer></script></body></html>'
     page = page.replace('查看节点地区 →', '查看7款套餐 →', 1).replace('href="#flycat-regions">查看7款套餐', 'href="#flycat-plans">查看7款套餐', 1)
     write_changed(root / 'brand-feimaoyun.html', page)
     for name in ('index.html', 'brands.html'):
         path = root / name
         original = path.read_text(encoding='utf-8')
         updated = re.sub(r'<a\b[^>]*href="brand-feimaoyun\.html"[^>]*>.*?</a>', lambda match: re.sub(r'<p>.*?</p>', '<p>IPLC线路 · 7款套餐与原生IP介绍</p>', match[0], count=1, flags=re.S), original, flags=re.S)
+        updated = re.sub(r'(<a\b[^>]*href="brand-feimaoyun\.html"[^>]*>.*?)<span class="brand-icon(?: feimaoyun-logo-frame)?"[^>]*>.*?</span>', lambda match: match[1] + '<span class="brand-icon feimaoyun-logo-frame">' + logo_image + '</span>', updated, count=1, flags=re.S)
+        updated = re.sub(r'<link rel="stylesheet" href="assets/flycat-logo\.css(?:\?[^\"]*)?">', '', updated)
+        updated = updated.replace('</head>', logo_css + '</head>', 1)
         write_changed(path, updated)
     catalog_path = root / 'data/brands.json'
     catalog = json.loads(catalog_path.read_text(encoding='utf-8'))
     brand = next(item for item in catalog['brands'] if item['id'] == 'feimaoyun')
     brand.update(profile_status='station_supplied_introduction_and_7_plans', verification_status='station_provided_not_independently_verified', source_type=data['source'] + '；' + plans['source'], source_date=data['updated_on'], line_type_from_materials=data['line_type'], listed_region_count=len(data['regions']), plan_count=len(plans['plans']), page_checked_on=data['entry_observation']['checked_on'], page_observation=data['entry_observation']['observation'])
+    brand['logo'] = logo
     write_changed(catalog_path, json.dumps(catalog, ensure_ascii=False, indent=2) + '\n')
     text = '# 飞猫云\n\n整理日期：' + data['updated_on'] + '。来源：' + data['source'] + '。\n\n## 品牌介绍\n\n' + data['intro'] + '\n\n'
+    text += 'Logo依据站长提供的小图高清重制，蓝色圆形、透明背景，保留内部白色标志。\n\n'
     text += '## 线路与设备\n\n' + ''.join('### ' + item['title'] + '\n\n' + item['description'] + '\n\n' for item in data['features'])
     text += '## 节点地区\n\n| 地区 | 资料提供的节点数量 |\n| --- | --- |\n'
     text += ''.join('| ' + item['name'] + ' | ' + (str(item['reported_node_count']) if item['reported_node_count'] is not None else '未提供数量') + ' |\n' for item in data['regions'])

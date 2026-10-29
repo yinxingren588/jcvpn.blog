@@ -6,6 +6,17 @@
   "source": "博客站长提供的飞猫云品牌介绍与节点分布",
   "independently_verified": false,
   "line_type": "IPLC专线",
+  "logo": {
+    "image": "assets/feimaoyun-logo-hd.png",
+    "width": 1254,
+    "height": 1254,
+    "format": "PNG",
+    "transparent_background": true,
+    "shape": "蓝色圆形，保留内部白色标志，外围无白底",
+    "source": "站长提供的36×35像素Logo截图",
+    "preparation": "按站长要求使用内置图像生成工具高清重制，非原始矢量文件",
+    "prepared_on": "2026-10-29"
+  },
   "intro": "飞猫云采用IPLC专线，提供原生IP线路选择，面向流媒体观看、AI工具访问与短视频平台使用等需求。品牌资料说明支持多端同时登录，不限制设备连接数量，并提供智能流量分配与路由优化。",
   "features": [
     {

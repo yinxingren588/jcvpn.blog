@@ -59,7 +59,18 @@
       "source_date": "2026-10-29",
       "line_type_from_materials": "IPLC专线",
       "listed_region_count": 15,
-      "plan_count": 7
+      "plan_count": 7,
+      "logo": {
+        "image": "assets/feimaoyun-logo-hd.png",
+        "width": 1254,
+        "height": 1254,
+        "format": "PNG",
+        "transparent_background": true,
+        "shape": "蓝色圆形，保留内部白色标志，外围无白底",
+        "source": "站长提供的36×35像素Logo截图",
+        "preparation": "按站长要求使用内置图像生成工具高清重制，非原始矢量文件",
+        "prepared_on": "2026-10-29"
+      }
     },
     {
       "id": "muguang",
