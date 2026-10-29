@@ -1,0 +1,7 @@
+.has-breezenet-floating .breeze-hero{grid-template-columns:minmax(0,1fr)}
+.has-breezenet-floating .breeze-intro>p{max-width:760px}
+#breezenet-floating-promo .fp-brand img{width:60px;height:60px;flex-shrink:0;background:transparent;border:0;border-radius:0;box-shadow:none}
+#breezenet-floating-promo .fp-brand strong{font-size:15px}
+#breezenet-floating-promo .fp-brand small{font-size:8px;letter-spacing:0;line-height:1.7}
+#breezenet-floating-promo .fp-launcher img{border-radius:0;background:transparent}
+@media(max-width:1099px){#breezenet-floating-promo .fp-brand img{width:64px;height:64px}#breezenet-floating-promo .fp-brand strong{font-size:17px}#breezenet-floating-promo .fp-brand small{font-size:9px}}

@@ -134,14 +134,16 @@ def build_breezenet_profile(root):
         body = body.replace('</nav>', '</nav>' + about, 1)
         body = body.replace('<div class="breeze-source-grid">', '<p class="breeze-source-line">品牌定位由博客站长于' + e(profile['updated_on']) + '补充；套餐和延迟记录按各自第三方资料整理，分别注明来源。</p><div class="breeze-source-grid">', 1)
         description = '微风网络Breezenet以大流量与性价比为定位，面向关注节点IP属性和4K视频使用需求的用户。页面整理IPLC专线、6款套餐价格与流量，以及上海电信Windows客户端的第三方延迟记录，便于按用量与场景了解服务。'
+    floating_promo = ''
     if coupon:
         recommended = next(item for item in plans if item['id'] == 'breeze-year')
         annual_paid = coupon_price(recommended, coupon)
         monthly_paid = (annual_paid / Decimal(12)).quantize(Decimal('.01'), rounding=ROUND_HALF_UP)
         scope = '全部套餐适用' if coupon.get('all_plans_applicable') else '已确认清风套餐适用'
         expiry = '无固定到期限制' if coupon.get('expiry_rule') == 'no_fixed_expiry' else '使用时核对后台活动规则'
-        spotlight = f'''<aside class="breeze-spotlight breeze-offer" aria-label="清风年付推荐与优惠码"><span class="breeze-offer-badge">清风 · 年付推荐</span><h2>每月100GB，<br>年付券后约{monthly_paid}元/月。</h2><div class="breeze-offer-price"><span>¥</span><strong>{monthly_paid}</strong><small>/月 · 年付折算</small></div><p class="breeze-offer-total">原价 <s>¥{recommended['price']}/年</s><span>{e(coupon['discount_label'])}</span>券后年付 <b>¥{annual_paid}</b></p><div class="breeze-coupon"><div><small>优惠码 · {e(coupon['discount_label'])}</small><code>{e(coupon['code'])}</code></div><button type="button" data-breeze-copy="{e(coupon['code'], quote=True)}" aria-label="复制微风优惠码">复制</button></div><p class="breeze-coupon-status" role="status" aria-live="polite"></p><p>{scope} · {expiry}。<br>每月100GB，购买日起按月重置；实际按年支付。</p><a class="breeze-plan-action" href="{url}" target="_blank" rel="sponsored noopener noreferrer">前往微风使用优惠码 <span aria-hidden="true">↗</span></a></aside>'''
-        body = re.sub(r'<aside class="breeze-spotlight".*?</aside>', lambda _: spotlight, body, count=1, flags=re.S)
+        from breeze_floating import render as floating_card
+        floating_promo = floating_card(recommended, coupon, annual_paid, monthly_paid, url, logo_image, scope, expiry)
+        body = re.sub(r'<aside class="breeze-spotlight".*?</aside>', '', body, count=1, flags=re.S)
         body = body.replace('先选付费方式，再看每月额度或一次性总量。', '先选付费方式，再看每月额度或一次性总量。以下保留套餐原价，已确认的券后价格另行注明。', 1)
         body = body.replace('客户端使用方式、优惠活动和售后规则请以微风后台现行指引为准。', '优惠码由站长补充，结算金额以后台为准；客户端使用方式和售后规则请以微风后台现行指引为准。')
     if clients:
@@ -193,6 +195,14 @@ def build_breezenet_profile(root):
     if logo_image:
         page = page.replace('<span class="breeze-mark" aria-hidden="true">B</span>', '<span class="breezenet-logo-frame">' + logo_image + '</span>', 1)
         page = page.replace('</head>', logo_style + '</head>', 1)
+    if floating_promo:
+        floating_assets = ''
+        for asset in ('invisible-floating.css', 'breezenet-floating.css', 'breezenet-floating.js'):
+            revision = sha256((root / 'assets' / asset).read_bytes()).hexdigest()[:12]
+            href = 'assets/' + asset + '?v=' + revision
+            floating_assets += '<script src="' + href + '" defer></script>' if asset.endswith('.js') else '<link rel="stylesheet" href="' + href + '">'
+        page = page.replace('</head>', floating_assets + '</head>', 1)
+        page = page.replace('<body>', '<body class="has-floating-promo has-breezenet-floating">' + floating_promo, 1)
     write_changed(root / 'brand-breezenet.html', page)
     # Keep card summaries in the home and directory consistent with the profile.
     for name in ('index.html', 'brands.html'):
