@@ -83,14 +83,15 @@
       "commercial_relationship": "unconfirmed",
       "planned_path": "/evidence/muguang/",
       "profile_path": "brand-muguang.html",
-      "profile_status": "station_supplied_service_introduction",
+      "profile_status": "station_supplied_introduction_and_9_plans",
       "page_checked_on": "2026-10-28",
       "page_observation": "本次公开页面查询未取得可核验的介绍内容。本站不据此宣称品牌停用，也不以其他服务的规则代填。",
       "source_type": "博客站长提供并确认的暮光网络服务介绍与节点地区资料",
       "source_date": "2026-10-29",
       "line_type_from_materials": "IPLC专线",
       "listed_region_count": 15,
-      "advertised_single_node_peak_gbps": 2.5
+      "advertised_single_node_peak_gbps": 2.5,
+      "plan_count": 9
     },
     {
       "id": "lingdongyun",

@@ -1,0 +1,101 @@
+{
+  "brand_id": "muguang",
+  "provided_on": "2026-10-29",
+  "source": "博客站长提供的3张暮光网络套餐截图及标准版流量确认",
+  "currency": "CNY",
+  "independently_verified": false,
+  "coupon": null,
+  "standard_traffic_confirmation": {
+    "screenshot_header_gb": 240,
+    "screenshot_detail_gb": 300,
+    "confirmed_monthly_gb": 240,
+    "confirmed_by": "博客站长",
+    "confirmed_on": "2026-10-29"
+  },
+  "plans": [
+    {
+      "id":"light-year","name":"暮光·年付轻量版","kind":"periodic","price_cny":109,"payment_unit":"年","traffic_gb":70,"quota_scope":"每30天额度","billing_label":"年付",
+      "reset_rule":"购买日起算，每30天自动刷新70GB流量。",
+      "audience":"适合每期用量较少、希望按年控制预算的用户。",
+      "detail":"109元按年支付，折合约9.08元/月。70GB是每30天刷新的额度，并非全年总额度。",
+      "traffic_multiplier":1,"line_type":"IPLC专线","advertised_single_node_peak_gbps":2.5,
+      "platforms_in_description":["Netflix","Disney+","ChatGPT","TikTok"],"protocol_in_description":null
+    },
+    {
+      "id":"basic","name":"暮光·基础版","kind":"periodic","price_cny":20,"payment_unit":"月","traffic_gb":120,"quota_scope":"每月额度","billing_label":"月付报价",
+      "reset_rule":"每月120GB，具体刷新日期以后台显示为准。",
+      "audience":"适合日常浏览、社交、短视频及适量流媒体使用。",
+      "detail":"每月120GB，资料列明BGP多线路调度与专线出口，适合从轻量年度预算转向月付使用的需求。",
+      "traffic_multiplier":1,"protocol_in_description":"Shadowsocks",
+      "platforms_in_description":["Netflix","Hulu","HBO","Disney+","DAZN","ChatGPT","Claude"]
+    },
+    {
+      "id":"standard","name":"暮光·标准版","kind":"periodic","price_cny":40,"payment_unit":"月","traffic_gb":240,"quota_scope":"每月额度","billing_label":"月付报价",
+      "reset_rule":"每月240GB，具体刷新日期以后台显示为准。",
+      "audience":"适合日常办公、网页浏览与中等频率的视频观看。",
+      "detail":"标准版月度额度已由站长确认采用240GB。资料说明BGP三网优化与专线出口，可按实际月度用量比较。",
+      "traffic_multiplier":1,"protocol_in_description":"Shadowsocks",
+      "platforms_in_description":["海外流媒体平台","ChatGPT","Claude"]
+    },
+    {
+      "id":"flagship","name":"暮光·旗舰版","kind":"periodic","price_cny":100,"payment_unit":"月","traffic_gb":700,"quota_scope":"每月额度","billing_label":"月付报价",
+      "reset_rule":"每月700GB，具体刷新日期以后台显示为准。",
+      "audience":"适合较高频率的视频、下载及远程办公使用。",
+      "detail":"每月700GB，资料列明BGP多线路调度与专线出口，面向多终端和较高流量需求。",
+      "traffic_multiplier":1,"protocol_in_description":"Shadowsocks",
+      "platforms_in_description":["流媒体平台","ChatGPT","Claude"]
+    },
+    {
+      "id":"supreme","name":"暮光·至尊版","kind":"periodic","price_cny":180,"payment_unit":"月","traffic_gb":1500,"quota_scope":"每月额度","billing_label":"月付报价",
+      "reset_rule":"每月1500GB，具体刷新日期以后台显示为准。",
+      "audience":"面向月度用量较大、长时间在线或多设备同时使用的场景。",
+      "detail":"1500GB是每月流量额度，图示为1.5TB。资料列明智能路由与专线出口，可先核对历史用量再选择。",
+      "traffic_multiplier":1,"protocol_in_description":"Shadowsocks",
+      "platforms_in_description":["流媒体与内容平台","ChatGPT","Claude"]
+    },
+    {
+      "id":"once-light","name":"暮光·不限时轻量包","kind":"one_time","price_cny":219,"payment_unit":"一次性","traffic_gb":150,"quota_scope":"一次性总额度","billing_label":"一次性购买",
+      "reset_rule":"无流量到期限制，用完为止；不按周期自动重置。",
+      "audience":"适合用量不固定、长期出差或备用连接需求。",
+      "detail":"单次购买获得150GB总流量，按累计消耗使用；不是每月新增150GB。",
+      "traffic_multiplier":1,"protocol_in_description":null,
+      "platforms_in_description":["4K/8K视频使用场景","ChatGPT","Claude","API访问需求"]
+    },
+    {
+      "id":"once-standard","name":"暮光·不限时标准包","kind":"one_time","price_cny":529,"payment_unit":"一次性","traffic_gb":400,"quota_scope":"一次性总额度","billing_label":"一次性购买",
+      "reset_rule":"无流量到期限制，用完为止；不按周期自动重置。",
+      "audience":"适合希望保留较充裕总流量、使用频率随阶段变化的用户。",
+      "detail":"单次购买获得400GB总流量，按实际消耗扣减，不因月份增加而自动补充。",
+      "traffic_multiplier":1,"protocol_in_description":null,
+      "platforms_in_description":["4K/8K视频使用场景","ChatGPT","Claude","API访问需求"]
+    },
+    {
+      "id":"once-large","name":"暮光·不限时大容量包","kind":"one_time","price_cny":959,"payment_unit":"一次性","traffic_gb":800,"quota_scope":"一次性总额度","billing_label":"一次性购买",
+      "reset_rule":"无流量到期限制，用完为止；不按周期自动重置。",
+      "audience":"适合总流量需求较大、希望按累计用量安排预算的场景。",
+      "detail":"单次购买获得800GB总流量，与月度额度分别比较；额度用完后不会按月自动恢复。",
+      "traffic_multiplier":1,"protocol_in_description":null,
+      "platforms_in_description":["4K/8K视频使用场景","ChatGPT","Claude","API访问需求"]
+    },
+    {
+      "id":"private-custom","name":"独享私人定制节点","kind":"custom","price_cny":680,"payment_unit":"月","traffic_gb":500,"quota_scope":"每月独享流量","billing_label":"独享定制",
+      "reset_rule":"每月500GB，具体刷新方式与部署配置通过工单确认。",
+      "audience":"面向独立部署、TikTok直播、跨境业务及其他定制需求。",
+      "detail":"图示680元/月，提供500GB月度独享流量、独立带宽资源与独立公网IP；该定制方案的资源不与他人共享。",
+      "traffic_multiplier":null,"protocol_in_description":null,
+      "exclusive_public_ip":true,"dedicated_bandwidth":true,
+      "delivery_working_days":[2,3],
+      "delivery_note":"资料列明下单后2—3个工作日完成交付，具体部署及进度通过工单确认。",
+      "support_channel_in_materials":"工单系统"
+    }
+  ],
+  "notes": [
+    "套餐照片只作为整理来源，不作为页面图片发布。",
+    "标准版40元/月的流量冲突已由站长确认为240GB/月，不采用详情中的300GB。",
+    "年付轻量版明确从购买日起每30天刷新；不把该精确刷新规则套用到其他套餐。",
+    "不限时套餐是150GB、400GB或800GB一次性总额度，不是月流量；未提供重置包价格。",
+    "定制方案确认独立公网IP与独立带宽，不扩写为住宅IP或其他未确认属性。",
+    "Shadowsocks仅在4款月付套餐截图中出现，不直接当作客户端名称。",
+    "没有提供暮光优惠码、其他付款周期价格或实际平台使用与测速记录，不引用其他品牌资料。"
+  ]
+}
