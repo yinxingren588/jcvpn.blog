@@ -66,7 +66,7 @@ python tools/prepare_site.py --zip ../jcvpn-blog-upload.zip
 
 上传后正式提交：`python tools/indexnow.py --submit`。
 
-线上校验会识别Cloudflare自动追加的Web Analytics统计脚本；其余正文与链接仍需匹配发布文件。核对多个页面时会显示进度。
+线上校验会识别Cloudflare自动追加的Web Analytics统计脚本，并还原其邮箱保护编码后比对邮箱和完整邮件链接；其余正文与链接仍需匹配发布文件，不关闭Cloudflare现有保护。核对多个页面时会显示进度。
 
 `site.config.json`保存域名及IndexNow配置。IndexNow验证文件须可公开访问；这份配置不是GitHub令牌或账户密码。不得向仓库提交账号密码、私有订阅地址或其他服务密钥。
 

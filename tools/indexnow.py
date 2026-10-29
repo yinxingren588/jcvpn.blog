@@ -7,6 +7,7 @@ import json
 import re
 import sys
 from datetime import datetime, timezone
+from html import escape
 from pathlib import Path
 from concurrent.futures import ThreadPoolExecutor
 from urllib.error import HTTPError, URLError
@@ -22,7 +23,19 @@ def normalize_live_html(text):
     # Cloudflare can append its own Web Analytics script to an otherwise exact
     # static response. Ignore only this recognized platform addition.
     pattern = r'''<script\b(?=[^>]*\bdata-cf-beacon=)(?=[^>]*\bsrc=["']https://static\.cloudflareinsights\.com/beacon\.min\.js(?:/[^"']*)?["'])[^>]*>\s*</script>\r?\n?'''
-    return re.sub(pattern, '', text, flags=re.I)
+    text = re.sub(pattern, '', text, flags=re.I)
+    # Reverse Cloudflare's email obfuscation for comparison, so the decoded
+    # address and full mailto query still have to match the published source.
+    def decoded(value):
+        raw = bytes.fromhex(value)
+        if len(raw) < 2: raise ValueError('Invalid Cloudflare email encoding')
+        return bytes(character ^ raw[0] for character in raw[1:]).decode('utf-8')
+    text = re.sub(r'''href=["']/cdn-cgi/l/email-protection#([a-f0-9]+)["']''',
+                  lambda match: 'href="mailto:' + escape(decoded(match[1]), quote=True) + '"', text, flags=re.I)
+    text = re.sub(r'''<span\b(?=[^>]*\bclass=["']__cf_email__["'])(?=[^>]*\bdata-cfemail=["']([a-f0-9]+)["'])[^>]*>[^<]*</span>''',
+                  lambda match: escape(decoded(match[1]), quote=False), text, flags=re.I)
+    text = re.sub(r'''<script\b(?=[^>]*\bdata-cfasync=["']false["'])(?=[^>]*\bsrc=["']/cdn-cgi/scripts/[a-f0-9]+/cloudflare-static/email-decode\.min\.js["'])[^>]*>\s*</script>\r?\n?''', '', text, flags=re.I)
+    return text
 
 
 def pending(config, manifest):
