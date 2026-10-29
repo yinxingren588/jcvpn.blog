@@ -1,0 +1,33 @@
+{
+  "brand_id": "feimaoyun",
+  "confirmed_on": "2026-10-29",
+  "source": "博客站长确认的飞猫云周期套餐流量重置规则与升级支持",
+  "independently_verified": false,
+  "periodic_traffic_reset": {
+    "supported": true,
+    "price_basis": "与所购套餐价格一致",
+    "effective_immediately": true,
+    "restores_full_plan_quota": true,
+    "validity_effect": null
+  },
+  "upgrade": {
+    "supported": true,
+    "payment_and_difference_refund": null,
+    "cycle_start": null,
+    "used_traffic_handling": null
+  },
+  "early_renewal": null,
+  "refund": null,
+  "one_time_traffic_reset": {
+    "source": "站长提供的不限时套餐截图，另见feimaoyun-plans.json",
+    "price_cny": 612,
+    "price_basis": "680元原价的90%",
+    "scope": "仅限飞猫·不限时套餐，不能套用于周期套餐"
+  },
+  "notes": [
+    "周期套餐流量用完后，支持购买重置包或升级套餐。",
+    "重置包与所购套餐同价，购买后立即恢复对应套餐完整流量。",
+    "套餐升级的付款、差价、周期及已用流量处理方式尚未逐项确认，不引用其他品牌规则。",
+    "提前续费、退款及重置对原有效期的影响尚未确认。"
+  ]
+}
