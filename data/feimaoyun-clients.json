@@ -1,0 +1,34 @@
+{
+  "brand_id": "feimaoyun",
+  "confirmed_on": "2026-10-29",
+  "source": "博客站长确认的飞猫云客户端类型、iOS识别码与自研客户端使用流程",
+  "independently_verified": false,
+  "native_client": {
+    "name": "飞猫云",
+    "development": "品牌自研客户端",
+    "platforms": ["Windows", "macOS", "Android"],
+    "download_entry": null,
+    "version": null,
+    "login_method": "官网账号登录",
+    "steps": [
+      {"title": "登录官网账号", "description": "打开对应系统的飞猫云自研客户端，使用自己的飞猫云官网账号登录。"},
+      {"title": "选择节点", "description": "登录后，在客户端的节点列表中选择准备使用的节点。"},
+      {"title": "点击连接", "description": "选择节点后，点击客户端中的连接按钮。"}
+    ]
+  },
+  "ios_client": {
+    "name": "Nextin",
+    "platform": "iOS",
+    "identifier": "fmy",
+    "download_entry": null,
+    "version": null,
+    "login_method": null,
+    "connection_steps": null
+  },
+  "notes": [
+    "Windows、macOS、Android三端使用同一套已确认流程。",
+    "iOS使用Nextin，品牌识别码为fmy；花括号不是识别码的一部分。",
+    "iOS后续登录与连接流程、各端具体下载入口及版本信息尚未确认。",
+    "本页只按已确认的客户端信息整理，不作为安装包实测或兼容性测试记录。"
+  ]
+}
