@@ -60,12 +60,18 @@ def prepare() -> dict:
     write_changed(ROOT / '.nojekyll', '')
 
     old = read_json(STATE, {'pages': {}})
+    descriptions = read_json(ROOT / 'data/page-descriptions.json', {})
     now = datetime.now(timezone(timedelta(hours=8))).replace(microsecond=0).isoformat()
     pages = {}
     for path in sorted(ROOT.glob('*.html')):
         if path.name == ALIAS:
             continue
         content = path.read_text(encoding='utf-8')
+        if path.name in descriptions:
+            description_tag = '<meta name="description" content="' + escape(descriptions[path.name], quote=True) + '">'
+            content, count = re.subn(r'<meta\b(?=[^>]*\bname=[\"\']description[\"\'])[^>]*>', lambda match: description_tag, content, count=1, flags=re.I)
+            if not count:
+                content = content.replace('</head>', description_tag + '</head>', 1)
         # Remove preview indexing rules and stale canonical tags, then add one copy.
         content = re.sub(r'<meta\b(?=[^>]*\bname=[\"\'](?:robots|bingbot)[\"\'])[^>]*>', '', content, flags=re.I)
         content = re.sub(r'<link\b(?=[^>]*\brel=[\"\']canonical[\"\'])[^>]*>', '', content, flags=re.I)

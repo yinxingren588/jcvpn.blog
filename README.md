@@ -35,6 +35,8 @@ IndexNow的提交成功表示搜索引擎收到通知，不代表已经收录，
 
 博客公开联系方式在`data/site-contact.json`维护。更新后运行准备工具，会重新生成`contact.html`、`about.html`以及全站页头、页脚。联系按钮直接打开邮件应用或Telegram，没有伪造表单提交和客服在线状态。
 
+栏目页搜索摘要在`data/page-descriptions.json`维护。准备工具会将各页对应的独立摘要写入HTML，避免重新生成页面时退回只含标题的简短描述。
+
 ## 从GitHub部署到Cloudflare Pages
 
 Cloudflare项目的“构建和部署”设置应填写：
