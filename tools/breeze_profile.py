@@ -61,6 +61,12 @@ def faqs(data, latency=None, coupon=None, profile=None, clients=None, rules=None
         upgrade_parts = [rules['upgrade'].get(key) for key in ('payment_rule', 'validity_rule', 'traffic_rule') if rules['upgrade'].get(key)]
         if upgrade_parts:
             questions.append(('微风升级套餐时，费用、有效期与流量怎样处理？', '。'.join(upgrade_parts) + '。该规则由博客站长于' + rules['updated_on'] + '确认。'))
+        if rules.get('early_renewal'):
+            renewal = rules['early_renewal']
+            questions.append(('微风提前续费会立即恢复流量吗？', '不会。' + renewal['validity_rule'] + '；' + renewal['traffic_rule'] + '。需要立即恢复完整流量时，可选择流量重置包。'))
+        if rules.get('refund'):
+            refund = rules['refund']
+            questions.append(('微风出现技术问题时支持退款吗？', '支持。在' + refund['condition'] + '的情况下，可' + refund['application_channel'] + refund['amount_rule'] + '。申请期限尚未确认，申请前请向客服核对。该规则由博客站长确认。'))
     return questions
 
 
@@ -146,6 +152,22 @@ def build_breezenet_profile(root):
         if upgrade_html:
             rules_section = rules_section.replace('<p>月流量用完后也支持升级套餐，可在后台查看可用的升级方案。</p>', upgrade_html)
             rules_section = rules_section.replace('月流量处理方式与重置规则由博客站长于', '流量重置与升级规则由博客站长于')
+        if rules.get('early_renewal'):
+            renewal = rules['early_renewal']
+            renewal_html = '<div><h3>提前续费</h3><p>' + e(renewal['validity_rule']) + '；' + e(renewal['traffic_rule']) + '。</p></div>'
+            rules_section = rules_section.replace('</div><p class="breeze-source-line">', renewal_html + '</div><p class="breeze-source-line">', 1)
+            rules_section = rules_section.replace('TRAFFIC RESET & PLAN UPGRADE', 'TRAFFIC, RENEWAL & UPGRADE', 1)
+            rules_section = rules_section.replace('流量用完，按需求选择重置或升级。', '重置、升级与续费，分清流量和有效期。', 1)
+            rules_section = rules_section.replace('周期套餐的月流量用完后，有两种处理方式。', '月流量用完后可选择重置或升级；提前续费只延长有效期。', 1)
+            rules_section = rules_section.replace('流量重置与升级规则由博客站长于', '流量重置、升级与续费规则由博客站长于')
+        if rules.get('refund'):
+            refund = rules['refund']
+            refund_html = '<div><h3>技术问题退款</h3><p>在' + e(refund['condition']) + '的情况下，可' + e(refund['application_channel']) + e(refund['amount_rule']) + '。</p><p>申请期限尚未确认，申请前请向客服核对。</p></div>'
+            rules_section = rules_section.replace('</div><p class="breeze-source-line">', refund_html + '</div><p class="breeze-source-line">', 1)
+            rules_section = rules_section.replace('流量重置、升级与续费规则由博客站长于', '流量与售后规则由博客站长于')
+            rules_section = rules_section.replace('重置、升级与续费，分清流量和有效期。', '流量、续费与售后，把规则说清楚。', 1)
+            rules_section = rules_section.replace('月流量用完后可选择重置或升级；提前续费只延长有效期。', '对照流量重置、套餐升级、提前续费与技术问题退款的处理方式。', 1)
+            rules_section = rules_section.replace('TRAFFIC, RENEWAL & UPGRADE', 'TRAFFIC & SERVICE RULES', 1)
         body = body.replace('<section class="section" id="breeze-faq">', rules_section + '<section class="section" id="breeze-faq">', 1)
         body = body.replace('<a href="#breeze-faq">常见问题</a>', '<a href="#breeze-rules">流量规则</a><a href="#breeze-faq">常见问题</a>', 1)
     page = '<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>微风网络 Breezenet｜套餐价格、IPLC线路与流量说明｜叮当观察</title><meta name="description" content="' + e(description, quote=True) + '"><link rel="stylesheet" href="assets/site-base.css"><link rel="stylesheet" href="assets/doraemon-theme.css"><link rel="stylesheet" href="assets/topics.css"><link rel="stylesheet" href="assets/breezenet.css"><script src="assets/breezenet.js" defer></script></head><body><div class="shell">' + header('brands') + '<main>' + body + '</main>' + footer() + '</div></body></html>'
@@ -208,6 +230,12 @@ def build_breezenet_profile(root):
         upgrade_lines = [('费用', rules['upgrade'].get('payment_rule')), ('有效期', rules['upgrade'].get('validity_rule')), ('流量', rules['upgrade'].get('traffic_rule'))]
         if any(value for _, value in upgrade_lines):
             markdown += '### 升级套餐的费用、有效期与流量\n\n' + ''.join('- ' + label + '：' + value + '。\n' for label, value in upgrade_lines if value) + '\n'
+        if rules.get('early_renewal'):
+            renewal = rules['early_renewal']
+            markdown += '### 提前续费\n\n' + renewal['validity_rule'] + '；' + renewal['traffic_rule'] + '。\n\n'
+        if rules.get('refund'):
+            refund = rules['refund']
+            markdown += '### 技术问题退款\n\n在' + refund['condition'] + '的情况下，可' + refund['application_channel'] + refund['amount_rule'] + '。申请期限尚未确认，申请前请向客服核对。\n\n'
     markdown += '## 常见问题\n\n' + ''.join('### ' + question + '\n\n' + answer + '\n\n' for question, answer in faqs(data, latency_data, coupon, profile, clients, rules))
     if latency_data:
         from breeze_latency import markdown as latency_markdown

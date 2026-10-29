@@ -1,9 +1,9 @@
 {
   "brand_id": "breezenet",
   "updated_on": "2026-10-29",
-  "source": "博客站长确认的微风流量重置、升级收费、有效期及流量计算规则",
+  "source": "博客站长确认的微风流量重置、套餐升级、提前续费及技术问题退款规则",
   "independently_verified": false,
-  "scope": "周期套餐的月流量用完后",
+  "scope": "流量重置、套餐升级、提前续费及技术问题退款的已确认规则",
   "exhausted_traffic_options": ["购买流量重置包", "升级套餐"],
   "reset": {
     "supported": true,
@@ -18,6 +18,17 @@
     "traffic_rule": "新套餐额度扣除本周期已用流量，剩余额度继续使用",
     "validity_rule": "升级成功当天作为新套餐起算日，重新计算所选周期的有效期"
   },
-  "early_renewal": null,
-  "refund": null
+  "early_renewal": {
+    "validity_rule": "提前续费只延长套餐有效期",
+    "traffic_rule": "流量仍按原定日期刷新，不会因提前续费而立即恢复"
+  },
+  "refund": {
+    "supported": true,
+    "condition": "技术问题经客服协助后仍完全无法使用",
+    "application_channel": "通过客服申请",
+    "amount_rule": "全额退款",
+    "application_deadline": null,
+    "application_deadline_status": "待确认",
+    "refund_destination": null
+  }
 }
