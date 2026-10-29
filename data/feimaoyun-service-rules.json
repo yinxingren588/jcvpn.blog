@@ -1,7 +1,7 @@
 {
   "brand_id": "feimaoyun",
   "confirmed_on": "2026-10-29",
-  "source": "博客站长确认的飞猫云周期套餐流量重置规则与升级支持",
+  "source": "博客站长确认的飞猫云周期套餐流量重置与升级规则",
   "independently_verified": false,
   "periodic_traffic_reset": {
     "supported": true,
@@ -12,9 +12,9 @@
   },
   "upgrade": {
     "supported": true,
-    "payment_and_difference_refund": null,
-    "cycle_start": null,
-    "used_traffic_handling": null
+    "payment_and_difference_refund": "先支付新套餐全价，再由平台退回差价。",
+    "cycle_start": "升级成功当天作为新套餐起算日，重新计算所选周期的有效期。",
+    "used_traffic_handling": "升级后的可用流量按新套餐额度减去本周期已用流量计算。"
   },
   "early_renewal": null,
   "refund": null,
@@ -27,7 +27,8 @@
   "notes": [
     "周期套餐流量用完后，支持购买重置包或升级套餐。",
     "重置包与所购套餐同价，购买后立即恢复对应套餐完整流量。",
-    "套餐升级的付款、差价、周期及已用流量处理方式尚未逐项确认，不引用其他品牌规则。",
+    "升级时先支付新套餐全价，再由平台退回差价；不补造差价计算公式、退回方式或到账时间。",
+    "升级当天重新起算套餐周期，流量按新套餐额度扣除本周期已用量计算。",
     "提前续费、退款及重置对原有效期的影响尚未确认。"
   ]
 }
