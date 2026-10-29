@@ -1,4 +1,13 @@
 (() => {
+  document.querySelectorAll('[data-breeze-copy]').forEach(button => button.addEventListener('click', async () => {
+    const status = button.closest('.breeze-offer').querySelector('.breeze-coupon-status');
+    try {
+      await navigator.clipboard.writeText(button.dataset.breezeCopy);
+      status.textContent = '优惠码已复制，购买时粘贴使用。';
+    } catch {
+      status.textContent = `请长按或选择优惠码 ${button.dataset.breezeCopy} 手动复制。`;
+    }
+  }));
   const panel = document.getElementById('breeze-plans');
   if (!panel) return;
   const buttons = [...panel.querySelectorAll('[data-breeze-filter]')];
