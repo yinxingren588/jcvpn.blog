@@ -1,7 +1,7 @@
 {
   "brand_id": "feimaoyun",
   "confirmed_on": "2026-10-29",
-  "source": "博客站长确认的飞猫云周期套餐流量重置与升级规则",
+  "source": "博客站长确认的飞猫云流量重置、提前续费、升级与技术问题退款规则",
   "independently_verified": false,
   "periodic_traffic_reset": {
     "supported": true,
@@ -16,8 +16,22 @@
     "cycle_start": "升级成功当天作为新套餐起算日，重新计算所选周期的有效期。",
     "used_traffic_handling": "升级后的可用流量按新套餐额度减去本周期已用流量计算。"
   },
-  "early_renewal": null,
-  "refund": null,
+  "early_renewal": {
+    "extends_validity": true,
+    "refreshes_traffic_immediately": false,
+    "traffic_refresh": "流量需等下一个原定刷新日再更新。",
+    "description": "提前续费只延长套餐有效期，不会立即刷新流量。"
+  },
+  "refund": {
+    "supported": true,
+    "full_refund": true,
+    "conditions": ["因技术问题", "经客服协助后仍完全无法使用"],
+    "application_channel": "通过客服申请",
+    "deadline_hours_after_purchase": 24,
+    "specific_contact_entry": null,
+    "refund_method": null,
+    "processing_time": null
+  },
   "one_time_traffic_reset": {
     "source": "站长提供的不限时套餐截图，另见feimaoyun-plans.json",
     "price_cny": 612,
@@ -29,6 +43,8 @@
     "重置包与所购套餐同价，购买后立即恢复对应套餐完整流量。",
     "升级时先支付新套餐全价，再由平台退回差价；不补造差价计算公式、退回方式或到账时间。",
     "升级当天重新起算套餐周期，流量按新套餐额度扣除本周期已用量计算。",
-    "提前续费、退款及重置对原有效期的影响尚未确认。"
+    "提前续费仅延长有效期，流量等到下一个原定刷新日更新。",
+    "技术问题退款需在购买后24小时内申请，经客服协助后仍完全无法使用时支持全额退款。",
+    "重置对原有效期的影响、客服具体入口、退款方式及到账时长尚未确认。"
   ]
 }
