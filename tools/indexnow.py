@@ -4,6 +4,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import re
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
@@ -15,6 +16,13 @@ from urllib.request import Request, urlopen
 from prepare_site import ROOT, read_json, write_changed, fingerprint
 
 NOTIFIED = ROOT / '.indexnow-state.json'
+
+
+def normalize_live_html(text):
+    # Cloudflare can append its own Web Analytics script to an otherwise exact
+    # static response. Ignore only this recognized platform addition.
+    pattern = r'''<script\b(?=[^>]*\bdata-cf-beacon=)(?=[^>]*\bsrc=["']https://static\.cloudflareinsights\.com/beacon\.min\.js(?:/[^"']*)?["'])[^>]*>\s*</script>\r?\n?'''
+    return re.sub(pattern, '', text, flags=re.I)
 
 
 def pending(config, manifest):
@@ -56,10 +64,12 @@ def verify_live(payload, manifest, deleted, check_all=True):
         status, final, text = fetch(url)
         if status != 200 or final != url:
             raise RuntimeError('Unexpected HTTP response or redirect: ' + url)
-        if fingerprint(text) != manifest['pages'][url]['sha256']:
+        if fingerprint(normalize_live_html(text)) != manifest['pages'][url]['sha256']:
             raise RuntimeError('The live page differs from this release: ' + url + '. Upload the changed page and retry.')
     with ThreadPoolExecutor(max_workers=6) as executor:
-        list(executor.map(verify_page, urls))
+        for number, _ in enumerate(executor.map(verify_page, urls), 1):
+            if number % 20 == 0 or number == len(urls):
+                print('Verified live pages:', number, '/', len(urls), flush=True)
     for filename in ('robots.txt', 'sitemap.xml'):
         url = manifest['origin'] + '/' + filename
         status, final, text = fetch(url)
