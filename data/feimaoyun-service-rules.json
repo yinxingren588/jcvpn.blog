@@ -1,7 +1,7 @@
 {
   "brand_id": "feimaoyun",
   "confirmed_on": "2026-10-29",
-  "source": "博客站长确认的飞猫云流量重置、提前续费、升级与技术问题退款规则",
+  "source": "博客站长确认的飞猫云流量重置、提前续费、升级、技术问题退款规则与官网内置客服入口",
   "independently_verified": false,
   "periodic_traffic_reset": {
     "supported": true,
@@ -26,11 +26,17 @@
     "supported": true,
     "full_refund": true,
     "conditions": ["因技术问题", "经客服协助后仍完全无法使用"],
-    "application_channel": "通过客服申请",
+    "application_channel": "通过官网内置客服申请",
     "deadline_hours_after_purchase": 24,
-    "specific_contact_entry": null,
+    "specific_contact_entry": "飞猫云官网内置客服入口",
     "refund_method": null,
     "processing_time": null
+  },
+  "customer_support": {
+    "channel": "官网内置客服入口",
+    "instructions": "在飞猫云官网内，通过内置客服入口联系客户服务。",
+    "login_required": null,
+    "direct_chat_url": null
   },
   "one_time_traffic_reset": {
     "source": "站长提供的不限时套餐截图，另见feimaoyun-plans.json",
@@ -45,6 +51,7 @@
     "升级当天重新起算套餐周期，流量按新套餐额度扣除本周期已用量计算。",
     "提前续费仅延长有效期，流量等到下一个原定刷新日更新。",
     "技术问题退款需在购买后24小时内申请，经客服协助后仍完全无法使用时支持全额退款。",
-    "重置对原有效期的影响、客服具体入口、退款方式及到账时长尚未确认。"
+    "客服通过飞猫云官网内置入口联系，技术问题退款通过同一入口申请。",
+    "重置对原有效期的影响、退款方式及到账时长尚未确认。"
   ]
 }

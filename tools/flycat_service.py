@@ -33,17 +33,18 @@ def service_faqs(data):
         ('提前续费飞猫云套餐会立即刷新流量吗？', renewal_text(data)),
         ('流量用完后，提前续费和流量重置有什么区别？', '提前续费延长套餐有效期，流量仍按原定刷新日更新；购买流量重置包后立即恢复对应套餐完整流量。若希望更换流量额度，可了解升级规则。'),
         ('飞猫云什么情况下支持全额退款？', refund_text(data)),
-        ('飞猫云技术问题退款需要在多久内申请？', '申请时限为购买后' + str(data['refund']['deadline_hours_after_purchase']) + '小时内，且需符合技术问题经客服协助后仍完全无法使用的条件，通过客服申请全额退款。')
+        ('飞猫云技术问题退款需要在多久内申请？', '申请时限为购买后' + str(data['refund']['deadline_hours_after_purchase']) + '小时内，且需符合技术问题经客服协助后仍完全无法使用的条件，通过官网内置客服申请全额退款。'),
+        ('飞猫云客服在哪里联系？', data['customer_support']['instructions'] + '需要技术协助或申请符合条件的退款时，均通过该入口联系。')
     ]
 
 
-def render_service(data):
+def render_service(data, url):
     reset = data['periodic_traffic_reset']
     once = data['one_time_traffic_reset']
     renewal = renewal_text(data)
     refund = refund_text(data)
     upgrade_steps = ''.join('<li><span class="flycat-step-number" aria-hidden="true">' + str(index).zfill(2) + '</span><div><h4>' + e(title) + '</h4><p>' + e(description) + '</p></div></li>' for index, (title, description) in enumerate(upgrade_items(data), 1))
-    return f'''<section class="section" id="flycat-service"><div class="flycat-section-title"><span class="overline">TRAFFIC, RENEWAL & SUPPORT</span><h2>周期套餐流量用完，可重置或升级。</h2><p>了解重置、续费与升级的不同用途，以及技术问题退款的条件和申请时限。</p></div><div class="flycat-feature-grid flycat-rules-grid"><article><h3>购买流量重置包</h3><p>重置包价格{e(reset['price_basis'])}，购买后立即恢复该套餐的完整流量额度。适合希望继续使用当前套餐、补充本次可用流量的情况。</p><div class="flycat-rule-tags"><span>与所购套餐同价</span><span>立即恢复完整流量</span></div><div class="flycat-service-scope"><h3>提前续费只延长有效期</h3><p>{e(renewal)}</p></div></article><article><h3>升级套餐</h3><p>需要更多月度流量时，可升级套餐。付款、有效期与流量按以下规则处理。</p><ol class="flycat-client-steps">{upgrade_steps}</ol><a class="flycat-rule-link" href="#flycat-compare">对照套餐额度与价格 →</a></article></div><div class="flycat-service-scope" id="flycat-refund"><h3>技术问题退款：购买后{data['refund']['deadline_hours_after_purchase']}小时内申请</h3><p>{e(refund)}</p><div class="flycat-rule-tags"><span>技术问题</span><span>经客服协助仍完全无法使用</span><span>符合条件全额退款</span></div></div><div class="flycat-service-scope"><h3>不限时套餐采用单独规则</h3><p>不限时套餐为一次性1000GB总额度，不按月自动刷新。截图列明手动重置费用为{once['price_cny']}元，即680元原价的90%；与周期套餐的同价重置包分别计算。</p></div><p class="flycat-note">重置、续费、升级及技术问题退款规则由博客站长于{e(data['confirmed_on'])}确认；不限时套餐的手动重置金额来自已提供的套餐资料。</p></section>'''
+    return f'''<section class="section" id="flycat-service"><div class="flycat-section-title"><span class="overline">TRAFFIC, RENEWAL & SUPPORT</span><h2>周期套餐流量用完，可重置或升级。</h2><p>了解重置、续费与升级的不同用途，以及技术问题退款的条件和申请时限。</p></div><div class="flycat-feature-grid flycat-rules-grid"><article><h3>购买流量重置包</h3><p>重置包价格{e(reset['price_basis'])}，购买后立即恢复该套餐的完整流量额度。适合希望继续使用当前套餐、补充本次可用流量的情况。</p><div class="flycat-rule-tags"><span>与所购套餐同价</span><span>立即恢复完整流量</span></div><div class="flycat-service-scope"><h3>提前续费只延长有效期</h3><p>{e(renewal)}</p></div></article><article><h3>升级套餐</h3><p>需要更多月度流量时，可升级套餐。付款、有效期与流量按以下规则处理。</p><ol class="flycat-client-steps">{upgrade_steps}</ol><a class="flycat-rule-link" href="#flycat-compare">对照套餐额度与价格 →</a></article></div><div class="flycat-service-scope" id="flycat-refund"><h3>技术问题退款：购买后{data['refund']['deadline_hours_after_purchase']}小时内申请</h3><p>{e(refund)}</p><div class="flycat-rule-tags"><span>技术问题</span><span>经客服协助仍完全无法使用</span><span>符合条件全额退款</span></div><p class="flycat-note">客服入口：{e(data['customer_support']['channel'])}。</p><a class="flycat-rule-link" href="{url}" target="_blank" rel="sponsored noopener noreferrer">前往飞猫云官网联系客服 ↗</a></div><div class="flycat-service-scope"><h3>不限时套餐采用单独规则</h3><p>不限时套餐为一次性1000GB总额度，不按月自动刷新。截图列明手动重置费用为{once['price_cny']}元，即680元原价的90%；与周期套餐的同价重置包分别计算。</p></div><p class="flycat-note">重置、续费、升级及技术问题退款规则由博客站长于{e(data['confirmed_on'])}确认；不限时套餐的手动重置金额来自已提供的套餐资料。</p></section>'''
 
 
 def service_markdown(data):
@@ -52,5 +53,6 @@ def service_markdown(data):
     text += '### 套餐升级\n\n' + ''.join(str(index) + '. ' + description + '\n' for index, (title, description) in enumerate(upgrade_items(data), 1)) + '\n'
     text += '### 提前续费\n\n' + renewal_text(data) + '\n\n'
     text += '### 技术问题退款\n\n' + refund_text(data) + '\n\n'
+    text += '### 客服联系入口\n\n' + data['customer_support']['instructions'] + '\n\n'
     text += '### 不限时套餐\n\n一次性1000GB总额度，不按月自动刷新。按截图列明的规则，手动重置费用为680元原价的90%，即612元，与周期套餐分别计算。\n\n'
     return text
