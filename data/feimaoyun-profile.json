@@ -1,0 +1,61 @@
+{
+  "brand_id": "feimaoyun",
+  "name": "飞猫云",
+  "entry_url": "https://flycat1.flycatvipaff.cc/#/?code=Os3T3OxW",
+  "updated_on": "2026-10-29",
+  "source": "博客站长提供的飞猫云品牌介绍与节点分布",
+  "independently_verified": false,
+  "line_type": "IPLC专线",
+  "intro": "飞猫云采用IPLC专线，提供原生IP线路选择，面向流媒体观看、AI工具访问与短视频平台使用等需求。品牌资料说明支持多端同时登录，不限制设备连接数量，并提供智能流量分配与路由优化。",
+  "features": [
+    {
+      "title": "IPLC专线与原生IP线路",
+      "description": "以IPLC专线与原生IP线路为服务方向，围绕跨地区浏览、流媒体及在线工具访问提供连接选择。"
+    },
+    {
+      "title": "不限设备连接数量",
+      "description": "支持多端同时登录使用，不限制连接设备数量。具体客户端和下载使用流程，将结合飞猫云的对应资料继续整理。"
+    },
+    {
+      "title": "智能分配与路由优化",
+      "description": "品牌介绍列明智能流量分配与路由优化，面向多设备与不同访问任务组织连接体验。"
+    }
+  ],
+  "declared_platforms": [
+    {"name": "Netflix", "category": "流媒体观看"},
+    {"name": "Disney+", "category": "流媒体观看"},
+    {"name": "ChatGPT", "category": "AI工具访问"},
+    {"name": "TikTok", "category": "短视频平台"}
+  ],
+  "platform_support_basis": "站长提供的品牌服务说明，尚未提供逐平台实际访问记录",
+  "regions": [
+    {"name": "香港", "reported_node_count": 20},
+    {"name": "台湾", "reported_node_count": 10},
+    {"name": "日本", "reported_node_count": 10},
+    {"name": "新加坡", "reported_node_count": 10},
+    {"name": "美国", "reported_node_count": 10},
+    {"name": "韩国", "reported_node_count": 3},
+    {"name": "马来西亚", "reported_node_count": null},
+    {"name": "越南", "reported_node_count": null},
+    {"name": "菲律宾", "reported_node_count": null},
+    {"name": "泰国", "reported_node_count": null},
+    {"name": "印度", "reported_node_count": null},
+    {"name": "英国", "reported_node_count": null},
+    {"name": "法国", "reported_node_count": null},
+    {"name": "德国", "reported_node_count": null},
+    {"name": "阿根廷", "reported_node_count": null}
+  ],
+  "entry_observation": {
+    "checked_on": "2026-10-29",
+    "observed_title": "飞猫云",
+    "observation": "原始入口经线路检测页进入标题为飞猫云的进入确认页，未查看套餐与客户端详情。",
+    "plans_observed": false
+  },
+  "notes": [
+    "保留站长提供的原始推广入口及code参数。",
+    "地区数量指本次资料列明的15个地区，不作为完整地区总数或在线节点数。",
+    "仅六个地区提供了节点数量，其余地区不补造数量。",
+    "线路、原生IP、设备和平台支持按品牌介绍整理，不等于本站已完成测速或解锁测试。",
+    "套餐、优惠码、客户端详情与售后规则等待飞猫云自身资料补充。"
+  ]
+}

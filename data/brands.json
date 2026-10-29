@@ -48,13 +48,17 @@
       "id": "feimaoyun",
       "name": "飞猫云",
       "url": "https://flycat1.flycatvipaff.cc/#/?code=Os3T3OxW",
-      "verification_status": "unverified",
+      "verification_status": "station_provided_not_independently_verified",
       "commercial_relationship": "unconfirmed",
       "planned_path": "/evidence/feimaoyun/",
       "profile_path": "brand-feimaoyun.html",
-      "profile_status": "initial_record",
-      "page_checked_on": "2026-10-28",
-      "page_observation": "本次查询涉及页面跳转，未取得可核验的品牌介绍与套餐内容。此记录不用于判断其实际运行状态。"
+      "profile_status": "station_supplied_introduction",
+      "page_checked_on": "2026-10-29",
+      "page_observation": "原始入口经线路检测页进入标题为飞猫云的进入确认页，未查看套餐与客户端详情。",
+      "source_type": "博客站长提供的飞猫云品牌介绍与节点分布",
+      "source_date": "2026-10-29",
+      "line_type_from_materials": "IPLC专线",
+      "listed_region_count": 15
     },
     {
       "id": "muguang",
