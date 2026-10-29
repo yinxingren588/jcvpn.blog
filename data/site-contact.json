@@ -1,0 +1,15 @@
+{
+  "site_name": "叮当观察",
+  "confirmed_on": "2026-10-29",
+  "contacts": [
+    {
+      "type": "telegram",
+      "value": "@yinxingren_588",
+      "url": "https://t.me/yinxingren_588"
+    },
+    {
+      "type": "email",
+      "value": "yinxingren588@gmail.com"
+    }
+  ]
+}

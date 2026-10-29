@@ -40,6 +40,9 @@ def fingerprint(content: str) -> str:
 
 
 def prepare() -> dict:
+    if (ROOT / 'data/site-contact.json').exists():
+        from site_chrome import apply_site_chrome
+        apply_site_chrome(ROOT)
     config_path = ROOT / 'site.config.json'
     config = read_json(config_path)
     origin = config['origin'].rstrip('/')
