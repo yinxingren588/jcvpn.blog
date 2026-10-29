@@ -39,7 +39,48 @@
       "platform": "Windows",
       "display_name": "暮光加速",
       "login_method": "官网账号登录",
-      "connection_steps": ["使用官网账号登录", "选择节点", "点击连接"],
+      "connection_steps": [
+        "使用官网账号登录",
+        "选择节点",
+        "点击连接"
+      ],
+      "download_location": "官网首页直接下载",
+      "confirmed_by": "博客站长",
+      "confirmed_on": "2026-10-29"
+    },
+    {
+      "platform": "macOS",
+      "display_name": "暮光加速",
+      "login_method": "官网账号登录",
+      "connection_steps": [
+        "使用官网账号登录",
+        "选择节点",
+        "点击连接"
+      ],
+      "download_location": "官网首页直接下载",
+      "confirmed_by": "博客站长",
+      "confirmed_on": "2026-10-29"
+    },
+    {
+      "platform": "Android",
+      "display_name": "暮光加速",
+      "login_method": "官网账号登录",
+      "connection_steps": [
+        "使用官网账号登录",
+        "选择节点",
+        "点击连接"
+      ],
+      "download_location": "官网首页直接下载",
+      "confirmed_by": "博客站长",
+      "confirmed_on": "2026-10-29"
+    },
+    {
+      "platform": "iOS",
+      "display_name": "Nextin",
+      "brand_code": "mgjs",
+      "login_method": null,
+      "connection_steps": null,
+      "pre_login_instruction": "登录前填写品牌识别码mgjs",
       "download_location": null,
       "confirmed_by": "博客站长",
       "confirmed_on": "2026-10-29"
@@ -113,7 +154,7 @@
     "最高2.5Gbps是单节点峰值规格，不是每位用户的实测下载速度。",
     "普通套餐原生IP不扩写为独享或住宅IP；私人定制节点单独确认独立公网IP与独立带宽。",
     "不限同时使用客户端数量不扩写为允许账号转售、共享或其他未确认用途。",
-    "另据站长提供的3张截图整理9款套餐，标准版经确认采用240GB/月；Windows客户端名称为暮光加速，使用官网账号登录，选择节点后点击连接。下载入口、其他平台客户端、优惠码、售后规则、Logo和实际测试记录尚待补充。",
+    "另据站长提供的3张截图整理9款套餐，标准版经确认采用240GB/月；Windows、macOS和安卓客户端均为暮光加速，从官网首页下载，使用官网账号登录，选择节点后点击连接。iOS使用Nextin，登录前填写识别码mgjs；iOS下载入口与后续流程、优惠码、售后规则、Logo和实际测试记录尚待补充。",
     "访问入口保留站长提供的原域名、路径和推广code参数。"
   ],
   "exclusive_ip_scope": {
