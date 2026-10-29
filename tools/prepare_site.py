@@ -47,6 +47,9 @@ def prepare() -> dict:
     if (ROOT / 'data/feimaoyun-profile.json').exists():
         from flycat_profile import build_flycat_profile
         build_flycat_profile(ROOT)
+    if (ROOT / 'data/muguang-profile.json').exists():
+        from twilight_profile import build_twilight_profile
+        build_twilight_profile(ROOT)
     if (ROOT / 'data/site-contact.json').exists():
         from site_chrome import apply_site_chrome
         apply_site_chrome(ROOT)

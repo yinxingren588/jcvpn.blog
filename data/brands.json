@@ -79,13 +79,18 @@
       "id": "muguang",
       "name": "暮光网络",
       "url": "https://varnexa.twilightaff.com/#/?code=3qqonTlH",
-      "verification_status": "unverified",
+      "verification_status": "station_provided_not_independently_verified",
       "commercial_relationship": "unconfirmed",
       "planned_path": "/evidence/muguang/",
       "profile_path": "brand-muguang.html",
-      "profile_status": "initial_record",
+      "profile_status": "station_supplied_service_introduction",
       "page_checked_on": "2026-10-28",
-      "page_observation": "本次公开页面查询未取得可核验的介绍内容。本站不据此宣称品牌停用，也不以其他服务的规则代填。"
+      "page_observation": "本次公开页面查询未取得可核验的介绍内容。本站不据此宣称品牌停用，也不以其他服务的规则代填。",
+      "source_type": "博客站长提供并确认的暮光网络服务介绍与节点地区资料",
+      "source_date": "2026-10-29",
+      "line_type_from_materials": "IPLC专线",
+      "listed_region_count": 15,
+      "advertised_single_node_peak_gbps": 2.5
     },
     {
       "id": "lingdongyun",
