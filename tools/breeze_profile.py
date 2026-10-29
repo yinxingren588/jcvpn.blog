@@ -49,6 +49,7 @@ def faqs(data, latency=None, coupon=None, profile=None, clients=None):
         questions.append(('微风网络是否提供原生IP节点？', '根据博客站长于2026-10-29补充的资料，微风提供原生IP节点选择，面向关注IP属性的用户。本站尚未逐节点核验，不将原生IP扩写为独享IP、住宅IP或特定平台永久可用。'))
     if clients:
         questions.append(('微风Windows客户端如何下载、登录和连接？', '在微风官网首页直接下载Windows版“微风网络”客户端。打开后使用微风官网账号登录，选择节点，再点击“连接”。该流程由博客站长于' + clients['updated_on'] + '确认。'))
+        questions.append(('微风在Android、macOS和iOS分别使用什么客户端？', 'Windows、macOS与Android使用“微风网络”客户端，直接使用微风官网账号登录；iOS使用Nextin应用。客户端名称与登录方式由博客站长确认。'))
     return questions
 
 
@@ -116,9 +117,12 @@ def build_breezenet_profile(root):
         body = body.replace('客户端使用方式、优惠活动和售后规则请以微风后台现行指引为准。', '优惠码由站长补充，结算金额以后台为准；客户端使用方式和售后规则请以微风后台现行指引为准。')
     if clients:
         client_section = '<section class="section" id="breeze-clients"><div class="breeze-section-title"><span class="overline">WINDOWS / CONNECT IN THREE STEPS</span><h2>从官网下载，选好节点再连接。</h2><p>Windows版客户端名称为“微风网络”，使用微风官网账号登录。</p></div><div class="breeze-guide-grid"><article><h3>01 · 从官网首页下载</h3><p>在微风官网首页找到Windows版“微风网络”客户端下载入口，下载并打开客户端。</p><a href="' + url + '" target="_blank" rel="sponsored noopener noreferrer">访问微风入口 ↗</a></article><article><h3>02 · 使用官网账号登录</h3><p>直接使用微风官网账号登录客户端。</p></article><article><h3>03 · 选择节点并连接</h3><p>登录成功后，先选择节点，再点击“连接”。</p></article></div><p class="breeze-source-line">下载入口与使用流程由博客站长于' + e(clients['updated_on']) + '确认。</p></section>'
+        platform_section = '<div class="breeze-section-title"><span class="overline">CLIENTS & PLATFORMS</span><h2>按设备选择客户端，再查看使用流程。</h2><p>Windows、macOS与Android使用微风网络客户端；iOS使用Nextin。</p></div><div class="breeze-source-grid"><div><h3>Windows / macOS / Android · 微风网络</h3><p>这三个系统均使用“微风网络”客户端，直接使用微风官网账号登录。</p></div><div><h3>iOS · Nextin</h3><p>iOS使用Nextin应用。</p></div></div>'
+        client_section = client_section.replace('<div class="breeze-section-title"><span class="overline">WINDOWS / CONNECT IN THREE STEPS</span>', platform_section + '<div class="breeze-section-title" style="margin-top:26px"><span class="overline">WINDOWS / CONNECT IN THREE STEPS</span>', 1)
+        client_section = client_section.replace('<h2>从官网下载，选好节点再连接。</h2>', '<h3>Windows：从官网下载，选好节点再连接。</h3>', 1)
         body = body.replace('<section class="section" id="breeze-faq">', client_section + '<section class="section" id="breeze-faq">', 1)
         body = body.replace('<a href="#breeze-faq">常见问题</a>', '<a href="#breeze-clients">使用教程</a><a href="#breeze-faq">常见问题</a>', 1)
-        body = body.replace('客户端使用方式和售后规则请以微风后台现行指引为准。', 'Windows客户端下载、账号登录及节点连接流程由站长确认；其他系统的客户端指引和售后规则以微风后台现行说明为准。')
+        body = body.replace('客户端使用方式和售后规则请以微风后台现行指引为准。', '各系统客户端名称、账号登录方式及Windows使用流程由站长确认；其他操作细节和售后规则以微风后台现行说明为准。')
     page = '<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>微风网络 Breezenet｜套餐价格、IPLC线路与流量说明｜叮当观察</title><meta name="description" content="' + e(description, quote=True) + '"><link rel="stylesheet" href="assets/site-base.css"><link rel="stylesheet" href="assets/doraemon-theme.css"><link rel="stylesheet" href="assets/topics.css"><link rel="stylesheet" href="assets/breezenet.css"><script src="assets/breezenet.js" defer></script></head><body><div class="shell">' + header('brands') + '<main>' + body + '</main>' + footer() + '</div></body></html>'
     if latency_data:
         page = page.replace('套餐价格、IPLC线路与流量说明', '套餐价格、IPLC资料与节点延迟', 1)
@@ -169,6 +173,7 @@ def build_breezenet_profile(root):
     if coupon:
         markdown += f'## 清风年付优惠\n\n优惠码：{coupon["code"]}，{coupon["discount_label"]}。清风原价137元/年、每月100GB，券后按原价计算为{annual_paid}元/年，折算约{monthly_paid}元/月，实际按年支付。{scope}；{expiry}。来源：{coupon["source"]}。\n\n'
     if clients:
+        markdown += '## 各系统客户端\n\n| 系统 | 客户端 | 已确认的登录方式 |\n| --- | --- | --- |\n| Windows / macOS / Android | 微风网络 | 直接使用微风官网账号登录 |\n| iOS | Nextin | 具体登录步骤待补充 |\n\n'
         markdown += '## Windows客户端使用教程\n\n1. 在微风官网首页直接下载Windows版“微风网络”客户端，下载并打开。\n2. 直接使用微风官网账号登录。\n3. 选择节点，再点击“连接”。\n\n下载入口与使用流程由博客站长于' + clients['updated_on'] + '确认。\n\n'
     markdown += '## 常见问题\n\n' + ''.join('### ' + question + '\n\n' + answer + '\n\n' for question, answer in faqs(data, latency_data, coupon, profile, clients))
     if latency_data:
