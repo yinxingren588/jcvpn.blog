@@ -1,7 +1,7 @@
 {
   "brand_id": "breezenet",
   "updated_on": "2026-10-29",
-  "source": "博客站长确认的各系统客户端名称、账号登录方式、Windows与iOS使用流程",
+  "source": "博客站长确认的各系统客户端名称及使用流程；Android、macOS与Windows教程相同",
   "independently_verified": false,
   "platforms": [
     {
@@ -19,8 +19,8 @@
       "client_name": "微风网络",
       "login_method": "website_account",
       "login_description": "打开macOS版微风网络客户端，直接使用微风官网账号登录。",
-      "connection_steps": null,
-      "download_source": null,
+      "connection_steps": ["选择节点", "点击连接"],
+      "download_source": "微风官网首页直接下载",
       "download_url": null,
       "self_developed": null
     },
@@ -29,8 +29,8 @@
       "client_name": "微风网络",
       "login_method": "website_account",
       "login_description": "打开Android版微风网络客户端，直接使用微风官网账号登录。",
-      "connection_steps": null,
-      "download_source": null,
+      "connection_steps": ["选择节点", "点击连接"],
+      "download_source": "微风官网首页直接下载",
       "download_url": null,
       "self_developed": null
     },

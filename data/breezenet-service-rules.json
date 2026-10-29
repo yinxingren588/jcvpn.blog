@@ -27,8 +27,9 @@
     "condition": "技术问题经客服协助后仍完全无法使用",
     "application_channel": "通过微风官网内的客服入口申请",
     "amount_rule": "全额退款",
-    "application_deadline": null,
-    "application_deadline_status": "待确认",
+    "application_deadline": "购买后24小时内",
+    "application_deadline_hours": 24,
+    "application_deadline_status": "博客站长已确认",
     "refund_destination": null
   },
   "support": {

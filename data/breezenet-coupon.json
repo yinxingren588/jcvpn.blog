@@ -3,10 +3,10 @@
   "code": "weifeng90",
   "pay_multiplier": "0.90",
   "discount_label": "九折",
-  "confirmed_plan_ids": ["breeze-year"],
-  "all_plans_applicable": null,
+  "confirmed_plan_ids": ["breeze-year", "riding-month", "breaking-month", "mastery-month", "trade-wind-once", "long-wind-once"],
+  "all_plans_applicable": true,
   "expiry_rule": null,
-  "source": "博客站长于2026-10-29最新更正：优惠码weifeng90为九折；清风每月100GB，原价137元/年",
+  "source": "博客站长于2026-10-29确认：优惠码weifeng90为九折，全部套餐均可使用；清风每月100GB，原价137元/年",
   "confirmed_on": "2026-10-29",
   "independently_verified": false
 }

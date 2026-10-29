@@ -1,0 +1,31 @@
+{
+  "brand_id": "breezenet",
+  "brand": "微风网络 Breezenet",
+  "source": "博客站长提供的实际使用反馈",
+  "prepared_on": "2026-10-29",
+  "timezone": "Asia/Shanghai",
+  "source_independence_verified": false,
+  "records": [
+    {
+      "id": "chatgpt-sg-20261029",
+      "platform": "ChatGPT",
+      "tested_on": "2026-10-29",
+      "tested_time": null,
+      "test_location": "上海",
+      "node_region": "新加坡",
+      "node_identifier": null,
+      "task": "发送问题并收到回答",
+      "result": "能够发送问题，并收到回答",
+      "status": "reported_success",
+      "independently_retested": false,
+      "client_name": null,
+      "client_platform": null,
+      "isp": null,
+      "account_plan": null,
+      "browser_or_app": null,
+      "evidence_attachment": null,
+      "scope": "仅对应2026-10-29在上海使用新加坡地区节点的ChatGPT问答操作"
+    }
+  ],
+  "notes": "本记录依据站长补充的日期、所在地、节点地区及问答结果整理，未由本站重新测试；不借用节点延迟记录的时刻、运营商或客户端，也不推断4K播放、API、付费功能、其他节点或长期可用性。"
+}
