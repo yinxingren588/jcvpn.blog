@@ -2,6 +2,7 @@
 import csv
 from decimal import Decimal, ROUND_HALF_UP
 from html import escape as e
+from hashlib import sha256
 import io
 import json
 from pathlib import Path
@@ -113,6 +114,9 @@ def build_breezenet_profile(root):
     if latency_data:
         page = page.replace('套餐价格、IPLC线路与流量说明', '套餐价格、IPLC资料与节点延迟', 1)
         page = page.replace('<link rel="stylesheet" href="assets/breezenet.css">', '<link rel="stylesheet" href="assets/invisible-latency.css"><link rel="stylesheet" href="assets/breezenet.css"><script src="assets/invisible-latency.js" defer></script>', 1)
+    for asset in ('breezenet.css', 'breezenet.js'):
+        revision = sha256((root / 'assets' / asset).read_bytes()).hexdigest()[:12]
+        page = page.replace(f'assets/{asset}"', f'assets/{asset}?v={revision}"')
     write_changed(root / 'brand-breezenet.html', page)
     # Keep card summaries in the home and directory consistent with the profile.
     for name in ('index.html', 'brands.html'):
