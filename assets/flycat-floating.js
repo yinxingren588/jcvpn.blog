@@ -6,8 +6,11 @@
   const close = root.querySelector('.fp-close');
   const reset = root.querySelector('.fp-reset');
   const handle = root.querySelector('.fp-handle');
+  const copy = root.querySelector('.fp-copy');
+  const input = root.querySelector('.fp-coupon input');
+  const status = root.querySelector('.fp-copy-status');
   const desktop = window.matchMedia('(min-width:1100px)');
-  let positioned = false, drag = null;
+  let positioned = false, drag = null, copyTimer;
   const clamp = (value, min, max) => Math.min(Math.max(value, min), Math.max(min, max));
   function resetPosition() {
     root.style.removeProperty('left');
@@ -68,4 +71,16 @@
   }
   handle.addEventListener('pointerup', endDrag);
   handle.addEventListener('pointercancel', endDrag);
+  if (copy && input && status) copy.addEventListener('click', async () => {
+    try {
+      await navigator.clipboard.writeText(input.value);
+      copy.textContent = '已复制';
+      status.textContent = '优惠码 ' + input.value + ' 已复制';
+    } catch {
+      input.focus(); input.select();
+      status.textContent = '请选中优惠码复制';
+    }
+    clearTimeout(copyTimer);
+    copyTimer = setTimeout(() => { copy.textContent = '复制'; status.textContent = ''; }, 2200);
+  });
 })();

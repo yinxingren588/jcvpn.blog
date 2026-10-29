@@ -9,7 +9,9 @@
     "student_additional_annual_discount": false,
     "other_periodic_plans_display_monthly_price_only": true,
     "long_cycle_totals": null,
-    "coupon_code": null
+    "coupon_code": "flycat888",
+    "student_coupon_eligible": false,
+    "coupon_rules_file": "feimaoyun-coupon.json"
   },
   "common_features": {
     "line_type": "IPLC专线",
@@ -91,6 +93,7 @@
     "其余四款周期套餐按站长要求只保留图示月价，不推算长周期成交总价。",
     "品牌介绍及周期套餐列韩国3个节点，不限时套餐截图列韩国2个；按套餐分别保留，具体以后台为准。",
     "定制套餐550元/月为截图所示配置报价，不标注为起价。",
-    "本次没有提供优惠码、客户端教程、售后规则或实际测试记录。"
+    "本组套餐截图不包含客户端教程、售后规则或实际测试记录；后续确认资料已分别整理。",
+    "优惠码flycat888为九折，学生版不适用，其余6款适用且无到期限制；详见feimaoyun-coupon.json。"
   ]
 }

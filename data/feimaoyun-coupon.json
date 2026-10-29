@@ -1,0 +1,21 @@
+{
+  "brand_id": "feimaoyun",
+  "confirmed_on": "2026-10-29",
+  "source": "博客站长提供并确认的飞猫云优惠码与九折优惠",
+  "independently_verified": false,
+  "code": "flycat888",
+  "discount_type": "percentage",
+  "payable_ratio": 0.9,
+  "discount_label": "九折",
+  "applies_to_all_plans": false,
+  "applies_to_plan_ids": ["starlight", "starring", "galaxy", "universe", "timeless", "custom"],
+  "expiry_date": null,
+  "no_expiry_confirmed": true,
+  "applies_to_reset_packages": null,
+  "notes": [
+    "代码为flycat888，不包含花括号。",
+    "九折指按原价的90%支付，即减免10%。",
+    "站长确认没有到期限制，学生版不适用，其余6款套餐适用。",
+    "流量重置包与套餐升级订单是否支持优惠尚未确认，不将套餐优惠推广到这两类订单。"
+  ]
+}
