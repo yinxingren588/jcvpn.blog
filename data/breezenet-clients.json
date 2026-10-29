@@ -1,7 +1,7 @@
 {
   "brand_id": "breezenet",
   "updated_on": "2026-10-29",
-  "source": "博客站长确认的各系统客户端名称、账号登录方式、Windows使用流程及iOS品牌识别码",
+  "source": "博客站长确认的各系统客户端名称、账号登录方式、Windows与iOS使用流程",
   "independently_verified": false,
   "platforms": [
     {
@@ -37,10 +37,10 @@
     {
       "os": "iOS",
       "client_name": "Nextin",
-      "login_method": null,
+      "login_method": "website_account",
       "brand_identifier": "wfwl",
-      "login_description": "打开Nextin应用，在登录前先填写品牌识别码wfwl，再继续登录。",
-      "connection_steps": null,
+      "login_description": "打开Nextin应用，在登录前先填写品牌识别码wfwl，再使用微风官网账号登录。登录成功后选择节点，点击连接。",
+      "connection_steps": ["选择节点", "点击连接"],
       "download_source": null,
       "download_url": null,
       "self_developed": null
