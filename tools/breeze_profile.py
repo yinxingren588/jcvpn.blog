@@ -58,6 +58,9 @@ def faqs(data, latency=None, coupon=None, profile=None, clients=None, rules=None
             ('微风每月流量用完后怎么办？', '周期套餐的月流量用完后，支持购买流量重置包，也支持升级套餐。可以根据当前流量需求，在后台选择相应处理方式。'),
             ('微风流量重置包多少钱，多久恢复流量？', '流量重置包' + rules['reset']['price_rule'] + '；' + rules['reset']['activation_rule'] + '。该规则由博客站长于' + rules['updated_on'] + '确认。')
         ]
+        upgrade_parts = [rules['upgrade'].get(key) for key in ('payment_rule', 'validity_rule', 'traffic_rule') if rules['upgrade'].get(key)]
+        if upgrade_parts:
+            questions.append(('微风升级套餐时，费用、有效期与流量怎样处理？', '。'.join(upgrade_parts) + '。该规则由博客站长于' + rules['updated_on'] + '确认。'))
     return questions
 
 
@@ -138,6 +141,11 @@ def build_breezenet_profile(root):
         body = body.replace('客户端使用方式和售后规则请以微风后台现行指引为准。', '各系统客户端名称、账号登录方式及Windows与iOS使用流程由站长确认；其他操作细节和售后规则以微风后台现行说明为准。')
     if rules:
         rules_section = '<section class="section" id="breeze-rules"><div class="breeze-section-title"><span class="overline">TRAFFIC RESET & PLAN UPGRADE</span><h2>流量用完，按需求选择重置或升级。</h2><p>周期套餐的月流量用完后，有两种处理方式。</p></div><div class="breeze-source-grid"><div><h3>购买流量重置包</h3><p>重置包' + e(rules['reset']['price_rule']) + '，' + e(rules['reset']['activation_rule']) + '。</p></div><div><h3>升级套餐</h3><p>月流量用完后也支持升级套餐，可在后台查看可用的升级方案。</p></div></div><p class="breeze-source-line">月流量处理方式与重置规则由博客站长于' + e(rules['updated_on']) + '确认。</p></section>'
+        upgrade_parts = [('费用', rules['upgrade'].get('payment_rule')), ('有效期', rules['upgrade'].get('validity_rule')), ('流量', rules['upgrade'].get('traffic_rule'))]
+        upgrade_html = ''.join('<p><strong>' + label + '：</strong>' + e(value) + '。</p>' for label, value in upgrade_parts if value)
+        if upgrade_html:
+            rules_section = rules_section.replace('<p>月流量用完后也支持升级套餐，可在后台查看可用的升级方案。</p>', upgrade_html)
+            rules_section = rules_section.replace('月流量处理方式与重置规则由博客站长于', '流量重置与升级规则由博客站长于')
         body = body.replace('<section class="section" id="breeze-faq">', rules_section + '<section class="section" id="breeze-faq">', 1)
         body = body.replace('<a href="#breeze-faq">常见问题</a>', '<a href="#breeze-rules">流量规则</a><a href="#breeze-faq">常见问题</a>', 1)
     page = '<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>微风网络 Breezenet｜套餐价格、IPLC线路与流量说明｜叮当观察</title><meta name="description" content="' + e(description, quote=True) + '"><link rel="stylesheet" href="assets/site-base.css"><link rel="stylesheet" href="assets/doraemon-theme.css"><link rel="stylesheet" href="assets/topics.css"><link rel="stylesheet" href="assets/breezenet.css"><script src="assets/breezenet.js" defer></script></head><body><div class="shell">' + header('brands') + '<main>' + body + '</main>' + footer() + '</div></body></html>'
@@ -197,6 +205,9 @@ def build_breezenet_profile(root):
             markdown += '## iOS Nextin使用流程\n\n1. 打开Nextin应用。\n2. 填写品牌识别码 `' + identifier + '`。\n3. 使用微风官网账号登录。\n4. 选择节点。\n5. 点击“连接”。\n\n该流程由博客站长于' + clients['updated_on'] + '确认。\n\n'
     if rules:
         markdown += '## 流量用完后的处理方式\n\n周期套餐的月流量用完后，支持购买流量重置包或升级套餐。\n\n- 流量重置包：' + rules['reset']['price_rule'] + '；' + rules['reset']['activation_rule'] + '。\n- 升级套餐：可在后台查看可用的升级方案。\n\n规则由博客站长于' + rules['updated_on'] + '确认。\n\n'
+        upgrade_lines = [('费用', rules['upgrade'].get('payment_rule')), ('有效期', rules['upgrade'].get('validity_rule')), ('流量', rules['upgrade'].get('traffic_rule'))]
+        if any(value for _, value in upgrade_lines):
+            markdown += '### 升级套餐的费用、有效期与流量\n\n' + ''.join('- ' + label + '：' + value + '。\n' for label, value in upgrade_lines if value) + '\n'
     markdown += '## 常见问题\n\n' + ''.join('### ' + question + '\n\n' + answer + '\n\n' for question, answer in faqs(data, latency_data, coupon, profile, clients, rules))
     if latency_data:
         from breeze_latency import markdown as latency_markdown
