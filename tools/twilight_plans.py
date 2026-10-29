@@ -17,6 +17,8 @@ def plan_faqs(data):
         ('暮光不限时流量包会每月自动补充吗？', '不会。三款分别是150GB、400GB和800GB一次性总流量，无流量到期限制，用完为止，不按周期自动重置。'),
         ('暮光周期套餐每个月哪天刷新？', '年付轻量版明确写明购买日起每30天自动刷新。其余四款按每月额度介绍，截图未列具体刷新日期，使用前请核对后台。'),
         ('暮光周期套餐流量用完后怎么办，重置包多少钱？', data['periodic_reset_policy']['description']),
+        ('暮光周期套餐提前续费，会立即补充流量吗？', data['periodic_early_renewal_policy']['description']),
+        ('暮光周期套餐升级如何收费，周期与流量怎样计算？', data['periodic_upgrade_policy']['description']),
         ('暮光独享私人定制节点提供什么配置？', '图示680元/月、每月500GB独享流量，提供独立带宽资源与独立公网IP，不与他人共享。面向独立部署、TikTok直播及跨境业务，定制需求通过工单沟通。'),
         ('独享私人定制节点需要多久交付？', '资料列明下单后2—3个工作日完成交付，由专人技术维护。具体部署内容与进度通过暮光工单系统确认。'),
         ('套餐里的Shadowsocks是客户端名称吗？', 'Shadowsocks是协议或连接方案名称，不能直接当作软件名称。基础、标准、旗舰、至尊四款的截图提到该方案，各平台客户端及具体使用流程需要对应指引。'),
@@ -26,7 +28,9 @@ def plan_faqs(data):
 
 def render_usage_rules(data):
     policy=data['periodic_reset_policy']
-    return '<section class="section" id="twilight-traffic"><div class="twilight-section-title"><span class="overline">PERIODIC PLAN / TRAFFIC RESET</span><h2>流量用完后，可以购买重置包。</h2><p>周期套餐的流量重置规则由博客站长确认。</p></div><article class="twilight-plan-notes"><h3>周期套餐 · 同价重置，立即恢复</h3><p>'+e(policy['description'])+'</p></article></section>'
+    renewal=data['periodic_early_renewal_policy']
+    upgrade=data['periodic_upgrade_policy']
+    return '<section class="section" id="twilight-traffic"><div class="twilight-section-title"><span class="overline">PERIODIC PLAN / RESET, RENEWAL & UPGRADE</span><h2>看清重置、续费与升级的区别。</h2><p>按需要补充流量、延长有效期或调整套餐，分别核对金额、起算日和可用额度。</p></div><article class="twilight-plan-notes"><h3>购买重置包 · 立即恢复流量</h3><p>'+e(policy['description'])+'</p></article><article class="twilight-plan-notes"><h3>提前续费 · 延长有效期</h3><p>'+e(renewal['description'])+'</p></article><article class="twilight-plan-notes"><h3>升级套餐 · 先付全价，再退差价</h3><p>'+e(upgrade['description'])+'</p></article></section>'
 
 
 def render_plans(data,url):
@@ -71,4 +75,6 @@ def plans_markdown(data):
             text+=plan['delivery_note']+'\n\n'
     text+='标准版流量冲突已由站长确认采用240GB/月。不推算其他付款周期或优惠价；具体套餐范围和使用规则按对应资料说明。\n\n'
     text+='## 周期套餐流量重置\n\n'+data['periodic_reset_policy']['description']+'\n\n'
+    text+='## 周期套餐提前续费\n\n'+data['periodic_early_renewal_policy']['description']+'\n\n'
+    text+='## 周期套餐升级\n\n'+data['periodic_upgrade_policy']['description']+'\n\n'
     return text
