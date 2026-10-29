@@ -1,5 +1,6 @@
-.breezenet-logo-frame{display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;overflow:hidden;background:#fff;border:1px solid #dce8f0;padding:1px;box-sizing:border-box}
-.breezenet-logo-image{display:block;width:57px;height:61px;max-width:100%;max-height:100%;object-fit:contain}
-.breeze-heading .breezenet-logo-frame{width:61px;height:65px;border-radius:14px}
-.brand-icon.breezenet-logo-frame{width:48px;height:52px;border-radius:11px;background:#fff}
-@media(max-width:700px){.breeze-heading .breezenet-logo-frame{width:50px;height:54px;border-radius:12px}.brand-icon.breezenet-logo-frame{width:44px;height:48px}}
+.breezenet-logo-frame{display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;overflow:visible;background:transparent;border:0;border-radius:0;padding:0;box-shadow:none;box-sizing:border-box}
+.breezenet-logo-image{display:block;width:100%;height:100%;max-width:100%;max-height:100%;object-fit:contain}
+.breeze-heading .breezenet-logo-frame{width:112px;height:112px}
+.brand-icon.breezenet-logo-frame{width:64px;height:64px;border:0;border-radius:0;background:transparent;box-shadow:none}
+@media(max-width:700px){.breeze-heading .breezenet-logo-frame{width:84px;height:84px}.brand-icon.breezenet-logo-frame{width:60px;height:60px}}
+@media(max-width:380px){.breeze-heading h1{font-size:23px}}

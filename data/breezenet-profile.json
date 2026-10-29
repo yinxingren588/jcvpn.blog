@@ -3,11 +3,13 @@
   "updated_on": "2026-10-29",
   "source": "博客站长补充的品牌定位说明",
   "logo": {
-    "path": "assets/breezenet-logo.png",
-    "source": "博客站长提供",
+    "path": "assets/breezenet-logo-hd.png",
+    "source": "博客站长提供原图，并要求制作透明背景的清晰重制版",
     "provided_on": "2026-10-29",
-    "width": 57,
-    "height": 61
+    "width": 1254,
+    "height": 1254,
+    "original_path": "assets/breezenet-logo.png",
+    "processing": "使用内置imagegen图像编辑工具，保留云朵与Breezenet文字，清晰重制并去除蓝色方底"
   },
   "positioning": "大流量与性价比",
   "line_type": "IPLC专线",
