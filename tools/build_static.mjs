@@ -29,7 +29,8 @@ assert.equal((await readFile(join(root, config.indexnow_key + '.txt'), 'utf8')).
 const files = (await readdir(root, { withFileTypes: true }))
   .filter(entry => entry.isFile() && entry.name.endsWith('.html'))
   .map(entry => entry.name);
-assert.equal(files.length, Object.keys(manifest.pages).length + 1, 'Refresh publication metadata for new or removed pages');
+assert.ok(files.includes('404.html'), 'A top-level 404.html is required for this static multi-page site');
+assert.equal(files.length, Object.keys(manifest.pages).length + 2, 'Refresh publication metadata for new or removed pages');
 files.push('03-可信内容与SEO规范.md', '04-首批品牌档案.md', 'robots.txt', 'sitemap.xml', '.nojekyll', config.indexnow_key + '.txt');
 async function collect(directory) {
   for (const entry of await readdir(join(root, directory), { withFileTypes: true })) {

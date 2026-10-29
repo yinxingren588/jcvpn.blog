@@ -32,7 +32,8 @@ def read_json(path: Path, default=None):
 
 
 def page_url(name: str, origin: str) -> str:
-    return origin + '/' if name == 'index.html' else origin + '/' + quote(name)
+    # Cloudflare Pages redirects *.html to the extensionless URL.
+    return origin + '/' if name == 'index.html' else origin + '/' + quote(name.removesuffix('.html'))
 
 
 def fingerprint(content: str) -> str:
@@ -62,19 +63,22 @@ def prepare() -> dict:
     now = datetime.now(timezone(timedelta(hours=8))).replace(microsecond=0).isoformat()
     pages = {}
     for path in sorted(ROOT.glob('*.html')):
-        if path.name in (ALIAS, '404.html'):
+        if path.name == ALIAS:
             continue
         content = path.read_text(encoding='utf-8')
         # Remove preview indexing rules and stale canonical tags, then add one copy.
         content = re.sub(r'<meta\b(?=[^>]*\bname=[\"\'](?:robots|bingbot)[\"\'])[^>]*>', '', content, flags=re.I)
         content = re.sub(r'<link\b(?=[^>]*\brel=[\"\']canonical[\"\'])[^>]*>', '', content, flags=re.I)
         canonical = page_url(path.name, origin)
-        tags = '<meta name="robots" content="index,follow"><link rel="canonical" href="' + escape(canonical, quote=True) + '">'
+        robots_rule = 'noindex,follow' if path.name == '404.html' else 'index,follow'
+        tags = '<meta name="robots" content="' + robots_rule + '"><link rel="canonical" href="' + escape(canonical, quote=True) + '">'
         content = re.sub(r'</head>', lambda match: tags + match.group(), content, count=1, flags=re.I)
         # Remove only the local-preview label, retaining source and authorship notes.
         content = content.replace('本地内容预览 · ', '').replace('本地预览 · ', '').replace(' · 本地预览', '')
         content = content.replace(' · 本地内容预览', '')
         write_changed(path, content)
+        if path.name == '404.html':
+            continue
         digest = fingerprint(content)
         previous = old.get('pages', {}).get(canonical, {})
         modified = previous['lastmod'] if previous.get('sha256') == digest else now

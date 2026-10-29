@@ -39,12 +39,13 @@ def validate():
     urls = [node.text for node in sitemap.findall('.//{' + NAMESPACE + '}loc')]
     if len(urls) != len(set(urls)) or set(urls) != set(manifest['pages']): errors.append('Sitemap URL set mismatch')
     if page_url(ALIAS, config['origin']) in urls: errors.append('Duplicate home in sitemap')
+    if page_url('404.html', config['origin']) in urls: errors.append('404 page in sitemap')
     for name, doc in documents.items():
         content = (ROOT / name).read_text(encoding='utf-8')
         expected = config['origin'] + '/' if name == ALIAS else page_url(name, config['origin'])
         if doc.canonicals != [expected]: errors.append(name + ': canonical mismatch')
-        if name != ALIAS and doc.robots != ['index,follow']: errors.append(name + ': indexing rule mismatch')
-        if name == ALIAS and doc.robots != ['noindex,follow']: errors.append('Alias must not be indexed')
+        expected_robots = 'noindex,follow' if name in (ALIAS, '404.html') else 'index,follow'
+        if doc.robots != [expected_robots]: errors.append(name + ': indexing rule mismatch')
         if len(re.findall(r'<h1(?:>|\s)', content)) != 1: errors.append(name + ': H1 count')
         for ref in doc.refs:
             parsed = urlsplit(ref)

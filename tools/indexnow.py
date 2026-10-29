@@ -7,6 +7,7 @@ import json
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
+from concurrent.futures import ThreadPoolExecutor
 from urllib.error import HTTPError, URLError
 from urllib.parse import urlsplit
 from urllib.request import Request, urlopen
@@ -20,7 +21,11 @@ def pending(config, manifest):
     previous = read_json(NOTIFIED, {'hashes': {}})['hashes']
     current = {url: info['sha256'] for url, info in manifest['pages'].items()}
     changed = [url for url, digest in current.items() if previous.get(url) != digest]
-    deleted = [url for url in previous if url not in current]
+    # Old .html URLs remain working redirects, not deleted resources.
+    def normalized(url):
+        if url.endswith('/index.html'): return url[:-10]
+        return url[:-5] if url.endswith('.html') else url
+    deleted = [url for url in previous if url not in current and normalized(url) not in current]
     payload = {'host': urlsplit(config['origin']).netloc,
                'key': config['indexnow_key'],
                'keyLocation': config['origin'].rstrip('/') + '/' + config['indexnow_key'] + '.txt',
@@ -39,13 +44,13 @@ def verify_live(payload, manifest, deleted, check_all=True):
     if status != 200 or final != payload['keyLocation'] or text.strip() != payload['key']:
         raise RuntimeError('The live IndexNow key file does not match. Upload the release to the confirmed domain root first.')
     urls = payload['urlList'] if check_all else []
-    for url in urls:
+    def verify_page(url):
         if url in deleted:
             try:
                 fetch(url)
             except HTTPError as error:
                 if error.code in (404, 410):
-                    continue
+                    return
                 raise
             raise RuntimeError('Removed URL is still online: ' + url)
         status, final, text = fetch(url)
@@ -53,6 +58,8 @@ def verify_live(payload, manifest, deleted, check_all=True):
             raise RuntimeError('Unexpected HTTP response or redirect: ' + url)
         if fingerprint(text) != manifest['pages'][url]['sha256']:
             raise RuntimeError('The live page differs from this release: ' + url + '. Upload the changed page and retry.')
+    with ThreadPoolExecutor(max_workers=6) as executor:
+        list(executor.map(verify_page, urls))
     for filename in ('robots.txt', 'sitemap.xml'):
         url = manifest['origin'] + '/' + filename
         status, final, text = fetch(url)

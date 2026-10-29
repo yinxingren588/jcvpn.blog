@@ -50,7 +50,7 @@ def footer():
 
 
 def shell(title, description, content):
-    return '<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>' + escape(title) + '｜叮当观察</title><meta name="description" content="' + escape(description, quote=True) + '"><link rel="stylesheet" href="assets/site-base.css"><link rel="stylesheet" href="assets/doraemon-theme.css"><link rel="stylesheet" href="assets/topics.css"></head><body><div class="shell">' + header('') + '<main class="site-info-main">' + content + '</main>' + footer() + '</div></body></html>'
+    return '<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>' + escape(title) + '｜叮当观察</title><meta name="description" content="' + escape(description, quote=True) + '"><link rel="stylesheet" href="assets/site-base.css"><link rel="stylesheet" href="assets/doraemon-theme.css"><link rel="stylesheet" href="assets/topics.css"><link rel="stylesheet" href="assets/site-chrome.css"><script src="assets/site-chrome.js" defer></script></head><body><div class="shell">' + header('') + '<main class="site-info-main">' + content + '</main>' + footer() + '</div></body></html>'
 
 
 def about_page():
@@ -84,6 +84,7 @@ def apply_site_chrome(root):
     data = read_contact(root)
     write_changed(root / 'about.html', about_page())
     write_changed(root / 'contact.html', contact_page(data))
+    write_changed(root / '404.html', shell('页面未找到', '这个页面不存在，可以返回首页、浏览专题或联系站方。', '<section class="info-hero"><span class="info-kicker">404 / PAGE NOT FOUND</span><h1>这页暂时找不到了</h1><p>链接可能已经变化，或地址输入有误。你可以返回首页，从专题重新查找内容；如果是站内链接的问题，也欢迎告诉站方。</p><div class="contact-buttons"><a class="contact-action" href="index.html">返回首页 →</a><a class="copy-contact" href="topics.html">浏览博客专题</a><a class="copy-contact" href="contact.html">反馈失效链接</a></div></section>'))
     for page in root.glob('*.html'):
         if page.name in ('01-首页框架.html', '404.html'):
             continue
