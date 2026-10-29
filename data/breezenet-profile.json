@@ -2,6 +2,13 @@
   "brand_name": "微风网络 Breezenet",
   "updated_on": "2026-10-29",
   "source": "博客站长补充的品牌定位说明",
+  "logo": {
+    "path": "assets/breezenet-logo.png",
+    "source": "博客站长提供",
+    "provided_on": "2026-10-29",
+    "width": 57,
+    "height": 61
+  },
   "positioning": "大流量与性价比",
   "line_type": "IPLC专线",
   "intro": "微风网络 Breezenet 以大流量与性价比为主要定位，采用IPLC专线，提供原生IP节点选择，面向关注节点IP纯净度、有4K视频观看需求的用户。本页结合套餐额度、优惠信息与第三方延迟记录，帮助你按用量、预算和使用场景了解服务。",

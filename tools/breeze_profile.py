@@ -85,6 +85,14 @@ def build_breezenet_profile(root):
     clients = json.loads(clients_path.read_text(encoding='utf-8')) if clients_path.exists() else None
     rules_path = root / 'data/breezenet-service-rules.json'
     rules = json.loads(rules_path.read_text(encoding='utf-8')) if rules_path.exists() else None
+    logo = profile.get('logo') if profile else None
+    logo_image = None
+    logo_style = ''
+    if logo:
+        image_revision = sha256((root / logo['path']).read_bytes()).hexdigest()[:12]
+        style_revision = sha256((root / 'assets/breezenet-logo.css').read_bytes()).hexdigest()[:12]
+        logo_image = '<img class="breezenet-logo-image" src="' + e(logo['path'], quote=True) + '?v=' + image_revision + '" alt="微风网络 Breezenet Logo" width="' + str(logo['width']) + '" height="' + str(logo['height']) + '" decoding="async">'
+        logo_style = '<link rel="stylesheet" href="assets/breezenet-logo.css?v=' + style_revision + '">'
     plans = data['plans']
     url = e(data['entry_url'], quote=True)
     labels = {'year': '年付 · 每月流量', 'month': '月付 · 每月流量', 'once': '一次性 · 总流量'}
@@ -182,14 +190,23 @@ def build_breezenet_profile(root):
     for asset in ('breezenet.css', 'breezenet.js'):
         revision = sha256((root / 'assets' / asset).read_bytes()).hexdigest()[:12]
         page = page.replace(f'assets/{asset}"', f'assets/{asset}?v={revision}"')
+    if logo_image:
+        page = page.replace('<span class="breeze-mark" aria-hidden="true">B</span>', '<span class="breezenet-logo-frame">' + logo_image + '</span>', 1)
+        page = page.replace('</head>', logo_style + '</head>', 1)
     write_changed(root / 'brand-breezenet.html', page)
     # Keep card summaries in the home and directory consistent with the profile.
     for name in ('index.html', 'brands.html'):
         path = root / name
         text = path.read_text(encoding='utf-8')
         def update_card(match):
-            return re.sub(r'<p>.*?</p>', '<p>IPLC资料 · 6款套餐</p>', match[0], count=1, flags=re.S)
+            card = re.sub(r'<p>.*?</p>', '<p>IPLC资料 · 6款套餐</p>', match[0], count=1, flags=re.S)
+            if logo_image:
+                card = re.sub(r'<span class="brand-icon\b[^>]*>.*?</span>', lambda _: '<span class="brand-icon breezenet-logo-frame">' + logo_image + '</span>', card, count=1, flags=re.S)
+            return card
         text = re.sub(r'<a\b[^>]*href="brand-breezenet\.html"[^>]*>.*?</a>', update_card, text, flags=re.S)
+        if logo_image:
+            text = re.sub(r'<link rel="stylesheet" href="assets/breezenet-logo\.css(?:\?[^\"]*)?">', '', text)
+            text = text.replace('</head>', logo_style + '</head>', 1)
         write_changed(path, text)
     brands_path = root / 'data/brands.json'
     catalog = json.loads(brands_path.read_text(encoding='utf-8'))
@@ -197,6 +214,8 @@ def build_breezenet_profile(root):
     brand.update(profile_status='third_party_plan_catalog', verification_status='third_party_materials_not_independently_verified', source_type='第三方套餐截图，经站长转交', source_date=data['updated_on'], plan_count=len(plans), line_type_from_materials='IPLC专线', page_checked_on=data['updated_on'], page_observation='入口经线路检测后可跳转微风网络注册页，并保留邀请码；套餐数据来自第三方截图，未登录后台独立核价。')
     if latency_data:
         brand.update(source_type='第三方套餐及延迟截图，经站长转交', latency_node_count=52, latency_recorded_at='2026-10-29 12:00（北京时间）')
+    if logo:
+        brand.update(logo_path=logo['path'], logo_source=logo['source'], logo_provided_on=logo['provided_on'])
     write_changed(brands_path, json.dumps(catalog, ensure_ascii=False, indent=2) + '\n')
     # Keep the existing general FAQ accurate as a second brand gains prices.
     old_status = '其他四个品牌的现行价格仍待提供，非月付周期报价不自行推算。'
