@@ -70,7 +70,10 @@
         "source": "站长提供的36×35像素Logo截图",
         "preparation": "按站长要求使用内置图像生成工具高清重制，非原始矢量文件",
         "prepared_on": "2026-10-29"
-      }
+      },
+      "latency_record_count": 69,
+      "latency_record_source": "博客站长提供的6张飞猫云客户端截图",
+      "latency_snapshot_local_time": "2026-10-29 20:00 Asia/Shanghai"
     },
     {
       "id": "muguang",

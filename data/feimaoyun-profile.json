@@ -70,6 +70,8 @@
     "套餐已按站长提供的3张截图与价格确认整理，详见feimaoyun-plans.json。",
     "客户端类型、iOS识别码与各平台登录连接流程已按站长确认整理，详见feimaoyun-clients.json。",
     "自研客户端从官网首页直接下载；iOS具体下载页面等待补充。优惠码flycat888为九折，学生版除外其余6款适用且无到期限制，详见feimaoyun-coupon.json；售后规则见feimaoyun-service-rules.json。",
-    "已记录2026-10-29上海电信、新加坡节点的ChatGPT成功问答反馈，未提供延迟或下载速度数值。"
+    "已记录2026-10-29上海电信、新加坡节点的ChatGPT成功问答反馈。",
+    "已按站长提供的6张截图整理2026-10-29 20:00上海电信、Windows版飞猫云客户端的69条延迟记录，详见feimaoyun-latency.json；未提供下载速度。",
+    "截图中的IEPL节点命名按原文保留，站长明确确认品牌介绍继续使用IPLC。"
   ]
 }
