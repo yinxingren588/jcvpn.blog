@@ -4,7 +4,10 @@
   "source": "博客站长提供的6张灵动云套餐截图及穿云IPLC线路确认",
   "currency": "CNY",
   "independently_verified": false,
-  "coupon": null,
+  "coupon": {
+    "code": "wsj888",
+    "rules_file": "data/lingdongyun-coupon.json"
+  },
   "annual_line_clarification": {
     "screenshot_line": "全IPLC专线",
     "screenshot_single_node_peak_gbps": 2.5,

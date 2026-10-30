@@ -137,7 +137,9 @@
       ],
       "payment_methods": [
         "支付宝"
-      ]
+      ],
+      "coupon_code": "wsj888",
+      "coupon_eligible_plan_count": 7
     }
   ]
 }

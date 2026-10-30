@@ -1,0 +1,19 @@
+{
+  "brand_id": "lingdongyun",
+  "code": "wsj888",
+  "discount_label": "八折",
+  "pay_multiplier": "0.80",
+  "applies_to_plan_ids": ["fufeng", "yulang", "poxiao", "lingxiao", "xianyun-once", "jingyun-once", "feiyun-once"],
+  "excluded_plan_ids": ["chuanyun-year", "private-custom"],
+  "no_fixed_expiry": true,
+  "expires_on": null,
+  "confirmed_on": "2026-10-30",
+  "source": "博客站长确认的优惠码、八折力度、两款除外范围与永久适用规则",
+  "independently_redeemed": false,
+  "notes": [
+    "穿云和至尊私人定制不适用，其余7款套餐可用；不因最初的所有套餐措辞覆盖用户明确列出的例外。",
+    "八折按已提供的原价乘以0.80计算，并保留两位小数。",
+    "无到期限制按站长永久适用的说明记录，不推断其他优惠叠加、重置包或升级订单优惠条件。",
+    "四款周期套餐仅有月价，其他周期的具体券后金额不推算。"
+  ]
+}
