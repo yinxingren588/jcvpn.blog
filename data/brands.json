@@ -93,7 +93,20 @@
       "advertised_single_node_peak_gbps": 2.5,
       "plan_count": 9,
       "access_record_count": 1,
-      "latency_record_count": 60
+      "latency_record_count": 60,
+      "logo": {
+        "image": "assets/feimaoyun-logo-hd.png",
+        "width": 1254,
+        "height": 1254,
+        "format": "PNG",
+        "transparent_background": true,
+        "shape": "蓝色圆形，保留内部白色标志，外围无白底",
+        "source": "博客站长确认暮光网络与飞猫云使用相同Logo，复用现有高清版本",
+        "preparation": "按站长要求使用内置图像生成工具高清重制，非原始矢量文件",
+        "prepared_on": "2026-10-29",
+        "shared_asset_with": "feimaoyun",
+        "confirmed_on": "2026-10-30"
+      }
     },
     {
       "id": "lingdongyun",

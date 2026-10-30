@@ -35,6 +35,11 @@ def build_twilight_profile(root):
     access=json.loads((root/'data/muguang-access-records.json').read_text(encoding='utf-8'))
     latency=json.loads((root/'data/muguang-latency.json').read_text(encoding='utf-8'))
     url=e(data['entry_url'],quote=True)
+    logo=data['logo']
+    logo_revision=sha256((root/logo['image']).read_bytes()).hexdigest()[:12]
+    logo_image='<img class="muguang-logo-image" src="'+e(logo['image'],quote=True)+'?v='+logo_revision+'" alt="暮光网络Logo" width="'+str(logo['width'])+'" height="'+str(logo['height'])+'" decoding="async">'
+    logo_css_revision=sha256((root/'assets/twilight-logo.css').read_bytes()).hexdigest()[:12]
+    logo_css='<link rel="stylesheet" href="assets/twilight-logo.css?v='+logo_css_revision+'">'
     counted=[item for item in data['regions'] if item['reported_node_count'] is not None]
     others=[item for item in data['regions'] if item['reported_node_count'] is None]
     region_cards=''.join('<article class="twilight-region"><h3>'+e(item['name'])+'</h3><strong>'+str(item['reported_node_count'])+'<small>个</small></strong></article>' for item in counted)
@@ -52,7 +57,7 @@ def build_twilight_profile(root):
     ios_name=e(ios['display_name'])
     ios_code=e(ios['brand_code'])
     windows_steps=''.join('<article><span>步骤 '+str(index)+'</span><h3>'+e(step)+'</h3><p>'+e(note)+'</p></article>' for index,(step,note) in enumerate(zip(windows['connection_steps'],['打开对应系统的'+windows['display_name']+'，使用官网账号登录。','登录后选择需要使用的节点。','选好节点后点击连接，开始使用。']),1))
-    body=f'''<section class="twilight-hero" id="twilight-about"><span class="overline">TWILIGHT / CONNECTION PROFILE</span><div class="twilight-hero-heading"><div><h1>暮光网络</h1><p class="twilight-tagline">IPLC专线与原生IP，面向多端日常。</p></div><span class="twilight-intro-stamp">线路 · 地区 · 使用方向</span></div><p class="twilight-intro">{e(data['intro'])}</p><div class="twilight-hero-facts"><div><span>线路方案</span><strong>IPLC专线</strong></div><div><span>资料列明的单节点峰值</span><strong>2.5<small>Gbps</small></strong></div><div><span>同时使用客户端数量</span><strong>不限数量</strong></div></div><div class="twilight-actions"><a class="btn" href="{url}" target="_blank" rel="sponsored noopener noreferrer">访问暮光网络入口 <span aria-hidden="true">↗</span></a><a href="#twilight-regions">查看节点地区 →</a></div><p class="twilight-date">服务资料由博客站长提供 · 整理日期：{data['updated_on']}</p></section>
+    body=f'''<section class="twilight-hero" id="twilight-about"><span class="overline">TWILIGHT / CONNECTION PROFILE</span><div class="twilight-hero-heading"><div class="twilight-brand-heading"><span class="muguang-logo-frame">{logo_image}</span><div><h1>暮光网络</h1><p class="twilight-tagline">IPLC专线与原生IP，面向多端日常。</p></div></div><span class="twilight-intro-stamp">线路 · 地区 · 使用方向</span></div><p class="twilight-intro">{e(data['intro'])}</p><div class="twilight-hero-facts"><div><span>线路方案</span><strong>IPLC专线</strong></div><div><span>资料列明的单节点峰值</span><strong>2.5<small>Gbps</small></strong></div><div><span>同时使用客户端数量</span><strong>不限数量</strong></div></div><div class="twilight-actions"><a class="btn" href="{url}" target="_blank" rel="sponsored noopener noreferrer">访问暮光网络入口 <span aria-hidden="true">↗</span></a><a href="#twilight-regions">查看节点地区 →</a></div><p class="twilight-date">服务资料由博客站长提供 · 整理日期：{data['updated_on']}</p></section>
 <nav class="twilight-jumps" aria-label="暮光网络页面目录"><a href="#twilight-about">品牌介绍</a><a href="#twilight-plans">9款套餐</a><a href="#twilight-latency">节点延迟</a><a href="#twilight-plan-comparison">价格对比</a><a href="#twilight-plan-guide">如何选择</a><a href="#twilight-clients">使用教程</a><a href="#twilight-traffic">流量规则</a><a href="#twilight-support">售后退款</a><a href="#twilight-service">线路与设备</a><a href="#twilight-regions">节点地区</a><a href="#twilight-platforms">平台支持</a><a href="#twilight-access-records">ChatGPT记录</a><a href="#twilight-faq">常见问题</a><a href="#twilight-sources">资料来源</a></nav>
 {plan_sections}
 {latency_section}
@@ -65,7 +70,7 @@ def build_twilight_profile(root):
 {access_section}
 <section class="section" id="twilight-faq"><div class="twilight-section-title"><span class="overline">TWILIGHT QUESTIONS & ANSWERS</span><h2>暮光网络常见问题</h2></div><div class="twilight-faqs">{questions}</div></section>
 <section class="section" id="twilight-reading"><div class="twilight-section-title"><span class="overline">READ BEFORE COMPARING</span><h2>选择之前，把这些条件看清。</h2></div><div class="twilight-reading-grid"><a href="article-brand-record-template.html"><span>资料来源</span><strong>每个数字，找到对应出处。</strong><small>阅读品牌资料整理方法 →</small></a><a href="article-plan-comparison-sheet.html"><span>套餐比较</span><strong>把金额、额度与周期分开。</strong><small>阅读套餐对比指南 →</small></a><a href="article-fair-comparison.html"><span>连接记录</span><strong>比较表现，先确认相同条件。</strong><small>阅读同条件比较方法 →</small></a></div></section>
-<section class="section" id="twilight-sources"><div class="twilight-section-title"><span class="overline">SOURCES & REVISIONS</span><h2>资料来源与更新说明</h2><p>本页依据{e(data['source'])}整理，日期为{data['updated_on']}；套餐部分另据站长提供的3张套餐截图与标准版240GB流量确认记录整理。内容涵盖IPLC线路、单节点峰值规格、原生IP、多设备并发、客服服务方向与节点地区。</p></div><p class="twilight-note">Windows、macOS和安卓的客户端名称、官网下载方式与连接流程已由站长确认。iOS使用Nextin，填写识别码mgjs后，使用官网账号登录、选择节点并点击连接。周期套餐的同价重置、提前续费与升级收费、周期和流量计算规则也已由站长确认。技术问题全额退款的适用条件、购买后24小时内的申请期限和官网后台客服入口也已确认。本页另收录2026-10-29 23:00上海电信、新加坡节点的ChatGPT实际问答反馈。iOS下载入口、优惠码、其他售后细则、Logo、其他平台使用记录及下载速度数据，将按后续资料补充。另已整理2026-10-30 10:00上海电信、Windows版暮光加速客户端的60条节点延迟记录，原截图不发布。入口保留站长提供的原推广参数。</p><div class="twilight-source-links"><a href="data/muguang-profile.json">暮光网络资料 JSON ↓</a><a href="data/muguang-access-records.json">ChatGPT使用记录 JSON ↓</a><a href="data/muguang-latency.json">60条延迟记录 JSON ↓</a><a href="data/muguang-plans.json">9款套餐资料 JSON ↓</a><a href="data/muguang-plans.csv" download>套餐对比表 CSV ↓</a><a href="{url}" target="_blank" rel="sponsored noopener noreferrer">暮光网络访问入口 ↗</a><a href="brands.html">返回品牌目录 →</a></div></section>'''
+<section class="section" id="twilight-sources"><div class="twilight-section-title"><span class="overline">SOURCES & REVISIONS</span><h2>资料来源与更新说明</h2><p>本页依据{e(data['source'])}整理，日期为{data['updated_on']}；套餐部分另据站长提供的3张套餐截图与标准版240GB流量确认记录整理。内容涵盖IPLC线路、单节点峰值规格、原生IP、多设备并发、客服服务方向与节点地区。</p></div><p class="twilight-note">Windows、macOS和安卓的客户端名称、官网下载方式与连接流程已由站长确认。iOS使用Nextin，填写识别码mgjs后，使用官网账号登录、选择节点并点击连接。周期套餐的同价重置、提前续费与升级收费、周期和流量计算规则也已由站长确认。技术问题全额退款的适用条件、购买后24小时内的申请期限和官网后台客服入口也已确认。本页另收录2026-10-29 23:00上海电信、新加坡节点的ChatGPT实际问答反馈。iOS下载入口、优惠码、其他售后细则、其他平台使用记录及下载速度数据，将按后续资料补充。另已整理2026-10-30 10:00上海电信、Windows版暮光加速客户端的60条节点延迟记录，原截图不发布。品牌Logo按站长确认，复用与飞猫云相同的蓝色圆形高清版本。入口保留站长提供的原推广参数。</p><div class="twilight-source-links"><a href="data/muguang-profile.json">暮光网络资料 JSON ↓</a><a href="data/muguang-access-records.json">ChatGPT使用记录 JSON ↓</a><a href="data/muguang-latency.json">60条延迟记录 JSON ↓</a><a href="data/muguang-plans.json">9款套餐资料 JSON ↓</a><a href="data/muguang-plans.csv" download>套餐对比表 CSV ↓</a><a href="{url}" target="_blank" rel="sponsored noopener noreferrer">暮光网络访问入口 ↗</a><a href="brands.html">返回品牌目录 →</a></div></section>'''
     css_revision=sha256((root/'assets/twilight.css').read_bytes()).hexdigest()[:12]
     description='暮光网络机场套餐与品牌介绍：年付109元、70GB每30天刷新；月付20至180元，覆盖120GB至1500GB。另有150GB、400GB、800GB不限时流量包及680元/月独享定制。对比9款价格与刷新规则，查看上海电信60条节点延迟记录、ChatGPT问答反馈与IPLC线路介绍。'
     page='<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>暮光网络机场套餐｜9款价格、IPLC专线与原生IP｜叮当观察</title><meta name="description" content="'+e(description,quote=True)+'"><link rel="stylesheet" href="assets/site-base.css"><link rel="stylesheet" href="assets/doraemon-theme.css"><link rel="stylesheet" href="assets/topics.css"><link rel="stylesheet" href="assets/invisible-access.css"><link rel="stylesheet" href="assets/twilight.css?v='+css_revision+'"></head><body><div class="shell">'+header('brands')+'<main>'+body+'</main>'+footer()+'</div></body></html>'
@@ -73,18 +78,22 @@ def build_twilight_profile(root):
     plans_js_revision=sha256((root/'assets/twilight-plans.js').read_bytes()).hexdigest()[:12]
     float_css_revision=sha256((root/'assets/invisible-floating.css').read_bytes()).hexdigest()[:12]
     page=page.replace('<link rel="stylesheet" href="assets/twilight.css', '<link rel="stylesheet" href="assets/invisible-floating.css?v='+float_css_revision+'"><link rel="stylesheet" href="assets/twilight.css',1)
-    page=page.replace('<body>', '<body class="has-floating-promo has-twilight-floating">'+floating_recommendation(plans,url),1)
+    page=page.replace('<body>', '<body class="has-floating-promo has-twilight-floating">'+floating_recommendation(plans,url,logo_image),1)
     page=page.replace('</body>', '<script src="assets/twilight-floating.js?v='+float_js_revision+'" defer></script><script src="assets/twilight-plans.js?v='+plans_js_revision+'" defer></script></body>',1)
     latency_css_revision=sha256((root/'assets/twilight-latency.css').read_bytes()).hexdigest()[:12]
     latency_js_revision=sha256((root/'assets/twilight-latency.js').read_bytes()).hexdigest()[:12]
     page=page.replace('</head>', '<link rel="stylesheet" href="assets/invisible-latency.css"><link rel="stylesheet" href="assets/twilight-latency.css?v='+latency_css_revision+'"></head>',1)
     page=page.replace('</body>', '<script src="assets/twilight-latency.js?v='+latency_js_revision+'" defer></script></body>',1)
     page=page.replace('href="#twilight-regions">查看节点地区 →', 'href="#twilight-plans">查看9款套餐 →',1)
+    page=page.replace('</head>',logo_css+'</head>',1)
     write_changed(root/'brand-muguang.html',page)
     for name in ('index.html','brands.html'):
         path=root/name
         original=path.read_text(encoding='utf-8')
         changed=re.sub(r'<a\b[^>]*href="brand-muguang\.html"[^>]*>.*?</a>',lambda match: re.sub(r'<p>.*?</p>','<p>IPLC专线 · 9款套餐与独享定制</p>',match[0],count=1,flags=re.S),original,flags=re.S)
+        changed=re.sub(r'(<a\b[^>]*href="brand-muguang\.html"[^>]*>.*?)<span class="brand-icon(?: muguang-logo-frame)?"[^>]*>.*?</span>',lambda match: match[1]+'<span class="brand-icon muguang-logo-frame">'+logo_image+'</span>',changed,count=1,flags=re.S)
+        changed=re.sub(r'<link rel="stylesheet" href="assets/twilight-logo\.css(?:\?[^\"]*)?">','',changed)
+        changed=changed.replace('</head>',logo_css+'</head>',1)
         write_changed(path,changed)
     catalog_path=root/'data/brands.json'
     catalog=json.loads(catalog_path.read_text(encoding='utf-8'))
@@ -94,8 +103,10 @@ def build_twilight_profile(root):
     brand['plan_count']=len(plans['plans'])
     brand['access_record_count']=len(access['records'])
     brand['latency_record_count']=len(latency['records'])
+    brand['logo']=logo
     write_changed(catalog_path,json.dumps(catalog,ensure_ascii=False,indent=2)+'\n')
     text='# 暮光网络\n\n整理日期：'+data['updated_on']+'。来源：'+data['source']+'。\n\n## 品牌介绍\n\n'+data['intro']+'\n\n'
+    text+='## 品牌Logo\n\n按站长确认，使用与飞猫云相同的蓝色圆形高清Logo，复用现有透明背景图片。\n\n'
     text+='## 服务规格\n\n- 线路：IPLC专线。\n- 资料列明的单节点峰值：最高2.5Gbps，不等于实测下载速度。\n- IP：原生IP线路。\n- 设备：不限制同时使用客户端数量，多设备在线。\n- 客服：登录官网后台联系客服；私人定制需求通过工单沟通，具体响应时限未提供。\n\n'
     text+='## Windows、macOS与安卓使用教程\n\n客户端名称：'+windows['display_name']+'。获取方式：'+windows['download_location']+'。\n\n'+''.join(str(index)+'. '+step+'。\n' for index,step in enumerate(windows['connection_steps'],1))+'\n'
     text+='## iOS客户端\n\n客户端：'+ios['display_name']+'。\n\n'+''.join(str(index)+'. '+step+'。\n' for index,step in enumerate(ios['connection_steps'],1))+'\n'

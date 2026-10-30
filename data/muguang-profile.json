@@ -168,9 +168,10 @@
     "最高2.5Gbps是单节点峰值规格，不是每位用户的实测下载速度。",
     "普通套餐原生IP不扩写为独享或住宅IP；私人定制节点单独确认独立公网IP与独立带宽。",
     "不限同时使用客户端数量不扩写为允许账号转售、共享或其他未确认用途。",
-    "另据站长提供的3张截图整理9款套餐，标准版经确认采用240GB/月；Windows、macOS和安卓客户端均为暮光加速，从官网首页下载，使用官网账号登录，选择节点后点击连接。iOS使用Nextin，填写识别码mgjs后，用官网账号登录，选择节点并点击连接；技术问题经客服协助后仍完全无法使用，可在购买后24小时内通过官网后台客服申请全额退款。iOS下载入口、优惠码、其他售后细则、Logo和下载速度记录尚待补充；另有2026-10-29 23:00上海电信、新加坡节点的ChatGPT成功问答反馈。",
+    "另据站长提供的3张截图整理9款套餐，标准版经确认采用240GB/月；Windows、macOS和安卓客户端均为暮光加速，从官网首页下载，使用官网账号登录，选择节点后点击连接。iOS使用Nextin，填写识别码mgjs后，用官网账号登录，选择节点并点击连接；技术问题经客服协助后仍完全无法使用，可在购买后24小时内通过官网后台客服申请全额退款。iOS下载入口、优惠码、其他售后细则、下载速度记录尚待补充；另有2026-10-29 23:00上海电信、新加坡节点的ChatGPT成功问答反馈。",
     "访问入口保留站长提供的原域名、路径和推广code参数。",
-    "已收录2026-10-30 10:00上海电信、Windows版暮光加速客户端的60条节点延迟记录，与前一晚23:00的ChatGPT问答反馈分开保存。"
+    "已收录2026-10-30 10:00上海电信、Windows版暮光加速客户端的60条节点延迟记录，与前一晚23:00的ChatGPT问答反馈分开保存。",
+    "品牌Logo按站长要求复用与飞猫云相同的蓝色圆形高清版本，外围保持透明。"
   ],
   "exclusive_ip_scope": {
     "plan_id": "private-custom",
@@ -178,5 +179,18 @@
     "ordinary_plans_exclusivity_confirmed": false
   },
   "access_records_file": "data/muguang-access-records.json",
-  "latency_records_file": "data/muguang-latency.json"
+  "latency_records_file": "data/muguang-latency.json",
+  "logo": {
+    "image": "assets/feimaoyun-logo-hd.png",
+    "width": 1254,
+    "height": 1254,
+    "format": "PNG",
+    "transparent_background": true,
+    "shape": "蓝色圆形，保留内部白色标志，外围无白底",
+    "source": "博客站长确认暮光网络与飞猫云使用相同Logo，复用现有高清版本",
+    "preparation": "按站长要求使用内置图像生成工具高清重制，非原始矢量文件",
+    "prepared_on": "2026-10-29",
+    "shared_asset_with": "feimaoyun",
+    "confirmed_on": "2026-10-30"
+  }
 }
