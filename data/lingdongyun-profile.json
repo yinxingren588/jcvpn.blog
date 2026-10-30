@@ -100,7 +100,7 @@
     "SS按协议理解，不当作软件名称；Windows、macOS和安卓使用灵动云客户端，从官网首页下载并用官网账号登录；iOS使用Nextin，识别码ldy。",
     "流媒体、4K/8K和AI支持来自服务介绍，实际结果需对应记录。",
     "15个地区是本次资料列明范围；7个有节点数量，其余8个只列名称，不据此推算完整节点总数。",
-    "已依据6张截图整理9款套餐；优惠码、付款方式、售后规则、Logo和实际测试记录按灵动云自身资料补充。",
+    "已依据6张截图整理9款套餐；周期套餐重置、提前续费与升级规则已确认；优惠码、付款方式、退款与客服细则、Logo和实际测试记录按灵动云自身资料补充。",
     "保留站长提供的完整推广入口及code参数。"
   ],
   "plan_records_file": "data/lingdongyun-plans.json",
@@ -114,5 +114,6 @@
     ],
     "residential_ip_confirmed": null
   },
-  "client_records_file": "data/lingdongyun-clients.json"
+  "client_records_file": "data/lingdongyun-clients.json",
+  "service_rules_file": "data/lingdongyun-service-rules.json"
 }

@@ -1,0 +1,26 @@
+"""Render Lingdong's confirmed periodic service rules with their own package scope."""
+from html import escape as e
+
+
+def upgrade_text(data):
+    return ''.join(data['upgrade'][key] for key in ('payment_rule','cycle_rule','traffic_rule'))
+
+
+def service_faqs(data):
+    return [
+        ('灵动云周期套餐的流量用完后怎样重置？',data['reset']['description']),
+        ('提前续费灵动云周期套餐，会立即补充流量吗？',data['early_renewal']['description']),
+        ('灵动云升级套餐的费用、周期和流量怎样处理？',upgrade_text(data))
+    ]
+
+
+def render_service(data):
+    steps=''.join('<li>'+e(data['upgrade'][key])+'</li>' for key in ('payment_rule','cycle_rule','traffic_rule'))
+    return f'''<section class="section" id="lingdong-service"><div class="lingdong-section-title"><span class="overline">PERIODIC PLANS / RESET, RENEWAL & UPGRADE</span><h2>重置、续费、升级，各自怎样处理？</h2><p>把费用、流量和起算日分开看清。以下适用于已确认的周期套餐。</p></div><div class="lingdong-service-grid"><article class="lingdong-service-card"><span class="lingdong-index">01 / RESET</span><h3>重置：立即恢复流量</h3><p>{e(data['reset']['description'])}</p><span class="lingdong-rule-tag">与所购套餐同价</span></article><article class="lingdong-service-card"><span class="lingdong-index">02 / RENEWAL</span><h3>续费：延长有效期</h3><p>{e(data['early_renewal']['description'])}</p><span class="lingdong-rule-tag">仍按原时间刷新</span></article><article class="lingdong-service-card is-upgrade"><span class="lingdong-index">03 / UPGRADE</span><h3>升级：分清三项处理</h3><ol>{steps}</ol></article></div><div class="lingdong-source-links"><a href="data/lingdongyun-service-rules.json">查看周期套餐规则 JSON ↓</a></div></section>'''
+
+
+def service_markdown(data):
+    return ('## 周期套餐流量规则\n\n来源：'+data['source']+'。确认日期：'+data['updated_on']+'。\n\n'+
+            '### 流量重置\n\n'+data['reset']['description']+'\n\n'+
+            '### 提前续费\n\n'+data['early_renewal']['description']+'\n\n'+
+            '### 套餐升级\n\n'+upgrade_text(data)+'\n\n')
