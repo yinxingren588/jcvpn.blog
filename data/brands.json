@@ -121,7 +121,7 @@
       "profile_path": "brand-lingdongyun.html",
       "profile_status": "station_supplied_introduction_and_9_plans",
       "page_checked_on": "2026-10-28",
-      "page_observation": "已按站长提供的品牌介绍与节点地区资料整理，尚无本品牌实际测速或平台操作记录。",
+      "page_observation": "根据博客站长提供的实际使用反馈，2026-10-30 12:00（北京时间），在上海使用电信网络，连接灵动云新加坡节点，ChatGPT能够正常发送问题，并收到回答。尚无节点延迟、下载速度或流媒体播放记录。",
       "source_type": "博客站长提供的灵动云品牌介绍与节点覆盖资料",
       "source_date": "2026-10-30",
       "line_type_from_materials": "BGP多网专线",
@@ -139,7 +139,18 @@
         "支付宝"
       ],
       "coupon_code": "wsj888",
-      "coupon_eligible_plan_count": 7
+      "coupon_eligible_plan_count": 7,
+      "logo": {
+        "image": "assets/lingdongyun-logo-hd.png",
+        "width": 1254,
+        "height": 1254,
+        "format": "PNG",
+        "transparent_background": true,
+        "source": "博客站长提供的灵动云Logo小图",
+        "preparation": "按站长要求使用图片编辑工具高清重绘，去掉最外层深紫色框，保留内部浅紫色与白色图案；非原始矢量文件",
+        "prepared_on": "2026-10-30"
+      },
+      "access_record_count": 1
     }
   ]
 }

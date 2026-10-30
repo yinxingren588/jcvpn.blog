@@ -15,7 +15,16 @@
   "native_ip_confirmed": null,
   "exclusive_ip_confirmed": null,
   "residential_ip_confirmed": null,
-  "logo": null,
+  "logo": {
+    "image": "assets/lingdongyun-logo-hd.png",
+    "width": 1254,
+    "height": 1254,
+    "format": "PNG",
+    "transparent_background": true,
+    "source": "博客站长提供的灵动云Logo小图",
+    "preparation": "按站长要求使用图片编辑工具高清重绘，去掉最外层深紫色框，保留内部浅紫色与白色图案；非原始矢量文件",
+    "prepared_on": "2026-10-30"
+  },
   "declared_streaming_platforms": [
     "Netflix",
     "Disney+",
@@ -29,7 +38,7 @@
     "ChatGPT",
     "Claude"
   ],
-  "platform_support_basis": "站长提供的服务介绍，尚无本品牌实际播放或问答记录",
+  "platform_support_basis": "服务介绍与站长提供的ChatGPT实际使用反馈；2026-10-30 12:00，上海电信、新加坡节点，能够发送问题并收到回答",
   "regions": [
     {
       "name": "香港",
@@ -100,7 +109,7 @@
     "SS按协议理解，不当作软件名称；Windows、macOS和安卓使用灵动云客户端，从官网首页下载并用官网账号登录；iOS使用Nextin，识别码ldy。",
     "流媒体、4K/8K和AI支持来自服务介绍，实际结果需对应记录。",
     "15个地区是本次资料列明范围；7个有节点数量，其余8个只列名称，不据此推算完整节点总数。",
-    "已依据6张截图整理9款套餐；周期套餐重置、提前续费与升级规则已确认；技术问题经客服协助仍完全无法使用，可在购买后24小时内通过官网后台客服申请全额退款。付款方式已确认支持支付宝；八折码wsj888适用于穿云、至尊私人定制以外的7款，无到期限制；其他售后细则、Logo和实际测试记录按灵动云自身资料补充。",
+    "已依据6张截图整理9款套餐；周期套餐重置、提前续费与升级规则已确认；技术问题经客服协助仍完全无法使用，可在购买后24小时内通过官网后台客服申请全额退款。付款方式已确认支持支付宝；八折码wsj888适用于穿云、至尊私人定制以外的7款，无到期限制；Logo已按站长提供的小图处理为高清版本；ChatGPT问答反馈单独记录，其他售后细则、流媒体播放与速度记录按灵动云自身资料补充。",
     "保留站长提供的完整推广入口及code参数。"
   ],
   "plan_records_file": "data/lingdongyun-plans.json",
@@ -116,5 +125,6 @@
   },
   "client_records_file": "data/lingdongyun-clients.json",
   "service_rules_file": "data/lingdongyun-service-rules.json",
-  "coupon_records_file": "data/lingdongyun-coupon.json"
+  "coupon_records_file": "data/lingdongyun-coupon.json",
+  "access_records_file": "data/lingdongyun-access-records.json"
 }

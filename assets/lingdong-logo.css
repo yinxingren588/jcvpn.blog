@@ -1,0 +1,13 @@
+.lingdong-logo-image{display:block;width:100%;height:100%;object-fit:contain}
+.lingdong-brand-heading{display:flex;align-items:center;gap:17px;min-width:0}
+.lingdong-brand-heading>div{min-width:0}
+.lingdong-logo-frame{display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;background:transparent;border:0;padding:0;box-shadow:none}
+.lingdong-brand-heading .lingdong-logo-frame{width:96px;height:96px}
+.lingdong-brand-heading .lingdong-tagline{margin-bottom:0}
+.brand-icon.lingdong-logo-frame{width:64px;height:64px;border-radius:0;background:transparent;border:0;box-shadow:none}
+#lingdong-floating-promo .fp-brand img{width:48px;height:48px;border:0;border-radius:0;background:transparent;box-shadow:none}
+#lingdong-floating-promo .fp-launcher img{width:28px;height:28px;border:0;border-radius:0;background:transparent}
+.lingdong-access-cards{margin-top:25px}
+@media(max-width:700px){.lingdong-brand-heading{gap:12px}.lingdong-brand-heading .lingdong-logo-frame{width:72px;height:72px}.lingdong-brand-heading .lingdong-tagline{font-size:13px;line-height:1.8}.brand-icon.lingdong-logo-frame{width:60px;height:60px}}
+@media(max-width:380px){.lingdong-brand-heading{gap:9px}.lingdong-brand-heading .lingdong-logo-frame{width:60px;height:60px}.lingdong-brand-heading h1{font-size:27px}.lingdong-brand-heading .lingdong-tagline{font-size:12px}}
+@media(max-width:380px){#lingdong-access-records .access-record-facts{grid-template-columns:1fr}}

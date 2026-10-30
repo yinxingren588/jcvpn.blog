@@ -1,0 +1,25 @@
+{
+  "brand_id": "lingdongyun",
+  "source": "博客站长提供的实际使用反馈",
+  "updated_on": "2026-10-30",
+  "independently_retested": false,
+  "records": [
+    {
+      "platform": "ChatGPT",
+      "tested_on": "2026-10-30",
+      "tested_time": "12:00",
+      "timezone": "Asia/Shanghai",
+      "test_location": "上海",
+      "isp": "电信",
+      "node_region": "新加坡",
+      "client": null,
+      "task": "发送问题并接收回答",
+      "result": "能够正常发送问题，并收到回答"
+    }
+  ],
+  "notes": [
+    "站长确认三十号中午十二点，在上海使用电信网络连接新加坡节点。",
+    "仅记录ChatGPT问答结果，不扩展为其他平台、全部节点、全部功能或持续可用的结论。",
+    "客户端与版本未提供，不借用其他品牌或其他记录的信息。"
+  ]
+}
