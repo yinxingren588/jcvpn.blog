@@ -50,6 +50,9 @@ def prepare() -> dict:
     if (ROOT / 'data/muguang-profile.json').exists():
         from twilight_profile import build_twilight_profile
         build_twilight_profile(ROOT)
+    if (ROOT / 'data/lingdongyun-profile.json').exists():
+        from lingdong_profile import build_lingdong_profile
+        build_lingdong_profile(ROOT)
     if (ROOT / 'data/site-contact.json').exists():
         from site_chrome import apply_site_chrome
         apply_site_chrome(ROOT)

@@ -115,13 +115,19 @@
       "id": "lingdongyun",
       "name": "灵动云",
       "url": "https://varnexa.lingdongaff.com/#/?code=QcRK6OPG",
-      "verification_status": "unverified",
+      "verification_status": "station_provided_not_independently_verified",
       "commercial_relationship": "unconfirmed",
       "planned_path": "/evidence/lingdongyun/",
       "profile_path": "brand-lingdongyun.html",
-      "profile_status": "initial_record",
+      "profile_status": "station_supplied_service_introduction",
       "page_checked_on": "2026-10-28",
-      "page_observation": "本次公开页面查询未取得可核验的介绍内容。后续需以可确认的品牌来源补充，当前不作价格或速度结论。"
+      "page_observation": "已按站长提供的品牌介绍与节点地区资料整理，尚无本品牌实际测速或平台操作记录。",
+      "source_type": "博客站长提供的灵动云品牌介绍与节点覆盖资料",
+      "source_date": "2026-10-30",
+      "line_type_from_materials": "BGP多网专线",
+      "listed_region_count": 15,
+      "traffic_multiplier": 1.0,
+      "protocol": "SS（Shadowsocks）"
     }
   ]
 }
