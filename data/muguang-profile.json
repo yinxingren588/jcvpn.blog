@@ -2,7 +2,7 @@
   "brand_id": "muguang",
   "name": "暮光网络",
   "entry_url": "https://varnexa.twilightaff.com/#/?code=3qqonTlH",
-  "updated_on": "2026-10-29",
+  "updated_on": "2026-10-30",
   "source": "博客站长提供并确认的暮光网络服务介绍与节点地区资料",
   "independently_verified": false,
   "line_type": "IPLC专线",
@@ -168,13 +168,15 @@
     "最高2.5Gbps是单节点峰值规格，不是每位用户的实测下载速度。",
     "普通套餐原生IP不扩写为独享或住宅IP；私人定制节点单独确认独立公网IP与独立带宽。",
     "不限同时使用客户端数量不扩写为允许账号转售、共享或其他未确认用途。",
-    "另据站长提供的3张截图整理9款套餐，标准版经确认采用240GB/月；Windows、macOS和安卓客户端均为暮光加速，从官网首页下载，使用官网账号登录，选择节点后点击连接。iOS使用Nextin，填写识别码mgjs后，用官网账号登录，选择节点并点击连接；技术问题经客服协助后仍完全无法使用，可在购买后24小时内通过官网后台客服申请全额退款。iOS下载入口、优惠码、其他售后细则、Logo、延迟和下载速度记录尚待补充；另有2026-10-29 23:00上海电信、新加坡节点的ChatGPT成功问答反馈。",
-    "访问入口保留站长提供的原域名、路径和推广code参数。"
+    "另据站长提供的3张截图整理9款套餐，标准版经确认采用240GB/月；Windows、macOS和安卓客户端均为暮光加速，从官网首页下载，使用官网账号登录，选择节点后点击连接。iOS使用Nextin，填写识别码mgjs后，用官网账号登录，选择节点并点击连接；技术问题经客服协助后仍完全无法使用，可在购买后24小时内通过官网后台客服申请全额退款。iOS下载入口、优惠码、其他售后细则、Logo和下载速度记录尚待补充；另有2026-10-29 23:00上海电信、新加坡节点的ChatGPT成功问答反馈。",
+    "访问入口保留站长提供的原域名、路径和推广code参数。",
+    "已收录2026-10-30 10:00上海电信、Windows版暮光加速客户端的60条节点延迟记录，与前一晚23:00的ChatGPT问答反馈分开保存。"
   ],
   "exclusive_ip_scope": {
     "plan_id": "private-custom",
     "exclusive_public_ip": true,
     "ordinary_plans_exclusivity_confirmed": false
   },
-  "access_records_file": "data/muguang-access-records.json"
+  "access_records_file": "data/muguang-access-records.json",
+  "latency_records_file": "data/muguang-latency.json"
 }

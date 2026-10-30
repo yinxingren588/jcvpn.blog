@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1120" viewBox="0 0 1600 1120" role="img" aria-labelledby="title desc"><title id="title">暮光网络上午节点延迟记录</title><desc id="desc">2026年10月30日10时，上海电信，Windows版暮光加速客户端，60条数值，0条超时。</desc>
+<rect x="36" y="36" width="1528" height="1048" rx="24" fill="#fff" stroke="#e3d9ed"/>
+<text x="90" y="99" fill="#9782b1" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="17" font-weight="700" text-anchor="start">TWILIGHT / MORNING NODE LATENCY</text>
+<text x="90" y="160" fill="#53406f" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="42" font-weight="700" text-anchor="start">暮光网络 · 上午节点延迟记录</text>
+<text x="90" y="204" fill="#8b8199" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="19" font-weight="400" text-anchor="start">2026-10-30 10:00（北京时间）  |  上海电信  |  Windows版暮光加速客户端</text>
+<rect x="90" y="244" width="337" height="120" rx="15" fill="#f6f1fb"/>
+<text x="114" y="282" fill="#9385a2" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="17" font-weight="400" text-anchor="start">截图记录</text>
+<text x="114" y="335" fill="#8161a4" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="37" font-weight="700" text-anchor="start">60 条</text>
+<rect x="451" y="244" width="337" height="120" rx="15" fill="#f6f1fb"/>
+<text x="475" y="282" fill="#9385a2" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="17" font-weight="400" text-anchor="start">有延迟数值</text>
+<text x="475" y="335" fill="#8161a4" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="37" font-weight="700" text-anchor="start">60 条</text>
+<rect x="812" y="244" width="337" height="120" rx="15" fill="#f6f1fb"/>
+<text x="836" y="282" fill="#9385a2" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="17" font-weight="400" text-anchor="start">本次超时</text>
+<text x="836" y="335" fill="#8161a4" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="37" font-weight="700" text-anchor="start">0 条</text>
+<rect x="1173" y="244" width="337" height="120" rx="15" fill="#f6f1fb"/>
+<text x="1197" y="282" fill="#9385a2" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="17" font-weight="400" text-anchor="start">最低延迟</text>
+<text x="1197" y="335" fill="#8161a4" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="37" font-weight="700" text-anchor="start">45 ms</text>
+<text x="90" y="420" fill="#69547f" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="25" font-weight="700" text-anchor="start">各地区延迟中位数</text>
+<text x="1510" y="420" fill="#93899e" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="16" font-weight="400" text-anchor="end">单位 ms · 右侧为中位数与范围</text>
+<line x1="360.0" y1="460" x2="360.0" y2="760" stroke="#e9e2f0"/>
+<text x="360.0" y="790" fill="#9a90a5" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="15" font-weight="400" text-anchor="middle">0</text>
+<line x1="640.0" y1="460" x2="640.0" y2="760" stroke="#e9e2f0"/>
+<text x="640.0" y="790" fill="#9a90a5" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="15" font-weight="400" text-anchor="middle">50</text>
+<line x1="920.0" y1="460" x2="920.0" y2="760" stroke="#e9e2f0"/>
+<text x="920.0" y="790" fill="#9a90a5" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="15" font-weight="400" text-anchor="middle">100</text>
+<line x1="1200.0" y1="460" x2="1200.0" y2="760" stroke="#e9e2f0"/>
+<text x="1200.0" y="790" fill="#9a90a5" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="15" font-weight="400" text-anchor="middle">150</text>
+<text x="90" y="490" fill="#6b5a7e" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" font-weight="700" text-anchor="start">香港</text>
+<text x="90" y="513" fill="#9b90a7" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="14" font-weight="400" text-anchor="start">20条数值 · 0条超时</text>
+<rect x="360" y="474" width="840" height="22" rx="4" fill="#f2edf7"/>
+<rect x="360" y="474" width="386.4" height="22" rx="4" fill="#8c73af"/>
+<text x="1260" y="492" fill="#75618d" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="19" font-weight="700" text-anchor="start">69 / 66—73</text>
+<text x="90" y="550" fill="#6b5a7e" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" font-weight="700" text-anchor="start">台湾</text>
+<text x="90" y="573" fill="#9b90a7" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="14" font-weight="400" text-anchor="start">10条数值 · 0条超时</text>
+<rect x="360" y="534" width="840" height="22" rx="4" fill="#f2edf7"/>
+<rect x="360" y="534" width="364.0" height="22" rx="4" fill="#589f99"/>
+<text x="1260" y="552" fill="#75618d" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="19" font-weight="700" text-anchor="start">65 / 59—87</text>
+<text x="90" y="610" fill="#6b5a7e" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" font-weight="700" text-anchor="start">日本</text>
+<text x="90" y="633" fill="#9b90a7" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="14" font-weight="400" text-anchor="start">10条数值 · 0条超时</text>
+<rect x="360" y="594" width="840" height="22" rx="4" fill="#f2edf7"/>
+<rect x="360" y="594" width="369.6" height="22" rx="4" fill="#6d88b4"/>
+<text x="1260" y="612" fill="#75618d" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="19" font-weight="700" text-anchor="start">66 / 45—69</text>
+<text x="90" y="670" fill="#6b5a7e" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" font-weight="700" text-anchor="start">新加坡</text>
+<text x="90" y="693" fill="#9b90a7" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="14" font-weight="400" text-anchor="start">10条数值 · 0条超时</text>
+<rect x="360" y="654" width="840" height="22" rx="4" fill="#f2edf7"/>
+<rect x="360" y="654" width="453.6" height="22" rx="4" fill="#c09a56"/>
+<text x="1260" y="672" fill="#75618d" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="19" font-weight="700" text-anchor="start">81 / 76—88</text>
+<text x="90" y="730" fill="#6b5a7e" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" font-weight="700" text-anchor="start">美国</text>
+<text x="90" y="753" fill="#9b90a7" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="14" font-weight="400" text-anchor="start">10条数值 · 0条超时</text>
+<rect x="360" y="714" width="840" height="22" rx="4" fill="#f2edf7"/>
+<rect x="360" y="714" width="649.6" height="22" rx="4" fill="#8a83b9"/>
+<text x="1260" y="732" fill="#75618d" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="19" font-weight="700" text-anchor="start">116 / 99—119</text>
+<rect x="90" y="833" width="1420" height="165" rx="16" fill="#f8f5fc"/>
+<text x="116" y="870" fill="#766189" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" font-weight="700" text-anchor="start">采样与统计说明</text>
+<text x="116" y="909" fill="#8e819a" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" font-weight="400" text-anchor="start">60条数值范围45—119ms，总体中位数69ms；本次截图未出现超时。</text>
+<text x="116" y="945" fill="#8e819a" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" font-weight="400" text-anchor="start">每节点仅一条记录，不推算下载速度、长期可用率或实时状态。</text>
+<text x="116" y="977" fill="#8e819a" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" font-weight="400" text-anchor="start">根据6张客户端截图重绘，未重新测量；原截图不在博客发布。</text>
+<text x="90" y="1047" fill="#857197" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" font-weight="700" text-anchor="start">叮当观察 / jcvpn.blog</text>
+<text x="1510" y="1047" fill="#9b90a7" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="16" font-weight="400" text-anchor="end">2026-10-30 10:00 · 上海电信 · 上午记录</text>
+</svg>

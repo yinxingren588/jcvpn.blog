@@ -8,9 +8,10 @@ import re
 from site_chrome import header, footer, write_changed
 from twilight_plans import render_plans, render_usage_rules, floating_recommendation, plan_faqs, plans_csv, plans_markdown
 from twilight_access import render_access, access_faqs, access_markdown, access_summary
+from twilight_latency import render_latency, latency_faqs, latency_markdown
 
 
-def twilight_faqs(data,plans,access):
+def twilight_faqs(data,plans,access,latency):
     counted='、'.join(item['name']+str(item['reported_node_count'])+'个' for item in data['regions'] if item['reported_node_count'] is not None)
     other='、'.join(item['name'] for item in data['regions'] if item['reported_node_count'] is None)
     return [
@@ -23,8 +24,8 @@ def twilight_faqs(data,plans,access):
         ('暮光网络什么情况可以退款，多久内申请？', data['refund_policy']['description']),
         ('暮光网络支持哪些流媒体与AI平台？', '站长提供的服务介绍列明Netflix、Disney+、ChatGPT与TikTok等平台。这里记录服务说明，本页另列上海电信网络、新加坡节点下的ChatGPT问答反馈，时间为2026-10-29 23:00；其余平台按服务说明列示。'),
         ('暮光网络的原生IP是否等于独享IP或住宅IP？', '品牌基础资料说明原生IP线路；独享私人定制节点另行列明独立公网IP与独立带宽，不与他人共享。普通套餐与独享定制分别核对，本次没有确认住宅IP属性。'),
-        ('这份暮光网络介绍包含实际使用和测速记录吗？', access_summary(access)+'本条是实际问答反馈，尚未提供暮光网络的延迟、下载或上传速度数据。')
-    ]+plan_faqs(plans)+access_faqs(access)
+        ('这份暮光网络介绍包含实际使用和测速记录吗？', access_summary(access)+'另有2026-10-30 10:00上海电信、Windows版暮光加速客户端的60条节点延迟记录。尚未提供下载或上传速度数据。')
+    ]+plan_faqs(plans)+access_faqs(access)+latency_faqs(latency)
 
 
 def build_twilight_profile(root):
@@ -32,14 +33,16 @@ def build_twilight_profile(root):
     data=json.loads((root/'data/muguang-profile.json').read_text(encoding='utf-8'))
     plans=json.loads((root/'data/muguang-plans.json').read_text(encoding='utf-8'))
     access=json.loads((root/'data/muguang-access-records.json').read_text(encoding='utf-8'))
+    latency=json.loads((root/'data/muguang-latency.json').read_text(encoding='utf-8'))
     url=e(data['entry_url'],quote=True)
     counted=[item for item in data['regions'] if item['reported_node_count'] is not None]
     others=[item for item in data['regions'] if item['reported_node_count'] is None]
     region_cards=''.join('<article class="twilight-region"><h3>'+e(item['name'])+'</h3><strong>'+str(item['reported_node_count'])+'<small>个</small></strong></article>' for item in counted)
     region_chips=''.join('<span>'+e(item['name'])+'</span>' for item in others)
     platforms=''.join('<article><span>'+e(item['category'])+'</span><h3>'+e(item['name'])+'</h3></article>' for item in data['platforms'])
-    questions=''.join('<details class="twilight-faq"><summary>'+e(question)+'</summary><p>'+e(answer)+'</p></details>' for question,answer in twilight_faqs(data,plans,access))
+    questions=''.join('<details class="twilight-faq"><summary>'+e(question)+'</summary><p>'+e(answer)+'</p></details>' for question,answer in twilight_faqs(data,plans,access,latency))
     access_section=render_access(access)
+    latency_section=render_latency(latency)
     plan_sections=render_plans(plans,url)
     usage_rules=render_usage_rules(plans)
     refund_description=e(data['refund_policy']['description'])
@@ -50,8 +53,9 @@ def build_twilight_profile(root):
     ios_code=e(ios['brand_code'])
     windows_steps=''.join('<article><span>步骤 '+str(index)+'</span><h3>'+e(step)+'</h3><p>'+e(note)+'</p></article>' for index,(step,note) in enumerate(zip(windows['connection_steps'],['打开对应系统的'+windows['display_name']+'，使用官网账号登录。','登录后选择需要使用的节点。','选好节点后点击连接，开始使用。']),1))
     body=f'''<section class="twilight-hero" id="twilight-about"><span class="overline">TWILIGHT / CONNECTION PROFILE</span><div class="twilight-hero-heading"><div><h1>暮光网络</h1><p class="twilight-tagline">IPLC专线与原生IP，面向多端日常。</p></div><span class="twilight-intro-stamp">线路 · 地区 · 使用方向</span></div><p class="twilight-intro">{e(data['intro'])}</p><div class="twilight-hero-facts"><div><span>线路方案</span><strong>IPLC专线</strong></div><div><span>资料列明的单节点峰值</span><strong>2.5<small>Gbps</small></strong></div><div><span>同时使用客户端数量</span><strong>不限数量</strong></div></div><div class="twilight-actions"><a class="btn" href="{url}" target="_blank" rel="sponsored noopener noreferrer">访问暮光网络入口 <span aria-hidden="true">↗</span></a><a href="#twilight-regions">查看节点地区 →</a></div><p class="twilight-date">服务资料由博客站长提供 · 整理日期：{data['updated_on']}</p></section>
-<nav class="twilight-jumps" aria-label="暮光网络页面目录"><a href="#twilight-about">品牌介绍</a><a href="#twilight-plans">9款套餐</a><a href="#twilight-plan-comparison">价格对比</a><a href="#twilight-plan-guide">如何选择</a><a href="#twilight-clients">使用教程</a><a href="#twilight-traffic">流量规则</a><a href="#twilight-support">售后退款</a><a href="#twilight-service">线路与设备</a><a href="#twilight-regions">节点地区</a><a href="#twilight-platforms">平台支持</a><a href="#twilight-access-records">ChatGPT记录</a><a href="#twilight-faq">常见问题</a><a href="#twilight-sources">资料来源</a></nav>
+<nav class="twilight-jumps" aria-label="暮光网络页面目录"><a href="#twilight-about">品牌介绍</a><a href="#twilight-plans">9款套餐</a><a href="#twilight-latency">节点延迟</a><a href="#twilight-plan-comparison">价格对比</a><a href="#twilight-plan-guide">如何选择</a><a href="#twilight-clients">使用教程</a><a href="#twilight-traffic">流量规则</a><a href="#twilight-support">售后退款</a><a href="#twilight-service">线路与设备</a><a href="#twilight-regions">节点地区</a><a href="#twilight-platforms">平台支持</a><a href="#twilight-access-records">ChatGPT记录</a><a href="#twilight-faq">常见问题</a><a href="#twilight-sources">资料来源</a></nav>
 {plan_sections}
+{latency_section}
 <section class="section" id="twilight-clients"><div class="twilight-section-title"><span class="overline">WINDOWS, MACOS & ANDROID / GET CONNECTED</span><h2>暮光加速：Windows、macOS与安卓使用教程</h2><p>三端均从暮光官网首页下载。打开对应系统的客户端，使用官网账号登录，选择节点后点击连接。</p></div><div class="twilight-plan-guide">{windows_steps}</div><div class="twilight-source-links"><a href="{url}" target="_blank" rel="sponsored noopener noreferrer">前往暮光官网首页获取客户端 ↗</a></div><article class="twilight-plan-notes"><h3>iOS · {ios_name}</h3><p>iOS使用{ios_name}应用。先填写品牌识别码：<strong>{ios_code}</strong>，再使用官网账号登录，选择节点后点击连接。</p></article></section>
 {usage_rules}
 <section class="section" id="twilight-support"><div class="twilight-section-title"><span class="overline">SUPPORT / TECHNICAL REFUND</span><h2>技术问题先排查，退款条件与期限看清楚。</h2><p>登录暮光官网后台联系客服，说明遇到的使用问题。</p></div><article class="twilight-plan-notes"><h3>符合技术问题条件 · 购买后24小时内申请</h3><p>{refund_description}</p></article></section>
@@ -61,9 +65,9 @@ def build_twilight_profile(root):
 {access_section}
 <section class="section" id="twilight-faq"><div class="twilight-section-title"><span class="overline">TWILIGHT QUESTIONS & ANSWERS</span><h2>暮光网络常见问题</h2></div><div class="twilight-faqs">{questions}</div></section>
 <section class="section" id="twilight-reading"><div class="twilight-section-title"><span class="overline">READ BEFORE COMPARING</span><h2>选择之前，把这些条件看清。</h2></div><div class="twilight-reading-grid"><a href="article-brand-record-template.html"><span>资料来源</span><strong>每个数字，找到对应出处。</strong><small>阅读品牌资料整理方法 →</small></a><a href="article-plan-comparison-sheet.html"><span>套餐比较</span><strong>把金额、额度与周期分开。</strong><small>阅读套餐对比指南 →</small></a><a href="article-fair-comparison.html"><span>连接记录</span><strong>比较表现，先确认相同条件。</strong><small>阅读同条件比较方法 →</small></a></div></section>
-<section class="section" id="twilight-sources"><div class="twilight-section-title"><span class="overline">SOURCES & REVISIONS</span><h2>资料来源与更新说明</h2><p>本页依据{e(data['source'])}整理，日期为{data['updated_on']}；套餐部分另据站长提供的3张套餐截图与标准版240GB流量确认记录整理。内容涵盖IPLC线路、单节点峰值规格、原生IP、多设备并发、客服服务方向与节点地区。</p></div><p class="twilight-note">Windows、macOS和安卓的客户端名称、官网下载方式与连接流程已由站长确认。iOS使用Nextin，填写识别码mgjs后，使用官网账号登录、选择节点并点击连接。周期套餐的同价重置、提前续费与升级收费、周期和流量计算规则也已由站长确认。技术问题全额退款的适用条件、购买后24小时内的申请期限和官网后台客服入口也已确认。本页另收录2026-10-29 23:00上海电信、新加坡节点的ChatGPT实际问答反馈。iOS下载入口、优惠码、其他售后细则、Logo、其他平台使用记录及延迟和下载速度数据，将按后续资料补充。入口保留站长提供的原推广参数。</p><div class="twilight-source-links"><a href="data/muguang-profile.json">暮光网络资料 JSON ↓</a><a href="data/muguang-access-records.json">ChatGPT使用记录 JSON ↓</a><a href="data/muguang-plans.json">9款套餐资料 JSON ↓</a><a href="data/muguang-plans.csv" download>套餐对比表 CSV ↓</a><a href="{url}" target="_blank" rel="sponsored noopener noreferrer">暮光网络访问入口 ↗</a><a href="brands.html">返回品牌目录 →</a></div></section>'''
+<section class="section" id="twilight-sources"><div class="twilight-section-title"><span class="overline">SOURCES & REVISIONS</span><h2>资料来源与更新说明</h2><p>本页依据{e(data['source'])}整理，日期为{data['updated_on']}；套餐部分另据站长提供的3张套餐截图与标准版240GB流量确认记录整理。内容涵盖IPLC线路、单节点峰值规格、原生IP、多设备并发、客服服务方向与节点地区。</p></div><p class="twilight-note">Windows、macOS和安卓的客户端名称、官网下载方式与连接流程已由站长确认。iOS使用Nextin，填写识别码mgjs后，使用官网账号登录、选择节点并点击连接。周期套餐的同价重置、提前续费与升级收费、周期和流量计算规则也已由站长确认。技术问题全额退款的适用条件、购买后24小时内的申请期限和官网后台客服入口也已确认。本页另收录2026-10-29 23:00上海电信、新加坡节点的ChatGPT实际问答反馈。iOS下载入口、优惠码、其他售后细则、Logo、其他平台使用记录及下载速度数据，将按后续资料补充。另已整理2026-10-30 10:00上海电信、Windows版暮光加速客户端的60条节点延迟记录，原截图不发布。入口保留站长提供的原推广参数。</p><div class="twilight-source-links"><a href="data/muguang-profile.json">暮光网络资料 JSON ↓</a><a href="data/muguang-access-records.json">ChatGPT使用记录 JSON ↓</a><a href="data/muguang-latency.json">60条延迟记录 JSON ↓</a><a href="data/muguang-plans.json">9款套餐资料 JSON ↓</a><a href="data/muguang-plans.csv" download>套餐对比表 CSV ↓</a><a href="{url}" target="_blank" rel="sponsored noopener noreferrer">暮光网络访问入口 ↗</a><a href="brands.html">返回品牌目录 →</a></div></section>'''
     css_revision=sha256((root/'assets/twilight.css').read_bytes()).hexdigest()[:12]
-    description='暮光网络机场套餐与品牌介绍：年付109元、70GB每30天刷新；月付20至180元，覆盖120GB至1500GB。另有150GB、400GB、800GB不限时流量包及680元/月独享定制。对比9款价格、流量、刷新规则，了解IPLC、原生IP和节点地区。'
+    description='暮光网络机场套餐与品牌介绍：年付109元、70GB每30天刷新；月付20至180元，覆盖120GB至1500GB。另有150GB、400GB、800GB不限时流量包及680元/月独享定制。对比9款价格与刷新规则，查看上海电信60条节点延迟记录、ChatGPT问答反馈与IPLC线路介绍。'
     page='<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>暮光网络机场套餐｜9款价格、IPLC专线与原生IP｜叮当观察</title><meta name="description" content="'+e(description,quote=True)+'"><link rel="stylesheet" href="assets/site-base.css"><link rel="stylesheet" href="assets/doraemon-theme.css"><link rel="stylesheet" href="assets/topics.css"><link rel="stylesheet" href="assets/invisible-access.css"><link rel="stylesheet" href="assets/twilight.css?v='+css_revision+'"></head><body><div class="shell">'+header('brands')+'<main>'+body+'</main>'+footer()+'</div></body></html>'
     float_js_revision=sha256((root/'assets/twilight-floating.js').read_bytes()).hexdigest()[:12]
     plans_js_revision=sha256((root/'assets/twilight-plans.js').read_bytes()).hexdigest()[:12]
@@ -71,6 +75,10 @@ def build_twilight_profile(root):
     page=page.replace('<link rel="stylesheet" href="assets/twilight.css', '<link rel="stylesheet" href="assets/invisible-floating.css?v='+float_css_revision+'"><link rel="stylesheet" href="assets/twilight.css',1)
     page=page.replace('<body>', '<body class="has-floating-promo has-twilight-floating">'+floating_recommendation(plans,url),1)
     page=page.replace('</body>', '<script src="assets/twilight-floating.js?v='+float_js_revision+'" defer></script><script src="assets/twilight-plans.js?v='+plans_js_revision+'" defer></script></body>',1)
+    latency_css_revision=sha256((root/'assets/twilight-latency.css').read_bytes()).hexdigest()[:12]
+    latency_js_revision=sha256((root/'assets/twilight-latency.js').read_bytes()).hexdigest()[:12]
+    page=page.replace('</head>', '<link rel="stylesheet" href="assets/invisible-latency.css"><link rel="stylesheet" href="assets/twilight-latency.css?v='+latency_css_revision+'"></head>',1)
+    page=page.replace('</body>', '<script src="assets/twilight-latency.js?v='+latency_js_revision+'" defer></script></body>',1)
     page=page.replace('href="#twilight-regions">查看节点地区 →', 'href="#twilight-plans">查看9款套餐 →',1)
     write_changed(root/'brand-muguang.html',page)
     for name in ('index.html','brands.html'):
@@ -85,6 +93,7 @@ def build_twilight_profile(root):
     brand['profile_status']='station_supplied_introduction_and_9_plans'
     brand['plan_count']=len(plans['plans'])
     brand['access_record_count']=len(access['records'])
+    brand['latency_record_count']=len(latency['records'])
     write_changed(catalog_path,json.dumps(catalog,ensure_ascii=False,indent=2)+'\n')
     text='# 暮光网络\n\n整理日期：'+data['updated_on']+'。来源：'+data['source']+'。\n\n## 品牌介绍\n\n'+data['intro']+'\n\n'
     text+='## 服务规格\n\n- 线路：IPLC专线。\n- 资料列明的单节点峰值：最高2.5Gbps，不等于实测下载速度。\n- IP：原生IP线路。\n- 设备：不限制同时使用客户端数量，多设备在线。\n- 客服：登录官网后台联系客服；私人定制需求通过工单沟通，具体响应时限未提供。\n\n'
@@ -95,8 +104,8 @@ def build_twilight_profile(root):
     text+='## 节点地区\n\n| 地区 | 资料提供的节点数量 |\n| --- | --- |\n'
     text+=''.join('| '+item['name']+' | '+(str(item['reported_node_count']) if item['reported_node_count'] is not None else '未提供数量')+' |\n' for item in data['regions'])
     text+='\n## 平台支持方向\n\n'+ '、'.join(item['name'] for item in data['platforms'])+'。以上来自服务介绍，ChatGPT实际使用反馈另列。\n\n'
-    text+=access_markdown(access)+'## 常见问题\n\n'
-    text+=''.join('### '+question+'\n\n'+answer+'\n\n' for question,answer in twilight_faqs(data,plans,access))
+    text+=latency_markdown(latency)+access_markdown(access)+'## 常见问题\n\n'
+    text+=''.join('### '+question+'\n\n'+answer+'\n\n' for question,answer in twilight_faqs(data,plans,access,latency))
     text+='## 访问入口\n\n[暮光网络访问入口]('+data['entry_url']+')。保留站长提供的推广参数。\n'
     folder=root/'content/brands'
     folder.mkdir(parents=True,exist_ok=True)
