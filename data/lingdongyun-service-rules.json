@@ -1,11 +1,17 @@
 {
   "brand_id": "lingdongyun",
   "updated_on": "2026-10-30",
-  "source": "博客站长确认的灵动云周期套餐规则、技术问题退款条件与官网后台客服入口",
+  "source": "博客站长确认的灵动云周期套餐规则、退款条件、客服入口与付款方式",
   "independently_verified": false,
   "scope": "重置、提前续费与升级适用于周期套餐；技术问题退款另行列明",
   "eligible_plan_ids_scope": "仅用于重置、提前续费与升级规则",
-  "eligible_plan_ids": ["fufeng", "yulang", "poxiao", "lingxiao", "chuanyun-year"],
+  "eligible_plan_ids": [
+    "fufeng",
+    "yulang",
+    "poxiao",
+    "lingxiao",
+    "chuanyun-year"
+  ],
   "reset": {
     "price_basis": "与所购套餐同价",
     "immediate_full_allowance": true,
@@ -38,6 +44,10 @@
     "重置包价格按所购套餐口径记录，不推算其他付款周期的实际报价或未确认的优惠价。",
     "升级差价的具体金额、退回路径和到账时间未提供，不自行计算或承诺。",
     "24小时是购买后的退款申请期限，不是退款到账时间；到账时间、退款路径与具体响应时限未提供。",
-    "付款方式按后续灵动云资料补充。"
-  ]
+    "付款方式已由站长确认支持支付宝；未扩写其他付款渠道、费用或到账规则。"
+  ],
+  "payment_methods": [
+    "支付宝"
+  ],
+  "payment_confirmed_on": "2026-10-30"
 }

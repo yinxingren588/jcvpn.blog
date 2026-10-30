@@ -12,7 +12,8 @@ def service_faqs(data):
         ('提前续费灵动云周期套餐，会立即补充流量吗？',data['early_renewal']['description']),
         ('灵动云升级套餐的费用、周期和流量怎样处理？',upgrade_text(data)),
         ('灵动云什么情况下可以全额退款，多久内申请？',data['refund']['description']),
-        ('灵动云客服在哪里联系？',data['customer_support']['instructions'])
+        ('灵动云客服在哪里联系？',data['customer_support']['instructions']),
+        ('灵动云支持什么付款方式？','已确认支持'+ '、'.join(data['payment_methods'])+'付款，可通过灵动云官网选择套餐并付款。')
     ]
 
 
@@ -26,7 +27,8 @@ def service_markdown(data):
             '### 流量重置\n\n'+data['reset']['description']+'\n\n'+
             '### 提前续费\n\n'+data['early_renewal']['description']+'\n\n'+
             '### 套餐升级\n\n'+upgrade_text(data)+'\n\n'+
-            '## 技术问题退款与客服\n\n'+data['refund']['description']+'\n\n'+data['customer_support']['instructions']+'\n\n')
+            '## 技术问题退款与客服\n\n'+data['refund']['description']+'\n\n'+data['customer_support']['instructions']+'\n\n'+
+            '## 付款方式\n\n已确认支持'+ '、'.join(data['payment_methods'])+'付款。\n\n')
 
 
 def render_refund(data,url):

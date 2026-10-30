@@ -134,6 +134,9 @@
         "macOS",
         "Android",
         "iOS"
+      ],
+      "payment_methods": [
+        "支付宝"
       ]
     }
   ]
