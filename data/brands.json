@@ -119,7 +119,7 @@
       "commercial_relationship": "unconfirmed",
       "planned_path": "/evidence/lingdongyun/",
       "profile_path": "brand-lingdongyun.html",
-      "profile_status": "station_supplied_service_introduction",
+      "profile_status": "station_supplied_introduction_and_9_plans",
       "page_checked_on": "2026-10-28",
       "page_observation": "已按站长提供的品牌介绍与节点地区资料整理，尚无本品牌实际测速或平台操作记录。",
       "source_type": "博客站长提供的灵动云品牌介绍与节点覆盖资料",
@@ -127,7 +127,8 @@
       "line_type_from_materials": "BGP多网专线",
       "listed_region_count": 15,
       "traffic_multiplier": 1.0,
-      "protocol": "SS（Shadowsocks）"
+      "protocol": "SS（Shadowsocks）",
+      "plan_count": 9
     }
   ]
 }

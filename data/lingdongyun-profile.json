@@ -16,36 +16,102 @@
   "exclusive_ip_confirmed": null,
   "residential_ip_confirmed": null,
   "logo": null,
-  "declared_streaming_platforms": ["Netflix", "Disney+", "HBO"],
-  "declared_video_formats": ["4K", "8K"],
-  "declared_ai_platforms": ["ChatGPT", "Claude"],
+  "declared_streaming_platforms": [
+    "Netflix",
+    "Disney+",
+    "HBO"
+  ],
+  "declared_video_formats": [
+    "4K",
+    "8K"
+  ],
+  "declared_ai_platforms": [
+    "ChatGPT",
+    "Claude"
+  ],
   "platform_support_basis": "站长提供的服务介绍，尚无本品牌实际播放或问答记录",
   "regions": [
-    {"name": "香港", "reported_node_count": 20},
-    {"name": "台湾", "reported_node_count": 10},
-    {"name": "日本", "reported_node_count": 10},
-    {"name": "新加坡", "reported_node_count": 10},
-    {"name": "美国", "reported_node_count": 10},
-    {"name": "韩国", "reported_node_count": 2},
-    {"name": "阿根廷", "reported_node_count": 2},
-    {"name": "马来西亚", "reported_node_count": null},
-    {"name": "越南", "reported_node_count": null},
-    {"name": "菲律宾", "reported_node_count": null},
-    {"name": "泰国", "reported_node_count": null},
-    {"name": "印度", "reported_node_count": null},
-    {"name": "德国", "reported_node_count": null},
-    {"name": "法国", "reported_node_count": null},
-    {"name": "英国", "reported_node_count": null}
+    {
+      "name": "香港",
+      "reported_node_count": 20
+    },
+    {
+      "name": "台湾",
+      "reported_node_count": 10
+    },
+    {
+      "name": "日本",
+      "reported_node_count": 10
+    },
+    {
+      "name": "新加坡",
+      "reported_node_count": 10
+    },
+    {
+      "name": "美国",
+      "reported_node_count": 10
+    },
+    {
+      "name": "韩国",
+      "reported_node_count": 2
+    },
+    {
+      "name": "阿根廷",
+      "reported_node_count": 2
+    },
+    {
+      "name": "马来西亚",
+      "reported_node_count": null
+    },
+    {
+      "name": "越南",
+      "reported_node_count": null
+    },
+    {
+      "name": "菲律宾",
+      "reported_node_count": null
+    },
+    {
+      "name": "泰国",
+      "reported_node_count": null
+    },
+    {
+      "name": "印度",
+      "reported_node_count": null
+    },
+    {
+      "name": "德国",
+      "reported_node_count": null
+    },
+    {
+      "name": "法国",
+      "reported_node_count": null
+    },
+    {
+      "name": "英国",
+      "reported_node_count": null
+    }
   ],
   "notes": [
-    "BGP多网专线按站长原介绍整理，不扩写为IPLC、IEPL、特定带宽或独立测试结论。",
+    "品牌介绍按BGP多网专线整理；穿云截图另列IPLC与单节点最高2.5Gbps，仅归入该套餐，不扩展至其他套餐或实际速度结论。",
     "不限速是服务资料中的政策表述，不推算固定下载速率或高峰表现。",
     "1.0x是流量计费倍率，不是网速倍率；页面示例仅解释倍率，不是套餐报价。",
-    "纯净IP优化不扩写为原生IP、独享IP或住宅IP。",
+    "品牌介绍说明纯净IP优化；驭浪、穿云套餐另列原生IP，至尊私人定制另列独立公网IP与独立带宽，不扩大至全部套餐或住宅IP。",
     "SS按协议理解，不当作软件名称；专属客户端名称、下载和连接流程尚待确认。",
     "流媒体、4K/8K和AI支持来自服务介绍，实际结果需对应记录。",
     "15个地区是本次资料列明范围；7个有节点数量，其余8个只列名称，不据此推算完整节点总数。",
-    "套餐价格、优惠码、付款方式、售后规则、Logo和实际测试记录按灵动云自身资料补充。",
+    "已依据6张截图整理9款套餐；优惠码、付款方式、售后规则、Logo和实际测试记录按灵动云自身资料补充。",
     "保留站长提供的完整推广入口及code参数。"
-  ]
+  ],
+  "plan_records_file": "data/lingdongyun-plans.json",
+  "ip_scope_from_plan_materials": {
+    "native_ip": [
+      "yulang",
+      "chuanyun-year"
+    ],
+    "exclusive_public_ip": [
+      "private-custom"
+    ],
+    "residential_ip_confirmed": null
+  }
 }

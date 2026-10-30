@@ -1,0 +1,224 @@
+{
+  "brand_id": "lingdongyun",
+  "provided_on": "2026-10-30",
+  "source": "博客站长提供的6张灵动云套餐截图及穿云IPLC线路确认",
+  "currency": "CNY",
+  "independently_verified": false,
+  "coupon": null,
+  "annual_line_clarification": {
+    "screenshot_line": "全IPLC专线",
+    "screenshot_single_node_peak_gbps": 2.5,
+    "brand_intro_line": "BGP多网专线",
+    "status": "IPLC_confirmed_by_site_owner",
+    "display_scope": "仅归入穿云年付套餐，不扩展到全部套餐；保留品牌介绍的BGP多网专线表述",
+    "confirmed_by": "博客站长",
+    "confirmed_on": "2026-10-30"
+  },
+  "plans": [
+    {
+      "id": "fufeng",
+      "name": "灵动·拂风",
+      "kind": "periodic",
+      "price_cny": 20,
+      "payment_unit": "月",
+      "traffic_gb": 100,
+      "quota_scope": "每月额度",
+      "available_cycles": [
+        "月付",
+        "季付",
+        "半年付",
+        "年付"
+      ],
+      "traffic_multiplier": 1,
+      "reset_rule": "每月100GB，具体刷新日期以后台显示为准。",
+      "audience": "适合网页、社交、短视频与适量追剧等日常使用。",
+      "detail": "100GB月度流量，资料列明BGP多网专线与1.0x计费，支持SS协议和多设备同时在线。",
+      "line_in_materials": "BGP多网专线",
+      "native_ip_in_materials": null,
+      "unlimited_devices_in_materials": true,
+      "featured_in_screenshot": true
+    },
+    {
+      "id": "yulang",
+      "name": "灵动·驭浪",
+      "kind": "periodic",
+      "price_cny": 50,
+      "payment_unit": "月",
+      "traffic_gb": 300,
+      "quota_scope": "每月额度",
+      "available_cycles": [
+        "月付",
+        "季付",
+        "半年付",
+        "年付"
+      ],
+      "traffic_multiplier": 1,
+      "reset_rule": "每月300GB，具体刷新日期以后台显示为准。",
+      "audience": "适合较频繁的办公、跨境电商及视频观看需求。",
+      "detail": "300GB月度流量，资料列明BGP三网优化、1.0x计费与原生纯净IP，面向流媒体及ChatGPT、Claude等使用方向。",
+      "line_in_materials": "BGP三网优化专线",
+      "native_ip_in_materials": true,
+      "unlimited_devices_in_materials": true
+    },
+    {
+      "id": "poxiao",
+      "name": "灵动·破晓",
+      "kind": "periodic",
+      "price_cny": 100,
+      "payment_unit": "月",
+      "traffic_gb": 700,
+      "quota_scope": "每月额度",
+      "available_cycles": [
+        "月付",
+        "季付",
+        "半年付",
+        "年付"
+      ],
+      "traffic_multiplier": 1,
+      "reset_rule": "每月700GB，具体刷新日期以后台显示为准。",
+      "audience": "适合高清追剧、大文件下载及远程办公等较高用量场景。",
+      "detail": "700GB月度流量，资料说明BGP多线专线与全节点1.0x计费，支持SS协议和多设备使用。",
+      "line_in_materials": "BGP多线专线",
+      "native_ip_in_materials": null,
+      "unlimited_devices_in_materials": true
+    },
+    {
+      "id": "lingxiao",
+      "name": "灵动·凌霄",
+      "kind": "periodic",
+      "price_cny": 180,
+      "payment_unit": "月",
+      "traffic_gb": 1500,
+      "quota_scope": "每月额度",
+      "available_cycles": [
+        "月付",
+        "季付",
+        "半年付",
+        "年付"
+      ],
+      "traffic_multiplier": 1,
+      "reset_rule": "每月1500GB，具体刷新日期以后台显示为准。",
+      "audience": "面向月度总用量较大、团队及多设备同时在线的需求。",
+      "detail": "每月1500GB，截图以1.5TB展示。资料列明BGP智能专线与流量不放大，面向影音、AI工具及多终端使用。",
+      "line_in_materials": "BGP智能专线",
+      "native_ip_in_materials": null,
+      "unlimited_devices_in_materials": true
+    },
+    {
+      "id": "chuanyun-year",
+      "name": "灵动·穿云",
+      "kind": "periodic",
+      "price_cny": 99,
+      "payment_unit": "年",
+      "traffic_gb": 70,
+      "quota_scope": "每30天额度",
+      "available_cycles": [
+        "年付"
+      ],
+      "traffic_multiplier": 1,
+      "reset_rule": "购买日起算，每30天自动刷新70GB流量。",
+      "audience": "适合每期用量较少、希望按年安排预算的新用户。",
+      "detail": "99元按年支付，折合约8.25元/月。70GB每30天刷新；截图另列IPLC、原生IP与单节点峰值最高2.5Gbps，峰值为规格说明。",
+      "line_in_materials": "IPLC专线",
+      "native_ip_in_materials": true,
+      "unlimited_devices_in_materials": true,
+      "advertised_single_node_peak_gbps_from_screenshot": 2.5,
+      "platforms_in_materials": [
+        "Netflix",
+        "Disney+",
+        "ChatGPT",
+        "TikTok"
+      ]
+    },
+    {
+      "id": "xianyun-once",
+      "name": "灵动·闲云（小流量包）",
+      "kind": "one_time",
+      "price_cny": 199,
+      "payment_unit": "一次性",
+      "traffic_gb": 150,
+      "quota_scope": "一次性总额度",
+      "available_cycles": [
+        "一次性"
+      ],
+      "traffic_multiplier": 1,
+      "reset_rule": "无固定流量使用期限，用完为止；不按月自动补充。",
+      "audience": "适合查资料、偶尔出行及低频备用连接需求。",
+      "detail": "单次购买获得150GB总流量，按累计消耗使用。资料列明BGP专线、1.0x计费和影音、AI工具支持方向。",
+      "line_in_materials": "BGP专线",
+      "unlimited_devices_in_materials": true
+    },
+    {
+      "id": "jingyun-once",
+      "name": "灵动·惊云（标准流量包）",
+      "kind": "one_time",
+      "price_cny": 499,
+      "payment_unit": "一次性",
+      "traffic_gb": 400,
+      "quota_scope": "一次性总额度",
+      "available_cycles": [
+        "一次性"
+      ],
+      "traffic_multiplier": null,
+      "reset_rule": "无固定流量使用期限，用完为止；不按月自动补充。",
+      "audience": "适合外出、学术资料查询及使用频率随阶段变化的场景。",
+      "detail": "一次购买400GB总流量，无固定使用期限。资料列明专线方案、SS协议与多设备同时在线。",
+      "line_in_materials": "专线（截图未明确BGP、IPLC或IEPL）",
+      "unlimited_devices_in_materials": true
+    },
+    {
+      "id": "feiyun-once",
+      "name": "灵动·飞云（精英流量包）",
+      "kind": "one_time",
+      "price_cny": 899,
+      "payment_unit": "一次性",
+      "traffic_gb": 800,
+      "quota_scope": "一次性总额度",
+      "available_cycles": [
+        "一次性"
+      ],
+      "traffic_multiplier": 1,
+      "reset_rule": "无固定流量使用期限，用完为止；不按月自动补充。",
+      "audience": "适合累计总用量较大、希望一次准备充裕流量的用户。",
+      "detail": "800GB一次性总流量，资料列明融合带宽、优先级方案与1.0x计费，支持SS协议和多设备同时在线。",
+      "line_in_materials": "融合带宽专线",
+      "priority_from_materials": "最高优先级",
+      "unlimited_devices_in_materials": true
+    },
+    {
+      "id": "private-custom",
+      "name": "灵动云·至尊私人定制",
+      "kind": "custom",
+      "price_cny": 680,
+      "payment_unit": "月",
+      "traffic_gb": 500,
+      "quota_scope": "每月独享流量",
+      "available_cycles": [
+        "月付"
+      ],
+      "traffic_multiplier": null,
+      "reset_rule": "每月500GB独享流量，具体刷新日期与部署配置通过工单确认。",
+      "audience": "面向独立站部署、TikTok直播及跨境定制业务。",
+      "detail": "图示680元/月，包含每月500GB专线独享流量、独立带宽与独立公网IP，资源不与他人共享。",
+      "line_in_materials": "独享专线（截图未明确BGP、IPLC或IEPL）",
+      "exclusive_public_ip": true,
+      "dedicated_bandwidth": true,
+      "unlimited_devices_in_materials": true,
+      "delivery_working_days": [
+        2,
+        3
+      ],
+      "delivery_note": "下单后约2—3个工作日交付，定制需求通过工单沟通，配有专人技术维护。"
+    }
+  ],
+  "notes": [
+    "6张图片分别展示9款套餐上半部与详情，按同列名称和顺序配对，不作为18款。",
+    "四款月付资料有月、季、半年、年四周期选项，但只提供月价，不推算其他周期售价。",
+    "穿云是99元年付、70GB每30天刷新；8.25元/月仅为年付折算，不是可单月支付的报价。",
+    "三款一次性流量分别为150GB、400GB和800GB总额度，不作为每月新增流量。",
+    "驭浪与穿云的资料列明原生IP，私人定制列明独立公网IP和独立带宽，按套餐分别记录。",
+    "图片中的4K/8K、平台访问、优先级及不限速属于服务说明，不作为实际测试结论。",
+    "不沿用其他品牌的优惠码、退款、升级、重置或客户端规则。",
+    "原套餐照片只作整理来源，不在博客发布。"
+  ]
+}
