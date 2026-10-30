@@ -10,7 +10,9 @@ def service_faqs(data):
     return [
         ('灵动云周期套餐的流量用完后怎样重置？',data['reset']['description']),
         ('提前续费灵动云周期套餐，会立即补充流量吗？',data['early_renewal']['description']),
-        ('灵动云升级套餐的费用、周期和流量怎样处理？',upgrade_text(data))
+        ('灵动云升级套餐的费用、周期和流量怎样处理？',upgrade_text(data)),
+        ('灵动云什么情况下可以全额退款，多久内申请？',data['refund']['description']),
+        ('灵动云客服在哪里联系？',data['customer_support']['instructions'])
     ]
 
 
@@ -23,4 +25,9 @@ def service_markdown(data):
     return ('## 周期套餐流量规则\n\n来源：'+data['source']+'。确认日期：'+data['updated_on']+'。\n\n'+
             '### 流量重置\n\n'+data['reset']['description']+'\n\n'+
             '### 提前续费\n\n'+data['early_renewal']['description']+'\n\n'+
-            '### 套餐升级\n\n'+upgrade_text(data)+'\n\n')
+            '### 套餐升级\n\n'+upgrade_text(data)+'\n\n'+
+            '## 技术问题退款与客服\n\n'+data['refund']['description']+'\n\n'+data['customer_support']['instructions']+'\n\n')
+
+
+def render_refund(data,url):
+    return f'''<section class="section" id="lingdong-refund"><div class="lingdong-section-title"><span class="overline">SUPPORT / TECHNICAL REFUND</span><h2>技术问题退款：购买后24小时内申请。</h2><p>先联系官网后台客服协助排查，再按实际情况申请。</p></div><article class="lingdong-refund-card"><h3>经客服协助后仍完全无法使用，可申请全额退款。</h3><p>{e(data['refund']['description'])}</p><a class="lingdong-refund-link" href="{url}" target="_blank" rel="sponsored noopener noreferrer">前往官网后台联系客服 <span aria-hidden="true">↗</span></a></article></section>'''
