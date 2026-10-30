@@ -1,0 +1,19 @@
+{
+  "brand_id": "lingdongyun",
+  "updated_on": "2026-10-30",
+  "source": "博客站长确认的灵动云客户端名称、下载与登录连接流程",
+  "independently_installed_or_tested": false,
+  "platforms": [
+    {"os":"Windows","name":"灵动云","download_location":"官网首页直接下载","login_method":"官网账号登录","connection_steps":["选择节点","点击连接"]},
+    {"os":"macOS","name":"灵动云","download_location":"官网首页直接下载","login_method":"官网账号登录","connection_steps":["选择节点","点击连接"]},
+    {"os":"Android","name":"灵动云","download_location":"官网首页直接下载","login_method":"官网账号登录","connection_steps":["选择节点","点击连接"]},
+    {"os":"iOS","name":"Nextin","download_location":"使用海外Apple ID，在App Store下载Nextin","brand_identifier":"ldy","login_method":"官网账号登录","connection_steps":["填写品牌识别码ldy","使用官网账号登录","选择节点","点击连接"]}
+  ],
+  "notes": [
+    "Windows、macOS和安卓的客户端下载、登录和连接流程相同，均由站长确认。",
+    "iOS使用Nextin，下载方式、ldy识别码和登录后选择节点连接流程均已由站长确认。",
+    "ldy为Nextin品牌识别码，不作为未经确认的购买优惠码。",
+    "未提供软件版本、安装包链接、开发归属或系统最低版本，不填造这些信息。",
+    "SS是套餐资料中的协议说明，不替代已确认的客户端名称。"
+  ]
+}

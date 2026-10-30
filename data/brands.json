@@ -128,7 +128,13 @@
       "listed_region_count": 15,
       "traffic_multiplier": 1.0,
       "protocol": "SS（Shadowsocks）",
-      "plan_count": 9
+      "plan_count": 9,
+      "client_platforms": [
+        "Windows",
+        "macOS",
+        "Android",
+        "iOS"
+      ]
     }
   ]
 }
