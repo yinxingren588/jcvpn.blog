@@ -106,7 +106,10 @@
         "prepared_on": "2026-10-29",
         "shared_asset_with": "feimaoyun",
         "confirmed_on": "2026-10-30"
-      }
+      },
+      "payment_methods": [
+        "支付宝"
+      ]
     },
     {
       "id": "lingdongyun",

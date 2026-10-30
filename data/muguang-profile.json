@@ -14,6 +14,11 @@
   "concurrent_client_limit": null,
   "concurrency_label": "不限制同时使用客户端数量，支持多设备在线",
   "support_description": "登录官网后台联系客服，协助排查使用问题并申请符合条件的退款；私人定制需求通过工单沟通，具体响应时限尚未提供",
+  "payment_methods": ["支付宝"],
+  "payment_confirmation": {
+    "source": "博客站长确认",
+    "confirmed_on": "2026-10-30"
+  },
   "refund_policy": {
     "condition": "技术问题经客服协助后仍完全无法使用",
     "refund_type": "全额退款",
