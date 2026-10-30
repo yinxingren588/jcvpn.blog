@@ -53,6 +53,9 @@ def prepare() -> dict:
     if (ROOT / 'data/lingdongyun-profile.json').exists():
         from lingdong_profile import build_lingdong_profile
         build_lingdong_profile(ROOT)
+    if (ROOT / 'data/invisible-promo.json').exists():
+        from home_feature import build_home_feature
+        build_home_feature(ROOT)
     if (ROOT / 'data/site-contact.json').exists():
         from site_chrome import apply_site_chrome
         apply_site_chrome(ROOT)
