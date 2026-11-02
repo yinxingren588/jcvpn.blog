@@ -93,7 +93,9 @@ def apply_site_seo(root):
             tags+='<meta '+attr+'="'+name+'" content="'+e(value,quote=True)+'">'
         structured={'@context':'https://schema.org','@type':m['kind'],'name':m['title'],'description':m['description'],'url':url,'inLanguage':'zh-CN'}
         if m['kind']=='Article':
-            structured.update(headline=articlemap[path.stem.removeprefix('article-')]['title'],datePublished=m['published_on'],author={'@type':'Organization','name':'叮当观察'},mainEntityOfPage=url)
+            article=articlemap[path.stem.removeprefix('article-')]
+            structured.update(headline=article['title'],datePublished=m['published_on'],author={'@type':'Organization','name':'叮当观察'},mainEntityOfPage=url)
+            if article.get('reviewed_on'):structured['dateModified']=article['reviewed_on']
         if m['kind']=='FAQPage':
             f=next(f for f in data['faqs'] if f.get('file')==path.name)
             structured['mainEntity']=[{'@type':'Question','name':f['question'],'acceptedAnswer':{'@type':'Answer','text':f['answer']}}]

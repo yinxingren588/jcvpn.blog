@@ -30,6 +30,22 @@ def audit():
     bodies={a['slug']:''.join(p for _,p in a['sections']) for a in articles}
     assert len(set(bodies.values()))==84
     assert min(len(bodies[a['slug']]) for a in new)>450
+    revised=[a for a in articles if a.get('reviewed_on')]
+    if (ROOT/'data/editorial-revisions.json').exists():
+        assert len(revised)==60
+        assert len({a['quick_answer'] for a in revised})==60
+        assert len({json.dumps(a['table'],ensure_ascii=False) for a in revised})==60
+        faqmap={f['id']:f for f in faqs}
+        for a in revised:
+            assert len(bodies[a['slug']])>=550,a['slug']
+            assert len(a['sections'])==6 and len(a['table'][1])>=2,a['slug']
+            text=(ROOT/a['file']).read_text(encoding='utf-8')
+            assert 'class="article-quick-answer"' in text,a['slug']
+            assert '本次修订说明' in text,a['slug']
+            structured=json.loads(re.search(r'<script type="application/ld\+json" id="site-seo-structured-data">(.*?)</script>',text,re.S).group(1))
+            assert structured['datePublished']=='2026-10-28' and structured['dateModified']==a['reviewed_on'],a['slug']
+            assert all('id="section-'+str(i)+'"' in text for i in range(1,7)),a['slug']
+            assert a['faqs']==[[faqmap[fid]['question'],faqmap[fid]['answer']] for fid in a['faq_ids']],a['slug']
     similarities=[]
     for i,a in enumerate(new):
         for b in new[i+1:]:
@@ -56,7 +72,7 @@ def audit():
     targets=['机场推荐','梯子推荐','vpn','vpn推荐','节点推荐','机场节点','机场测评','性价比机场','稳定机场','clash机场','便宜机场','便宜机场推荐']
     titles=' '.join(a['title'] for a in new).casefold()
     assert all(k.casefold() in titles for k in targets)
-    report=dict(articles=84,new_articles=24,faqs=248,new_independent_faqs=48,topics=12,seo_pages=len(seo),
+    report=dict(articles=84,new_articles=24,revised_original_articles=len(revised),faqs=248,new_independent_faqs=48,topics=12,seo_pages=len(seo),
                 new_article_shortest_prose=min(len(bodies[a['slug']]) for a in new),highest_new_pair_similarity=sorted(similarities,reverse=True)[:3],errors=[])
     print(json.dumps(report,ensure_ascii=True))
     return report

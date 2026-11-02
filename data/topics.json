@@ -876,7 +876,10 @@
       "question": "浏览器访问成功，能证明所有应用都走VPN吗？",
       "answer": "不能。应分别确认其他应用的代理、路由或例外设置；单个浏览器的成功结果只能说明该次访问。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "vpn",
+        "ipsec"
+      ],
       "article": "vpn-scope"
     },
     {
@@ -885,7 +888,10 @@
       "question": "“全局模式”这个名字足够判断覆盖范围吗？",
       "answer": "不够。不同客户端的命名可能不同，应看当前版本对该模式的定义，并检查应用例外和实际行为。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "vpn",
+        "ipsec"
+      ],
       "article": "vpn-scope"
     },
     {
@@ -894,7 +900,10 @@
       "question": "本站是否已经验证五个品牌的保护范围？",
       "answer": "尚未开展独立验证。隐形人机场已提供品牌方介绍并披露为本站主推品牌，其他品牌仍以初始入口资料为主；保护范围需要结合具体客户端和配置另行核对。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "vpn",
+        "ipsec"
+      ],
       "article": "vpn-scope"
     },
     {
@@ -903,7 +912,11 @@
       "question": "买了订阅，还需要单独确认客户端吗？",
       "answer": "需要核对服务方推荐格式与客户端支持情况。具体软件是否收费、是否支持你的系统，不能从套餐名称推断。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "proxy",
+        "brand-clients",
+        "mihomo-config"
+      ],
       "article": "service-client-protocol"
     },
     {
@@ -912,7 +925,11 @@
       "question": "同一个客户端能说明两家服务质量相同吗？",
       "answer": "不能。客户端相同只控制了部分变量，端点、配置、网络和服务规则仍可能不同。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "proxy",
+        "brand-clients",
+        "mihomo-config"
+      ],
       "article": "service-client-protocol"
     },
     {
@@ -921,7 +938,11 @@
       "question": "“机场VPN”为什么没有统一协议答案？",
       "answer": "因为本站把它视为常用搜索表达，其中“机场”是服务俗称。具体技术必须回到该服务和配置文档确认。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "proxy",
+        "brand-clients",
+        "mihomo-config"
+      ],
       "article": "service-client-protocol"
     },
     {
@@ -930,7 +951,9 @@
       "question": "更换DNS后好了，就证明原DNS一定坏了吗？",
       "answer": "这只是一次相关观察。缓存、时间变化和其他条件也可能变化，需要在受控条件下复查，不能立即归因。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "dns"
+      ],
       "article": "dns-connection"
     },
     {
@@ -939,7 +962,9 @@
       "question": "一个域名有多个地址正常吗？",
       "answer": "可能正常。具体地址结果取决于站点配置和解析过程，不能仅凭地址不止一个认定异常。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "dns"
+      ],
       "article": "dns-connection"
     },
     {
@@ -948,7 +973,9 @@
       "question": "DNS解析成功能证明网站证书有效吗？",
       "answer": "不能。解析与TLS身份校验是不同环节，证书状态需要在实际连接中另外判断。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "dns"
+      ],
       "article": "dns-connection"
     },
     {
@@ -957,7 +984,10 @@
       "question": "网站有HTTPS就代表它不会骗人吗？",
       "answer": "不代表。HTTPS保护连接并参与身份验证，不负责保证商家条款、内容真实性或售后履约。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "tls",
+        "cert"
+      ],
       "article": "https-vpn"
     },
     {
@@ -966,7 +996,10 @@
       "question": "有VPN就可以忽略证书警告吗？",
       "answer": "不能。VPN连接状态不能替目标网站通过证书验证；应保留错误信息并调查具体原因。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "tls",
+        "cert"
+      ],
       "article": "https-vpn"
     },
     {
@@ -975,7 +1008,10 @@
       "question": "HTTPS与VPN一定只能二选一吗？",
       "answer": "不是。它们作用于不同连接边界，可以同时使用；实际覆盖范围仍由应用与配置决定。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "tls",
+        "cert"
+      ],
       "article": "https-vpn"
     },
     {
@@ -984,7 +1020,10 @@
       "question": "打不开一个网站，要立即重装客户端吗？",
       "answer": "先记录范围和错误，再做有依据的局部检查。重装会改变多项条件，可能丢失有用记录，不宜作为默认第一步。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "browser",
+        "timeout-guide"
+      ],
       "article": "connected-no-web"
     },
     {
@@ -993,7 +1032,10 @@
       "question": "错误提示相同就说明原因相同吗？",
       "answer": "不一定。相同表面错误可能对应不同环境；还要结合影响范围、时间和对照结果。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "browser",
+        "timeout-guide"
+      ],
       "article": "connected-no-web"
     },
     {
@@ -1002,7 +1044,10 @@
       "question": "已经恢复，还需要留排查记录吗？",
       "answer": "建议保留关键条件和有效变更，以便复发时比对。不要把一次恢复直接写成已证实的根因。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "browser",
+        "timeout-guide"
+      ],
       "article": "connected-no-web"
     },
     {
@@ -1011,7 +1056,10 @@
       "question": "两台设备在同一个房间就是同网络吗？",
       "answer": "不是充分条件。手机可能使用移动网络，设备也可能连接不同Wi-Fi；应实际确认连接状态。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "browser",
+        "brand-clients"
+      ],
       "article": "device-comparison"
     },
     {
@@ -1020,7 +1068,10 @@
       "question": "配置名字相同就说明内容相同吗？",
       "answer": "不能。名字可以相同而获取日期或内容不同，核对来源和更新时间比名称更有帮助。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "browser",
+        "brand-clients"
+      ],
       "article": "device-comparison"
     },
     {
@@ -1029,7 +1080,10 @@
       "question": "电脑一个浏览器失败，其他正常，重点在哪里？",
       "answer": "先围绕失败浏览器的连接设置、扩展和站点数据排查；这比立即更换整套系统配置更有针对性。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "browser",
+        "brand-clients"
+      ],
       "article": "device-comparison"
     },
     {
@@ -1038,7 +1092,10 @@
       "question": "配置能下载就代表客户端一定支持吗？",
       "answer": "不代表。获取和解析是不同阶段，仍需核对格式、字段和当前版本的支持情况。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "mihomo-providers",
+        "brand-clients"
+      ],
       "article": "subscription-import"
     },
     {
@@ -1047,7 +1104,10 @@
       "question": "把订阅链接发到公开群方便别人帮忙吗？",
       "answer": "不建议。链接可能携带访问凭据，公开后应按服务方说明处理重置，而不是只删除聊天记录。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "mihomo-providers",
+        "brand-clients"
+      ],
       "article": "subscription-import"
     },
     {
@@ -1056,7 +1116,10 @@
       "question": "导入后出现列表，是否可以结束验证？",
       "answer": "还需要验证实际连接与目标访问。导入成功只代表配置处理中的一个阶段完成。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "mihomo-providers",
+        "brand-clients"
+      ],
       "article": "subscription-import"
     },
     {
@@ -1065,7 +1128,10 @@
       "question": "更新后失败，可以直接判定新版有缺陷吗？",
       "answer": "不能。时间先后提供线索，但还需对照配置、网络与其他变化，才能判断因果关系。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "browser",
+        "troubleshoot"
+      ],
       "article": "after-update"
     },
     {
@@ -1074,7 +1140,10 @@
       "question": "找不到旧版本号怎么写反馈？",
       "answer": "写“旧版本未知”，同时提交新版本、更新日期和失败时间；真实缺失项优于猜测。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "browser",
+        "troubleshoot"
+      ],
       "article": "after-update"
     },
     {
@@ -1083,16 +1152,23 @@
       "question": "是否应下载任意旧版安装包来回退？",
       "answer": "应优先查官方回退与数据兼容说明，不采用来源不明安装包；有管理要求的设备交由管理员处理。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "browser",
+        "troubleshoot"
+      ],
       "article": "after-update"
     },
     {
       "id": "monthly-annual-cost-1",
       "category": "plans",
       "question": "年付除以12就能判断划算吗？",
-      "answer": "这只得到名义月均价，还要看实际使用月份、退款限制和续费条件，不能单独代表总成本。",
+      "answer": "不能。年付除以12只是预算展示，实际先支付整年金额。还要核对每期额度、预计使用月份、优惠排除项和已确认退款条件；月均低不代表短期付款少。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "brand-plans",
+        "brand-coupons",
+        "brand-rules"
+      ],
       "article": "monthly-annual-cost"
     },
     {
@@ -1101,7 +1177,11 @@
       "question": "优惠码没写有效期，应怎样记录？",
       "answer": "记录来源和获取日期，标为有效期未知，不宣称永久可用；实际适用条件需在购买前确认。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "brand-plans",
+        "brand-coupons",
+        "brand-rules"
+      ],
       "article": "monthly-annual-cost"
     },
     {
@@ -1110,16 +1190,23 @@
       "question": "未确认退款规则可以按可退款计算吗？",
       "answer": "不应这样计算。把退款金额记为未知，并分别比较可确认的实际支付与剩余权益。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "brand-plans",
+        "brand-coupons",
+        "brand-rules"
+      ],
       "article": "monthly-annual-cost"
     },
     {
       "id": "traffic-accounting-1",
       "category": "plans",
       "question": "“每月重置”一定是每月1日吗？",
-      "answer": "不一定。应查看套餐原文或账户说明，确认按自然月、购买日还是其他周期重置。",
+      "answer": "不一定。本站部分套餐明确按购买日起每30天刷新，其他说明可能使用每月表述。应查看具体套餐及后台日期，不能统一改写成每月1日。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "brand-rules",
+        "brand-plans"
+      ],
       "article": "traffic-accounting"
     },
     {
@@ -1128,7 +1215,10 @@
       "question": "上传流量是否一定免费？",
       "answer": "不能统一判断，需查服务方计费规则。资料未注明时应标为未知，不默认不扣减。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "brand-rules",
+        "brand-plans"
+      ],
       "article": "traffic-accounting"
     },
     {
@@ -1137,7 +1227,10 @@
       "question": "客户端显示10GB、扣减20GB就一定异常吗？",
       "answer": "先确认倍率和统计口径；只有同一窗口、同一单位与规则明确时，差值才具备进一步分析的基础。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "brand-rules",
+        "brand-plans"
+      ],
       "article": "traffic-accounting"
     },
     {
@@ -1146,7 +1239,10 @@
       "question": "支持3台设备一定能3台同时使用吗？",
       "answer": "不一定。“设备数”可能指绑定数，并发条件需另行核对，不能从一句宣传话中推导。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "brand-plans",
+        "brand-clients"
+      ],
       "article": "devices-and-sharing"
     },
     {
@@ -1155,7 +1251,10 @@
       "question": "只有一个用户，是否就不会触发并发限制？",
       "answer": "并发通常与同时使用情况有关，一个用户的多台设备也可能同时连接；仍需确认具体规则。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "brand-plans",
+        "brand-clients"
+      ],
       "article": "devices-and-sharing"
     },
     {
@@ -1164,7 +1263,10 @@
       "question": "更换新电脑前应确认什么？",
       "answer": "确认解绑或迁移方式、已绑定数量、客户端来源与配置格式，并备份必要资料，不把旧设备状态直接套到新设备。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "brand-plans",
+        "brand-clients"
+      ],
       "article": "devices-and-sharing"
     },
     {
@@ -1173,7 +1275,10 @@
       "question": "表格中写“未知”会显得不专业吗？",
       "answer": "不会。明确缺失项使读者知道结论边界，虚构一个整齐数字反而破坏可核查性。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "brand-plans",
+        "brand-coupons"
+      ],
       "article": "plan-comparison-sheet"
     },
     {
@@ -1182,7 +1287,10 @@
       "question": "实际订单能证明所有人都买得到同价吗？",
       "answer": "不能。订单可能受时间、账户或活动条件影响，只能证明该次交易所记录的情况。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "brand-plans",
+        "brand-coupons"
+      ],
       "article": "plan-comparison-sheet"
     },
     {
@@ -1191,7 +1299,10 @@
       "question": "两个套餐字段不齐还能比较吗？",
       "answer": "可以展示已知差异，但应标明缺项，并避免给出依赖未知条件的总分或购买结论。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "brand-plans",
+        "brand-coupons"
+      ],
       "article": "plan-comparison-sheet"
     },
     {
@@ -1200,7 +1311,12 @@
       "question": "测速里的ping一定是同一种测量吗？",
       "answer": "不一定。不同工具可能采用不同方式和定义，应先读工具说明，避免直接对比不可比的数值。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "speed",
+        "speedtest",
+        "aim",
+        "node-records"
+      ],
       "article": "metrics-explained"
     },
     {
@@ -1209,7 +1325,12 @@
       "question": "平均延迟相同，体验一定相同吗？",
       "answer": "不一定。波动、失败情况及任务类型可能不同，需要更多样本信息才能判断。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "speed",
+        "speedtest",
+        "aim",
+        "node-records"
+      ],
       "article": "metrics-explained"
     },
     {
@@ -1218,7 +1339,12 @@
       "question": "丢包为零能证明所有应用没有丢包吗？",
       "answer": "不能。结果只涉及相应测试路径和采样，不能自动覆盖其他协议、目标或时间。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "speed",
+        "speedtest",
+        "aim",
+        "node-records"
+      ],
       "article": "metrics-explained"
     },
     {
@@ -1227,7 +1353,10 @@
       "question": "别人转发的测速图可以写成本站实测吗？",
       "answer": "不能。可以在取得使用许可并注明出处后讨论其记录，但不得将第三方材料冒充本站采样。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "speedtest",
+        "node-records"
+      ],
       "article": "read-speed-chart"
     },
     {
@@ -1236,7 +1365,10 @@
       "question": "截图只显示峰值，还缺什么？",
       "answer": "至少缺少采样条件、样本分布和失败情况；峰值不能独立代表持续表现。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "speedtest",
+        "node-records"
+      ],
       "article": "read-speed-chart"
     },
     {
@@ -1245,7 +1377,10 @@
       "question": "工具不同，结果是否完全不能参考？",
       "answer": "可以作为各自条件下的观察，但需解释测量差异，不应直接按数值高低作公平排名。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "speedtest",
+        "node-records"
+      ],
       "article": "read-speed-chart"
     },
     {
@@ -1272,7 +1407,9 @@
       "question": "两家各测一次能做排行榜吗？",
       "answer": "本站不会据此排行。一次样本难以区分服务差异和环境波动，应先扩大可比记录。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "node-records"
+      ],
       "article": "fair-comparison"
     },
     {
@@ -1281,7 +1418,9 @@
       "question": "综合分越精确是否越可信？",
       "answer": "不是。小数位并不能弥补权重、样本或缺失项处理的不足，方法需要先公开。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "node-records"
+      ],
       "article": "fair-comparison"
     },
     {
@@ -1290,7 +1429,9 @@
       "question": "品牌收到赠测会自动让结论无效吗？",
       "answer": "合作关系需要披露，但判断仍应检查方法和证据；既不能隐瞒，也不能单凭合作标签替代分析。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "node-records"
+      ],
       "article": "fair-comparison"
     },
     {
@@ -1326,7 +1467,11 @@
       "question": "换IP后没有退出登录，说明VPN失效了吗？",
       "answer": "不能这样判断。浏览器可能保留会话Cookie；应分别验证网络路径和站点会话状态。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "cookies",
+        "privacy",
+        "ai-records"
+      ],
       "article": "cookies-and-ip"
     },
     {
@@ -1335,7 +1480,11 @@
       "question": "清除Cookie一定不会影响使用吗？",
       "answer": "可能退出登录或重置站点偏好。清理前应确认目标、保留必要信息，并使用浏览器提供的相应功能。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "cookies",
+        "privacy",
+        "ai-records"
+      ],
       "article": "cookies-and-ip"
     },
     {
@@ -1344,7 +1493,11 @@
       "question": "没有Cookie就一定不能被识别吗？",
       "answer": "不能保证。浏览器指纹、登录等机制仍需分别考虑，不应把单一措施描述成完全匿名。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "cookies",
+        "privacy",
+        "ai-records"
+      ],
       "article": "cookies-and-ip"
     },
     {
@@ -1353,7 +1506,10 @@
       "question": "证书过期错误是否只能由本机时间造成？",
       "answer": "不是。目标站点证书自身也可能过期，应根据代码、证书信息和时间检查区分。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "cert",
+        "tls"
+      ],
       "article": "certificate-warnings"
     },
     {
@@ -1362,7 +1518,10 @@
       "question": "遇到未知颁发者，应立刻安装网上提供的证书吗？",
       "answer": "不应盲目安装。先确认来源和网络管理要求，通过浏览器官方说明或管理员排查。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "cert",
+        "tls"
+      ],
       "article": "certificate-warnings"
     },
     {
@@ -1371,7 +1530,10 @@
       "question": "证书警告属于普通速度问题吗？",
       "answer": "不是同一层面。它涉及连接验证，应与超时、吞吐量和页面加载慢分别记录。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "cert",
+        "tls"
+      ],
       "article": "certificate-warnings"
     },
     {
@@ -1380,7 +1542,11 @@
       "question": "系统代理开启后，所有软件都会使用它吗？",
       "answer": "不能作统一承诺。不同应用处理系统设置的方式可能不同，应逐项查文档和验证。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "proxy",
+        "browser",
+        "mihomo-config"
+      ],
       "article": "browser-proxy-scope"
     },
     {
@@ -1389,7 +1555,11 @@
       "question": "同一软件换版本后，配置范围一定不变吗？",
       "answer": "不能默认不变。检查版本说明与当前设置，重要行为应重新确认。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "proxy",
+        "browser",
+        "mihomo-config"
+      ],
       "article": "browser-proxy-scope"
     },
     {
@@ -1398,7 +1568,11 @@
       "question": "能否同时打开多个网络工具来增加成功概率？",
       "answer": "不建议把叠加工具当排障方法。应先弄清各自配置和作用范围，否则变量增多后更难归因。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "proxy",
+        "browser",
+        "mihomo-config"
+      ],
       "article": "browser-proxy-scope"
     },
     {
@@ -1407,7 +1581,11 @@
       "question": "来源很多就一定能证明结论吗？",
       "answer": "不一定。需要看每条来源是否支持同一主张、是否独立，以及是否覆盖对应时间和条件。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "brand-plans",
+        "node-records",
+        "ai-records"
+      ],
       "article": "evidence-levels"
     },
     {
@@ -1416,7 +1594,11 @@
       "question": "用户评价数量可以直接换算可用率吗？",
       "answer": "不能。反馈样本可能有选择偏差，且没有统一总体与失败统计，不能直接计算服务可用率。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "brand-plans",
+        "node-records",
+        "ai-records"
+      ],
       "article": "evidence-levels"
     },
     {
@@ -1425,7 +1607,11 @@
       "question": "品牌公开写了“无日志”就算本站证实了吗？",
       "answer": "不是。应标为官方声明；独立验证需要相应证据，不能把宣传原文当作本站审计结果。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "brand-plans",
+        "node-records",
+        "ai-records"
+      ],
       "article": "evidence-levels"
     },
     {
@@ -1434,7 +1620,12 @@
       "question": "入口域名和品牌名不同，能直接认定真假吗？",
       "answer": "不能仅凭名称差异确定。需要独立核验归属、公开说明与实际来源，不作未经证实的身份判断。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "brand-catalog",
+        "brand-coupons",
+        "brand-clients",
+        "node-records"
+      ],
       "article": "brand-record-template"
     },
     {
@@ -1443,7 +1634,12 @@
       "question": "历史价格可以继续标为现价吗？",
       "answer": "不能。应改为带日期的历史记录，或在核验后更新为当前信息，并保留变更说明。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "brand-catalog",
+        "brand-coupons",
+        "brand-clients",
+        "node-records"
+      ],
       "article": "brand-record-template"
     },
     {
@@ -1452,7 +1648,12 @@
       "question": "资料卡没有价格是不是就不能建？",
       "answer": "可以建，但要明确尚待核验的字段，只展示真实已有信息，不制作伪完整卡片。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "brand-catalog",
+        "brand-coupons",
+        "brand-clients",
+        "node-records"
+      ],
       "article": "brand-record-template"
     },
     {
@@ -1461,7 +1662,10 @@
       "question": "每天改文章日期会让内容更新鲜吗？",
       "answer": "日期应反映实质更新。仅改日期无法补充事实，也会让读者无法判断资料真正的核验时间。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "brand-plans",
+        "brand-rules"
+      ],
       "article": "revision-log"
     },
     {
@@ -1470,7 +1674,10 @@
       "question": "来源链接失效，就必须删除整篇文章吗？",
       "answer": "先判断失效影响的主张。可标记待复核、缩小结论或撤下相关段落，按证据缺口处理而非一概决定。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "brand-plans",
+        "brand-rules"
+      ],
       "article": "revision-log"
     },
     {
@@ -1479,7 +1686,10 @@
       "question": "更新价格后要检查FAQ吗？",
       "answer": "需要检查所有引用该信息的页面。更好的做法是维护来源与关联页面清单，减少不同位置互相矛盾。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "brand-plans",
+        "brand-rules"
+      ],
       "article": "revision-log"
     },
     {
@@ -1488,7 +1698,13 @@
       "question": "能否为每个品牌先生成相同的好评文章？",
       "answer": "本站不这样做。可共用资料字段，但评价和结论需要该品牌自身的来源与实际记录。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "brand-catalog",
+        "brand-plans",
+        "brand-coupons",
+        "node-records",
+        "ai-records"
+      ],
       "article": "five-brand-reading"
     },
     {
@@ -1497,7 +1713,13 @@
       "question": "何时可以比较五个品牌的速度？",
       "answer": "取得同条件、足够覆盖的实际样本并公开方法后，才能在相应条件内讨论差异，不能预先填写结果。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "brand-catalog",
+        "brand-plans",
+        "brand-coupons",
+        "node-records",
+        "ai-records"
+      ],
       "article": "five-brand-reading"
     },
     {
@@ -1506,7 +1728,9 @@
       "question": "刷新订阅会自动升级客户端程序吗？",
       "answer": "不能默认会。配置获取与程序升级是不同过程，应分别查看版本和更新时间。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "mihomo-providers"
+      ],
       "article": "read-subscription-file"
     },
     {
@@ -1515,7 +1739,9 @@
       "question": "列表多了几个名字就意味着套餐升级了吗？",
       "answer": "不能这样推断。先核对账户权益和服务说明，列表变化本身不证明购买条件改变。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "mihomo-providers"
+      ],
       "article": "read-subscription-file"
     },
     {
@@ -1524,7 +1750,9 @@
       "question": "更新列表前需要记下什么？",
       "answer": "记录客户端版本、配置时间、必要条目摘要及当前问题，并对截图和文件做好脱敏。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "mihomo-providers"
+      ],
       "article": "read-subscription-file"
     },
     {
@@ -1533,7 +1761,12 @@
       "question": "支持某协议就等于默认启用了吗？",
       "answer": "不等于。需要检查当前版本、服务端和实际配置，支持列表不能代替启用状态。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "tcp",
+        "udp",
+        "brand-catalog",
+        "mihomo-config"
+      ],
       "article": "protocol-and-quality"
     },
     {
@@ -1542,7 +1775,12 @@
       "question": "UDP没有交付保证就意味着所有基于它的应用不可靠？",
       "answer": "不能这样推断。UDP自身机制与上层应用提供的处理方式不同，应结合应用协议和任务判断。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "tcp",
+        "udp",
+        "brand-catalog",
+        "mihomo-config"
+      ],
       "article": "protocol-and-quality"
     },
     {
@@ -1551,7 +1789,12 @@
       "question": "相同协议的两个套餐可以省略实测吗？",
       "answer": "不能。端点、实现、网络与套餐规则仍可能不同，协议相同只说明部分条件。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "tcp",
+        "udp",
+        "brand-catalog",
+        "mihomo-config"
+      ],
       "article": "protocol-and-quality"
     },
     {
@@ -1560,7 +1803,9 @@
       "question": "设备显示IPv6地址就能证明所有访问使用IPv6吗？",
       "answer": "不能。实际连接仍由应用、目标、路由及配置决定，应针对具体访问观察。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "ipv6"
+      ],
       "article": "ipv4-ipv6-context"
     },
     {
@@ -1569,7 +1814,9 @@
       "question": "看到IPv6相关问题就应永久关闭IPv6吗？",
       "answer": "不应作为默认结论。先核对适用文档、调查范围，并保留任何临时更改的恢复方法。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "ipv6"
+      ],
       "article": "ipv4-ipv6-context"
     },
     {
@@ -1578,7 +1825,9 @@
       "question": "五个品牌的IPv6支持已经验证了吗？",
       "answer": "尚未验证。公开支持声明、当前配置与实际应用结果需要分别记录。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "ipv6"
+      ],
       "article": "ipv4-ipv6-context"
     },
     {
@@ -1587,7 +1836,10 @@
       "question": "节点名字写某个地区，就证明服务器在那里吗？",
       "answer": "不能仅凭名字确认。需要适合该主张的来源和实际记录，并说明位置判断的局限。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "dns",
+        "node-records"
+      ],
       "article": "hostname-ip-node"
     },
     {
@@ -1596,7 +1848,10 @@
       "question": "同一个域名解析地址变化是否一定异常？",
       "answer": "不一定。先核对时间、查询环境与服务配置，地址变化本身不能说明故障或身份变化。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "dns",
+        "node-records"
+      ],
       "article": "hostname-ip-node"
     },
     {
@@ -1605,7 +1860,10 @@
       "question": "改节点名字能证明连接路径发生变化吗？",
       "answer": "不能。名称变化和实际配置变化应分别核对，界面文字不是路径测量。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "dns",
+        "node-records"
+      ],
       "article": "hostname-ip-node"
     },
     {
@@ -1614,7 +1872,10 @@
       "question": "链接里出现品牌名就能证明主机属于该品牌吗？",
       "answer": "不能。应识别真正主机并核验归属，路径或参数中的文字不足以证明身份。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "url",
+        "brand-coupons"
+      ],
       "article": "url-components"
     },
     {
@@ -1623,7 +1884,10 @@
       "question": "井号后的内容都可以直接删除吗？",
       "answer": "不能统一处理。片段可能被页面逻辑使用，删除可能改变访问位置或行为，应先了解实际用途。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "url",
+        "brand-coupons"
+      ],
       "article": "url-components"
     },
     {
@@ -1632,7 +1896,10 @@
       "question": "参数名为code就一定是优惠码吗？",
       "answer": "不一定。同名参数可有不同用途，折扣或推广关系需要具体服务说明支持。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "url",
+        "brand-coupons"
+      ],
       "article": "url-components"
     },
     {
@@ -1641,7 +1908,9 @@
       "question": "清除浏览器Cookie等于清理DNS缓存吗？",
       "answer": "不是同一类信息。应查看对应产品说明，避免为处理解析问题而误删登录状态。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "dns"
+      ],
       "article": "dns-cache-observation"
     },
     {
@@ -1650,7 +1919,9 @@
       "question": "改设置后等一会恢复，能确定是设置生效吗？",
       "answer": "还不能。时间和缓存等条件可能一起变化，应保存过程并限制因果结论。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "dns"
+      ],
       "article": "dns-cache-observation"
     },
     {
@@ -1659,7 +1930,9 @@
       "question": "两台设备短时解析不同就一定有一台坏了吗？",
       "answer": "不能直接判断。先对照解析环境、时间和缓存背景，再调查差异。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "dns"
+      ],
       "article": "dns-cache-observation"
     },
     {
@@ -1668,7 +1941,10 @@
       "question": "没有历史测速，能写“比过去下降一半”吗？",
       "answer": "不应凭印象给出比例。先建立当前记录，历史数据缺失应如实说明。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "speed",
+        "aim"
+      ],
       "article": "slow-baseline"
     },
     {
@@ -1677,7 +1953,10 @@
       "question": "正常基线应该只保留最快一次吗？",
       "answer": "不应。保留重复样本和失败，才能看出通常范围，峰值不等于正常表现。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "speed",
+        "aim"
+      ],
       "article": "slow-baseline"
     },
     {
@@ -1686,7 +1965,10 @@
       "question": "网站慢可以直接用下载速度解释吗？",
       "answer": "不能单凭下载指标解释。先确认具体任务和目标，再选择相应观察方法。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "speed",
+        "aim"
+      ],
       "article": "slow-baseline"
     },
     {
@@ -1722,7 +2004,11 @@
       "question": "一个网站首页能开，能证明全部功能正常吗？",
       "answer": "不能。登录、特定路径与资源可能由不同环节处理，应分别验证任务范围。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "browser",
+        "dns",
+        "ai-records"
+      ],
       "article": "single-site-failure"
     },
     {
@@ -1731,7 +2017,11 @@
       "question": "只有我打不开，能发布全站宕机消息吗？",
       "answer": "证据不足。应描述个人环境下的观察，广泛故障需要更适用的证据支持。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "browser",
+        "dns",
+        "ai-records"
+      ],
       "article": "single-site-failure"
     },
     {
@@ -1740,7 +2030,11 @@
       "question": "账户页面异常，应该借用他人账号排查吗？",
       "answer": "不需要这样做。保留自身错误信息，通过站点认可的支持渠道处理。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "browser",
+        "dns",
+        "ai-records"
+      ],
       "article": "single-site-failure"
     },
     {
@@ -1749,7 +2043,10 @@
       "question": "排障模式正常，就能确定是广告拦截扩展吗？",
       "answer": "不能。该模式可能改变多项功能，需要继续逐项对照，不能直接指定某个扩展。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "troubleshoot-mode",
+        "permissions"
+      ],
       "article": "extension-isolation"
     },
     {
@@ -1758,7 +2055,10 @@
       "question": "扩展在普通窗口启用，私密窗口也一定启用吗？",
       "answer": "不一定。应查看对应浏览器和扩展的权限设置，不把两个窗口当完全相同环境。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "troubleshoot-mode",
+        "permissions"
+      ],
       "article": "extension-isolation"
     },
     {
@@ -1767,7 +2067,10 @@
       "question": "隔离测试必须永久卸载全部扩展吗？",
       "answer": "通常应先按官方说明进行可恢复的对照；没有必要把永久删除作为默认第一步。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "troubleshoot-mode",
+        "permissions"
+      ],
       "article": "extension-isolation"
     },
     {
@@ -1776,7 +2079,9 @@
       "question": "网络图标变化后应立刻把超时计作服务故障吗？",
       "answer": "不宜。先记录切换过程并确认基础接入完成，再区分过渡事件与持续异常。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "timeout-guide"
+      ],
       "article": "network-switch"
     },
     {
@@ -1785,7 +2090,9 @@
       "question": "换成移动网络恢复，就证明Wi-Fi运营商有问题吗？",
       "answer": "不能直接证明。切换同时改变多个条件，需要进一步对照，结论先限于当前观察。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "timeout-guide"
+      ],
       "article": "network-switch"
     },
     {
@@ -1794,7 +2101,9 @@
       "question": "排查网络切换时可以同时更新配置吗？",
       "answer": "为便于归因，应尽量分开操作；不得不同时变更时，完整记录并注明限制。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "timeout-guide"
+      ],
       "article": "network-switch"
     },
     {
@@ -1803,7 +2112,10 @@
       "question": "搜索到相同错误句子就能直接照搬解决步骤吗？",
       "answer": "先确认产品、版本、发生阶段与环境是否相符；相似文字不能保证根因一致。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "cert",
+        "troubleshoot"
+      ],
       "article": "error-message-map"
     },
     {
@@ -1812,7 +2124,10 @@
       "question": "反馈错误代码还需要截图吗？",
       "answer": "可按需要提供脱敏截图以说明来源和上下文；仅有代码可能不足以识别具体产品状态。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "cert",
+        "troubleshoot"
+      ],
       "article": "error-message-map"
     },
     {
@@ -1821,7 +2136,10 @@
       "question": "无法判断阶段时应给错误硬分类吗？",
       "answer": "不必。标记未知并保留操作顺序、来源和原文，比错误归类更有帮助。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "cert",
+        "troubleshoot"
+      ],
       "article": "error-message-map"
     },
     {
@@ -1830,7 +2148,9 @@
       "question": "为什么不直接按“轻度用户”推荐固定GB数？",
       "answer": "同一标签下的任务与设置可能不同，自己的实际记录更适合作为预算依据。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "brand-plans"
+      ],
       "article": "quota-estimate"
     },
     {
@@ -1839,7 +2159,9 @@
       "question": "预算额外留20%是不是行业标准？",
       "answer": "不是。它只是透明算例中的个人余量假设，实际选择应结合用量波动与可确认规则。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "brand-plans"
+      ],
       "article": "quota-estimate"
     },
     {
@@ -1848,7 +2170,9 @@
       "question": "偶尔大下载应该全部算进每月常态吗？",
       "answer": "应分别列常态与高需求情境，再比较实际发生频率，避免用极端月份替代所有月份。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "brand-plans"
+      ],
       "article": "quota-estimate"
     },
     {
@@ -1857,7 +2181,10 @@
       "question": "首月折扣可以直接乘12计算年费吗？",
       "answer": "只有后续每月条件也确认相同时才有这种前提；否则应分列首期和续费。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "brand-coupons",
+        "brand-rules"
+      ],
       "article": "renewal-price-record"
     },
     {
@@ -1866,7 +2193,10 @@
       "question": "页面报价和订单金额不一致时保留哪一份？",
       "answer": "保留两份并核对时间、套餐与适用条件，不默默选择更低的数字作为通用价格。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "brand-coupons",
+        "brand-rules"
+      ],
       "article": "renewal-price-record"
     },
     {
@@ -1875,7 +2205,10 @@
       "question": "不清楚自动续费规则，应怎样填表？",
       "answer": "标为待确认，分别询问扣费时间、管理方式和取消对权益的影响，不用惯例补答案。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "brand-coupons",
+        "brand-rules"
+      ],
       "article": "renewal-price-record"
     },
     {
@@ -1884,7 +2217,9 @@
       "question": "退款页面没提用量限制，可以写“无用量限制”吗？",
       "answer": "不应这样推断。“未找到说明”应保留为待确认，不能改写成明确承诺。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "brand-rules"
+      ],
       "article": "refund-rule-reading"
     },
     {
@@ -1893,16 +2228,20 @@
       "question": "其他用户收到退款能代表所有套餐都一样吗？",
       "answer": "不能。需要核对购买日期、渠道、套餐及具体适用条件。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "brand-rules"
+      ],
       "article": "refund-rule-reading"
     },
     {
       "id": "refund-rule-reading-3",
       "category": "plans",
       "question": "退款申请时间应从购买还是激活起算？",
-      "answer": "以对应规则明确的起点为准；没有说明时先核对，不自行选择更有利解释。",
+      "answer": "以具体品牌已经确认的时间起点为准。微风、飞猫、暮光、灵动为购买后24小时内；隐形人期限未提供，不能改成从激活或发现故障起算。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "brand-rules"
+      ],
       "article": "refund-rule-reading"
     },
     {
@@ -1911,7 +2250,10 @@
       "question": "试用里的某项功能可以认定正式套餐必然一样吗？",
       "answer": "不能默认相同，应核对正式套餐说明，试用范围与长期权益分别记录。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "brand-clients",
+        "brand-rules"
+      ],
       "article": "trial-evaluation"
     },
     {
@@ -1920,7 +2262,10 @@
       "question": "短期试用没掉线，能写长期稳定吗？",
       "answer": "不能。应说明观察窗口和任务，未覆盖的日期与环境继续保留未知。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "brand-clients",
+        "brand-rules"
+      ],
       "article": "trial-evaluation"
     },
     {
@@ -1929,25 +2274,34 @@
       "question": "试用结果需要打一个总分吗？",
       "answer": "不必。先按必需任务列通过、未通过和未测，比没有依据的综合分更有用。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "brand-clients",
+        "brand-rules"
+      ],
       "article": "trial-evaluation"
     },
     {
       "id": "upgrade-plan-checklist-1",
       "category": "plans",
       "question": "升级后额度变多就说明周期重新开始吗？",
-      "answer": "不能直接推断。额度、生效时间和重置日期需要分别核对。",
+      "answer": "不能只看额度推断。但本站五品牌已另行确认周期升级从升级当天重新起算；同时新额度扣除本周期已用量。跨一次性包或定制等特殊情形另核对。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "brand-rules",
+        "brand-plans"
+      ],
       "article": "upgrade-plan-checklist"
     },
     {
       "id": "upgrade-plan-checklist-2",
       "category": "plans",
       "question": "升级支付的差额等于之后的续费价格吗？",
-      "answer": "不等同。差额与完整续费属于不同计费项目，应记录来源和适用条件。",
+      "answer": "不等同。已确认流程先付新套餐全价，再由平台退原套餐差价；差价不是以后完整周期的续费价格。具体退差价计算未统一提供。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "brand-rules",
+        "brand-plans"
+      ],
       "article": "upgrade-plan-checklist"
     },
     {
@@ -1956,7 +2310,10 @@
       "question": "某家按比例折算，其他品牌也可以这样算吗？",
       "answer": "不能套用。每家升级规则都应有自身来源，没有确认时只保留待核验清单。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "brand-rules",
+        "brand-plans"
+      ],
       "article": "upgrade-plan-checklist"
     },
     {
@@ -1965,7 +2322,10 @@
       "question": "换服务就是把订阅链接替换掉吗？",
       "answer": "还要核对设备、客户端格式、任务、旧权益与恢复方式，链接替换只是其中一步。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "brand-clients",
+        "brand-rules"
+      ],
       "article": "service-migration"
     },
     {
@@ -1974,7 +2334,10 @@
       "question": "旧服务剩余额度能默认转到新品牌吗？",
       "answer": "不能。不同服务之间的权益没有通用转移承诺，需要各自明确规则支持。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "brand-clients",
+        "brand-rules"
+      ],
       "article": "service-migration"
     },
     {
@@ -1983,7 +2346,10 @@
       "question": "新服务一次访问正常就能删光旧备份吗？",
       "answer": "先确认必需任务和恢复安排，避免只完成一个观察就失去唯一恢复材料。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "brand-clients",
+        "brand-rules"
+      ],
       "article": "service-migration"
     },
     {
@@ -1992,7 +2358,9 @@
       "question": "超时没有数值，可以填零方便求平均吗？",
       "answer": "不应这样处理。应单独记录失败，并解释数值统计覆盖的样本。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "node-records"
+      ],
       "article": "median-and-range"
     },
     {
@@ -2001,7 +2369,9 @@
       "question": "中位数好看，是否可以不展示最大值？",
       "answer": "应根据问题保留必要范围与原始样本，不能用单一摘要隐藏波动。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "node-records"
+      ],
       "article": "median-and-range"
     },
     {
@@ -2010,7 +2380,9 @@
       "question": "高数值影响平均分，能否标为异常删除？",
       "answer": "需要预先定义的无效条件和证据，不能仅因成绩不利而排除。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "node-records"
+      ],
       "article": "median-and-range"
     },
     {
@@ -2046,7 +2418,11 @@
       "question": "测速站分数高就能保证所有网站快吗？",
       "answer": "不能。测试只涉及特定目标和任务，实际应用还需要相应条件下的观察。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "speedtest",
+        "ai-records",
+        "node-records"
+      ],
       "article": "test-target-bias"
     },
     {
@@ -2055,7 +2431,11 @@
       "question": "不知道工具实际选了哪个端点怎么办？",
       "answer": "记录工具的公开选择机制并标注具体端点未知，不猜测地点或归属。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "speedtest",
+        "ai-records",
+        "node-records"
+      ],
       "article": "test-target-bias"
     },
     {
@@ -2064,7 +2444,11 @@
       "question": "测试结果与真实任务冲突时应删除哪一个？",
       "answer": "先保留两条观察，核对目标、任务与测量差异，而不是选择更有利的一项。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "speedtest",
+        "ai-records",
+        "node-records"
+      ],
       "article": "test-target-bias"
     },
     {
@@ -2073,7 +2457,9 @@
       "question": "只统计成功连接的速度可以吗？",
       "answer": "可以作为明确限定的摘要，但必须另报失败情况，不能把它当作全部尝试表现。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "node-records"
+      ],
       "article": "sampling-selection"
     },
     {
@@ -2082,7 +2468,9 @@
       "question": "测试计划中途改变还可以发布吗？",
       "answer": "可以说明调整原因与前后条件，并限制结论；不能隐去旧记录或伪装成原定计划。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "node-records"
+      ],
       "article": "sampling-selection"
     },
     {
@@ -2091,7 +2479,9 @@
       "question": "没有测试的时段可以补记为成功吗？",
       "answer": "不可以。未观察与成功是不同状态，不能为了完整统计而填入推测。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "node-records"
+      ],
       "article": "sampling-selection"
     },
     {
@@ -2100,7 +2490,10 @@
       "question": "后台有传输时的延迟能直接与空闲数值比较吗？",
       "answer": "可以在条件与方法明确时作有限对照，但必须说明负载任务和采样口径。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "aim",
+        "node-records"
+      ],
       "article": "loaded-latency"
     },
     {
@@ -2109,7 +2502,10 @@
       "question": "负载时变慢能直接证明服务端故障吗？",
       "answer": "不能。需要进一步控制目标、网络、任务和设备条件，单次关联不足以确定根因。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "aim",
+        "node-records"
+      ],
       "article": "loaded-latency"
     },
     {
@@ -2118,7 +2514,10 @@
       "question": "是否必须占满网络才能写负载观察？",
       "answer": "不必。可先记录实际任务期间的可控观察，明确限制，不影响重要或共享任务。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "aim",
+        "node-records"
+      ],
       "article": "loaded-latency"
     },
     {
@@ -2127,7 +2526,9 @@
       "question": "只交测速截图算可复查报告吗？",
       "answer": "通常还缺对象、条件、原始样本与处理过程，截图只是证据链的一部分。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "node-records"
+      ],
       "article": "reproducible-report"
     },
     {
@@ -2136,7 +2537,9 @@
       "question": "有原始日志就可以公开全部内容吗？",
       "answer": "不应。原始材料可能含凭据或个人信息，应提供必要脱敏版本并限制敏感原件。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "node-records"
+      ],
       "article": "reproducible-report"
     },
     {
@@ -2145,7 +2548,9 @@
       "question": "报告局限只放在文末就足够了吗？",
       "answer": "局限还应约束标题和结论，不能前面作绝对承诺、最后再以未测试项目抵消。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "node-records"
+      ],
       "article": "reproducible-report"
     },
     {
@@ -2154,7 +2559,9 @@
       "question": "私密窗口等于开启VPN吗？",
       "answer": "不是同一种功能。浏览器记录处理与连接路径应分别确认，不能互相证明。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "private-mode"
+      ],
       "article": "private-window-boundary"
     },
     {
@@ -2163,7 +2570,9 @@
       "question": "普通窗口失败而私密窗口成功，就能认定是Cookie吗？",
       "answer": "不能直接认定。扩展、会话及其他条件可能不同，应继续核对变量。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "private-mode"
+      ],
       "article": "private-window-boundary"
     },
     {
@@ -2172,7 +2581,9 @@
       "question": "私密窗口重新登录后还可以说完全匿名吗？",
       "answer": "不能。登录账户会引入账户层面的识别，私密浏览本身也不提供互联网完全匿名保证。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "private-mode"
+      ],
       "article": "private-window-boundary"
     },
     {
@@ -2181,7 +2592,9 @@
       "question": "请求全部网站权限就一定是恶意扩展吗？",
       "answer": "不能仅凭权限作恶意结论，但应认真评估能力范围是否与需求相符，并核对来源与说明。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "permissions"
+      ],
       "article": "extension-permissions"
     },
     {
@@ -2190,7 +2603,9 @@
       "question": "功能简单就可以不看权限了吗？",
       "answer": "不宜。实际能力由权限和实现决定，界面简单不表示访问范围一定小。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "permissions"
+      ],
       "article": "extension-permissions"
     },
     {
@@ -2199,7 +2614,9 @@
       "question": "扩展更新后新增权限，需要重新考虑吗？",
       "answer": "需要结合新功能和实际需求复查，不能把最初的决定自动延续到更广访问范围。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "permissions"
+      ],
       "article": "extension-permissions"
     },
     {
@@ -2208,7 +2625,9 @@
       "question": "文件名与官方软件相同，就能直接安装吗？",
       "answer": "不能单凭名字确认内容和身份，先核对发布来源、平台版本及正式说明。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "brand-clients"
+      ],
       "article": "download-source-check"
     },
     {
@@ -2217,7 +2636,9 @@
       "question": "校验值一致就能保证程序绝对安全吗？",
       "answer": "不能。它用于相应完整性核对，发布来源和校验值来源同样重要。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "brand-clients"
+      ],
       "article": "download-source-check"
     },
     {
@@ -2226,7 +2647,9 @@
       "question": "教程里的旧下载地址需要定期检查吗？",
       "answer": "需要。入口、支持平台与版本可能变化，应该保留核验日期并及时修订。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "brand-clients"
+      ],
       "article": "download-source-check"
     },
     {
@@ -2262,7 +2685,9 @@
       "question": "客服要完整日志，就应无条件发送吗？",
       "answer": "先确认接收方、必要字段和渠道，检查是否含凭据或个人信息，再决定最小必要范围。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "brand-rules"
+      ],
       "article": "minimum-support-data"
     },
     {
@@ -2271,7 +2696,9 @@
       "question": "软件解析报错需要提交支付密码吗？",
       "answer": "这与通常的格式和版本调查不相符；应暂停并核对请求用途及接收方身份。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "brand-rules"
+      ],
       "article": "minimum-support-data"
     },
     {
@@ -2280,7 +2707,9 @@
       "question": "为什么要记录发出过哪些文件？",
       "answer": "有助于后续补充、追踪敏感副本范围，并减少误发原件和重复发送。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "brand-rules"
+      ],
       "article": "minimum-support-data"
     },
     {
@@ -2316,7 +2745,9 @@
       "question": "含推广参数就能知道返佣比例吗？",
       "answer": "不能。具体比例与安排需要对应说明，不能从参数字符串推算。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "brand-coupons"
+      ],
       "article": "promotion-disclosure"
     },
     {
@@ -2325,7 +2756,9 @@
       "question": "把披露放页脚是否总能满足阅读需要？",
       "answer": "应让读者在相关入口或判断附近看到清楚说明，避免必须翻到远处才能了解关系。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "brand-coupons"
+      ],
       "article": "promotion-disclosure"
     },
     {
@@ -2334,7 +2767,9 @@
       "question": "收到赠测后还能写不适合或证据不足吗？",
       "answer": "可以。合作关系应披露，结论仍由适用证据、方法和限制决定。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "brand-coupons"
+      ],
       "article": "promotion-disclosure"
     },
     {
@@ -2343,7 +2778,9 @@
       "question": "官方说恢复了，个人仍失败就只能认定公告假吗？",
       "answer": "先核对公告范围、时间与个人任务，二者可能不覆盖同一对象，不能立即作真假判断。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "node-records"
+      ],
       "article": "service-status-evidence"
     },
     {
@@ -2352,7 +2789,9 @@
       "question": "很多人在评论里说断连，能计算准确可用率吗？",
       "answer": "不能。评论缺少统一总体、观察窗口和成功标准，可作为调查线索而非精确统计。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "node-records"
+      ],
       "article": "service-status-evidence"
     },
     {
@@ -2361,7 +2800,9 @@
       "question": "图标恢复与应用任务恢复需要分别记录吗？",
       "answer": "需要。它们反映不同层次，实际关心的任务应按相同标准另行验证。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "node-records"
+      ],
       "article": "service-status-evidence"
     },
     {
@@ -2370,7 +2811,10 @@
       "question": "规则截图没有时间还能当现行依据吗？",
       "answer": "时效无法确认时应标注限制，不能直接作为当前规则；需要重新核对来源与日期。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "brand-coupons",
+        "brand-plans"
+      ],
       "article": "terms-snapshot"
     },
     {
@@ -2379,7 +2823,10 @@
       "question": "新活动页面能证明以前订单也适用优惠吗？",
       "answer": "不能自动证明，必须有对应追溯适用说明或实际材料支持。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "brand-coupons",
+        "brand-plans"
+      ],
       "article": "terms-snapshot"
     },
     {
@@ -2388,7 +2835,10 @@
       "question": "为了核查条款必须完整复制整个站点吗？",
       "answer": "不必。保存必要摘要、日期、来源和可使用的证据，避免过量复制或个人信息泄露。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "brand-coupons",
+        "brand-plans"
+      ],
       "article": "terms-snapshot"
     },
     {
@@ -2424,7 +2874,9 @@
       "question": "读者意见与文章不同，就应立即改成对方说法吗？",
       "answer": "先核对来源、时间和适用条件，区分事实错误与不同环境，不直接按意见强弱更改。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "brand-plans"
+      ],
       "article": "correction-workflow"
     },
     {
@@ -2433,7 +2885,9 @@
       "question": "公开纠错必须展示反馈者账号吗？",
       "answer": "不必。保留必要事实与脱敏依据即可，个人身份和私下材料应按用途与授权处理。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "brand-plans"
+      ],
       "article": "correction-workflow"
     },
     {
@@ -2442,7 +2896,9 @@
       "question": "纠正正文后还要检查文章简介吗？",
       "answer": "需要。简介、FAQ和表格可能继续重复旧结论，应沿关联记录一起复查。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "brand-plans"
+      ],
       "article": "correction-workflow"
     },
     {
@@ -2451,7 +2907,9 @@
       "question": "没有公开来源，怎样提供纠错线索？",
       "answer": "先具体说明文章位置、亲自观察到的现象、日期和适用环境；把体验与推测分开。没有可公开证据时可作为待核验线索，不会直接升级为已确认事实。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "brand-plans"
+      ],
       "article": "correction-workflow"
     },
     {
@@ -2460,7 +2918,10 @@
       "question": "当前套餐页能自动推翻过去的真实订单吗？",
       "answer": "不能。二者可能对应不同时间和适用条件，应保留原记录并核对追溯说明。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "brand-plans",
+        "node-records"
+      ],
       "article": "conflicting-sources"
     },
     {
@@ -2469,7 +2930,10 @@
       "question": "冲突未解决时可以先给该项打分吗？",
       "answer": "不宜给依赖未知条件的精确评分，应展示差异与待核验状态。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "brand-plans",
+        "node-records"
+      ],
       "article": "conflicting-sources"
     },
     {
@@ -2478,7 +2942,10 @@
       "question": "取得解释后应该删除所有旧记录吗？",
       "answer": "保留必要历史与修改理由，有助于解释旧文章为何与当前内容不同，敏感资料仍需受控。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "brand-plans",
+        "node-records"
+      ],
       "article": "conflicting-sources"
     },
     {
@@ -2487,7 +2954,10 @@
       "question": "暂时无法核验的主张应该怎样展示？",
       "answer": "标明具体缺失项与资料日期，缩小或撤下依赖它的强结论；保留复核与修订状态，不靠自动刷新日期制造已经验证的印象。",
       "type": "文章延伸解答",
-      "sources": [],
+      "sources": [
+        "brand-plans",
+        "node-records"
+      ],
       "article": "conflicting-sources"
     },
     {

@@ -85,9 +85,11 @@ def ref_links(keys,sources,self_file=''):
         out.extend('<a class="source" href="data/'+name+'-latency.json">'+label+'延迟源记录 JSON ↓</a>' for name,label in [('invisible','隐形人'),('breezenet','微风'),('feimaoyun','飞猫'),('muguang','暮光')])
     if 'ai-records' in keys:
         out.extend('<a class="source" href="data/'+name+'-access-records.json">'+label+'问答源记录 JSON ↓</a>' for name,label in [('invisible','隐形人'),('breezenet','微风'),('feimaoyun','飞猫'),('muguang','暮光'),('lingdongyun','灵动')])
+    if 'brand-plans' in keys or 'brand-coupons' in keys:
+        out.extend('<a class="source" href="data/'+name+'-plans.json">'+label+'套餐与优惠源资料 JSON ↓</a>' for name,label in [('invisible','隐形人'),('breezenet','微风'),('feimaoyun','飞猫'),('muguang','暮光'),('lingdongyun','灵动')])
     return ''.join(out)
 
-def render_table(table,snapshot=False):
+def render_table(table,snapshot=False,caption=None):
     if not table:return ''
     heads,rows=table
     def cell(value):
@@ -97,8 +99,8 @@ def render_table(table,snapshot=False):
         if text.endswith('.json') and text in ['invisible-plans.json','breezenet-plans.json','feimaoyun-plans.json','muguang-plans.json','lingdongyun-plans.json']:
             return '<a href="data/'+text+'">资料JSON</a>'
         return e(text)
-    caption='报价与记录来自2026年10月已提供资料；11月2日整理，未作实时询价。' if snapshot else '文中条件与方法对照；算例不代表品牌实测。'
-    return '<div class="data-table" role="region" aria-label="文章资料对照表，可横向滚动" tabindex="0"><table><caption>'+caption+'</caption><thead><tr>'+''.join('<th scope="col">'+e(str(x))+'</th>' for x in heads)+'</tr></thead><tbody>'+''.join('<tr>'+''.join('<td>'+cell(x)+'</td>' for x in row)+'</tr>' for row in rows)+'</tbody></table></div>'
+    caption=caption or ('报价与记录来自2026年10月已提供资料；11月2日整理，未作实时询价。' if snapshot else '文中条件与方法对照；算例不代表品牌实测。')
+    return '<div class="data-table" role="region" aria-label="文章资料对照表，可横向滚动" tabindex="0"><table><caption>'+e(caption)+'</caption><thead><tr>'+''.join('<th scope="col">'+e(str(x))+'</th>' for x in heads)+'</tr></thead><tbody>'+''.join('<tr>'+''.join('<td>'+cell(x)+'</td>' for x in row)+'</tr>' for row in rows)+'</tbody></table></div>'
 
 def row(a,topics):
     return '<a class="article-row" href="'+a['file']+'"><div><span class="overline">'+e(topics[a['category']]['name'])+'</span><h3>'+e(a['title'])+'</h3><p>'+e(a['summary'])+'</p></div><span>阅读全文 ↗</span></a>'
@@ -118,6 +120,19 @@ def build_content_library(root):
       'brand-materials':'品牌页包含套餐、客户端与规则资料；部分另有截图延迟和ChatGPT反馈。品牌说明、用户反馈与独立复测不是同一种证据，记录应分别保留来源与日期。'}
     for f in faqs:
         if f['id'] in corrected:f['answer']=corrected[f['id']]
+    revisions_path=root/'data/editorial-revisions.json'
+    revisions=load(root,'data/editorial-revisions.json')['articles'] if revisions_path.exists() else []
+    original_map={a['slug']:a for a in articles}
+    faq_map={f['id']:f for f in faqs}
+    for revision in revisions:
+        a=original_map[revision['slug']]
+        a.update({k:v for k,v in revision.items() if k not in ('slug','faq_answers')})
+        for fid,answer in revision.get('faq_answers',{}).items():
+            assert faq_map[fid]['article']==a['slug'],fid
+            faq_map[fid]['answer']=answer
+        for fid in a['faq_ids']:faq_map[fid]['sources']=a['sources']
+        a['faqs']=[[faq_map[fid]['question'],faq_map[fid]['answer']] for fid in a['faq_ids']]
+        a['chars']=len(a['summary'])+sum(len(h)+len(p) for h,p in a['sections'])+sum(map(len,a['checks']))
     for source in expansion['articles']:
         a={**source,'origin':'search-expansion','file':'article-'+source['slug']+'.html','faq_ids':[]}
         a['table']=source_tables.get(a.get('table_kind'))
@@ -147,18 +162,29 @@ def build_content_library(root):
         t=topics[a['category']]; date=a.get('published_on','2026-10-28')
         toc=''.join('<a href="#section-'+str(i)+'">'+e(h)+'</a>' for i,(h,p) in enumerate(a['sections'],1))
         sections=''.join('<section class="prose-section" id="section-'+str(i)+'"><h2>'+e(h)+'</h2><p>'+e(p)+'</p></section>' for i,(h,p) in enumerate(a['sections'],1))
-        related=[x for x in articles if x['category']==a['category'] and x['slug']!=a['slug']][:3]
+        category_articles=[x for x in articles if x['category']==a['category']]
+        position=next(i for i,x in enumerate(category_articles) if x['slug']==a['slug'])
+        related=(category_articles[position+1:]+category_articles[:position])[:3]
         inline=''.join('<details class="inline-faq"><summary>'+e(fmap[fid]['question'])+'</summary><p>'+e(fmap[fid]['answer'])+'</p><a href="'+faq_link(fmap[fid])+'">查看完整解答 →</a></details>' for fid in a['faq_ids'])
-        table=render_table(a.get('table'),bool(a.get('origin')))
+        table=render_table(a.get('table'),bool(a.get('origin')),a.get('table_caption'))
+        if a.get('table_after_section'):
+            sections=''.join('<section class="prose-section" id="section-'+str(i)+'"><h2>'+e(h)+'</h2><p>'+e(p)+'</p></section>'+(table if i==a['table_after_section'] else '') for i,(h,p) in enumerate(a['sections'],1))
+            table=''
+        quick='<section class="article-quick-answer" aria-label="阅读要点"><strong>先看结论</strong><p>'+e(a['quick_answer'])+'</p></section>' if a.get('quick_answer') else ''
+        revision_note='<details class="article-revision"><summary>本次修订说明 · '+a['reviewed_on']+'</summary><p>'+e(a['revision_note'])+'</p></details>' if a.get('reviewed_on') else ''
+        display_date='初稿 <time datetime="'+date+'">'+date+'</time>'
+        if a.get('reviewed_on'):display_date+=' · 修订 <time datetime="'+a['reviewed_on']+'">'+a['reviewed_on']+'</time>'
         note='本文为资料型选择指南；套餐与截图记录按来源日期列明。隐形人是本站主推，展示位置不作为独立测速排名。' if a.get('origin') else 'AI辅助撰写与资料整理；技术解释、方法和算例不作为本站完成的品牌实测。'
-        body='<div class="article-breadcrumb"><a href="topics.html">专题</a> / <a href="topic-'+t['id']+'.html">'+e(t['name'])+'</a></div><article class="article-panel"><header class="article-header"><span class="overline">'+e(t['name'])+'</span><h1>'+e(a['title'])+'</h1><p class="article-lead">'+e(a['summary'])+'</p><div class="article-meta">整理于 <time datetime="'+date+'">'+date+'</time> · 叮当观察</div><p class="authorship">'+note+'</p></header><div class="article-layout"><aside class="article-toc" aria-label="文章目录"><strong>本文目录</strong>'+toc+'</aside><div class="article-prose">'+sections+table+'<section class="takeaway"><h2>选择与核对清单</h2><ul>'+''.join('<li>'+e(c)+'</li>' for c in a['checks'])+'</ul></section><section class="prose-section"><h2>相关问题</h2>'+inline+'</section><section class="reference-box"><h2>资料与参考</h2>'+ref_links(a['sources'],sources,a['file'])+'<p>品牌报价与记录来自已提供材料。本文的比较步骤为本站整理方法，具体产品条件应在购买前核对。</p></section><section class="prose-section"><h2>继续阅读</h2>'+''.join(row(x,topics) for x in related)+'</section></div></div></article>'
+        body='<div class="article-breadcrumb"><a href="topics.html">专题</a> / <a href="topic-'+t['id']+'.html">'+e(t['name'])+'</a></div><article class="article-panel"><header class="article-header"><span class="overline">'+e(t['name'])+'</span><h1>'+e(a['title'])+'</h1><p class="article-lead">'+e(a['summary'])+'</p><div class="article-meta">'+display_date+' · 叮当观察</div><p class="authorship">'+note+'</p></header><div class="article-layout"><aside class="article-toc" aria-label="文章目录"><strong>本文目录</strong>'+toc+'</aside><div class="article-prose">'+quick+sections+table+'<section class="takeaway"><h2>选择与核对清单</h2><ul>'+''.join('<li>'+e(c)+'</li>' for c in a['checks'])+'</ul></section><section class="prose-section"><h2>相关问题</h2>'+inline+'</section><section class="reference-box"><h2>资料与参考</h2>'+ref_links(a['sources'],sources,a['file'])+'<p>品牌报价与记录来自已提供材料。本文的比较步骤为本站整理方法，具体产品条件应在购买前核对。</p>'+revision_note+'</section><section class="prose-section"><h2>继续阅读</h2>'+''.join(row(x,topics) for x in related)+'</section></div></div></article>'
         write_changed(root/a['file'],layout(a['title'],'blog',body))
-        md='# '+a['title']+'\n\n'+a['summary']+'\n\n整理日期：'+date+'。\n\n'+''.join('## '+h+'\n\n'+p+'\n\n' for h,p in a['sections'])
+        md='# '+a['title']+'\n\n'+a['summary']+'\n\n初稿日期：'+date+'。'+('修订日期：'+a['reviewed_on']+'。' if a.get('reviewed_on') else '')+'\n\n'
+        if a.get('quick_answer'):md+='## 先看结论\n\n'+a['quick_answer']+'\n\n'
+        md+=''.join('## '+h+'\n\n'+p+'\n\n' for h,p in a['sections'])
         if a.get('table'):
             heads,rows=a['table']; md+='| '+' | '.join(heads)+' |\n| '+' | '.join(['---']*len(heads))+' |\n'+''.join('| '+' | '.join(map(str,r))+' |\n' for r in rows)+'\n'
         md+='## 核对清单\n\n'+''.join('- '+c+'\n' for c in a['checks'])+'\n## 相关FAQ\n\n'+''.join('### '+fmap[fid]['question']+'\n\n'+fmap[fid]['answer']+'\n\n' for fid in a['faq_ids'])+'## 来源\n\n'+''.join('- ['+sources[k][0]+']('+sources[k][1]+')\n' for k in a['sources'])
         markdown_path=root/'content/articles'/(a['slug']+'.md')
-        if a.get('origin') or not markdown_path.exists():
+        if a.get('origin') or a.get('reviewed_on') or not markdown_path.exists():
             write_changed(markdown_path,md.rstrip()+'\n')
     for f in faqs:
         if f.get('origin')!='search-expansion':continue
@@ -177,7 +203,7 @@ def build_content_library(root):
     write_changed(root/'topics.html',layout('机场推荐、VPN与节点专题','topics',hero('GUIDES BY SEARCH INTENT','机场推荐、VPN与节点专题','12条阅读路线：先按需求选择专题，再进入完整文章和具体问题。')+'<section class="topic-grid">'+topic_cards+'</section><section class="section"><h2>84篇文章与248条FAQ怎样衔接</h2><p>选择指南负责解释条件、展示资料表和提供下一步；FAQ集中回答一个明确问题。新增48条FAQ均有独立页面，其余问题保留原来的锚点入口与延伸阅读。</p><a class="inline-link" href="blog.html">查看全部文章 →</a></section>'))
     ordered=[a for a in articles if a.get('origin')]+[a for a in articles if not a.get('origin')]
     filters='<button type="button" data-category="all" aria-pressed="true">全部内容</button>'+''.join('<button type="button" data-category="'+t['id']+'" aria-pressed="false">'+e(t['name'])+'</button>' for t in topic_list)
-    cards=''.join('<article class="catalog-card" data-library-card data-category="'+a['category']+'"><a href="'+a['file']+'"><span class="overline">'+e(topics[a['category']]['name'])+'</span><h2>'+e(a['title'])+'</h2><p>'+e(a['summary'])+'</p><span class="catalog-foot">独立正文 · '+a.get('published_on','2026-10-28')+'<b>阅读全文 ↗</b></span></a></article>' for a in ordered)
+    cards=''.join('<article class="catalog-card" data-library-card data-category="'+a['category']+'"><a href="'+a['file']+'"><span class="overline">'+e(topics[a['category']]['name'])+'</span><h2>'+e(a['title'])+'</h2><p>'+e(a['summary'])+'</p><span class="catalog-foot">'+('修订于 '+a['reviewed_on'] if a.get('reviewed_on') else '独立正文 · '+a.get('published_on','2026-10-28'))+'<b>阅读全文 ↗</b></span></a></article>' for a in ordered)
     controls='<section class="section library-controls"><label class="faq-search">⌕ <input type="search" aria-label="搜索文章" placeholder="搜索主题，例如机场推荐、年付、节点、Clash"></label><div class="faq-filters" role="group" aria-label="文章分类">'+filters+'</div><p id="library-count" aria-live="polite">84篇文章</p></section>'
     pager='<div class="pagination"><button type="button" id="library-previous">← 上一页</button><span id="library-page" aria-live="polite"></span><button type="button" id="library-next">下一页 →</button></div>'
     write_changed(root/'blog.html',layout('机场推荐与VPN使用指南','blog',hero('ARTICLE LIBRARY','机场推荐与VPN使用指南','84篇独立文章，覆盖机场推荐、VPN、节点选择、机场测评、性价比与Clash配置。')+controls+'<div class="catalog-grid">'+cards+'</div><p class="section" id="library-empty" hidden>没有匹配文章，请调整关键词或分类。</p>'+pager,'<script src="assets/content-library.js" defer></script>'))
