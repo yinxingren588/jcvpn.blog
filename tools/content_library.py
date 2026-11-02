@@ -17,6 +17,7 @@ SOURCES={
  'brand-coupons':['优惠范围与例外：进入对应品牌核对','brands.html'],
  'brand-rules':['流量、升级与退款：各品牌规则入口','brands.html'],
  'node-records':['四批节点延迟记录与来源','article-airport-review-records-overview.html'],
+ 'flyv-node-records':['飞v晚高峰节点延迟记录与来源','brand-feiv.html#flyv-latency'],
  'ai-records':['五条ChatGPT使用反馈与条件','article-vpn-ai-use-records.html'],
  'timeout-guide':['隐形人客服排查资料','data/invisible-support.json'],
  'ipsec':['RFC 4301：IP安全架构','https://www.rfc-editor.org/info/rfc4301/'],
@@ -86,6 +87,8 @@ def ref_links(keys,sources,self_file=''):
         out.extend('<a class="source" href="data/'+name+'-latency.json">'+label+'延迟源记录 JSON ↓</a>' for name,label in [('invisible','隐形人'),('breezenet','微风'),('feimaoyun','飞猫'),('muguang','暮光')])
     if 'ai-records' in keys:
         out.extend('<a class="source" href="data/'+name+'-access-records.json">'+label+'问答源记录 JSON ↓</a>' for name,label in [('invisible','隐形人'),('breezenet','微风'),('feimaoyun','飞猫'),('muguang','暮光'),('lingdongyun','灵动')])
+    if 'flyv-node-records' in keys:
+        out.append('<a class="source" href="data/feiv-latency.json">飞v延迟源记录 JSON ↓</a>')
     if 'brand-plans' in keys or 'brand-coupons' in keys:
         out.extend('<a class="source" href="data/'+name+'-plans.json">'+label+'套餐与优惠源资料 JSON ↓</a>' for name,label in [('invisible','隐形人'),('breezenet','微风'),('feimaoyun','飞猫'),('muguang','暮光'),('lingdongyun','灵动')])
     return ''.join(out)
@@ -95,7 +98,7 @@ def render_table(table,snapshot=False,caption=None):
     heads,rows=table
     def cell(value):
         text=str(value)
-        for name,url in BRANDS:
+        for name,url in BRANDS+[('飞v','brand-feiv.html')]:
             if text==name:return '<a href="'+url+'">'+e(text)+'</a>'
         if text.endswith('.json') and text in ['invisible-plans.json','breezenet-plans.json','feimaoyun-plans.json','muguang-plans.json','lingdongyun-plans.json']:
             return '<a href="data/'+text+'">资料JSON</a>'

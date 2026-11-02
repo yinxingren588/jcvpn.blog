@@ -2,7 +2,7 @@
   "confirmed_on": "2026-11-02",
   "source": "博客站长提供并确认的品牌名及推广入口",
   "brands": [
-    {"id":"feiv","name":"飞v","english_name":"FlyV","mark":"飞V","url":"https://varnexa.flyvaff.com/#/?code=IC0p64fi","profile_path":"brand-feiv.html","profile_status":"plans_provided_other_details_pending","plans_path":"data/feiv-plans.json","logo_path":"assets/feiv-logo.webp","logo_width":1024,"logo_height":1024,"logo_source":{"type":"site_owner_provided_image","provided_on":"2026-11-02","original_path":"assets/feiv-logo.png"}},
+    {"id":"feiv","name":"飞v","english_name":"FlyV","mark":"飞V","url":"https://varnexa.flyvaff.com/#/?code=IC0p64fi","profile_path":"brand-feiv.html","profile_status":"plans_and_latency_provided_other_details_pending","plans_path":"data/feiv-plans.json","latency_path":"data/feiv-latency.json","logo_path":"assets/feiv-logo.webp","logo_width":1024,"logo_height":1024,"logo_source":{"type":"site_owner_provided_image","provided_on":"2026-11-02","original_path":"assets/feiv-logo.png"}},
     {"id":"tiziyun","name":"梯子云","english_name":"LadderCloud","mark":"梯","url":"https://varnexa.ladderaff.com/#/?code=KSmLLEnR","profile_path":"brand-tiziyun.html","profile_status":"entry_confirmed_details_pending"},
     {"id":"langwang","name":"浪网","english_name":"WaveNet","mark":"浪","url":"https://varnexa.wavenetaff.com/#/?code=j468t9eF","profile_path":"brand-langwang.html","profile_status":"entry_confirmed_details_pending"}
   ]

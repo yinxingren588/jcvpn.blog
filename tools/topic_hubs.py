@@ -34,6 +34,12 @@ def hub_tables(root, source_tables, brands):
                         d['location']+d['isp']+' · '+d['client'], str(s['node_count']),
                         str(s['response_count'])+' / '+str(s['timeout_count']),
                         str(s['min_ms'])+' / '+format(s['median_ms'],'g')+' / '+str(s['max_ms'])])
+    flyv=json.loads((Path(root)/'data/feiv-latency.json').read_text(encoding='utf-8'))
+    fs=flyv['summary']
+    latency.append(['飞v',flyv['measured_date']+' '+flyv['measured_time'],
+                    flyv['location']+flyv['isp']+' · '+(flyv.get('client') or '客户端未提供'),
+                    str(fs['node_count']),str(fs['response_count'])+' / '+str(fs['timeout_count']),
+                    str(fs['min_ms'])+' / '+format(fs['median_ms'],'g')+' / '+str(fs['max_ms'])])
     latency.append([brands[4][0],'尚未提供','尚未提供','—','—','—'])
     return {**source_tables,
             'hub-candidates': (['品牌','线路资料','入门月付应付与额度','轻量年付应付与每期额度','优惠范围'], candidates),

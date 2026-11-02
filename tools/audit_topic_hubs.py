@@ -57,9 +57,11 @@ def audit():
         assert structured['@type']=='CollectionPage'
         total_sections+=len(hub['sections'])
     # Validate that failure entries were not turned into zeroes or silently omitted.
-    for name in ('invisible','breezenet','feimaoyun','muguang'):
+    verified_records=0
+    for name in ('invisible','breezenet','feimaoyun','muguang','feiv'):
         data=json.loads((ROOT/'data'/(name+'-latency.json')).read_text(encoding='utf-8'))
         records=data['records']
+        verified_records+=len(records)
         numeric=[r['latency_ms'] for r in records if r['latency_ms'] is not None]
         summary=data['summary']
         assert len(records)==summary['node_count']
@@ -77,7 +79,7 @@ def audit():
     assert len(rendered_tables['hub-candidates'][1])==5
     assert rendered_tables['hub-latency'][1][-1][1]=='尚未提供'
     report=dict(substantive_hubs=len(hubs),authored_sections=total_sections,legacy_anchors_preserved=9,
-                verified_latency_records=241,errors=[])
+                verified_latency_records=verified_records,errors=[])
     print(json.dumps(report,ensure_ascii=True))
     return report
 

@@ -159,10 +159,10 @@
       "mark": "飞V",
       "url": "https://varnexa.flyvaff.com/#/?code=IC0p64fi",
       "profile_path": "brand-feiv.html",
-      "profile_status": "plans_provided_other_details_pending",
+      "profile_status": "plans_and_latency_provided_other_details_pending",
       "source_type": "博客站长提供并确认的品牌名及推广入口",
       "source_date": "2026-11-02",
-      "verification_status": "plans_provided_other_details_pending",
+      "verification_status": "plans_and_latency_provided_other_details_pending",
       "commercial_relationship": "推广入口；具体合作条件未提供",
       "logo_path": "assets/feiv-logo.webp",
       "logo_width": 1024,
@@ -172,7 +172,8 @@
         "provided_on": "2026-11-02",
         "original_path": "assets/feiv-logo.png"
       },
-      "plans_path": "data/feiv-plans.json"
+      "plans_path": "data/feiv-plans.json",
+      "latency_path": "data/feiv-latency.json"
     },
     {
       "id": "tiziyun",
@@ -184,7 +185,7 @@
       "profile_status": "entry_confirmed_details_pending",
       "source_type": "博客站长提供并确认的品牌名及推广入口",
       "source_date": "2026-11-02",
-      "verification_status": "entry_provided_details_pending",
+      "verification_status": "entry_confirmed_details_pending",
       "commercial_relationship": "推广入口；具体合作条件未提供"
     },
     {
@@ -197,7 +198,7 @@
       "profile_status": "entry_confirmed_details_pending",
       "source_type": "博客站长提供并确认的品牌名及推广入口",
       "source_date": "2026-11-02",
-      "verification_status": "entry_provided_details_pending",
+      "verification_status": "entry_confirmed_details_pending",
       "commercial_relationship": "推广入口；具体合作条件未提供"
     }
   ],
