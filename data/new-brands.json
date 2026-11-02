@@ -12,6 +12,7 @@
       "profile_status": "core_materials_provided_more_details_pending",
       "plans_path": "data/feiv-plans.json",
       "latency_path": "data/feiv-latency.json",
+      "coverage_path": "data/feiv-coverage.json",
       "clients_path": "data/feiv-clients.json",
       "service_rules_path": "data/feiv-service-rules.json",
       "coupon_path": "data/feiv-coupon.json",

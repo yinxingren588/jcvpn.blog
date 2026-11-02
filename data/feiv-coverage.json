@@ -1,0 +1,24 @@
+{
+  "brand_id": "feiv",
+  "brand": "飞v FlyV",
+  "confirmed_on": "2026-11-02",
+  "source": "博客站长针对飞v完整节点地区范围的确认",
+  "independently_verified": false,
+  "collection_status": "regions_and_counts_confirmed",
+  "coverage_scope": "完整节点地区范围",
+  "region_count": 5,
+  "total_node_count": 60,
+  "node_counts_confirmed_on": "2026-11-02",
+  "regions": [
+    {"id": "hk", "name": "香港", "node_count": 20},
+    {"id": "tw", "name": "台湾", "node_count": 10},
+    {"id": "jp", "name": "日本", "node_count": 10},
+    {"id": "sg", "name": "新加坡", "node_count": 10},
+    {"id": "us", "name": "美国", "node_count": 10}
+  ],
+  "notes": [
+    "站长已确认飞v的完整节点地区为香港、台湾、日本、新加坡和美国，仅这五个地区。",
+    "站长另已确认完整节点共60个，香港20个，台湾、日本、新加坡和美国各10个。",
+    "地区覆盖说明与某次节点延迟记录分别保留来源和日期。"
+  ]
+}
