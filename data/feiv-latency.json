@@ -39,9 +39,11 @@
   "timezone": "Asia/Shanghai",
   "location": "上海",
   "isp": "电信",
-  "client": null,
-  "client_name": null,
-  "client_platform": null,
+  "client": "飞v Windows客户端",
+  "client_name": "飞v",
+  "client_platform": "Windows",
+  "client_confirmed_on": "2026-11-02",
+  "client_confirmation_source": "博客站长逐项确认",
   "client_version": null,
   "measurement_method": null,
   "prepared_on": "2026-11-02",
@@ -1021,6 +1023,6 @@
     "原截图有62张节点卡片，其中台湾04和台湾05各重复出现一次；数值一致，每个节点只统计一次。",
     "新加坡05、美国04显示Timeout，按null保存，不作0ms，不参与延迟数值的中位数与范围计算。",
     "每个节点只有一次截图记录，图表不是实时检测；ms不能换算成下载速度或长期可用率。",
-    "截图未提供客户端名称、平台、版本及探测方法，均保留未知，不从其他报告或品牌推定。"
+    "站长补充确认本批延迟截图使用Windows版飞v客户端；具体版本与探测方法仍未提供，不从其他报告推定。"
   ]
 }
