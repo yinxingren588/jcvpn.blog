@@ -19,6 +19,7 @@ SOURCES={
  'node-records':['四批节点延迟记录与来源','article-airport-review-records-overview.html'],
  'flyv-node-records':['飞v晚高峰节点延迟记录与来源','brand-feiv.html#flyv-latency'],
  'ai-records':['五条ChatGPT使用反馈与条件','article-vpn-ai-use-records.html'],
+ 'flyv-ai-records':['飞v新加坡节点ChatGPT使用反馈与条件','brand-feiv.html#flyv-access'],
  'timeout-guide':['隐形人客服排查资料','data/invisible-support.json'],
  'ipsec':['RFC 4301：IP安全架构','https://www.rfc-editor.org/info/rfc4301/'],
  'aim':['Cloudflare：互联网性能测量指标','https://developers.cloudflare.com/speed/aim/'],
