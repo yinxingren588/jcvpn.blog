@@ -56,11 +56,13 @@ def prepare() -> dict:
     if (ROOT / 'data/invisible-promo.json').exists():
         from home_feature import build_home_feature
         build_home_feature(ROOT)
-        from home_directory import build_home_directory
-        build_home_directory(ROOT)
+    from brand_showcase import build_brand_showcase
+    build_brand_showcase(ROOT)
     if (ROOT / 'data/site-contact.json').exists():
         from site_chrome import apply_site_chrome
         apply_site_chrome(ROOT)
+    from site_directory import apply_site_directory
+    apply_site_directory(ROOT)
     config_path = ROOT / 'site.config.json'
     config = read_json(config_path)
     origin = config['origin'].rstrip('/')
