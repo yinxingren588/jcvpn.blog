@@ -1,6 +1,234 @@
 {
   "topics": [
     {
+      "id": "recommendations",
+      "name": "机场推荐与梯子选择",
+      "icon": "↗",
+      "intro": "按设备、用量与售后条件，找到值得继续核对的方案。",
+      "keywords": [
+        "机场推荐",
+        "梯子推荐"
+      ],
+      "audience": "正在寻找机场推荐、希望按自身需求筛选服务的读者",
+      "steps": [
+        "明确设备、用量与售后要求",
+        "并排核对五品牌对应方案",
+        "验证自己的主要使用任务"
+      ],
+      "article_paths": [
+        "article-airport-recommendation-by-needs.html",
+        "article-ladder-recommendation-devices.html",
+        "article-airport-low-usage-selection.html",
+        "article-airport-refund-comparison.html"
+      ],
+      "articles": [
+        "机场推荐怎么选：五个品牌的需求与资料对照",
+        "梯子推荐新手路线：按Windows、安卓与iOS选择客户端",
+        "机场推荐低用量方案：50GB、70GB、80GB与100GB怎样比较",
+        "机场推荐要看售后：退款期限、客服入口与验证记录"
+      ],
+      "faq": [
+        "airport-recommendation-by-needs-1",
+        "airport-recommendation-by-needs-2",
+        "ladder-recommendation-devices-1",
+        "ladder-recommendation-devices-2",
+        "airport-low-usage-selection-1",
+        "airport-low-usage-selection-2",
+        "airport-refund-comparison-1",
+        "airport-refund-comparison-2"
+      ]
+    },
+    {
+      "id": "vpn-choice",
+      "name": "VPN推荐与使用场景",
+      "icon": "◎",
+      "intro": "围绕办公、学习、ChatGPT与流媒体，分清需要验证的任务。",
+      "keywords": [
+        "vpn",
+        "vpn推荐"
+      ],
+      "audience": "希望明确VPN用途与目标平台验证范围的读者",
+      "steps": [
+        "分清用途、授权与连接范围",
+        "核对问答或播放的具体动作",
+        "保留相应环境下的访问记录"
+      ],
+      "article_paths": [
+        "article-vpn-recommendation-usage.html",
+        "article-vpn-recommendation-work-study.html",
+        "article-vpn-ai-use-records.html",
+        "article-vpn-streaming-verification.html"
+      ],
+      "articles": [
+        "VPN推荐前先问用途：远程接入、代理服务与连接范围",
+        "VPN推荐给办公与学习用户：先列任务，再估算流量",
+        "VPN推荐与ChatGPT访问：五品牌问答记录能说明什么",
+        "VPN推荐看流媒体：平台支持说明与实际播放怎样核对"
+      ],
+      "faq": [
+        "vpn-recommendation-usage-1",
+        "vpn-recommendation-usage-2",
+        "vpn-recommendation-work-study-1",
+        "vpn-recommendation-work-study-2",
+        "vpn-ai-use-records-1",
+        "vpn-ai-use-records-2",
+        "vpn-streaming-verification-1",
+        "vpn-streaming-verification-2"
+      ]
+    },
+    {
+      "id": "nodes-guide",
+      "name": "节点推荐与机场节点",
+      "icon": "⌁",
+      "intro": "从地区、任务、IP要求和异常排查理解节点选择。",
+      "keywords": [
+        "节点推荐",
+        "机场节点"
+      ],
+      "audience": "需要选择节点、比较地区或处理连接异常的读者",
+      "steps": [
+        "先确定任务和节点地区需求",
+        "区分延迟探测与实际目标响应",
+        "发生异常时做单变量对照"
+      ],
+      "article_paths": [
+        "article-node-recommendation-task.html",
+        "article-airport-node-region-choice.html",
+        "article-airport-node-timeout-check.html",
+        "article-airport-node-ip-requirements.html"
+      ],
+      "articles": [
+        "节点推荐先看任务：浏览、问答、会议与下载怎么选",
+        "机场节点地区怎么选：香港、日本与新加坡的比较边界",
+        "机场节点全部超时怎么办：设备、网络与探测结果排查",
+        "机场节点IP怎么选：原生、独享与纯净度分别核对"
+      ],
+      "faq": [
+        "node-recommendation-task-1",
+        "node-recommendation-task-2",
+        "airport-node-region-choice-1",
+        "airport-node-region-choice-2",
+        "airport-node-timeout-check-1",
+        "airport-node-timeout-check-2",
+        "airport-node-ip-requirements-1",
+        "airport-node-ip-requirements-2"
+      ]
+    },
+    {
+      "id": "reviews-guide",
+      "name": "机场测评与稳定性",
+      "icon": "▥",
+      "intro": "阅读真实记录、统计口径、失败样本与尚未补充的资料。",
+      "keywords": [
+        "机场测评",
+        "稳定机场"
+      ],
+      "audience": "想判断测速图、晚高峰与稳定性结论是否有依据的读者",
+      "steps": [
+        "找出数据来源与采样窗口",
+        "核对统计口径和失败样本",
+        "补充连续记录及关键缺失条件"
+      ],
+      "article_paths": [
+        "article-airport-review-records-overview.html",
+        "article-stable-airport-peak-review.html",
+        "article-airport-review-method-snapshot.html",
+        "article-airport-review-evidence-gaps.html"
+      ],
+      "articles": [
+        "机场测评资料对照：四批节点延迟与五条ChatGPT反馈",
+        "稳定机场怎么判断：晚高峰记录应当怎样连续观察",
+        "机场测评读图指南：超时、最大值与中位数怎么保留",
+        "机场测评资料不全时怎么选：五品牌待验证项目清单"
+      ],
+      "faq": [
+        "airport-review-records-overview-1",
+        "airport-review-records-overview-2",
+        "stable-airport-peak-review-1",
+        "stable-airport-peak-review-2",
+        "airport-review-method-snapshot-1",
+        "airport-review-method-snapshot-2",
+        "airport-review-evidence-gaps-1",
+        "airport-review-evidence-gaps-2"
+      ]
+    },
+    {
+      "id": "budget-guide",
+      "name": "性价比与便宜机场",
+      "icon": "¥",
+      "intro": "把月付、年付、一次性总流量与优惠例外放在同一预算框架。",
+      "keywords": [
+        "性价比机场",
+        "便宜机场",
+        "便宜机场推荐"
+      ],
+      "audience": "重视预算，希望核对实际付款、额度与优惠条件的读者",
+      "steps": [
+        "区分月付、年付与一次性总量",
+        "核对优惠范围与实际付款",
+        "按自己的消耗评估预算"
+      ],
+      "article_paths": [
+        "article-value-airport-monthly-table.html",
+        "article-cheap-airport-annual-table.html",
+        "article-cheap-airport-once-usage.html",
+        "article-cheap-airport-coupon-exclusions.html"
+      ],
+      "articles": [
+        "性价比机场怎么比：五款入门月付套餐的金额与额度",
+        "便宜机场推荐怎么看年付：五款轻量方案的真实付款",
+        "便宜机场怎么选不限时流量：总额度、使用频率与重置",
+        "便宜机场优惠码对照：八折、九折与不适用套餐"
+      ],
+      "faq": [
+        "value-airport-monthly-table-1",
+        "value-airport-monthly-table-2",
+        "cheap-airport-annual-table-1",
+        "cheap-airport-annual-table-2",
+        "cheap-airport-once-usage-1",
+        "cheap-airport-once-usage-2",
+        "cheap-airport-coupon-exclusions-1",
+        "cheap-airport-coupon-exclusions-2"
+      ]
+    },
+    {
+      "id": "clash-guide",
+      "name": "Clash机场与客户端",
+      "icon": "⌘",
+      "intro": "核对客户端、内核、格式与实际目标，区分配置和服务。",
+      "keywords": [
+        "clash机场"
+      ],
+      "audience": "需要了解Clash相关订阅兼容、更新和客户端切换的读者",
+      "steps": [
+        "确认客户端和实际内核版本",
+        "核对协议与订阅格式",
+        "分别验证导入、连接和访问"
+      ],
+      "article_paths": [
+        "article-clash-airport-compatibility.html",
+        "article-clash-airport-provider-update.html",
+        "article-clash-airport-rule-check.html",
+        "article-clash-airport-migration-native.html"
+      ],
+      "articles": [
+        "Clash机场怎么选：先核对内核、协议与订阅格式",
+        "Clash机场订阅更新：配置获取、解析和节点变化分别检查",
+        "Clash机场已连接但网站打不开：策略与目标访问如何区分",
+        "Clash机场与官网客户端怎么切换：保留配置与验证范围"
+      ],
+      "faq": [
+        "clash-airport-compatibility-1",
+        "clash-airport-compatibility-2",
+        "clash-airport-provider-update-1",
+        "clash-airport-provider-update-2",
+        "clash-airport-rule-check-1",
+        "clash-airport-rule-check-2",
+        "clash-airport-migration-native-1",
+        "clash-airport-migration-native-2"
+      ]
+    },
+    {
       "id": "basics",
       "name": "VPN与机场VPN入门",
       "icon": "⌘",
@@ -33,7 +261,37 @@
         "what-vpn",
         "what-airport",
         "client-service",
-        "vpn-guarantee"
+        "vpn-guarantee",
+        "vpn-scope-1",
+        "vpn-scope-2",
+        "vpn-scope-3",
+        "service-client-protocol-1",
+        "service-client-protocol-2",
+        "service-client-protocol-3",
+        "dns-connection-1",
+        "dns-connection-2",
+        "dns-connection-3",
+        "https-vpn-1",
+        "https-vpn-2",
+        "https-vpn-3",
+        "read-subscription-file-1",
+        "read-subscription-file-2",
+        "read-subscription-file-3",
+        "protocol-and-quality-1",
+        "protocol-and-quality-2",
+        "protocol-and-quality-3",
+        "ipv4-ipv6-context-1",
+        "ipv4-ipv6-context-2",
+        "ipv4-ipv6-context-3",
+        "hostname-ip-node-1",
+        "hostname-ip-node-2",
+        "hostname-ip-node-3",
+        "url-components-1",
+        "url-components-2",
+        "url-components-3",
+        "dns-cache-observation-1",
+        "dns-cache-observation-2",
+        "dns-cache-observation-3"
       ],
       "article_paths": [
         "article-vpn-scope.html",
@@ -80,7 +338,37 @@
         "connected-no-web",
         "device-difference",
         "import-failure",
-        "what-dns"
+        "what-dns",
+        "connected-no-web-1",
+        "connected-no-web-2",
+        "connected-no-web-3",
+        "device-comparison-1",
+        "device-comparison-2",
+        "device-comparison-3",
+        "subscription-import-1",
+        "subscription-import-2",
+        "subscription-import-3",
+        "after-update-1",
+        "after-update-2",
+        "after-update-3",
+        "slow-baseline-1",
+        "slow-baseline-2",
+        "slow-baseline-3",
+        "intermittent-log-1",
+        "intermittent-log-2",
+        "intermittent-log-3",
+        "single-site-failure-1",
+        "single-site-failure-2",
+        "single-site-failure-3",
+        "extension-isolation-1",
+        "extension-isolation-2",
+        "extension-isolation-3",
+        "network-switch-1",
+        "network-switch-2",
+        "network-switch-3",
+        "error-message-map-1",
+        "error-message-map-2",
+        "error-message-map-3"
       ],
       "article_paths": [
         "article-connected-no-web.html",
@@ -125,7 +413,37 @@
         "monthly-annual",
         "traffic-multiplier",
         "device-count",
-        "price-check"
+        "price-check",
+        "monthly-annual-cost-1",
+        "monthly-annual-cost-2",
+        "monthly-annual-cost-3",
+        "traffic-accounting-1",
+        "traffic-accounting-2",
+        "traffic-accounting-3",
+        "devices-and-sharing-1",
+        "devices-and-sharing-2",
+        "devices-and-sharing-3",
+        "plan-comparison-sheet-1",
+        "plan-comparison-sheet-2",
+        "plan-comparison-sheet-3",
+        "quota-estimate-1",
+        "quota-estimate-2",
+        "quota-estimate-3",
+        "renewal-price-record-1",
+        "renewal-price-record-2",
+        "renewal-price-record-3",
+        "refund-rule-reading-1",
+        "refund-rule-reading-2",
+        "refund-rule-reading-3",
+        "trial-evaluation-1",
+        "trial-evaluation-2",
+        "trial-evaluation-3",
+        "upgrade-plan-checklist-1",
+        "upgrade-plan-checklist-2",
+        "upgrade-plan-checklist-3",
+        "service-migration-1",
+        "service-migration-2",
+        "service-migration-3"
       ],
       "article_paths": [
         "article-monthly-annual-cost.html",
@@ -172,7 +490,36 @@
         "latency-speed",
         "one-speed-test",
         "fair-test",
-        "fastest-brand"
+        "fastest-brand",
+        "metrics-explained-1",
+        "metrics-explained-2",
+        "metrics-explained-3",
+        "read-speed-chart-1",
+        "read-speed-chart-2",
+        "read-speed-chart-3",
+        "sampling-notebook-1",
+        "sampling-notebook-2",
+        "fair-comparison-1",
+        "fair-comparison-2",
+        "fair-comparison-3",
+        "median-and-range-1",
+        "median-and-range-2",
+        "median-and-range-3",
+        "rate-units-1",
+        "rate-units-2",
+        "rate-units-3",
+        "test-target-bias-1",
+        "test-target-bias-2",
+        "test-target-bias-3",
+        "sampling-selection-1",
+        "sampling-selection-2",
+        "sampling-selection-3",
+        "loaded-latency-1",
+        "loaded-latency-2",
+        "loaded-latency-3",
+        "reproducible-report-1",
+        "reproducible-report-2",
+        "reproducible-report-3"
       ],
       "article_paths": [
         "article-metrics-explained.html",
@@ -221,6 +568,38 @@
         "article-configuration-backup.html",
         "article-minimum-support-data.html",
         "article-credential-exposure-response.html"
+      ],
+      "faq": [
+        "redact-support-files-1",
+        "redact-support-files-2",
+        "redact-support-files-3",
+        "cookies-and-ip-1",
+        "cookies-and-ip-2",
+        "cookies-and-ip-3",
+        "certificate-warnings-1",
+        "certificate-warnings-2",
+        "certificate-warnings-3",
+        "browser-proxy-scope-1",
+        "browser-proxy-scope-2",
+        "browser-proxy-scope-3",
+        "private-window-boundary-1",
+        "private-window-boundary-2",
+        "private-window-boundary-3",
+        "extension-permissions-1",
+        "extension-permissions-2",
+        "extension-permissions-3",
+        "download-source-check-1",
+        "download-source-check-2",
+        "download-source-check-3",
+        "configuration-backup-1",
+        "configuration-backup-2",
+        "configuration-backup-3",
+        "minimum-support-data-1",
+        "minimum-support-data-2",
+        "minimum-support-data-3",
+        "credential-exposure-response-1",
+        "credential-exposure-response-2",
+        "credential-exposure-response-3"
       ]
     },
     {
@@ -253,7 +632,38 @@
         "brands-listed",
         "brand-ranking",
         "affiliate-links",
-        "brand-materials"
+        "brand-materials",
+        "evidence-levels-1",
+        "evidence-levels-2",
+        "evidence-levels-3",
+        "brand-record-template-1",
+        "brand-record-template-2",
+        "brand-record-template-3",
+        "revision-log-1",
+        "revision-log-2",
+        "revision-log-3",
+        "five-brand-reading-1",
+        "five-brand-reading-2",
+        "promotion-disclosure-1",
+        "promotion-disclosure-2",
+        "promotion-disclosure-3",
+        "service-status-evidence-1",
+        "service-status-evidence-2",
+        "service-status-evidence-3",
+        "terms-snapshot-1",
+        "terms-snapshot-2",
+        "terms-snapshot-3",
+        "audit-report-reading-1",
+        "audit-report-reading-2",
+        "audit-report-reading-3",
+        "correction-workflow-1",
+        "correction-workflow-2",
+        "correction-workflow-3",
+        "correction-workflow-4",
+        "conflicting-sources-1",
+        "conflicting-sources-2",
+        "conflicting-sources-3",
+        "conflicting-sources-4"
       ],
       "article_paths": [
         "article-evidence-levels.html",
@@ -381,7 +791,7 @@
       "id": "price-check",
       "category": "plans",
       "question": "这五个品牌现在分别多少钱？",
-      "answer": "隐形人机场已由品牌方提供9款套餐价格与额度，见独立品牌页：包含109元年付、24/48/105/185元月付、680元商务月付及229/549/1199元一次性流量包。微风网络的6款套餐已按第三方资料整理；其余三个品牌的现行价格仍待补充。未提供的付费周期报价不自行推算。",
+      "answer": "五个品牌均已整理站长提供的套餐报价与额度。比较时先区分月付、年付和一次性总流量，查看优惠排除项，再到对应官网核对当前结算金额，不推算尚未提供的付款周期。",
       "type": "本站资料状态",
       "sources": [],
       "article": "brand-record-template"
@@ -428,7 +838,7 @@
       "id": "brands-listed",
       "category": "brands",
       "question": "叮当观察目前收录哪些品牌？",
-      "answer": "本站收录隐形人机场、微风网络 Breezenet、飞猫云、暮光网络、灵动云。隐形人为本站主推品牌，已有品牌方介绍；其他品牌仍以初始资料为主，尚无同条件独立实测。",
+      "answer": "本站收录隐形人机场、微风网络、飞猫云、暮光网络和灵动云，均有套餐与客户端资料。隐形人为本站主推，实际反馈与延迟记录按各品牌的日期和条件分别阅读。",
       "type": "本站资料状态",
       "sources": [],
       "article": "five-brand-reading"
@@ -455,7 +865,7 @@
       "id": "brand-materials",
       "category": "brands",
       "question": "后续补充品牌资料，需要准备什么？",
-      "answer": "准备来源网址与获取日期、套餐规则、支持设备及版本、公开条款和商业关系说明。如提供实测，另附测试条件、方法、脱敏日志和截图；不要公开账号或订阅密钥。",
+      "answer": "品牌页包含套餐、客户端与规则资料；部分另有截图延迟和ChatGPT反馈。品牌说明、用户反馈与独立复测不是同一种证据，记录应分别保留来源与日期。",
       "type": "本站资料清单",
       "sources": [],
       "article": "brand-record-template"
@@ -2079,6 +2489,904 @@
       "type": "文章延伸解答",
       "sources": [],
       "article": "conflicting-sources"
+    },
+    {
+      "id": "airport-recommendation-by-needs-1",
+      "category": "recommendations",
+      "question": "机场推荐应该先看价格还是使用需求？",
+      "answer": "先看使用需求。最低付款金额、每月流量和一次性总流量是不同条件。先明确用量、设备及目标任务，再比较同口径套餐，才不会买到金额更低却不适合自己的方案。",
+      "steps": [
+        "记录最近一个月用量",
+        "确认主要设备和平台",
+        "选择同周期的两个候选方案"
+      ],
+      "article": "airport-recommendation-by-needs",
+      "type": "专题解答与核对步骤",
+      "sources": [
+        "brand-catalog"
+      ],
+      "origin": "search-expansion",
+      "file": "faq-airport-recommendation-by-needs-1.html"
+    },
+    {
+      "id": "airport-recommendation-by-needs-2",
+      "category": "recommendations",
+      "question": "本站主推隐形人是否表示它测速第一？",
+      "answer": "不是。隐形人是本站主推品牌，展示位置属于推广安排。现有各品牌延迟记录的日期、时段与客户端不同，不能用它们制作同条件速度冠军排名。",
+      "steps": [
+        "查看主推关系说明",
+        "阅读各记录的采样条件",
+        "用自己的环境验证目标任务"
+      ],
+      "article": "airport-recommendation-by-needs",
+      "type": "专题解答与核对步骤",
+      "sources": [
+        "brand-catalog"
+      ],
+      "origin": "search-expansion",
+      "file": "faq-airport-recommendation-by-needs-2.html"
+    },
+    {
+      "id": "ladder-recommendation-devices-1",
+      "category": "recommendations",
+      "question": "五个机场的iOS识别码可以通用吗？",
+      "answer": "不能通用。当前资料分别是yxr、wfwl、fmy、mgjs和ldy，对应隐形人、微风网络、飞猫云、暮光网络与灵动云。填完识别码后仍需登录该品牌自己的账号。",
+      "steps": [
+        "先核对所购品牌",
+        "填写对应识别码",
+        "用同一品牌官网账号登录"
+      ],
+      "article": "ladder-recommendation-devices",
+      "type": "专题解答与核对步骤",
+      "sources": [
+        "brand-clients"
+      ],
+      "origin": "search-expansion",
+      "file": "faq-ladder-recommendation-devices-1.html"
+    },
+    {
+      "id": "ladder-recommendation-devices-2",
+      "category": "recommendations",
+      "question": "官网客户端登录成功后就能直接使用吗？",
+      "answer": "还需要选择节点并点击连接。五个品牌确认的流程都包含这个步骤。若账号能登录但网站打不开，应分别观察连接状态和目标响应，避免把账号问题与网络问题混在一起。",
+      "steps": [
+        "确认节点列表已经加载",
+        "选择一个节点并连接",
+        "打开一个固定页面验证"
+      ],
+      "article": "ladder-recommendation-devices",
+      "type": "专题解答与核对步骤",
+      "sources": [
+        "brand-clients"
+      ],
+      "origin": "search-expansion",
+      "file": "faq-ladder-recommendation-devices-2.html"
+    },
+    {
+      "id": "airport-low-usage-selection-1",
+      "category": "recommendations",
+      "question": "便宜年付套餐的80GB是全年只能用80GB吗？",
+      "answer": "隐形人该款年付方案不是全年共80GB，而是从购买日起每30天刷新80GB。判断其他套餐时也要分别看额度和刷新周期，不能只凭年付两个字推断流量范围。",
+      "steps": [
+        "找到流量范围说明",
+        "核对后台刷新日期",
+        "区分周期额度与一次性总量"
+      ],
+      "article": "airport-low-usage-selection",
+      "type": "专题解答与核对步骤",
+      "sources": [
+        "brand-plans",
+        "brand-coupons"
+      ],
+      "origin": "search-expansion",
+      "file": "faq-airport-low-usage-selection-1.html"
+    },
+    {
+      "id": "airport-low-usage-selection-2",
+      "category": "recommendations",
+      "question": "飞猫学生版和灵动穿云都能用优惠码吗？",
+      "answer": "当前确认的规则是：飞猫学生版不适用flycat888，84元为最终年价；灵动穿云不适用wsj888，保持99元/年。其他套餐的优惠范围应分别查看品牌页。",
+      "steps": [
+        "先确认具体套餐名称",
+        "阅读优惠排除项",
+        "核对结算页实际应付金额"
+      ],
+      "article": "airport-low-usage-selection",
+      "type": "专题解答与核对步骤",
+      "sources": [
+        "brand-plans",
+        "brand-coupons"
+      ],
+      "origin": "search-expansion",
+      "file": "faq-airport-low-usage-selection-2.html"
+    },
+    {
+      "id": "airport-refund-comparison-1",
+      "category": "recommendations",
+      "question": "机场购买后24小时内一定可以无理由退款吗？",
+      "answer": "不能这样理解。四个品牌确认的是在24小时内申请技术问题退款，且须经客服协助后仍完全无法使用。无理由退款、到账时限与其他情形没有在这项条件中确认。",
+      "steps": [
+        "阅读完整退款条件",
+        "在适用期限内联系客服",
+        "保留协助处理仍失败的记录"
+      ],
+      "article": "airport-refund-comparison",
+      "type": "专题解答与核对步骤",
+      "sources": [
+        "brand-rules"
+      ],
+      "origin": "search-expansion",
+      "file": "faq-airport-refund-comparison-1.html"
+    },
+    {
+      "id": "airport-refund-comparison-2",
+      "category": "recommendations",
+      "question": "隐形人也有24小时退款限制吗？",
+      "answer": "目前只确认隐形人因技术问题经协助后仍完全无法使用时支持申请全额退款，申请期限尚未提供。不要套用其他品牌的24小时条件，购买前可向隐形人客服确认。",
+      "steps": [
+        "查隐形人自身规则",
+        "向客服确认申请期限",
+        "不要用其他品牌条款推算"
+      ],
+      "article": "airport-refund-comparison",
+      "type": "专题解答与核对步骤",
+      "sources": [
+        "brand-rules"
+      ],
+      "origin": "search-expansion",
+      "file": "faq-airport-refund-comparison-2.html"
+    },
+    {
+      "id": "vpn-recommendation-usage-1",
+      "category": "vpn-choice",
+      "question": "VPN推荐和机场推荐是一回事吗？",
+      "answer": "不是完全相同。VPN是技术与产品中广泛使用的术语，机场是订阅代理服务的俗称。搜索时可能混用，但选择时应回到具体协议、客户端、流量范围和任务需求。",
+      "steps": [
+        "写明需要完成的任务",
+        "核对产品实际接入方式",
+        "分别验证关键应用"
+      ],
+      "article": "vpn-recommendation-usage",
+      "type": "专题解答与核对步骤",
+      "sources": [
+        "ipsec",
+        "brand-clients"
+      ],
+      "origin": "search-expansion",
+      "file": "faq-vpn-recommendation-usage-1.html"
+    },
+    {
+      "id": "vpn-recommendation-usage-2",
+      "category": "vpn-choice",
+      "question": "买了机场服务就能获得目标平台的账号权限吗？",
+      "answer": "不能。网络路径与目标服务的账户授权是两件事。能连接某地区节点，不等于获得内部系统权限、付费功能或目标平台认可的使用资格。",
+      "steps": [
+        "核对目标账户状态",
+        "确认平台和组织授权",
+        "只测试自己有权访问的资源"
+      ],
+      "article": "vpn-recommendation-usage",
+      "type": "专题解答与核对步骤",
+      "sources": [
+        "ipsec",
+        "brand-clients"
+      ],
+      "origin": "search-expansion",
+      "file": "faq-vpn-recommendation-usage-2.html"
+    },
+    {
+      "id": "vpn-recommendation-work-study-1",
+      "category": "vpn-choice",
+      "question": "办公或学习用户应该固定买多少GB？",
+      "answer": "没有统一额度。文字资料、视频会议和素材下载的消耗不同。先使用自己后台的近期统计或一周任务样本，标明单位和计算口径，再选择留有适当余量的套餐。",
+      "steps": [
+        "查看近期流量统计",
+        "标出集中下载等异常任务",
+        "按实际频率估算下一周期"
+      ],
+      "article": "vpn-recommendation-work-study",
+      "type": "专题解答与核对步骤",
+      "sources": [
+        "aim",
+        "brand-plans"
+      ],
+      "origin": "search-expansion",
+      "file": "faq-vpn-recommendation-work-study-1.html"
+    },
+    {
+      "id": "vpn-recommendation-work-study-2",
+      "category": "vpn-choice",
+      "question": "网络测速很快就能保证视频会议稳定吗？",
+      "answer": "不能保证。持续下载能力和实时互动体验不是同一指标，还需观察响应波动、丢包及目标应用实际表现。应在自己的设备和网络上完成一次会议任务并留下条件记录。",
+      "steps": [
+        "固定设备与网络",
+        "进行实际会议操作",
+        "记录卡顿时间与网络变化"
+      ],
+      "article": "vpn-recommendation-work-study",
+      "type": "专题解答与核对步骤",
+      "sources": [
+        "aim",
+        "brand-plans"
+      ],
+      "origin": "search-expansion",
+      "file": "faq-vpn-recommendation-work-study-2.html"
+    },
+    {
+      "id": "vpn-ai-use-records-1",
+      "category": "vpn-choice",
+      "question": "机场能打开ChatGPT就说明API也能用吗？",
+      "answer": "不能。网页或应用问答与API请求具有不同的账户、权限和调用路径。本站现有反馈确认发送问题并收到回答，没有据此确认API、付款或所有模型功能。",
+      "steps": [
+        "列出真正要用的功能",
+        "阅读记录验证的具体动作",
+        "API需求另行记录请求结果"
+      ],
+      "article": "vpn-ai-use-records",
+      "type": "专题解答与核对步骤",
+      "sources": [
+        "ai-records"
+      ],
+      "origin": "search-expansion",
+      "file": "faq-vpn-ai-use-records-1.html"
+    },
+    {
+      "id": "vpn-ai-use-records-2",
+      "category": "vpn-choice",
+      "question": "五个品牌的ChatGPT记录可以直接排出速度名次吗？",
+      "answer": "不能。记录日期、时刻和环境完整程度不同，而且没有统一的响应耗时测量。它们适合查看已报告的问答条件，不适合制作速度排名或长期可用率。",
+      "steps": [
+        "核对每条记录的日期和网络",
+        "区分成功反馈与耗时数据",
+        "在同条件下补充重复样本"
+      ],
+      "article": "vpn-ai-use-records",
+      "type": "专题解答与核对步骤",
+      "sources": [
+        "ai-records"
+      ],
+      "origin": "search-expansion",
+      "file": "faq-vpn-ai-use-records-2.html"
+    },
+    {
+      "id": "vpn-streaming-verification-1",
+      "category": "vpn-choice",
+      "question": "节点延迟低就代表Netflix可以4K播放吗？",
+      "answer": "不代表。延迟不是视频持续传输能力，也没有包含账户权益、片源、设备和应用条件。需要在对应环境下实际播放并记录清晰度和缓冲情况。",
+      "steps": [
+        "确认账户和片源支持情况",
+        "固定节点与设备实际播放",
+        "记录清晰度及缓冲现象"
+      ],
+      "article": "vpn-streaming-verification",
+      "type": "专题解答与核对步骤",
+      "sources": [
+        "brand-catalog"
+      ],
+      "origin": "search-expansion",
+      "file": "faq-vpn-streaming-verification-1.html"
+    },
+    {
+      "id": "vpn-streaming-verification-2",
+      "category": "vpn-choice",
+      "question": "原生IP能保证所有流媒体一直解锁吗？",
+      "answer": "不能保证。IP属性是节点资料的一部分，平台识别和使用条件还会变化。需要分平台、地区、节点和日期记录实际结果，不能由原生IP四个字推断全部平台与时段。",
+      "steps": [
+        "核对具体节点的资料",
+        "分别验证目标平台",
+        "保留时间和平台提示"
+      ],
+      "article": "vpn-streaming-verification",
+      "type": "专题解答与核对步骤",
+      "sources": [
+        "brand-catalog"
+      ],
+      "origin": "search-expansion",
+      "file": "faq-vpn-streaming-verification-2.html"
+    },
+    {
+      "id": "node-recommendation-task-1",
+      "category": "nodes-guide",
+      "question": "节点推荐是不是选择延迟最低的就够了？",
+      "answer": "不够。延迟可用于初筛，但真实任务还涉及目标响应和持续传输。先确定自己要完成浏览、问答、会议还是下载，再在同一设备和网络下验证候选节点。",
+      "steps": [
+        "写明当前任务",
+        "选择两个候选节点",
+        "按相同操作比较结果"
+      ],
+      "article": "node-recommendation-task",
+      "type": "专题解答与核对步骤",
+      "sources": [
+        "aim"
+      ],
+      "origin": "search-expansion",
+      "file": "faq-node-recommendation-task-1.html"
+    },
+    {
+      "id": "node-recommendation-task-2",
+      "category": "nodes-guide",
+      "question": "选择节点时要一次测试完整个列表吗？",
+      "answer": "通常不必。先从符合地区需求的少量候选开始，固定条件并记录重复结果。完整列表测试适合有明确采样计划的记录工作，不应代替日常任务验证。",
+      "steps": [
+        "先确认地区需求",
+        "从少量候选做对照",
+        "异常时再扩大排查范围"
+      ],
+      "article": "node-recommendation-task",
+      "type": "专题解答与核对步骤",
+      "sources": [
+        "aim"
+      ],
+      "origin": "search-expansion",
+      "file": "faq-node-recommendation-task-2.html"
+    },
+    {
+      "id": "airport-node-region-choice-1",
+      "category": "nodes-guide",
+      "question": "人在上海就一定选香港节点更快吗？",
+      "answer": "不一定。地理距离只是背景之一，实际路径、入口和当时网络也会影响结果。应在自己的设备、网络和同一时段下，对满足任务需求的节点做实际比较。",
+      "steps": [
+        "选择满足地区条件的候选",
+        "保持同一网络和客户端",
+        "比较同一目标任务"
+      ],
+      "article": "airport-node-region-choice",
+      "type": "专题解答与核对步骤",
+      "sources": [
+        "node-records",
+        "brand-catalog"
+      ],
+      "origin": "search-expansion",
+      "file": "faq-airport-node-region-choice-1.html"
+    },
+    {
+      "id": "airport-node-region-choice-2",
+      "category": "nodes-guide",
+      "question": "节点名字里写IEPL就证明线路一定是IEPL吗？",
+      "answer": "节点名称不能单独证明网络架构。比如飞猫云截图名称出现IEPL，但站长确认品牌介绍仍保留IPLC。本站分别记录原始名称与线路说明，不用标签替代验证。",
+      "steps": [
+        "保留原始节点名称",
+        "核对品牌当前线路说明",
+        "必要时请客服解释字段"
+      ],
+      "article": "airport-node-region-choice",
+      "type": "专题解答与核对步骤",
+      "sources": [
+        "node-records",
+        "brand-catalog"
+      ],
+      "origin": "search-expansion",
+      "file": "faq-airport-node-region-choice-2.html"
+    },
+    {
+      "id": "airport-node-timeout-check-1",
+      "category": "nodes-guide",
+      "question": "所有机场节点超时就一定是机场停服了吗？",
+      "answer": "不能直接判断。需要区分延迟探测、客户端连接和实际访问。先保留错误及时间，再在同一设备上更换网络对照，必要时通过品牌后台联系客服。",
+      "steps": [
+        "观察实际连接和目标响应",
+        "更换热点做单变量对照",
+        "保存结果并联系客服"
+      ],
+      "article": "airport-node-timeout-check",
+      "type": "专题解答与核对步骤",
+      "sources": [
+        "timeout-guide"
+      ],
+      "origin": "search-expansion",
+      "file": "faq-airport-node-timeout-check-1.html"
+    },
+    {
+      "id": "airport-node-timeout-check-2",
+      "category": "nodes-guide",
+      "question": "更换热点能保证解决全部超时吗？",
+      "answer": "不能保证。这是客服经验中的排查方法，用于比较接入网络因素。恢复或未恢复都应记录，不能把一次结果概括成所有超时的原因。",
+      "steps": [
+        "保持节点和设备不变",
+        "比较更换前后的现象",
+        "未恢复时继续按客服指引排查"
+      ],
+      "article": "airport-node-timeout-check",
+      "type": "专题解答与核对步骤",
+      "sources": [
+        "timeout-guide"
+      ],
+      "origin": "search-expansion",
+      "file": "faq-airport-node-timeout-check-2.html"
+    },
+    {
+      "id": "airport-node-ip-requirements-1",
+      "category": "nodes-guide",
+      "question": "原生IP就是一个人独享的住宅IP吗？",
+      "answer": "不是。原生、独享和住宅是不同层面的描述。原生标签不能证明只有一个用户使用，也不能证明地址来自住宅网络。需要逐项核对相应套餐的具体说明。",
+      "steps": [
+        "分别询问三个属性",
+        "确认承诺对应哪款套餐",
+        "保留品牌给出的文字说明"
+      ],
+      "article": "airport-node-ip-requirements",
+      "type": "专题解答与核对步骤",
+      "sources": [
+        "brand-catalog",
+        "brand-plans"
+      ],
+      "origin": "search-expansion",
+      "file": "faq-airport-node-ip-requirements-1.html"
+    },
+    {
+      "id": "airport-node-ip-requirements-2",
+      "category": "nodes-guide",
+      "question": "灵动云所有套餐都提供独享公网IP吗？",
+      "answer": "不能这样概括。当前资料把独立公网IP和独立带宽单独列在至尊私人定制中；普通套餐的纯净IP优化、部分方案的原生IP说明，不等于全品牌都独享。",
+      "steps": [
+        "打开具体套餐配置",
+        "核对是否明确不与他人共享",
+        "定制需求通过工单确认"
+      ],
+      "article": "airport-node-ip-requirements",
+      "type": "专题解答与核对步骤",
+      "sources": [
+        "brand-catalog",
+        "brand-plans"
+      ],
+      "origin": "search-expansion",
+      "file": "faq-airport-node-ip-requirements-2.html"
+    },
+    {
+      "id": "airport-review-records-overview-1",
+      "category": "reviews-guide",
+      "question": "本站的机场测评记录都是现场实时测速吗？",
+      "answer": "不是。当前主要是用户提供的客户端截图快照和实际使用反馈，没有自动更新的测速接口。图表依据这些记录整理，不表示此刻重新探测了所有节点。",
+      "steps": [
+        "查看采样日期和来源",
+        "区分历史快照与实时接口",
+        "按自己的环境补充记录"
+      ],
+      "article": "airport-review-records-overview",
+      "type": "专题解答与核对步骤",
+      "sources": [
+        "node-records",
+        "ai-records"
+      ],
+      "origin": "search-expansion",
+      "file": "faq-airport-review-records-overview-1.html"
+    },
+    {
+      "id": "airport-review-records-overview-2",
+      "category": "reviews-guide",
+      "question": "某批截图没有超时就能证明长期零故障吗？",
+      "answer": "不能。它只说明该批记录中没有出现超时条目。长期可用性需要连续采样、清楚的失败定义和完整的时间窗口，不能从一次截图推算。",
+      "steps": [
+        "核对采样窗口",
+        "保留后续异常",
+        "不要把单次结果换成长期比例"
+      ],
+      "article": "airport-review-records-overview",
+      "type": "专题解答与核对步骤",
+      "sources": [
+        "node-records",
+        "ai-records"
+      ],
+      "origin": "search-expansion",
+      "file": "faq-airport-review-records-overview-2.html"
+    },
+    {
+      "id": "stable-airport-peak-review-1",
+      "category": "reviews-guide",
+      "question": "稳定机场应该测几次才能确认？",
+      "answer": "没有一套次数能自动证明长期稳定。先确定观察窗口、目标任务和失败定义，再在多个实际使用日期持续记录；样本数量与覆盖范围应一起说明。",
+      "steps": [
+        "设定观察窗口和任务",
+        "跨日期保留重复结果",
+        "报告没有覆盖的时段"
+      ],
+      "article": "stable-airport-peak-review",
+      "type": "专题解答与核对步骤",
+      "sources": [
+        "node-records",
+        "aim"
+      ],
+      "origin": "search-expansion",
+      "file": "faq-stable-airport-peak-review-1.html"
+    },
+    {
+      "id": "stable-airport-peak-review-2",
+      "category": "reviews-guide",
+      "question": "IEPL或IPLC专线就能保证晚高峰稳定吗？",
+      "answer": "不能由线路名称直接保证。线路介绍与实际高峰表现是不同证据，需要结合接入网络、节点、时间和目标任务的连续记录。",
+      "steps": [
+        "核对品牌线路说明",
+        "查看相应高峰记录",
+        "在自己的网络下验证任务"
+      ],
+      "article": "stable-airport-peak-review",
+      "type": "专题解答与核对步骤",
+      "sources": [
+        "node-records",
+        "aim"
+      ],
+      "origin": "search-expansion",
+      "file": "faq-stable-airport-peak-review-2.html"
+    },
+    {
+      "id": "airport-review-method-snapshot-1",
+      "category": "reviews-guide",
+      "question": "Timeout可以按0ms算进平均值吗？",
+      "answer": "不可以。超时没有提供有效毫秒数，记为0会让结果显得更好。应单独统计超时数量，对有效数值另算统计量，并说明两者的样本口径。",
+      "steps": [
+        "保留Timeout原状态",
+        "只对有效数值计算",
+        "同时显示总数和超时数"
+      ],
+      "article": "airport-review-method-snapshot",
+      "type": "专题解答与核对步骤",
+      "sources": [
+        "node-records",
+        "aim"
+      ],
+      "origin": "search-expansion",
+      "file": "faq-airport-review-method-snapshot-1.html"
+    },
+    {
+      "id": "airport-review-method-snapshot-2",
+      "category": "reviews-guide",
+      "question": "延迟中位数可以换算成下载速度吗？",
+      "answer": "不能。延迟和传输吞吐量是不同指标，没有一个由毫秒数直接推导Mbps的通用换算。下载需求应另行记录目标、时段和持续传输结果。",
+      "steps": [
+        "确认图表单位是ms",
+        "另做持续传输记录",
+        "不要用低延迟替代带宽结果"
+      ],
+      "article": "airport-review-method-snapshot",
+      "type": "专题解答与核对步骤",
+      "sources": [
+        "node-records",
+        "aim"
+      ],
+      "origin": "search-expansion",
+      "file": "faq-airport-review-method-snapshot-2.html"
+    },
+    {
+      "id": "airport-review-evidence-gaps-1",
+      "category": "reviews-guide",
+      "question": "没有某品牌测速图是不是说明它不能用？",
+      "answer": "不是。没有记录只表示本站缺少相应数据，不能直接推导服务可用或不可用。应核对当前官方说明，并在自己的网络与任务下取得实际结果。",
+      "steps": [
+        "先确认缺少哪项记录",
+        "向品牌核对当前说明",
+        "完成自己的目标任务验证"
+      ],
+      "article": "airport-review-evidence-gaps",
+      "type": "专题解答与核对步骤",
+      "sources": [
+        "brand-catalog",
+        "node-records",
+        "ai-records"
+      ],
+      "origin": "search-expansion",
+      "file": "faq-airport-review-evidence-gaps-1.html"
+    },
+    {
+      "id": "airport-review-evidence-gaps-2",
+      "category": "reviews-guide",
+      "question": "机场测评应该优先补哪些资料？",
+      "answer": "优先补会影响结论的条件：时间、所在地、网络、具体节点、客户端和完成的任务。之后再补连续样本、失败和恢复过程，不需要公开敏感账号或订阅凭据。",
+      "steps": [
+        "明确当前判断依赖什么",
+        "补齐环境和任务字段",
+        "脱敏后保存对应结果"
+      ],
+      "article": "airport-review-evidence-gaps",
+      "type": "专题解答与核对步骤",
+      "sources": [
+        "brand-catalog",
+        "node-records",
+        "ai-records"
+      ],
+      "origin": "search-expansion",
+      "file": "faq-airport-review-evidence-gaps-2.html"
+    },
+    {
+      "id": "value-airport-monthly-table-1",
+      "category": "budget-guide",
+      "question": "性价比机场就是每GB单价最低吗？",
+      "answer": "不是。每GB金额只是预算指标，且通常假设能用完额度。实际用量、刷新周期、客户端、目标任务和售后条件都影响是否适合你，不能用一项算式代替综合判断。",
+      "steps": [
+        "先估算实际使用量",
+        "比较同周期应付金额",
+        "再看任务与服务条件"
+      ],
+      "article": "value-airport-monthly-table",
+      "type": "专题解答与核对步骤",
+      "sources": [
+        "brand-plans",
+        "brand-coupons"
+      ],
+      "origin": "search-expansion",
+      "file": "faq-value-airport-monthly-table-1.html"
+    },
+    {
+      "id": "value-airport-monthly-table-2",
+      "category": "budget-guide",
+      "question": "五个品牌的入门月付最低券后价是多少？",
+      "answer": "按本站已有资料计算，灵动拂风为16元/月、100GB；隐形人白银为19.20元/月、144GB；暮光基础版20元/月、120GB；微风和飞猫相应入门方案均22.50元/月，额度分别200GB与150GB。这里只比较报价，不代表性能排名。",
+      "steps": [
+        "确认所比的是月付",
+        "核对各自优惠适用范围",
+        "到官网确认实际应付金额"
+      ],
+      "article": "value-airport-monthly-table",
+      "type": "专题解答与核对步骤",
+      "sources": [
+        "brand-plans",
+        "brand-coupons"
+      ],
+      "origin": "search-expansion",
+      "file": "faq-value-airport-monthly-table-2.html"
+    },
+    {
+      "id": "cheap-airport-annual-table-1",
+      "category": "budget-guide",
+      "question": "看到7.27元/月，是不是每个月只付款7.27元？",
+      "answer": "不是。它是隐形人109元年付使用八折码后，87.20元除以12的月均折算。实际按年支付87.20元，流量从购买日起每30天刷新80GB。",
+      "steps": [
+        "查看真实付款周期",
+        "核对年度应付总额",
+        "区分月均展示和月付报价"
+      ],
+      "article": "cheap-airport-annual-table",
+      "type": "专题解答与核对步骤",
+      "sources": [
+        "brand-plans",
+        "brand-coupons"
+      ],
+      "origin": "search-expansion",
+      "file": "faq-cheap-airport-annual-table-1.html"
+    },
+    {
+      "id": "cheap-airport-annual-table-2",
+      "category": "budget-guide",
+      "question": "便宜机场推荐为什么不能只按年价排序？",
+      "answer": "因为额度、刷新规则、优惠范围和实际任务不同。年价较低可能同时对应更少流量或不适用优惠，价格表只能帮助筛选预算，不能直接证明速度、稳定性或适用性。",
+      "steps": [
+        "同时比较额度和周期",
+        "查清优惠条件",
+        "验证自己的主要使用任务"
+      ],
+      "article": "cheap-airport-annual-table",
+      "type": "专题解答与核对步骤",
+      "sources": [
+        "brand-plans",
+        "brand-coupons"
+      ],
+      "origin": "search-expansion",
+      "file": "faq-cheap-airport-annual-table-2.html"
+    },
+    {
+      "id": "cheap-airport-once-usage-1",
+      "category": "budget-guide",
+      "question": "不限时机场套餐是不是每月都会重新给流量？",
+      "answer": "通常不是。本次收录的一次性方案是购买后获得一笔总额度，不按月自动新增。月度订阅则按相应周期刷新，两者应分别比较。",
+      "steps": [
+        "阅读额度范围",
+        "查有没有自动刷新条款",
+        "确认用完后的处理方式"
+      ],
+      "article": "cheap-airport-once-usage",
+      "type": "专题解答与核对步骤",
+      "sources": [
+        "brand-plans",
+        "brand-rules"
+      ],
+      "origin": "search-expansion",
+      "file": "faq-cheap-airport-once-usage-1.html"
+    },
+    {
+      "id": "cheap-airport-once-usage-2",
+      "category": "budget-guide",
+      "question": "飞猫不限时套餐重置价可以再自动打九折吗？",
+      "answer": "不能据现有资料这样叠加。该款已说明按680元原价的90%计算手动重置价612元；flycat888对重置订单是否还能使用，没有单独确认。",
+      "steps": [
+        "核对该款重置说明",
+        "不要二次套用套餐优惠",
+        "付款前查看后台应付金额"
+      ],
+      "article": "cheap-airport-once-usage",
+      "type": "专题解答与核对步骤",
+      "sources": [
+        "brand-plans",
+        "brand-rules"
+      ],
+      "origin": "search-expansion",
+      "file": "faq-cheap-airport-once-usage-2.html"
+    },
+    {
+      "id": "cheap-airport-coupon-exclusions-1",
+      "category": "budget-guide",
+      "question": "灵动云wsj888八折适用哪些套餐？",
+      "answer": "适用于拂风、驭浪、破晓、凌霄、闲云、惊云和飞云这7款；穿云与至尊私人定制除外。站长确认无到期限制，重置、升级与叠加订单规则未另行确认。",
+      "steps": [
+        "先核对套餐名称",
+        "排除穿云和私人定制",
+        "查看结算应付金额"
+      ],
+      "article": "cheap-airport-coupon-exclusions",
+      "type": "专题解答与核对步骤",
+      "sources": [
+        "brand-coupons"
+      ],
+      "origin": "search-expansion",
+      "file": "faq-cheap-airport-coupon-exclusions-1.html"
+    },
+    {
+      "id": "cheap-airport-coupon-exclusions-2",
+      "category": "budget-guide",
+      "question": "微风weifeng90现在还是七折吗？",
+      "answer": "不是。用户已经更正为九折，适用全部6款套餐。清风137元年付按九折计算为123.30元，折算约10.28元/月；优惠码期限尚未单独确认。",
+      "steps": [
+        "以九折口径计算",
+        "确认所选周期",
+        "核对官网结算与活动说明"
+      ],
+      "article": "cheap-airport-coupon-exclusions",
+      "type": "专题解答与核对步骤",
+      "sources": [
+        "brand-coupons"
+      ],
+      "origin": "search-expansion",
+      "file": "faq-cheap-airport-coupon-exclusions-2.html"
+    },
+    {
+      "id": "clash-airport-compatibility-1",
+      "category": "clash-guide",
+      "question": "支持Clash是不是所有Clash客户端都能使用？",
+      "answer": "不能默认。不同客户端、内核和版本支持的配置可能不同，还要核对品牌提供的协议和订阅格式。应以具体版本的文档及品牌说明为准，再做实际导入与访问验证。",
+      "steps": [
+        "记录软件和内核版本",
+        "确认服务的订阅格式",
+        "用同一版本完成验证"
+      ],
+      "article": "clash-airport-compatibility",
+      "type": "专题解答与核对步骤",
+      "sources": [
+        "mihomo-config",
+        "brand-clients"
+      ],
+      "origin": "search-expansion",
+      "file": "faq-clash-airport-compatibility-1.html"
+    },
+    {
+      "id": "clash-airport-compatibility-2",
+      "category": "clash-guide",
+      "question": "五个品牌都有官网客户端，是否就证明Clash兼容？",
+      "answer": "不能。官网客户端的登录连接流程与第三方客户端兼容性是不同问题。本站已确认前者；使用特定Clash或Mihomo版本时，还需核对品牌给出的配置支持。",
+      "steps": [
+        "选择要使用的接入路线",
+        "查询品牌第三方客户端指引",
+        "不要把官网登录教程当导入保证"
+      ],
+      "article": "clash-airport-compatibility",
+      "type": "专题解答与核对步骤",
+      "sources": [
+        "mihomo-config",
+        "brand-clients"
+      ],
+      "origin": "search-expansion",
+      "file": "faq-clash-airport-compatibility-2.html"
+    },
+    {
+      "id": "clash-airport-provider-update-1",
+      "category": "clash-guide",
+      "question": "Clash订阅更新成功是否表示套餐已经续费？",
+      "answer": "不表示。配置获取、软件升级和账户权益是不同过程。订阅更新时间变化或节点增减，不能证明流量已经刷新或有效期延长，应到品牌账户后台核对。",
+      "steps": [
+        "查看配置更新时间",
+        "检查后台有效期与额度",
+        "把两份结果分开记录"
+      ],
+      "article": "clash-airport-provider-update",
+      "type": "专题解答与核对步骤",
+      "sources": [
+        "mihomo-providers",
+        "brand-clients"
+      ],
+      "origin": "search-expansion",
+      "file": "faq-clash-airport-provider-update-1.html"
+    },
+    {
+      "id": "clash-airport-provider-update-2",
+      "category": "clash-guide",
+      "question": "Clash导入报错时能公开发送完整订阅URL吗？",
+      "answer": "不应公开。订阅URL可能包含用于获取配置的凭据。反馈应提供客户端与内核版本、报错原文和脱敏结构，需要原件时只通过认可的客服渠道提交。",
+      "steps": [
+        "隐藏URL与账户信息",
+        "保留错误阶段和原文",
+        "通过品牌认可渠道反馈"
+      ],
+      "article": "clash-airport-provider-update",
+      "type": "专题解答与核对步骤",
+      "sources": [
+        "mihomo-providers",
+        "brand-clients"
+      ],
+      "origin": "search-expansion",
+      "file": "faq-clash-airport-provider-update-2.html"
+    },
+    {
+      "id": "clash-airport-rule-check-1",
+      "category": "clash-guide",
+      "question": "Clash已连接但一个网站打不开，先做什么？",
+      "answer": "先确认影响范围：是否只有这个网站、普通页面能否访问、客户端有没有明确错误。记录当前策略、节点和时刻，再保持其他条件不变做对照，避免一次改动多个设置。",
+      "steps": [
+        "对比一个普通目标",
+        "记录当前策略和错误",
+        "一次只改变一个条件"
+      ],
+      "article": "clash-airport-rule-check",
+      "type": "专题解答与核对步骤",
+      "sources": [
+        "mihomo-groups",
+        "brand-clients"
+      ],
+      "origin": "search-expansion",
+      "file": "faq-clash-airport-rule-check-1.html"
+    },
+    {
+      "id": "clash-airport-rule-check-2",
+      "category": "clash-guide",
+      "question": "切换全局模式成功就说明所有应用都走同一路径吗？",
+      "answer": "不能仅凭名称和一个成功结果推断。模式含义、流量接管方式及应用行为取决于具体客户端和配置，应分别查看文档并验证关键应用。",
+      "steps": [
+        "查当前版本对模式的定义",
+        "确认接管范围",
+        "分别验证真正要使用的应用"
+      ],
+      "article": "clash-airport-rule-check",
+      "type": "专题解答与核对步骤",
+      "sources": [
+        "mihomo-groups",
+        "brand-clients"
+      ],
+      "origin": "search-expansion",
+      "file": "faq-clash-airport-rule-check-2.html"
+    },
+    {
+      "id": "clash-airport-migration-native-1",
+      "category": "clash-guide",
+      "question": "从Clash换到官网客户端，规则会自动迁移吗？",
+      "answer": "不能默认。官网账号登录流程与第三方客户端的自定义规则不同，是否迁移及支持哪些内容，应查对应程序指引或询问品牌客服。",
+      "steps": [
+        "备份必要的现有设置",
+        "核对新客户端支持范围",
+        "连接后验证关键应用"
+      ],
+      "article": "clash-airport-migration-native",
+      "type": "专题解答与核对步骤",
+      "sources": [
+        "brand-clients",
+        "mihomo-config"
+      ],
+      "origin": "search-expansion",
+      "file": "faq-clash-airport-migration-native-1.html"
+    },
+    {
+      "id": "clash-airport-migration-native-2",
+      "category": "clash-guide",
+      "question": "更换客户端成功后可以认定原机场有问题吗？",
+      "answer": "不能直接认定。软件、内核、配置和接管范围都可能同时变化。需要固定其他条件，比较切换前后的具体结果，再判断哪一个环节需要继续核对。",
+      "steps": [
+        "记录切换前的错误",
+        "保持网络和目标一致",
+        "对照版本与配置差异"
+      ],
+      "article": "clash-airport-migration-native",
+      "type": "专题解答与核对步骤",
+      "sources": [
+        "brand-clients",
+        "mihomo-config"
+      ],
+      "origin": "search-expansion",
+      "file": "faq-clash-airport-migration-native-2.html"
     }
   ],
   "article_catalog": "library.json"

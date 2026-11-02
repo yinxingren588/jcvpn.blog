@@ -41,6 +41,9 @@ def fingerprint(content: str) -> str:
 
 
 def prepare() -> dict:
+    if (ROOT / 'data/editorial-expansion.json').exists():
+        from content_library import build_content_library
+        build_content_library(ROOT)
     if (ROOT / 'data/breezenet-plans.json').exists():
         from breeze_profile import build_breezenet_profile
         build_breezenet_profile(ROOT)
@@ -63,6 +66,9 @@ def prepare() -> dict:
         apply_site_chrome(ROOT)
     from site_directory import apply_site_directory
     apply_site_directory(ROOT)
+    if (ROOT / 'data/editorial-expansion.json').exists():
+        from site_seo import apply_site_seo
+        apply_site_seo(ROOT)
     config_path = ROOT / 'site.config.json'
     config = read_json(config_path)
     origin = config['origin'].rstrip('/')

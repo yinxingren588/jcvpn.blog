@@ -1,0 +1,12 @@
+.catalog-card[hidden],.faq-item[hidden],.faq-group[hidden]{display:none!important}
+.library-controls .faq-filters,.faq-controls .faq-filters{display:flex;gap:8px;flex-wrap:wrap;margin:20px 0}
+.library-controls button[data-category],.faq-controls button[data-category]{font:inherit;font-size:11px;line-height:1.8;padding:7px 12px;border:1px solid #d7e9f7;border-radius:20px;color:#688ca6;background:#f5fbff;cursor:pointer}
+.library-controls button[aria-pressed=true],.faq-controls button[aria-pressed=true]{color:#fff;background:#138ec8;border-color:#138ec8}
+.search-featured-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 30px}
+.search-featured-grid .article-row{align-items:flex-start;min-width:0}.search-featured-grid .article-row>div{min-width:0}.search-featured-grid h3{font-size:17px;line-height:1.8}.search-featured-grid .article-row>span{font-size:10px}.search-featured-grid .article-row:first-of-type{border-top:1px solid #d5eaf8}
+.faq-detail{max-width:1050px;margin:0 auto 30px}.faq-detail>.prose-section{margin-top:30px}.faq-detail .prose-section ol{padding-left:22px;font-size:15px;line-height:2;color:#466e88}.faq-detail .prose-section li{margin:12px 0}.faq-detail .article-header{margin-bottom:20px}
+.data-table caption{padding:12px 16px;background:#f6fbff;color:#7b96ab;font-size:10px;line-height:1.8;text-align:left}.data-table a{text-decoration:underline;text-underline-offset:3px;color:#2985b6}.data-table table{min-width:630px}
+.article-panel .reference-box .source{font-size:12px;line-height:1.8;margin:8px 0;overflow-wrap:anywhere}
+.article-prose .article-row h3{font-size:17px}.article-prose .article-row p{font-size:12px}.article-meta time{white-space:nowrap}
+.topic-card{min-width:0}.topic-card h2{overflow-wrap:anywhere}.topic-card-foot{gap:15px}.article-lead{overflow-wrap:anywhere}
+@media(max-width:700px){.search-featured-grid{grid-template-columns:1fr;gap:0}.library-controls button[data-category],.faq-controls button[data-category]{font-size:10px;padding:6px 10px}.faq-detail .prose-section ol{font-size:14px}.faq-detail{margin-bottom:20px}.data-table caption{font-size:9px}.search-featured-grid .article-row{gap:12px}.article-prose .article-row{gap:10px}}
