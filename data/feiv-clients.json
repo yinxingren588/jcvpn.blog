@@ -1,0 +1,87 @@
+{
+  "brand_id": "feiv",
+  "confirmed_on": "2026-11-02",
+  "source": "博客站长逐项确认的飞v客户端资料",
+  "independently_verified": false,
+  "collection_status": "basic_flows_confirmed",
+  "platforms": {
+    "windows": {
+      "platform": "Windows",
+      "name": "飞v",
+      "name_confirmed_on": "2026-11-02",
+      "development": null,
+      "download_entry": "官网首页直接下载",
+      "download_confirmed_on": "2026-11-02",
+      "version": null,
+      "system_requirements": null,
+      "login_method": "使用飞v官网注册的账号登录",
+      "login_confirmed_on": "2026-11-02",
+      "connection_steps": [
+        {"title": "下载客户端", "description": "从飞v官网首页直接下载Windows版飞v客户端。"},
+        {"title": "登录账号", "description": "打开客户端，使用飞v官网注册的账号登录。"},
+        {"title": "选择节点", "description": "在客户端节点列表中选择准备使用的节点。"},
+        {"title": "点击连接", "description": "选择节点后点击连接，即可开始使用。"}
+      ],
+      "connection_confirmed_on": "2026-11-02"
+    },
+    "macos": {
+      "platform": "macOS",
+      "name": "飞v",
+      "confirmed_on": "2026-11-02",
+      "development": null,
+      "download_entry": "官网首页直接下载",
+      "version": null,
+      "system_requirements": null,
+      "login_method": "使用飞v官网注册的账号登录",
+      "connection_steps": [
+        {"title": "下载客户端", "description": "从飞v官网首页直接下载macOS版飞v客户端。"},
+        {"title": "登录账号", "description": "打开客户端，使用飞v官网注册的账号登录。"},
+        {"title": "选择节点", "description": "在客户端节点列表中选择准备使用的节点。"},
+        {"title": "点击连接", "description": "选择节点后点击连接，即可开始使用。"}
+      ]
+    },
+    "android": {
+      "platform": "Android",
+      "name": "飞v",
+      "confirmed_on": "2026-11-02",
+      "development": null,
+      "download_entry": "官网首页直接下载",
+      "version": null,
+      "system_requirements": null,
+      "login_method": "使用飞v官网注册的账号登录",
+      "connection_steps": [
+        {"title": "下载客户端", "description": "从飞v官网首页直接下载安卓版飞v客户端。"},
+        {"title": "登录账号", "description": "打开客户端，使用飞v官网注册的账号登录。"},
+        {"title": "选择节点", "description": "在客户端节点列表中选择准备使用的节点。"},
+        {"title": "点击连接", "description": "选择节点后点击连接，即可开始使用。"}
+      ]
+    },
+    "ios": {
+      "platform": "iOS",
+      "name": "Nextin",
+      "name_confirmed_on": "2026-11-02",
+      "identifier": "flyv",
+      "identifier_confirmed_on": "2026-11-02",
+      "download_entry": "使用海外Apple ID在App Store下载Nextin",
+      "download_confirmed_on": "2026-11-02",
+      "version": null,
+      "system_requirements": null,
+      "login_method": "填写品牌识别码flyv后，使用飞v官网注册的账号登录",
+      "login_confirmed_on": "2026-11-02",
+      "connection_steps": [
+        {"title": "下载Nextin", "description": "使用海外Apple ID，在App Store下载Nextin。"},
+        {"title": "填写品牌识别码", "description": "打开Nextin，填写飞v品牌识别码flyv。"},
+        {"title": "登录官网账号", "description": "填写识别码后，使用飞v官网注册的账号登录。"},
+        {"title": "选择节点", "description": "在节点列表中选择准备使用的节点。"},
+        {"title": "点击连接", "description": "选择节点后点击连接，即可开始使用。"}
+      ],
+      "connection_confirmed_on": "2026-11-02"
+    }
+  },
+  "notes": [
+    "Windows、macOS和安卓均已确认：官网首页下载飞v客户端，使用官网账号登录，选择节点后点击连接。",
+    "iOS已确认：使用海外Apple ID在App Store下载Nextin，填写flyv，使用官网账号登录，选择节点后点击连接。",
+    "Windows、macOS和安卓客户端的自研属性尚未确认。",
+    "此项为通用客户端资料，不自动补入具体测速记录的客户端条件。"
+  ]
+}

@@ -60,9 +60,9 @@ def apply_site_seo(root):
     intake=json.loads((root/'data/new-brands.json').read_text(encoding='utf-8'))['brands']
     for b in intake:
         if b.get('plans_path'):
-            put(b['profile_path'],'飞v FlyV套餐与测速资料｜9款价格、晚高峰节点延迟',
-                '整理飞v FlyV9款套餐：99元年付、25至190元月付、一次性流量与680元/月独享方案。另列2026年11月2日19点上海电信60个节点延迟记录，58条数值、2条超时，可查看地区统计、筛选明细和下载完整数据。',
-                ['飞v','FlyV','飞v套餐','飞v测速','机场套餐价格','晚高峰节点延迟','不限时流量'])
+            put(b['profile_path'],'飞v FlyV套餐与测速｜9款价格、晚高峰记录及客户端教程',
+                '整理飞v FlyV9款套餐与晚高峰节点延迟资料，涵盖99元年付、月付及不限时流量。查看11月2日19点上海电信60个节点记录，以及Windows、macOS、安卓飞v客户端和iOS Nextin教程；Nextin品牌识别码为flyv。',
+                ['飞v','FlyV','飞v套餐','飞v测速','飞v客户端','Nextin flyv','机场套餐价格','晚高峰节点延迟'])
             continue
         put(b['profile_path'],b['name']+(' '+b['english_name'] if b['english_name'] else '')+'品牌入口｜套餐与资料陆续补充',
             '叮当观察已收录'+b['name']+'的站长确认推广入口。当前套餐价格、额度、客户端、节点与售后资料尚待提供；本页展示已知来源和选择前核对步骤，详情会按真实材料逐项补充。',[b['name'],b['english_name']] if b['english_name'] else [b['name']])
