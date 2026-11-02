@@ -45,8 +45,12 @@ def main():
     assert names<=reached,sorted(names-reached)
     for b in intake:
         html=(ROOT/b['profile_path']).read_text(encoding='utf-8')
-        assert 'name="robots" content="noindex,follow"' in html,b['name']
-        assert b['profile_path'] not in names,b['name']
+        if b.get('plans_path'):
+            assert 'name="robots" content="index,follow"' in html,b['name']
+            assert b['profile_path'] in names,b['name']
+        else:
+            assert 'name="robots" content="noindex,follow"' in html,b['name']
+            assert b['profile_path'] not in names,b['name']
         assert unescape(b['url']) in unescape(html),b['name']
         assert 'rel="sponsored noopener noreferrer"' in html,b['name']
         assert 'href="'+b['profile_path']+'"' in home,b['name']
@@ -56,7 +60,8 @@ def main():
     for source in ['breezenet-logo-hd','feimaoyun-logo-hd','lingdongyun-logo-hd']:
         assert source+'.png' not in home,source
         assert source+'.webp?v=' not in home,source
-    report={'keywords':coverage,'indexable_pages_reachable':len(names),'brand_entries':8,'completed_profiles':5,'incomplete_profiles_noindex':3,'notes':'覆盖检查不代表Bing已收录、排名或权重。'}
+    pending_count=sum(not b.get('plans_path') for b in intake)
+    report={'keywords':coverage,'indexable_pages_reachable':len(names),'brand_entries':8,'completed_profiles':5,'additional_plan_profiles':len(intake)-pending_count,'incomplete_profiles_noindex':pending_count,'notes':'覆盖检查不代表Bing已收录、排名或权重。'}
     (ROOT/'data/search-coverage.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
-    print(json.dumps({'target_keywords':len(coverage),'reachable_indexable_pages':len(names),'brand_entries':8,'incomplete_noindex':3,'errors':[]}))
+    print(json.dumps({'target_keywords':len(coverage),'reachable_indexable_pages':len(names),'brand_entries':8,'incomplete_noindex':pending_count,'errors':[]}))
 if __name__=='__main__':main()

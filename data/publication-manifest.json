@@ -441,6 +441,11 @@
       "sha256": "83dc7ddff42d7d7a6919e0508f5b58abf344f5a255f87c94fd6a80449ccc6127",
       "lastmod": "2026-11-02T18:10:40+08:00"
     },
+    "https://jcvpn.blog/brand-feiv": {
+      "file": "brand-feiv.html",
+      "sha256": "7d0c8e3d4704fc9384d2ca3d7949da2912d6cb1863dade1a929bcfdaac31ed6c",
+      "lastmod": "2026-11-02T18:52:13+08:00"
+    },
     "https://jcvpn.blog/brand-lingdongyun": {
       "file": "brand-lingdongyun.html",
       "sha256": "f3dd895e73cee222049f4bd33c0bc755520322ebc6769c022526ad9b17d84514",
@@ -458,8 +463,8 @@
     },
     "https://jcvpn.blog/brands": {
       "file": "brands.html",
-      "sha256": "c15550b35368c93de37052b3860e460ce93a8e281989b6e65cef2afef3a8c68f",
-      "lastmod": "2026-11-02T18:10:40+08:00"
+      "sha256": "70697882148f5da89dc1c615528951e148130594dfbbdba7b6c18b2428eaaa86",
+      "lastmod": "2026-11-02T18:48:03+08:00"
     },
     "https://jcvpn.blog/contact": {
       "file": "contact.html",
@@ -713,8 +718,8 @@
     },
     "https://jcvpn.blog/": {
       "file": "index.html",
-      "sha256": "e0129b5543e5a1b97e81f5cedf5f7f31eae36af972fe4e646308258753c0816d",
-      "lastmod": "2026-11-02T18:10:40+08:00"
+      "sha256": "470d3845034908300dc69343408e28494b1c3957a3d2d36ba8346a611df39629",
+      "lastmod": "2026-11-02T18:48:03+08:00"
     },
     "https://jcvpn.blog/topic-basics": {
       "file": "topic-basics.html",
@@ -758,8 +763,8 @@
     },
     "https://jcvpn.blog/topic-recommendations": {
       "file": "topic-recommendations.html",
-      "sha256": "7e6ef2b595b9e9ce02c80b0a474c6a87f00be14b7b6556396abd8a77b5d5ad69",
-      "lastmod": "2026-11-02T18:10:40+08:00"
+      "sha256": "646881cddb22ffb0f5c5353d86b8e4634873bc86f22517d62e236512b8a54056",
+      "lastmod": "2026-11-02T18:48:03+08:00"
     },
     "https://jcvpn.blog/topic-reviews-guide": {
       "file": "topic-reviews-guide.html",

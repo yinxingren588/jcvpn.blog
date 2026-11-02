@@ -36,7 +36,7 @@ def apply_site_seo(root):
         metadata[file]=dict(title=title if title.endswith(SUFFIX) else title+SUFFIX,
                             description=shorten(description),keywords=list(dict.fromkeys(keywords)),kind=kind,published_on=published)
     put('index.html','机场推荐与VPN推荐｜套餐对比、节点记录与Clash指南',
-        '叮当观察提供机场推荐、梯子推荐、VPN推荐与节点选择指南，整理隐形人等五品牌的套餐、优惠和使用资料，并收录飞v、梯子云、浪网入口。通过性价比机场、便宜机场推荐、Clash机场和稳定性专题，核对预算、客户端、售后条件及实际记录。',
+        '叮当观察提供机场推荐、梯子推荐、VPN推荐与节点选择指南，整理隐形人等五品牌的套餐、优惠和使用资料，并补充飞v9款套餐及梯子云、浪网入口。通过性价比机场、便宜机场推荐、Clash机场和稳定性专题，核对预算、客户端、售后条件及实际记录。',
         ['机场推荐','梯子推荐','VPN推荐','机场测评','性价比机场','机场节点','Clash机场','稳定机场'],'WebSite')
     put('blog.html','机场推荐与VPN文章｜节点、测评、性价比及Clash指南',
         '浏览叮当观察84篇独立文章，围绕机场推荐、梯子推荐、VPN推荐、机场节点、机场测评、性价比与Clash机场开展阅读。支持关键词搜索和12类专题筛选，查看五品牌报价表、优惠例外、退款条件与真实记录的适用范围。',
@@ -48,7 +48,7 @@ def apply_site_seo(root):
         '查询248个机场与VPN常见问题，涵盖机场推荐、VPN推荐、节点选择、便宜机场、优惠范围、流量规则、退款条件和Clash客户端。支持搜索与专题筛选，新增48个问题可打开独立页面，继续查看核对步骤、来源和完整指南。',
         ['机场推荐','VPN推荐','机场节点','便宜机场','Clash机场','机场FAQ'],'CollectionPage')
     put('brands.html','机场品牌目录｜8个品牌入口与套餐资料',
-        '浏览叮当观察8个品牌入口：隐形人独立主推，微风网络、飞猫云、暮光网络和灵动云分别提供套餐、客户端及已有记录；飞v、梯子云LadderCloud、浪网WaveNet资料陆续补充。主推展示不作为同条件测速排名。',
+        '浏览叮当观察8个品牌入口：隐形人独立主推，微风、飞猫、暮光和灵动提供套餐、客户端及已有记录；飞v已整理9款套餐，梯子云LadderCloud与浪网WaveNet资料陆续补充。主推展示不作为同条件测速排名。',
         ['机场推荐','机场品牌','隐形人机场','性价比机场','机场测评资料'],'CollectionPage')
     brand_specs=[
       ('yinxingren','隐形人机场怎么样｜IEPL套餐、优惠码与节点记录','隐形人机场品牌页整理IEPL专线、9款套餐与yxr888八折优惠，包括109元年付、80GB每30天刷新方案。查看Windows、macOS、安卓及iOS使用流程、流量重置、退款条件、晚高峰延迟与ChatGPT使用反馈。',['隐形人机场','机场推荐','IEPL专线','机场节点','机场套餐']),
@@ -59,6 +59,11 @@ def apply_site_seo(root):
     for slug,title,description,keys in brand_specs:put('brand-'+slug+'.html',title,description,keys)
     intake=json.loads((root/'data/new-brands.json').read_text(encoding='utf-8'))['brands']
     for b in intake:
+        if b.get('plans_path'):
+            put(b['profile_path'],'飞v FlyV套餐价格｜9款方案、年付与不限时流量',
+                '飞v FlyV9款套餐资料：99元年付每月65GB，25至190元月付提供150GB至1.8TB，另有188、479、799元一次性流量包及680元/月独享黄金专线。按套餐核对付款周期、额度刷新、线路与协议，比较预算和使用范围。',
+                ['飞v','FlyV','飞v套餐','机场套餐价格','年付机场','不限时流量'])
+            continue
         put(b['profile_path'],b['name']+(' '+b['english_name'] if b['english_name'] else '')+'品牌入口｜套餐与资料陆续补充',
             '叮当观察已收录'+b['name']+'的站长确认推广入口。当前套餐价格、额度、客户端、节点与售后资料尚待提供；本页展示已知来源和选择前核对步骤，详情会按真实材料逐项补充。',[b['name'],b['english_name']] if b['english_name'] else [b['name']])
     for t in data['topics']:
