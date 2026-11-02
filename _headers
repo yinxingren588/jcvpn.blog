@@ -1,2 +1,4 @@
 /data/*
   X-Robots-Tag: noindex
+/*.md
+  X-Robots-Tag: noindex
