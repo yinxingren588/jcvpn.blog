@@ -38,8 +38,8 @@ def build_brand_intake(root):
     write_changed(root/'data/brands.json',json.dumps(catalog,ensure_ascii=False,indent=2)+'\n')
     policy={'noindex_pages':{b['profile_path']:'仅确认品牌名与入口；补齐实质资料后再开放索引' for b in pending}}
     write_changed(root/'data/indexing-policy.json',json.dumps(policy,ensure_ascii=False,indent=2)+'\n')
-    cards=''.join('<a class="intake-card" href="'+b['profile_path']+'" aria-label="查看'+e(b['name'],quote=True)+'品牌资料">'+brand_mark(b)+'<span class="intake-status">'+('9款套餐已整理' if b.get('plans_path') else '入口已收录')+'</span><h3>'+e(b['name'])+'</h3><p>'+e(b['english_name'] or '品牌资料')+' · '+('年付、月付与一次性总流量' if b.get('plans_path') else '套餐与介绍陆续补充')+'</p><span class="intake-cta">'+('查看套餐资料' if b.get('plans_path') else '查看品牌页面')+' <span>→</span></span></a>' for b in brands)
-    section='<section class="section brand-intake-section" id="brand-intake"><div class="sectionhead"><div><span class="overline">NEW BRAND ENTRANCES</span><h2>新增品牌，逐步补全资料。</h2><p>飞v已补充9款套餐与晚高峰延迟记录；梯子云与浪网的服务详情待逐项确认。</p></div></div><div class="intake-grid">'+cards+'</div></section>'
+    cards=''.join('<a class="intake-card" href="'+b['profile_path']+'" aria-label="查看'+e(b['name'],quote=True)+'品牌资料">'+brand_mark(b)+'<span class="intake-status">'+('9款套餐 · 八折优惠' if b.get('coupon_path') else '9款套餐已整理' if b.get('plans_path') else '入口已收录')+'</span><h3>'+e(b['name'])+'</h3><p>'+e(b['english_name'] or '品牌资料')+' · '+('fly20全套餐八折，无到期限制' if b.get('coupon_path') else '年付、月付与一次性总流量' if b.get('plans_path') else '套餐与介绍陆续补充')+'</p><span class="intake-cta">'+('查看套餐资料' if b.get('plans_path') else '查看品牌页面')+' <span>→</span></span></a>' for b in brands)
+    section='<section class="section brand-intake-section" id="brand-intake"><div class="sectionhead"><div><span class="overline">NEW BRAND ENTRANCES</span><h2>新增品牌，逐步补全资料。</h2><p>飞v已补充9款套餐、fly20八折优惠与晚高峰延迟记录；梯子云与浪网的服务详情待逐项确认。</p></div></div><div class="intake-grid">'+cards+'</div></section>'
     for filename in ['index.html','brands.html']:
         p=root/filename; html=p.read_text(encoding='utf-8')
         html=re.sub(r'<section class="section brand-intake-section".*?</section>','',html,flags=re.S)

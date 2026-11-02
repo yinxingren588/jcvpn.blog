@@ -1,0 +1,30 @@
+{
+  "brand_id": "feiv",
+  "confirmed_on": "2026-11-02",
+  "source": "博客站长逐项确认的飞v优惠资料",
+  "independently_verified": false,
+  "collection_status": "confirmed",
+  "coupon": {
+    "code": "fly20",
+    "code_confirmed_on": "2026-11-02",
+    "discount_type": "percentage",
+    "pay_multiplier": "0.80",
+    "display_discount": "八折",
+    "discount_confirmed_on": "2026-11-02",
+    "applies_to_plan_ids": ["annual-light", "entry", "advanced", "high-end", "business", "once-small", "once-standard", "once-elite", "native-gold"],
+    "excluded_plan_ids": [],
+    "scope": "全部9款套餐，包括年付轻量版、四款月付、三款一次性流量包及独享黄金专线",
+    "scope_confirmed_on": "2026-11-02",
+    "expires_on": null,
+    "expiry_policy": "无到期限制",
+    "expiry_confirmed_on": "2026-11-02",
+    "renewal_applicability": null,
+    "traffic_reset_applicability": null,
+    "stackability": null
+  },
+  "notes": [
+    "站长已逐项确认：优惠码fly20为八折，适用于全部9款套餐，无到期限制。",
+    "券后价格按已提供套餐报价乘以0.80计算；尚未提供的其他付款周期报价不推算。",
+    "续费、重置包是否可用及能否叠加其他优惠尚未确认。"
+  ]
+}

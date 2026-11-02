@@ -37,8 +37,8 @@
     {
       "id": "recommendations-next",
       "title": "确定候选后，完成一次自己的使用核对",
-      "paragraphs": ["记录所选套餐、节点地区、日期时刻、本地运营商和客户端版本，分别检查连接成功、目标网站打开、实际任务完成。若出现异常，保留错误提示并在已知申请期限内联系客服；不要只凭一次低延迟或优惠码决定长期付款。", "飞v另有独立资料页，已补充9款套餐、11月2日19点上海电信节点延迟、四端使用流程，以及普通周期套餐和技术问题退款规则，并确认支持支付宝。上方表格保留五品牌现有方案；飞v优惠信息及完整地区覆盖继续补充。梯子云和浪网当前仅有站长确认的推广入口，资料补齐后再继续整理。"],
-      "links": [["topic-budget-guide.html", "继续评估预算与优惠"], ["topic-reviews-guide.html", "继续核对测评证据"], ["brand-feiv.html#flyv-plans", "查看飞v9款套餐资料"], ["brand-feiv.html#flyv-clients", "查看飞v各平台使用教程"], ["brand-feiv.html#flyv-service", "查看飞v流量与升级规则"], ["brand-feiv.html#flyv-refund", "查看飞v技术问题退款条件"], ["brands.html#brand-intake", "查看三个新增品牌的资料状态"]]
+      "paragraphs": ["记录所选套餐、节点地区、日期时刻、本地运营商和客户端版本，分别检查连接成功、目标网站打开、实际任务完成。若出现异常，保留错误提示并在已知申请期限内联系客服；不要只凭一次低延迟或优惠码决定长期付款。", "飞v另有独立资料页，已补充9款套餐、11月2日19点上海电信节点延迟、四端使用流程，以及普通周期套餐和技术问题退款规则，并确认支持支付宝。优惠码fly20全套餐八折，无到期限制，年付轻量版券后79.20元/年、每月65GB。上方表格保留五品牌现有方案；飞v完整在售地区覆盖继续补充。梯子云和浪网当前仅有站长确认的推广入口，资料补齐后再继续整理。"],
+      "links": [["topic-budget-guide.html", "继续评估预算与优惠"], ["topic-reviews-guide.html", "继续核对测评证据"], ["brand-feiv.html#flyv-plans", "查看飞v9款套餐资料"], ["brand-feiv.html#flyv-coupon", "查看fly20八折优惠与券后价格"], ["brand-feiv.html#flyv-clients", "查看飞v各平台使用教程"], ["brand-feiv.html#flyv-service", "查看飞v流量与升级规则"], ["brand-feiv.html#flyv-refund", "查看飞v技术问题退款条件"], ["brands.html#brand-intake", "查看三个新增品牌的资料状态"]]
     }
   ],
   "sources": ["brand-plans", "brand-clients", "brand-rules", "brand-coupons"],
