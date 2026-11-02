@@ -62,7 +62,10 @@ def render_directory(name, chapters):
                           '><span class="home-dir-brand"><img src="assets/' + logo + '" width="1254" height="1254" alt="'+escape(label,quote=True)+'Logo" decoding="async"></span><span>' +
                           label + '</span></a>' for url, label, logo in brands)
     for b in json.loads((Path(__file__).resolve().parents[1]/'data/new-brands.json').read_text(encoding='utf-8'))['brands']:
-        brand_links+='<a href="'+b['profile_path']+'"'+(' aria-current="page"' if name==b['profile_path'] else '')+'><span class="home-dir-monogram" aria-hidden="true">'+escape(b['mark'])+'</span><span>'+escape(b['name'])+' <small>资料待补</small></span></a>'
+        mark='<span class="home-dir-monogram" aria-hidden="true">'+escape(b['mark'])+'</span>'
+        if b.get('logo_path'):
+            mark='<span class="home-dir-brand"><img src="'+escape(b['logo_path'],quote=True)+'" width="'+str(b['logo_width'])+'" height="'+str(b['logo_height'])+'" alt="'+escape(b['name'],quote=True)+'Logo" decoding="async"></span>'
+        brand_links+='<a href="'+b['profile_path']+'" aria-label="查看'+escape(b['name'],quote=True)+'品牌资料"'+(' aria-current="page"' if name==b['profile_path'] else '')+'>'+mark+'<span>'+escape(b['name'])+' <small>资料待补</small></span></a>'
     current = ' aria-current="page"' if name == 'brand-yinxingren.html' else ''
     return '''<aside class="home-directory-root" id="home-directory-root" data-open="auto" aria-label="页面快捷目录">
 <section class="home-directory-panel" id="home-directory-panel" aria-labelledby="home-directory-title">
