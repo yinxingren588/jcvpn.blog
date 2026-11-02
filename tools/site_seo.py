@@ -61,7 +61,7 @@ def apply_site_seo(root):
     for b in intake:
         if b.get('plans_path'):
             put(b['profile_path'],'飞v FlyV套餐与测速｜9款价格、晚高峰记录及客户端教程',
-                '整理飞v FlyV9款套餐与晚高峰节点延迟资料，涵盖99元年付、月付及不限时流量。查看11月2日19点上海电信60个节点记录，以及Windows、macOS、安卓飞v客户端和iOS Nextin教程；Nextin品牌识别码为flyv。',
+                '飞v FlyV9款套餐与晚高峰节点记录，提供Windows、macOS、安卓及iOS Nextin使用教程，识别码flyv。支持支付宝；普通周期套餐支持同价重置、提前续费和升级。因技术问题，经客服协助仍完全无法使用时，可在购买后24小时内申请全额退款。',
                 ['飞v','FlyV','飞v套餐','飞v测速','飞v客户端','Nextin flyv','机场套餐价格','晚高峰节点延迟'])
             continue
         put(b['profile_path'],b['name']+(' '+b['english_name'] if b['english_name'] else '')+'品牌入口｜套餐与资料陆续补充',

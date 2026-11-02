@@ -1,0 +1,74 @@
+{
+  "brand_id": "feiv",
+  "confirmed_on": "2026-11-02",
+  "source": "博客站长逐项确认的飞v业务规则",
+  "independently_verified": false,
+  "collection_status": "core_rules_confirmed",
+  "periodic_traffic_reset": {
+    "supported": true,
+    "applies_to_plan_ids": ["annual-light", "entry", "advanced", "high-end", "business"],
+    "scope": "普通周期套餐：年付标准轻量版及四款月付方案",
+    "price_basis": "与所购套餐价格相同",
+    "effective_immediately": true,
+    "restores_full_plan_quota": true,
+    "confirmed_on": "2026-11-02",
+    "validity_effect": null,
+    "scheduled_refresh_effect": null,
+    "discount_applicability": null
+  },
+  "early_renewal": {
+    "scope": "普通周期套餐：年付标准轻量版及四款月付方案",
+    "extends_validity": true,
+    "refreshes_traffic_immediately": false,
+    "traffic_refresh": "仍按原定流量刷新日期更新",
+    "confirmed_on": "2026-11-02"
+  },
+  "upgrade": {
+    "supported": true,
+    "scope": "普通周期套餐：年付标准轻量版及四款月付方案",
+    "payment_and_difference_refund": "先支付新套餐全价，再由平台退回原套餐差价。",
+    "confirmed_on": "2026-11-02",
+    "difference_calculation": null,
+    "refund_destination": null,
+    "refund_processing_time": null,
+    "cycle_start": "升级成功当天作为新套餐起算日，重新计算所选周期的有效期。",
+    "used_traffic_handling": "升级后的可用流量按新套餐额度减去本周期已用流量计算。"
+  },
+  "refund": {
+    "supported": true,
+    "full_refund": true,
+    "conditions": ["因技术问题", "经客服协助后仍完全无法使用"],
+    "confirmed_on": "2026-11-02",
+    "deadline_hours_after_purchase": 24,
+    "deadline_confirmed_on": "2026-11-02",
+    "application_channel": "登录官网后台联系客服办理",
+    "application_login_required": true,
+    "application_channel_confirmed_on": "2026-11-02",
+    "refund_method": null,
+    "processing_time": null
+  },
+  "customer_support": {
+    "channel": "官网后台客服",
+    "login_required": true,
+    "instructions": "登录飞v官网后台后联系客服。",
+    "direct_url": null,
+    "confirmed_on": "2026-11-02"
+  },
+  "payment_methods": ["支付宝"],
+  "payment_confirmed_on": "2026-11-02",
+  "one_time_traffic_reset": null,
+  "custom_plan_traffic_reset": null,
+  "notes": [
+    "已确认普通周期套餐可购买同价重置包，购买后立即恢复该套餐完整流量额度。",
+    "本条不自动适用于三款一次性流量包或独享黄金专线。",
+    "重置对有效期、原定刷新日及优惠适用的影响尚未提供。",
+    "普通周期套餐提前续费只延长有效期，不立即补充流量，仍按原定刷新日期更新。",
+    "升级已确认先付新套餐全价，再由平台退回原套餐差价；从升级成功当天重新起算所选周期。",
+    "升级后的可用流量为新套餐额度减去本周期已用流量。",
+    "差价计算、退回渠道与到账时间尚未提供。",
+    "因技术问题，经客服协助后仍完全无法使用时，可申请全额退款。",
+    "上述技术问题退款须在购买后24小时内申请。",
+    "退款通过登录飞v官网后台后联系客服办理。",
+    "已确认支持支付宝付款；不沿用其他品牌的付款或优惠规则。"
+  ]
+}

@@ -159,10 +159,10 @@
       "mark": "飞V",
       "url": "https://varnexa.flyvaff.com/#/?code=IC0p64fi",
       "profile_path": "brand-feiv.html",
-      "profile_status": "plans_latency_and_clients_provided_other_details_pending",
+      "profile_status": "core_materials_provided_more_details_pending",
       "source_type": "博客站长提供并确认的品牌名及推广入口",
       "source_date": "2026-11-02",
-      "verification_status": "plans_latency_and_clients_provided_other_details_pending",
+      "verification_status": "core_materials_provided_more_details_pending",
       "commercial_relationship": "推广入口；具体合作条件未提供",
       "logo_path": "assets/feiv-logo.webp",
       "logo_width": 1024,
@@ -174,7 +174,8 @@
       },
       "plans_path": "data/feiv-plans.json",
       "latency_path": "data/feiv-latency.json",
-      "clients_path": "data/feiv-clients.json"
+      "clients_path": "data/feiv-clients.json",
+      "service_rules_path": "data/feiv-service-rules.json"
     },
     {
       "id": "tiziyun",

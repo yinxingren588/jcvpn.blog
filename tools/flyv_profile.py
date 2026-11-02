@@ -9,6 +9,7 @@ import json
 from site_chrome import shell, write_changed
 from flyv_latency import build_latency_assets, render_latency, latency_faqs
 from flyv_clients import render_clients, client_faqs
+from flyv_service import render_service, render_refund, service_faqs
 
 
 def money(value):
@@ -20,6 +21,7 @@ def build_flyv_profile(root,brand):
     data=json.loads((root/brand['plans_path']).read_text(encoding='utf-8'))
     latency=json.loads((root/brand['latency_path']).read_text(encoding='utf-8'))
     clients=json.loads((root/brand['clients_path']).read_text(encoding='utf-8'))
+    rules=json.loads((root/brand['service_rules_path']).read_text(encoding='utf-8'))
     build_latency_assets(root,latency)
     url=e(brand['url'],quote=True)
     kinds={'annual':'轻量年付','monthly':'月付报价','one_time':'不限时总流量','custom':'独享专线'}
@@ -41,11 +43,11 @@ def build_flyv_profile(root,brand):
         ('进阶方案和标准流量包都是380GB，有什么区别？','进阶为50元/月、每月380GB；单次标准流量包为479元一次性、380GB总额度。两者付款周期与流量范围不同，不应只按380GB这个数字比较。'),
         ('独享黄金专线的价格和配置是什么？','采用站长补充确认的680元/月，包含每月500GB专属流量、独立原生公网IP和独享带宽。资料列明1对1技术协助，预计约2—3个工作日交付，具体部署要求通过工单沟通。'),
         ('飞v是否所有套餐均为IPLC、IEPL或同一种协议？','不能从本批资料这样推定。进阶列明BGP三网调度搭配IEPL/IPLC传输；高端与商业分别列明多线路调度或冗余专线出口，进阶、高端、商业另列Shadowsocks。其他套餐按各自说明阅读。'),
-        ('资料中的平台支持与不限速是否已经实测？','这些是套餐资料中的服务方向和政策说明。本页另列2026年11月2日19点上海电信的60个节点延迟记录；尚未提供下载速度、连续播放或AI问答的实际记录，不能由延迟数值推断这些任务结果。四个平台的使用教程已逐项确认；优惠与售后规则按后续资料补充。')
-    ]+latency_faqs(latency)+client_faqs(clients)
+        ('资料中的平台支持与不限速是否已经实测？','这些是套餐资料中的服务方向和政策说明。本页另列2026年11月2日19点上海电信的60个节点延迟记录；尚未提供下载速度、连续播放或AI问答的实际记录，不能由延迟数值推断这些任务结果。四端使用流程、周期套餐及技术问题退款规则已逐项确认；优惠信息按后续资料补充。')
+    ]+latency_faqs(latency)+client_faqs(clients)+service_faqs(rules)
     faq=''.join('<details class="flyv-faq"><summary>'+e(q)+'</summary><p>'+e(answer)+'</p></details>' for q,answer in questions)
     body='''<section class="info-hero flyv-hero" id="flyv-about"><span class="info-kicker">FLYV / PLANS & QUOTAS</span><div class="flyv-brand-heading"><img src="'''+e(brand['logo_path'],quote=True)+'''" width="1024" height="1024" alt="飞vLogo" decoding="async"><div><h1>飞v FlyV</h1><p>从轻量年付，到月度用量与独享部署。</p></div></div><p>按已提供资料整理9款套餐：1款轻量年付、4款月付报价、3款一次性总流量包，以及1款独享黄金专线。先分清付款周期和额度范围，再比较适合自己的方案。</p><div class="contact-buttons"><a class="contact-action" href="#flyv-plans">查看9款套餐 →</a><a class="copy-contact" href="'''+url+'''" target="_blank" rel="sponsored noopener noreferrer">访问飞v推广入口 ↗</a></div><p class="flyv-source-date">资料由博客站长提供 · 整理日期：'''+data['provided_on']+'''</p></section>
-<nav class="flyv-jumps" aria-label="飞v页面重点内容"><a href="#flyv-plans">套餐文字卡片</a><a href="#flyv-comparison">价格对照表</a><a href="#flyv-guide">如何选择</a><a href="#flyv-latency">晚高峰延迟</a><a href="#flyv-clients">使用教程</a><a href="#flyv-faq">常见问题</a><a href="#flyv-sources">资料来源</a></nav>
+<nav class="flyv-jumps" aria-label="飞v页面重点内容"><a href="#flyv-plans">套餐文字卡片</a><a href="#flyv-comparison">价格对照表</a><a href="#flyv-guide">如何选择</a><a href="#flyv-latency">晚高峰延迟</a><a href="#flyv-clients">使用教程</a><a href="#flyv-service">流量规则</a><a href="#flyv-refund">技术问题退款</a><a href="#flyv-faq">常见问题</a><a href="#flyv-sources">资料来源</a></nav>
 <section class="section" id="flyv-plans"><span class="overline">9 PLANS / SUPPLIED PRICES</span><h2>九款套餐，价格与额度逐项看清。</h2><p class="flyv-section-lead">下方为文字整理的套餐卡片。年付按年支付、按月刷新；一次性包按总量消耗；独享方案另列资源和交付说明。</p><div class="flyv-plan-grid">'''+''.join(cards)+'''</div><p class="flyv-material-note">卡片中的不限速、设备数量和平台支持取自套餐资料；具体节点、兼容情况与实际使用表现应在相应环境下核对。</p></section>
 <section class="section" id="flyv-comparison"><span class="overline">COMPARE BILLING & QUOTAS</span><h2>飞v套餐价格对照表</h2><div class="flyv-table-wrap" role="region" aria-label="飞v9款套餐对比表，可横向滚动" tabindex="0"><table><caption>'''+data['provided_on']+'''依据提供资料整理；独享专线按站长确认的680元/月展示。</caption><thead><tr><th scope="col">套餐</th><th scope="col">已提供报价</th><th scope="col">流量与范围</th><th scope="col">付款选项</th><th scope="col">刷新或使用规则</th></tr></thead><tbody>'''+''.join(rows)+'''</tbody></table></div><p class="flyv-material-note">这里列的是资料报价，当前在售与结算金额请核对官网。季度、半年与全年价格未提供时保留空缺，不推算。<a href="data/feiv-plans.csv" download>下载完整套餐表 CSV ↓</a></p></section>
 <section class="section" id="flyv-guide"><span class="overline">CHOOSE BY YOUR USAGE</span><h2>按用量和付款方式选择</h2><div class="flyv-guide-grid"><article><h3>轻量持续使用</h3><p>年付标准轻量版为99元/年、每月65GB。先确认自己的月用量是否在额度内，再看全年支付与每月刷新的安排。</p></article><article><h3>每月固定用量</h3><p>入门、进阶、高端和商业分别提供150GB、380GB、800GB与1.8TB月度额度。以近期实际消耗作参考，比较相应档位。</p></article><article><h3>间歇使用或备用</h3><p>130GB、380GB与600GB一次性包按累计用量安排，适合使用频率不固定的情况。整包额度不随月份自动增加。</p></article><article><h3>独立资源与业务部署</h3><p>独享黄金专线为680元/月、每月500GB，资料列明独立原生公网IP与独享带宽。可通过工单确认定制要求，预计约2—3个工作日交付。</p></article></div></section>
@@ -55,8 +57,10 @@ def build_flyv_profile(root,brand):
     original_headings=['九款套餐，价格与额度逐项看清。','飞v套餐价格对照表','按用量和付款方式选择','飞v套餐常见问题','资料来源与后续补充']
     for index,title in enumerate(original_headings,1):
         body=body.replace('<h2>'+title+'</h2>','<h2 id="quick-section-'+str(index)+'">'+title+'</h2>',1)
-    body=body.replace('<section class="section" id="flyv-faq">',render_latency(latency)+'\n'+render_clients(clients,brand['url'])+'\n<section class="section" id="flyv-faq">',1)
-    body=body.replace('客户端名称与下载流程、节点地区清单、支付方式、优惠及重置、续费、升级和退款规则尚待提供，后续按飞v自身资料补充。','另按站长提供的6张新截图整理2026年11月2日19点上海电信的节点延迟，重复卡片去重，超时独立保留。Windows、macOS与安卓的飞v客户端流程，以及iOS Nextin的flyv识别码、下载与登录连接流程，均由站长逐项确认。具体客户端版本、完整在售地区覆盖、支付方式、优惠及重置、续费、升级和退款规则按后续资料补充。',1)
+    body=body.replace('<section class="section" id="flyv-faq">',render_latency(latency)+'\n'+render_clients(clients,brand['url'])+'\n'+render_service(rules)+render_refund(rules,brand['url'])+'\n<section class="section" id="flyv-faq">',1)
+    body=body.replace('客户端名称与下载流程、节点地区清单、支付方式、优惠及重置、续费、升级和退款规则尚待提供，后续按飞v自身资料补充。','另按站长提供的6张新截图整理2026年11月2日19点上海电信的节点延迟，重复卡片去重，超时独立保留。Windows、macOS与安卓的飞v客户端流程，以及iOS Nextin的flyv识别码、下载与登录连接流程，均由站长逐项确认。普通周期套餐的重置、续费和升级规则，以及购买后24小时内的技术问题退款条件与后台客服入口，均已确认；付款已确认支持支付宝。具体客户端版本、完整在售地区覆盖与优惠信息按后续资料补充。',1)
+    payment_badge='<span class="flyv-payment-badge" id="flyv-payment">支持'+e('、'.join(rules['payment_methods']))+'付款</span>'
+    body=body.replace('访问飞v推广入口 ↗</a></div>','访问飞v推广入口 ↗</a>'+payment_badge+'</div>',1)
     html=shell('飞v FlyV套餐与晚高峰节点延迟','飞v9款套餐及晚高峰上海电信节点延迟记录。',body)
     styles='<link rel="stylesheet" href="assets/flyv.css"><link rel="stylesheet" href="assets/invisible-latency.css"><link rel="stylesheet" href="assets/flyv-latency.css">'
     html=html.replace('</head>',styles+'</head>',1)
