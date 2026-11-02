@@ -3,7 +3,7 @@ from html import escape as e
 
 
 def render(plan, coupon, annual_paid, monthly_paid, url, logo_image, scope, expiry):
-    launcher_logo = logo_image.replace('alt="微风网络 Breezenet Logo"', 'alt=""') if logo_image else ''
+    launcher_logo = logo_image or ''
     return f'''<aside class="floating-promo" id="breezenet-floating-promo" data-open="auto" aria-label="微风网络套餐与优惠推荐">
 <section class="fp-panel" id="breeze-floating-panel" aria-label="微风推荐套餐和优惠码">
 <div class="fp-handle" title="拖动移动推荐卡"><span class="fp-grip" aria-hidden="true">⠿</span><span class="fp-label">套餐推荐</span><div class="fp-window-actions"><button type="button" class="fp-reset" aria-label="恢复微风推荐卡默认位置" title="恢复默认位置">↺</button><button type="button" class="fp-close" aria-label="收起微风推荐卡" title="收起">×</button></div></div>

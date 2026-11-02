@@ -58,8 +58,8 @@ def render_directory(name, chapters):
               ('brand-feimaoyun.html', '飞猫云', 'feimaoyun-logo-hd.png'),
               ('brand-muguang.html', '暮光网络', 'feimaoyun-logo-hd.png'),
               ('brand-lingdongyun.html', '灵动云', 'lingdongyun-logo-hd.png')]
-    brand_links = ''.join('<a href="' + url + '"' + (' aria-current="page"' if name == url else '') +
-                          '><span class="home-dir-brand"><img src="assets/' + logo + '" width="1254" height="1254" alt="" decoding="async"></span><span>' +
+    brand_links = ''.join('<a href="' + url + '" aria-label="查看'+escape(label,quote=True)+'品牌资料"' + (' aria-current="page"' if name == url else '') +
+                          '><span class="home-dir-brand"><img src="assets/' + logo + '" width="1254" height="1254" alt="'+escape(label,quote=True)+'Logo" decoding="async"></span><span>' +
                           label + '</span></a>' for url, label, logo in brands)
     for b in json.loads((Path(__file__).resolve().parents[1]/'data/new-brands.json').read_text(encoding='utf-8'))['brands']:
         brand_links+='<a href="'+b['profile_path']+'"'+(' aria-current="page"' if name==b['profile_path'] else '')+'><span class="home-dir-monogram" aria-hidden="true">'+escape(b['mark'])+'</span><span>'+escape(b['name'])+' <small>资料待补</small></span></a>'
@@ -67,7 +67,7 @@ def render_directory(name, chapters):
     return '''<aside class="home-directory-root" id="home-directory-root" data-open="auto" aria-label="页面快捷目录">
 <section class="home-directory-panel" id="home-directory-panel" aria-labelledby="home-directory-title">
 <div class="home-directory-head"><div><span>QUICK NAVIGATION</span><h2 id="home-directory-title">快捷目录</h2></div><button type="button" class="home-directory-close" aria-label="收起快捷目录" title="收起目录">×</button></div>
-<a class="site-directory-feature" href="brand-yinxingren.html"''' + current + '''><img src="assets/invisible-network-logo.jpg" width="512" height="512" alt="" decoding="async"><span><small>本站主推</small><strong>隐形人机场</strong></span><span aria-hidden="true">→</span></a>
+<a class="site-directory-feature" href="brand-yinxingren.html" aria-label="查看隐形人机场品牌资料"''' + current + '''><img src="assets/invisible-network-logo.jpg" width="512" height="512" alt="隐形人机场Logo" decoding="async"><span><small>本站主推</small><strong>隐形人机场</strong></span><span aria-hidden="true">→</span></a>
 <nav class="home-directory-links" aria-label="页面快捷导航"><div class="home-directory-group"><h3>本页目录</h3>''' + toc + '''</div><div class="home-directory-group"><h3>网站导航</h3>''' + route_links + '''</div><div class="home-directory-group"><h3>其他品牌</h3>''' + brand_links + '''</div></nav>
 <p class="home-directory-foot">点击目录，快速找到你想看的内容。</p></section><button class="home-directory-launcher" type="button" aria-controls="home-directory-panel" aria-expanded="false" aria-label="展开快捷目录"><span aria-hidden="true">☷</span>快捷目录</button></aside>'''
 

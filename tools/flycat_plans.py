@@ -49,7 +49,7 @@ def render_plans(data, url, coupon):
 
 
 def render_floating(url, coupon, logo_image):
-    launcher_logo = logo_image.replace('alt="飞猫云Logo"', 'alt=""')
+    launcher_logo = logo_image
     return f'''<aside class="floating-promo" id="flycat-floating-promo" data-open="auto" aria-label="飞猫云套餐推荐"><section class="fp-panel" id="flycat-floating-panel" aria-label="飞猫云学生版推荐"><div class="fp-handle" title="拖动移动推荐卡"><span class="fp-grip" aria-hidden="true">⠿</span><span class="fp-label">轻量年付</span><div class="fp-window-actions"><button type="button" class="fp-reset" aria-label="恢复飞猫推荐卡默认位置" title="恢复默认位置">↺</button><button type="button" class="fp-close" aria-label="收起飞猫推荐卡" title="收起">×</button></div></div><div class="fp-content"><a class="fp-brand" href="#flycat-about">{logo_image}<span><strong>飞猫云</strong><small>FLYCAT · IPLC专线</small></span></a><div class="fp-plan"><span class="fp-eyebrow">推荐套餐 · 低流量用户</span><h2>飞猫·学生版</h2><div class="fp-traffic"><strong>50<small>GB</small></strong><span>每月刷新</span></div></div><div class="fp-pricing"><div><small>年付折算</small><strong>¥7.00</strong><span>/月</span></div><p class="fp-annual-total">实付 ¥84.00/年 · 已确认最终价</p></div><a class="flycat-float-details" href="#flycat-plans">比较全部7款套餐 →</a>{floating_coupon(coupon)}<a class="fp-cta" href="{url}" target="_blank" rel="sponsored noopener noreferrer">前往官网查看 <span aria-hidden="true">↗</span></a><p class="fp-note">学生版不适用优惠码；按年支付，每月50GB。</p><p class="fp-copy-status" role="status" aria-live="polite"></p></div></section><button type="button" class="fp-launcher" aria-controls="flycat-floating-panel" aria-expanded="false" aria-label="展开飞猫套餐推荐">{launcher_logo}<span>飞猫套餐</span><span aria-hidden="true">＋</span></button></aside>'''
 
 
