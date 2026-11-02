@@ -64,7 +64,7 @@ def apply_site_seo(root):
     for t in data['topics']:
         count=len(t['article_paths']); n=len(t['faq']); keys=t.get('keywords') or KEYS[t['id']]
         desc='叮当观察的'+t['name']+'专题，整理'+str(count)+'篇独立文章与'+str(n)+'条常见问题。'+t['intro']+'从具体需求进入对应指南，查看条件对照、核对步骤和资料出处，区分品牌说明、使用反馈与尚待验证的结果。'
-        put('topic-'+t['id']+'.html',t['name']+'专题｜选择方法、资料与FAQ',desc,keys,'CollectionPage')
+        put('topic-'+t['id']+'.html',t.get('seo_title',t['name']+'专题｜选择方法、资料与FAQ'),t.get('seo_description',desc),keys,'CollectionPage')
     articlemap={a['slug']:a for a in data['articles']}
     for a in data['articles']:
         title=a['title']

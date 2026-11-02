@@ -6,6 +6,7 @@ import json
 import re
 
 from site_chrome import header, footer, write_changed
+from topic_hubs import load_hubs, hub_tables, render_hub
 
 DATE='2026-11-02'
 BRANDS=[('隐形人机场','brand-yinxingren.html'),('微风网络','brand-breezenet.html'),('飞猫云','brand-feimaoyun.html'),('暮光网络','brand-muguang.html'),('灵动云','brand-lingdongyun.html')]
@@ -67,8 +68,8 @@ def tables(root):
       'evidence-gaps':(['记录项目','现有覆盖','尚需补充'],[
         ['套餐与优惠','五个品牌均有单独资料','当前结算与活动变更需核对'],['客户端流程','五品牌四平台说明','具体版本与系统要求'],['节点延迟','四批截图快照','同条件、跨日期与探测方法'],['ChatGPT问答','五条不同条件反馈','部分时刻、客户端和重复样本'],['流媒体与稳定性','品牌支持方向','对应播放与连续观测资料']])}
 
-def layout(title,current,body,script=''):
-    return '<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>'+e(title)+'｜叮当观察</title><meta name="description" content="'+e(title,quote=True)+'"><link rel="stylesheet" href="assets/site-base.css"><link rel="stylesheet" href="assets/doraemon-theme.css"><link rel="stylesheet" href="assets/topics.css"><link rel="stylesheet" href="assets/library.css"><link rel="stylesheet" href="assets/expansion.css"><link rel="stylesheet" href="assets/search-library.css"></head><body><div class="shell">'+header(current)+'<main>'+body+'</main>'+footer()+'</div>'+script+'</body></html>'
+def layout(title,current,body,script='',styles=()):
+    return '<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>'+e(title)+'｜叮当观察</title><meta name="description" content="'+e(title,quote=True)+'"><link rel="stylesheet" href="assets/site-base.css"><link rel="stylesheet" href="assets/doraemon-theme.css"><link rel="stylesheet" href="assets/topics.css"><link rel="stylesheet" href="assets/library.css"><link rel="stylesheet" href="assets/expansion.css"><link rel="stylesheet" href="assets/search-library.css">'+''.join('<link rel="stylesheet" href="'+e(url,quote=True)+'">' for url in styles)+'</head><body><div class="shell">'+header(current)+'<main>'+body+'</main>'+footer()+'</div>'+script+'</body></html>'
 
 def hero(label,title,description):
     return '<section class="hub-hero"><div><span class="overline">'+label+'</span><h1>'+e(title)+'</h1><p>'+e(description)+'</p></div></section>'
@@ -114,6 +115,7 @@ def build_content_library(root):
     faqs=[f for f in data['faqs'] if f.get('origin')!='search-expansion']
     old_topics=[t for t in data['topics'] if t['id'] not in new_ids]
     sources={**data['sources'],**SOURCES}; source_tables=tables(root)
+    hubs=load_hubs(root); topic_tables=hub_tables(root,source_tables,BRANDS)
     corrected={
       'brands-listed':'本站收录隐形人机场、微风网络、飞猫云、暮光网络和灵动云，均有套餐与客户端资料。隐形人为本站主推，实际反馈与延迟记录按各品牌的日期和条件分别阅读。',
       'price-check':'五个品牌均已整理站长提供的套餐报价与额度。比较时先区分月付、年付和一次性总流量，查看优惠排除项，再到对应官网核对当前结算金额，不推算尚未提供的付款周期。',
@@ -142,6 +144,8 @@ def build_content_library(root):
             faqs.append(dict(id=fid,category=a['category'],question=q,answer=answer,steps=steps,article=a['slug'],type='专题解答与核对步骤',sources=a['sources'],origin='search-expansion',file='faq-'+fid+'.html'))
         articles.append(a)
     topic_list=expansion['topics']+old_topics; topics={t['id']:t for t in topic_list}
+    for key,hub in hubs.items():
+        topics[key].update({name:hub[name] for name in ('seo_title','seo_description','reviewed_on')})
     amap={a['slug']:a for a in articles}; fmap={f['id']:f for f in faqs}
     assert len(amap)==84 and len(faqs)==248 and len({f['question'] for f in faqs})==248
     for t in topic_list:
@@ -198,8 +202,13 @@ def build_content_library(root):
         aa=[a for a in articles if a['category']==t['id']]; ff=[f for f in faqs if f['category']==t['id']]
         topic_cards+='<a class="topic-card" href="topic-'+t['id']+'.html"><span class="topic-icon">'+e(t['icon'])+'</span><span class="overline">'+('选择与使用专题' if t['id'] in new_ids else '基础阅读路线')+'</span><h2>'+e(t['name'])+'</h2><p>'+e(t['intro'])+'</p><span class="topic-card-foot">'+str(len(aa))+'篇文章 · '+str(len(ff))+'条FAQ <b>↗</b></span></a>'
         steps=t.get('steps',['先明确当前使用需求','对照对应资料与条件','完成实际任务后保留记录'])
-        topic_body=hero('READ BY PURPOSE',t['name'],t['intro'])+'<div class="breadcrumb"><a href="topics.html">全部专题</a> / '+e(t['name'])+'</div><section class="section"><h2>按这个顺序阅读</h2><p>'+e(t['audience'])+'。先明确问题，再沿文章核对资料，实际使用结果按日期与环境分别记录。</p><ol class="route-list">'+''.join('<li><b>'+str(i).zfill(2)+'</b>'+e(s)+'</li>' for i,s in enumerate(steps,1))+'</ol></section><section class="section"><div class="sectionhead"><h2>专题文章</h2><span>'+str(len(aa))+'篇独立正文</span></div>'+''.join(row(a,topics) for a in aa)+'</section><section class="section"><h2>专题FAQ</h2>'+''.join('<a class="faq-short" href="'+faq_link(f)+'">'+e(f['question'])+'<span>→</span></a>' for f in ff[:8])+'</section>'
-        write_changed(root/('topic-'+t['id']+'.html'),layout(t['name'],'topics',topic_body))
+        rich=render_hub(hubs[t['id']],topic_tables,render_table,lambda keys:ref_links(keys,sources)) if t['id'] in hubs else ''
+        # Preserve the three original section anchors when new guide headings are added.
+        route_heading='<h2 id="quick-section-1">' if rich else '<h2>'
+        article_heading='<h2 id="quick-section-2">' if rich else '<h2>'
+        faq_heading='<h2 id="quick-section-3">' if rich else '<h2>'
+        topic_body=hero('READ BY PURPOSE',t['name'],t['intro'])+'<div class="breadcrumb"><a href="topics.html">全部专题</a> / '+e(t['name'])+'</div><section class="section">'+route_heading+'按这个顺序阅读</h2><p>'+e(t['audience'])+'。先明确问题，再沿文章核对资料，实际使用结果按日期与环境分别记录。</p><ol class="route-list">'+''.join('<li><b>'+str(i).zfill(2)+'</b>'+e(s)+'</li>' for i,s in enumerate(steps,1))+'</ol></section>'+rich+'<section class="section"><div class="sectionhead">'+article_heading+'专题文章</h2><span>'+str(len(aa))+'篇独立正文</span></div>'+''.join(row(a,topics) for a in aa)+'</section><section class="section">'+faq_heading+'专题FAQ</h2>'+''.join('<a class="faq-short" href="'+faq_link(f)+'">'+e(f['question'])+'<span>→</span></a>' for f in ff[:8])+'</section>'
+        write_changed(root/('topic-'+t['id']+'.html'),layout(t['name'],'topics',topic_body,styles=('assets/topic-hubs.css',) if rich else ()))
     write_changed(root/'topics.html',layout('机场推荐、VPN与节点专题','topics',hero('GUIDES BY SEARCH INTENT','机场推荐、VPN与节点专题','12条阅读路线：先按需求选择专题，再进入完整文章和具体问题。')+'<section class="topic-grid">'+topic_cards+'</section><section class="section"><h2>84篇文章与248条FAQ怎样衔接</h2><p>选择指南负责解释条件、展示资料表和提供下一步；FAQ集中回答一个明确问题。新增48条FAQ均有独立页面，其余问题保留原来的锚点入口与延伸阅读。</p><a class="inline-link" href="blog.html">查看全部文章 →</a></section>'))
     ordered=[a for a in articles if a.get('origin')]+[a for a in articles if not a.get('origin')]
     filters='<button type="button" data-category="all" aria-pressed="true">全部内容</button>'+''.join('<button type="button" data-category="'+t['id']+'" aria-pressed="false">'+e(t['name'])+'</button>' for t in topic_list)
