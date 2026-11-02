@@ -36,8 +36,8 @@ def apply_site_seo(root):
         metadata[file]=dict(title=title if title.endswith(SUFFIX) else title+SUFFIX,
                             description=shorten(description),keywords=list(dict.fromkeys(keywords)),kind=kind,published_on=published)
     put('index.html','机场推荐与VPN推荐｜套餐对比、节点记录与Clash指南',
-        '叮当观察围绕机场推荐、VPN推荐与机场测评，整理隐形人、微风网络、飞猫云、暮光网络和灵动云的套餐、优惠与使用资料。通过性价比机场、便宜机场推荐、机场节点与Clash机场专题，了解预算、客户端、退款条件和实际记录，按自己的需求选择。',
-        ['机场推荐','VPN推荐','机场测评','性价比机场','机场节点','Clash机场'],'WebSite')
+        '叮当观察提供机场推荐、梯子推荐、VPN推荐与节点选择指南，整理隐形人等五品牌的套餐、优惠和使用资料，并收录飞v、梯子云、浪网入口。通过性价比机场、便宜机场推荐、Clash机场和稳定性专题，核对预算、客户端、售后条件及实际记录。',
+        ['机场推荐','梯子推荐','VPN推荐','机场测评','性价比机场','机场节点','Clash机场','稳定机场'],'WebSite')
     put('blog.html','机场推荐与VPN文章｜节点、测评、性价比及Clash指南',
         '浏览叮当观察84篇独立文章，围绕机场推荐、梯子推荐、VPN推荐、机场节点、机场测评、性价比与Clash机场开展阅读。支持关键词搜索和12类专题筛选，查看五品牌报价表、优惠例外、退款条件与真实记录的适用范围。',
         ['机场推荐','梯子推荐','VPN推荐','机场测评','便宜机场推荐','Clash机场'],'CollectionPage')
@@ -47,8 +47,8 @@ def apply_site_seo(root):
     put('faq.html','机场与VPN常见问题｜推荐、套餐、节点及Clash FAQ',
         '查询248个机场与VPN常见问题，涵盖机场推荐、VPN推荐、节点选择、便宜机场、优惠范围、流量规则、退款条件和Clash客户端。支持搜索与专题筛选，新增48个问题可打开独立页面，继续查看核对步骤、来源和完整指南。',
         ['机场推荐','VPN推荐','机场节点','便宜机场','Clash机场','机场FAQ'],'CollectionPage')
-    put('brands.html','机场品牌介绍与选择｜隐形人主推及四品牌资料对照',
-        '查看隐形人机场独立主推区，以及微风网络、飞猫云、暮光网络和灵动云的品牌介绍。分别核对套餐价格、优惠适用范围、客户端、退款条件、节点地区和已提供的记录；主推展示不作为同条件测速排名。',
+    put('brands.html','机场品牌目录｜8个品牌入口与套餐资料',
+        '浏览叮当观察8个品牌入口：隐形人独立主推，微风网络、飞猫云、暮光网络和灵动云分别提供套餐、客户端及已有记录；飞v、梯子云LadderCloud、浪网WaveNet资料陆续补充。主推展示不作为同条件测速排名。',
         ['机场推荐','机场品牌','隐形人机场','性价比机场','机场测评资料'],'CollectionPage')
     brand_specs=[
       ('yinxingren','隐形人机场怎么样｜IEPL套餐、优惠码与节点记录','隐形人机场品牌页整理IEPL专线、9款套餐与yxr888八折优惠，包括109元年付、80GB每30天刷新方案。查看Windows、macOS、安卓及iOS使用流程、流量重置、退款条件、晚高峰延迟与ChatGPT使用反馈。',['隐形人机场','机场推荐','IEPL专线','机场节点','机场套餐']),
@@ -57,6 +57,10 @@ def apply_site_seo(root):
       ('muguang','暮光网络机场｜IPLC套餐、节点记录与客户端教程','暮光网络介绍汇总9款套餐、IPLC专线、节点地区与暮光加速客户端教程，iOS使用Nextin识别码mgjs。查看年付轻量版、月付和不限时流量包、上海电信上午节点记录、ChatGPT反馈与技术问题退款条件。',['暮光网络','机场推荐','IPLC专线','机场节点']),
       ('lingdongyun','灵动云机场｜八折套餐、节点地区与使用教程','灵动云页面整理9款套餐、BGP线路资料、SS协议及各平台客户端，iOS使用Nextin识别码ldy。八折码wsj888适用7款，穿云和至尊私人定制除外；另列新加坡节点ChatGPT反馈、流量规则与技术问题退款条件。',['灵动云','性价比机场','便宜机场','机场节点'])]
     for slug,title,description,keys in brand_specs:put('brand-'+slug+'.html',title,description,keys)
+    intake=json.loads((root/'data/new-brands.json').read_text(encoding='utf-8'))['brands']
+    for b in intake:
+        put(b['profile_path'],b['name']+(' '+b['english_name'] if b['english_name'] else '')+'品牌入口｜套餐与资料陆续补充',
+            '叮当观察已收录'+b['name']+'的站长确认推广入口。当前套餐价格、额度、客户端、节点与售后资料尚待提供；本页展示已知来源和选择前核对步骤，详情会按真实材料逐项补充。',[b['name'],b['english_name']] if b['english_name'] else [b['name']])
     for t in data['topics']:
         count=len(t['article_paths']); n=len(t['faq']); keys=t.get('keywords') or KEYS[t['id']]
         desc='叮当观察的'+t['name']+'专题，整理'+str(count)+'篇独立文章与'+str(n)+'条常见问题。'+t['intro']+'从具体需求进入对应指南，查看条件对照、核对步骤和资料出处，区分品牌说明、使用反馈与尚待验证的结果。'

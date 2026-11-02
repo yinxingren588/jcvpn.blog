@@ -1,0 +1,69 @@
+{
+  "keywords": [
+    {
+      "keyword": "机场推荐",
+      "primary_page": "https://jcvpn.blog/topic-recommendations",
+      "status": "title_and_visible_topic_content_with_homepage_link"
+    },
+    {
+      "keyword": "梯子推荐",
+      "primary_page": "https://jcvpn.blog/topic-recommendations",
+      "status": "title_and_visible_topic_content_with_homepage_link"
+    },
+    {
+      "keyword": "VPN",
+      "primary_page": "https://jcvpn.blog/topic-vpn-choice",
+      "status": "title_and_visible_topic_content_with_homepage_link"
+    },
+    {
+      "keyword": "VPN推荐",
+      "primary_page": "https://jcvpn.blog/topic-vpn-choice",
+      "status": "title_and_visible_topic_content_with_homepage_link"
+    },
+    {
+      "keyword": "节点推荐",
+      "primary_page": "https://jcvpn.blog/topic-nodes-guide",
+      "status": "title_and_visible_topic_content_with_homepage_link"
+    },
+    {
+      "keyword": "机场节点",
+      "primary_page": "https://jcvpn.blog/topic-nodes-guide",
+      "status": "title_and_visible_topic_content_with_homepage_link"
+    },
+    {
+      "keyword": "机场测评",
+      "primary_page": "https://jcvpn.blog/topic-reviews-guide",
+      "status": "title_and_visible_topic_content_with_homepage_link"
+    },
+    {
+      "keyword": "稳定机场",
+      "primary_page": "https://jcvpn.blog/topic-reviews-guide",
+      "status": "title_and_visible_topic_content_with_homepage_link"
+    },
+    {
+      "keyword": "性价比机场",
+      "primary_page": "https://jcvpn.blog/topic-budget-guide",
+      "status": "title_and_visible_topic_content_with_homepage_link"
+    },
+    {
+      "keyword": "Clash机场",
+      "primary_page": "https://jcvpn.blog/topic-clash-guide",
+      "status": "title_and_visible_topic_content_with_homepage_link"
+    },
+    {
+      "keyword": "便宜机场",
+      "primary_page": "https://jcvpn.blog/topic-budget-guide",
+      "status": "title_and_visible_topic_content_with_homepage_link"
+    },
+    {
+      "keyword": "便宜机场推荐",
+      "primary_page": "https://jcvpn.blog/topic-budget-guide",
+      "status": "title_and_visible_topic_content_with_homepage_link"
+    }
+  ],
+  "indexable_pages_reachable": 156,
+  "brand_entries": 8,
+  "completed_profiles": 5,
+  "incomplete_profiles_noindex": 3,
+  "notes": "覆盖检查不代表Bing已收录、排名或权重。"
+}

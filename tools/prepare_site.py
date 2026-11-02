@@ -17,7 +17,7 @@ ROOT = Path(__file__).resolve().parents[1]
 STATE = ROOT / '.release' / 'manifest.json'
 NAMESPACE = 'http://www.sitemaps.org/schemas/sitemap/0.9'
 ALIAS = '01-首页框架.html'
-DOCS = ('03-可信内容与SEO规范.md', '04-首批品牌档案.md')
+DOCS = ()  # Historical working notes stay local, outside the public release.
 
 
 def write_changed(path: Path, value: str) -> None:
@@ -61,6 +61,8 @@ def prepare() -> dict:
         build_home_feature(ROOT)
     from brand_showcase import build_brand_showcase
     build_brand_showcase(ROOT)
+    from brand_intake import build_brand_intake
+    build_brand_intake(ROOT)
     if (ROOT / 'data/site-contact.json').exists():
         from site_chrome import apply_site_chrome
         apply_site_chrome(ROOT)
@@ -69,6 +71,8 @@ def prepare() -> dict:
     if (ROOT / 'data/editorial-expansion.json').exists():
         from site_seo import apply_site_seo
         apply_site_seo(ROOT)
+    from site_assets import apply_site_assets
+    apply_site_assets(ROOT)
     config_path = ROOT / 'site.config.json'
     config = read_json(config_path)
     origin = config['origin'].rstrip('/')
@@ -86,6 +90,7 @@ def prepare() -> dict:
 
     old = read_json(STATE, {'pages': {}})
     descriptions = read_json(ROOT / 'data/page-descriptions.json', {})
+    excluded = read_json(ROOT / 'data/indexing-policy.json', {}).get('noindex_pages', {})
     now = datetime.now(timezone(timedelta(hours=8))).replace(microsecond=0).isoformat()
     pages = {}
     for path in sorted(ROOT.glob('*.html')):
@@ -101,14 +106,14 @@ def prepare() -> dict:
         content = re.sub(r'<meta\b(?=[^>]*\bname=[\"\'](?:robots|bingbot)[\"\'])[^>]*>', '', content, flags=re.I)
         content = re.sub(r'<link\b(?=[^>]*\brel=[\"\']canonical[\"\'])[^>]*>', '', content, flags=re.I)
         canonical = page_url(path.name, origin)
-        robots_rule = 'noindex,follow' if path.name == '404.html' else 'index,follow'
+        robots_rule = 'noindex,follow' if path.name == '404.html' or path.name in excluded else 'index,follow'
         tags = '<meta name="robots" content="' + robots_rule + '"><link rel="canonical" href="' + escape(canonical, quote=True) + '">'
         content = re.sub(r'</head>', lambda match: tags + match.group(), content, count=1, flags=re.I)
         # Remove only the local-preview label, retaining source and authorship notes.
         content = content.replace('本地内容预览 · ', '').replace('本地预览 · ', '').replace(' · 本地预览', '')
         content = content.replace(' · 本地内容预览', '')
         write_changed(path, content)
-        if path.name == '404.html':
+        if path.name == '404.html' or path.name in excluded:
             continue
         digest = fingerprint(content)
         previous = old.get('pages', {}).get(canonical, {})
@@ -139,7 +144,7 @@ def prepare() -> dict:
 
 def archive(path: Path, key: str) -> int:
     files = list(ROOT.glob('*.html'))
-    files += [ROOT / name for name in (*DOCS, 'robots.txt', 'sitemap.xml', '.nojekyll', key + '.txt')]
+    files += [ROOT / name for name in (*DOCS, '_headers', 'robots.txt', 'sitemap.xml', '.nojekyll', key + '.txt')]
     for directory in ('assets', 'data'):
         files.extend(p for p in (ROOT / directory).rglob('*') if p.is_file())
     path.parent.mkdir(parents=True, exist_ok=True)

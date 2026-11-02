@@ -30,8 +30,14 @@ const files = (await readdir(root, { withFileTypes: true }))
   .filter(entry => entry.isFile() && entry.name.endsWith('.html'))
   .map(entry => entry.name);
 assert.ok(files.includes('404.html'), 'A top-level 404.html is required for this static multi-page site');
-assert.equal(files.length, Object.keys(manifest.pages).length + 2, 'Refresh publication metadata for new or removed pages');
-files.push('03-可信内容与SEO规范.md', '04-首批品牌档案.md', 'robots.txt', 'sitemap.xml', '.nojekyll', config.indexnow_key + '.txt');
+const indexingPolicy = JSON.parse(await readFile(join(root, 'data/indexing-policy.json'), 'utf8'));
+const excludedPages = Object.keys(indexingPolicy.noindex_pages || {});
+for (const file of excludedPages) {
+  assert.ok(files.includes(file), `Missing draft brand page: ${file}`);
+  assert.ok((await readFile(join(root, file), 'utf8')).includes('name="robots" content="noindex,follow"'), `Draft indexing rule missing: ${file}`);
+}
+assert.equal(files.length, Object.keys(manifest.pages).length + 2 + excludedPages.length, 'Refresh publication metadata for new or removed pages');
+files.push('_headers', 'robots.txt', 'sitemap.xml', '.nojekyll', config.indexnow_key + '.txt');
 async function collect(directory) {
   for (const entry of await readdir(join(root, directory), { withFileTypes: true })) {
     assert.ok(!entry.isSymbolicLink(), `Symlink is not a publication asset: ${entry.name}`);

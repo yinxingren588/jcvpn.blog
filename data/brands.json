@@ -151,6 +151,46 @@
         "prepared_on": "2026-10-30"
       },
       "access_record_count": 1
+    },
+    {
+      "id": "feiv",
+      "name": "飞v",
+      "english_name": "",
+      "mark": "飞V",
+      "url": "https://varnexa.flyvaff.com/#/?code=IC0p64fi",
+      "profile_path": "brand-feiv.html",
+      "profile_status": "entry_confirmed_details_pending",
+      "source_type": "博客站长提供并确认的品牌名及推广入口",
+      "source_date": "2026-11-02",
+      "verification_status": "entry_provided_details_pending",
+      "commercial_relationship": "推广入口；具体合作条件未提供"
+    },
+    {
+      "id": "tiziyun",
+      "name": "梯子云",
+      "english_name": "LadderCloud",
+      "mark": "梯",
+      "url": "https://varnexa.ladderaff.com/#/?code=KSmLLEnR",
+      "profile_path": "brand-tiziyun.html",
+      "profile_status": "entry_confirmed_details_pending",
+      "source_type": "博客站长提供并确认的品牌名及推广入口",
+      "source_date": "2026-11-02",
+      "verification_status": "entry_provided_details_pending",
+      "commercial_relationship": "推广入口；具体合作条件未提供"
+    },
+    {
+      "id": "langwang",
+      "name": "浪网",
+      "english_name": "WaveNet",
+      "mark": "浪",
+      "url": "https://varnexa.wavenetaff.com/#/?code=j468t9eF",
+      "profile_path": "brand-langwang.html",
+      "profile_status": "entry_confirmed_details_pending",
+      "source_type": "博客站长提供并确认的品牌名及推广入口",
+      "source_date": "2026-11-02",
+      "verification_status": "entry_provided_details_pending",
+      "commercial_relationship": "推广入口；具体合作条件未提供"
     }
-  ]
+  ],
+  "updated_on": "2026-11-02"
 }

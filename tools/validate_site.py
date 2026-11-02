@@ -33,6 +33,7 @@ class Document(HTMLParser):
 def validate():
     config = read_json(ROOT / 'site.config.json')
     manifest = read_json(ROOT / 'data/publication-manifest.json')
+    excluded = read_json(ROOT / 'data/indexing-policy.json', {}).get('noindex_pages', {})
     documents = {p.name: Document(p.read_text(encoding='utf-8')) for p in ROOT.glob('*.html')}
     errors = []
     sitemap = ET.parse(ROOT / 'sitemap.xml')
@@ -44,8 +45,9 @@ def validate():
         content = (ROOT / name).read_text(encoding='utf-8')
         expected = config['origin'] + '/' if name == ALIAS else page_url(name, config['origin'])
         if doc.canonicals != [expected]: errors.append(name + ': canonical mismatch')
-        expected_robots = 'noindex,follow' if name in (ALIAS, '404.html') else 'index,follow'
+        expected_robots = 'noindex,follow' if name in (ALIAS, '404.html') or name in excluded else 'index,follow'
         if doc.robots != [expected_robots]: errors.append(name + ': indexing rule mismatch')
+        if name in excluded and page_url(name, config['origin']) in urls: errors.append(name + ': incomplete page in sitemap')
         if len(re.findall(r'<h1(?:>|\s)', content)) != 1: errors.append(name + ': H1 count')
         for ref in doc.refs:
             parsed = urlsplit(ref)

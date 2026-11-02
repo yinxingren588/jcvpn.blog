@@ -1,7 +1,7 @@
 /* Doraemon sky theme: full-page fixed wallpaper, readable translucent panels. */
 :root{--paper:#eaf7ff;--ink:#173e60;--muted:#54758d;--green:#087ec0;--lime:#ffe182;--line:#c8e5f4}
 body{background:#85c9ff;color:var(--ink);isolation:isolate}
-body:before{content:"";position:fixed;inset:0;z-index:-2;background:url("doraemon-sky.png") center center/cover no-repeat;pointer-events:none}
+body:before{content:"";position:fixed;inset:0;z-index:-2;background:url("doraemon-sky.webp") center center/cover no-repeat;pointer-events:none}
 .shell{max-width:1310px;padding:0 40px}
 .header{margin-top:18px;height:80px;padding:0 25px;background:#ffffffed;border:1px solid #ffffff;border-radius:22px;box-shadow:0 8px 35px #1267ae14}
 .logo{color:#096baf}.logo small{color:#5b89a6}.header-action{background:#e9f6ff;border-color:#d5ebfb;color:#2677a7}

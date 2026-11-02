@@ -223,6 +223,10 @@ def build_content_library(root):
     featured=[next(a for a in ordered if a['category']==t['id']) for t in expansion['topics']]
     reading='<section class="section" id="reading"><div class="sectionhead"><div><span class="overline">PRACTICAL READING PATHS</span><h2>从需求出发，读懂推荐与测评。</h2><p>六个选择与使用专题，各从一篇具体指南开始。</p></div><a href="blog.html">查看全部84篇 ↗</a></div><div class="search-featured-grid">'+''.join(row(a,topics) for a in featured)+'</div></section>'
     home=re.sub(r'<section class="section" id="reading">.*?</section>',lambda _:reading,home,count=1,flags=re.S)
+    route_cards=''.join('<a class="search-route-card" href="topic-'+t['id']+'.html"><span>'+e(t['name'])+'</span><p>'+e(t['intro'])+'</p><b aria-hidden="true">→</b></a>' for t in expansion['topics'])
+    guides='<section class="section search-guides" id="search-guides"><div class="sectionhead"><div><span class="overline">CHOOSE YOUR READING PATH</span><h2>按用途查找推荐和使用指南。</h2><p>从预算、设备、节点或实际任务进入专题，再核对品牌资料与具体步骤。</p></div></div><div class="search-route-grid">'+route_cards+'</div></section>'
+    home=re.sub(r'<section class="section search-guides".*?</section>','',home,flags=re.S)
+    home=home.replace('<section class="section" id="reading">',guides+'<section class="section" id="reading">',1)
     home=re.sub(r'<link rel="stylesheet" href="assets/search-library\.css">','',home)
     home=home.replace('</head>','<link rel="stylesheet" href="assets/search-library.css"></head>',1)
     write_changed(root/'index.html',home)

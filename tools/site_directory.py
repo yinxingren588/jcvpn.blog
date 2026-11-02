@@ -2,6 +2,7 @@
 from hashlib import sha256
 from html import escape, unescape
 from pathlib import Path
+import json
 import re
 
 from site_chrome import write_changed
@@ -14,7 +15,7 @@ def plain_text(markup):
 def add_chapters(html, name):
     if name == 'index.html':
         return html, [('home-overview', '首页介绍'), ('home-invisible-feature', '隐形人主推'),
-                      ('brands', '品牌档案'), ('reading', '精选文章')]
+                      ('search-guides', '按需求选专题'), ('brands', '品牌档案'), ('reading', '精选文章'), ('brand-intake', '新增品牌')]
     main = re.search(r'<main\b[^>]*>(.*?)</main>', html, re.S)
     if not main:
         return html, [('top', '返回页首')]
@@ -60,6 +61,8 @@ def render_directory(name, chapters):
     brand_links = ''.join('<a href="' + url + '"' + (' aria-current="page"' if name == url else '') +
                           '><span class="home-dir-brand"><img src="assets/' + logo + '" width="1254" height="1254" alt="" decoding="async"></span><span>' +
                           label + '</span></a>' for url, label, logo in brands)
+    for b in json.loads((Path(__file__).resolve().parents[1]/'data/new-brands.json').read_text(encoding='utf-8'))['brands']:
+        brand_links+='<a href="'+b['profile_path']+'"'+(' aria-current="page"' if name==b['profile_path'] else '')+'><span class="home-dir-monogram" aria-hidden="true">'+escape(b['mark'])+'</span><span>'+escape(b['name'])+' <small>资料待补</small></span></a>'
     current = ' aria-current="page"' if name == 'brand-yinxingren.html' else ''
     return '''<aside class="home-directory-root" id="home-directory-root" data-open="auto" aria-label="页面快捷目录">
 <section class="home-directory-panel" id="home-directory-panel" aria-labelledby="home-directory-title">
