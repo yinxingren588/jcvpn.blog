@@ -9,6 +9,7 @@ from langwang_plans import validate_plans, build_plan_csv, render_plans, plan_fa
 from langwang_clients import render_clients, client_faqs
 from langwang_coupon import validate_coupon, render_coupon, coupon_faqs
 from langwang_service import validate_service, render_service, render_refund, service_faqs
+from langwang_access import access_record, render_access, access_faqs
 
 
 def load(root, path):
@@ -32,6 +33,10 @@ def build_langwang_profile(root, brand):
         validate_coupon(coupon, plans['plans'])
     if service_ready:
         validate_service(rules, plans['plans'], coupon)
+    access = load(root, brand['access_records_path']) if brand.get('access_records_path') else None
+    access_ready = access is not None and access['collection_status'] == 'core_conditions_confirmed'
+    if access_ready:
+        access_record(access)
     validate_snapshot(snapshot)
     validate_plans(plans)
     assert overview['brand_id'] == coverage['brand_id'] == 'langwang'
@@ -48,6 +53,8 @@ def build_langwang_profile(root, brand):
         ('年付标准单独列IPLC', '119元年付标准的全IPLC说明已由站长单独确认；每30天刷新80GB。其他套餐按各自线路条目阅读。'),
         ('平台使用方向', '品牌资料列4K流媒体、TikTok与AI工具方向。本页提供的是节点延迟截图，相应实际播放或问答反馈继续补充。')
     ]
+    if access_ready:
+        features[2] = ('平台方向与问答反馈', '4K与TikTok按品牌资料列明；已另列11月3日19点新加坡节点的ChatGPT问答使用反馈。其他平台任务继续补充。')
     feature_cards = ''.join('<article><span class="overline">0'+str(index)+' / BRAND MATERIAL</span><h3>'+e(title)
                             +'</h3><p>'+e(text)+'</p></article>' for index, (title, text) in enumerate(features, 1))
     region_cards = ''.join('<li><h3>'+e(g['name'])+'</h3><p><strong>'+str(g['node_count'])
@@ -57,9 +64,9 @@ def build_langwang_profile(root, brand):
         ('这批浪网节点延迟的采样条件是什么？', time_label(snapshot)+'，上海电信，Windows版浪网客户端。日期、时间、城市、运营商与客户端均由站长逐项确认，客户端版本和探测方法未提供。'),
         ('超时和1028ms这类较高数值怎样统计？', '台湾04保留为Timeout，不按0ms参与数值统计。其余59条数值范围50—1028ms，中位数169ms；台湾01的1028ms、美国01的565ms等按原值保留。'),
         ('这批截图能证明晚高峰一直稳定吗？', '本批为11月3日12点的静态节点截图。品牌介绍中的晚高峰表现说明仍需要对应时段和连续观察材料；当前记录不生成长期可用率或同条件性能排名。'),
-        ('浪网已有4K、TikTok和ChatGPT的实际任务结果吗？', '这些是品牌介绍与套餐材料列明的使用方向，目前尚未提供对应平台的实际播放、账号任务或问答记录。客户端显示的延迟与实际任务结果分别记录。'),
+        ('浪网已有4K、TikTok和ChatGPT的实际任务结果吗？', '已补充11月3日19点、上海电信、Windows版浪网客户端连接新加坡节点的ChatGPT正常问答反馈。4K播放、TikTok及其他AI任务继续按品牌列明方向阅读，需补充各自的实际记录。' if access_ready else '这些是品牌介绍与套餐材料列明的使用方向，目前尚未提供对应平台的实际播放、账号任务或问答记录。客户端显示的延迟与实际任务结果分别记录。'),
         ('浪网的优惠、付款、使用与退款规则在哪里查看？', '本页已列lw888八折优惠、支付宝付款、四个平台使用教程、普通周期套餐流量规则与购买后24小时内的技术问题退款条件。选购时请核对官网订单与客服说明。' if service_ready else ('四个平台的基础使用教程已列明，具体版本和最低系统要求请查看下载页。优惠、付款、流量与售后规则继续按浪网资料补充，选购时请核对官网订单与客服说明。' if clients_ready else '本页已整理9款套餐和60节点记录。各平台完整使用流程、优惠、付款与售后规则按后续提供的浪网资料继续补充，选购时请核对官网订单与客服说明。'))
-    ] + plan_faqs(plans, active_coupon) + (client_faqs(clients) if clients_ready else []) + (coupon_faqs(coupon) if coupon_ready else []) + (service_faqs(rules, coupon) if service_ready else [])
+    ] + plan_faqs(plans, active_coupon) + (client_faqs(clients) if clients_ready else []) + (coupon_faqs(coupon) if coupon_ready else []) + (service_faqs(rules, coupon) if service_ready else []) + (access_faqs(access) if access_ready else [])
     faq = ''.join('<details class="langwang-faq"><summary>'+e(question)+'</summary><p>'+e(answer)+'</p></details>' for question, answer in questions)
     body = ('<section class="info-hero langwang-hero" id="langwang-about"><span class="info-kicker">WAVENET / BGP & SS</span>'
             '<div class="langwang-heading">'+mark+'<div><h1>浪网 WaveNet</h1><p>BGP智能多线入口 · SS协议 · 年付标准单独列IPLC</p></div></div>'
@@ -113,7 +120,14 @@ def build_langwang_profile(root, brand):
         body = body.replace('四个平台的基础下载、登录与连接流程已在上方列出。具体版本和最低系统要求以下载页说明为准；优惠、付款、流量与售后条件继续按浪网资料补充。', '已整理四个平台基础流程、lw888八折优惠、支付宝付款、普通周期套餐的重置与升级规则，以及技术问题退款条件。其他付款周期、版本与系统要求、重置对有效期的影响、升级差价算法和退款到账安排，请在官网订单与客服说明中核对。', 1)
         body = body.replace('本页为资料整理，本站未独立复测。', '优惠、付款、流量与技术问题退款条件亦由站长逐项确认。本页为资料整理，本站未独立复测。', 1)
         body = body.replace('<a href="data/langwang-overview.json">品牌资料 JSON ↓</a>', '<a href="data/langwang-overview.json">品牌资料 JSON ↓</a><a href="data/langwang-service-rules.json">流量、付款与售后规则 JSON ↓</a>', 1)
-    html = shell('浪网 WaveNet套餐与优惠｜lw888八折、60节点与使用教程', '浪网9款套餐与lw888八折优惠，附60节点午间记录、四端教程、流量和退款规则。', body)
+    if access_ready:
+        marker = '<section class="section" id="langwang-clients"' if clients_ready else '<section class="section" id="langwang-materials"'
+        assert marker in body, 'Missing insertion point for the ChatGPT feedback section'
+        body = body.replace(marker, render_access(access)+'\n'+marker, 1)
+        body = body.replace('<a href="#langwang-faq">常见问题</a>', '<a href="#langwang-access">ChatGPT问答反馈</a><a href="#langwang-faq">常见问题</a>', 1)
+        body = body.replace('本页为资料整理，本站未独立复测。', 'ChatGPT问答的11月3日19点时段、上海电信、Windows版浪网客户端与新加坡节点条件另行逐项确认。本页为资料整理，本站未独立复测。', 1)
+        body = body.replace('<a href="data/langwang-overview.json">品牌资料 JSON ↓</a>', '<a href="data/langwang-overview.json">品牌资料 JSON ↓</a><a href="data/langwang-access-records.json">ChatGPT问答反馈与条件 JSON ↓</a>', 1)
+    html = shell('浪网 WaveNet套餐与优惠｜lw888八折、60节点与使用教程', '浪网9款套餐与lw888八折优惠，附60节点午间记录、四端教程、ChatGPT问答反馈和业务规则。', body)
     html = html.replace('</head>', '<link rel="stylesheet" href="assets/langwang-profile.css"><link rel="stylesheet" href="assets/invisible-latency.css"><link rel="stylesheet" href="assets/langwang-latency.css"></head>', 1)
     html = html.replace('</body>', '<script src="assets/langwang-latency.js" defer></script></body>', 1)
     if coupon_ready:

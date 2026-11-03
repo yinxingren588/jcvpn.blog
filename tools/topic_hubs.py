@@ -71,6 +71,14 @@ def hub_tables(root, source_tables, brands):
             record=ladder_access_record(ladder_data)
             ai_records.append(['梯子云',record['tested_on'],record['tested_time'],record['test_location'],
                                record['isp'],record['node_region'],'已报告能发送问题并收到回答'])
+    wave_access_path=Path(root)/'data/langwang-access-records.json'
+    if wave_access_path.exists():
+        wave_data=json.loads(wave_access_path.read_text(encoding='utf-8'))
+        if wave_data['collection_status']=='core_conditions_confirmed':
+            from langwang_access import access_record as wave_access_record
+            record=wave_access_record(wave_data)
+            ai_records.append(['浪网',record['tested_on'],record['tested_time'],record['test_location'],
+                               record['isp'],record['node_region'],'已报告能发送问题并收到回答'])
     return {**source_tables,
             'hub-candidates': (['品牌','线路资料','入门月付应付与额度','轻量年付应付与每期额度','优惠范围'], candidates),
             'hub-latency': (['品牌','采样日期 / 时段（北京时间）','环境与客户端','记录数','有数值 / 超时','最小 / 中位 / 最大（ms）'], latency),

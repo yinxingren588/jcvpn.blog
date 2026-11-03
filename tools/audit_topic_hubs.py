@@ -83,9 +83,11 @@ def audit():
     assert wave_latency[3:]==['60','59 / 1','50 / 169 / 1028']
     assert '2026-11-03 12:00' in wave_latency[1] and '上海电信' in wave_latency[2]
     ai_rows=rendered_tables['hub-ai-records'][1]
-    assert len(ai_rows)==7
+    assert len(ai_rows)==8
     ladder_ai=next(row for row in ai_rows if row[0]=='梯子云')
     assert ladder_ai[1:6]==['2026-11-03','12:00','上海','电信','新加坡']
+    wave_ai=next(row for row in ai_rows if row[0]=='浪网')
+    assert wave_ai[1:6]==['2026-11-03','19:00','上海','电信','新加坡']
     report=dict(substantive_hubs=len(hubs),authored_sections=total_sections,legacy_anchors_preserved=9,
                 verified_latency_records=verified_records,verified_ai_records=len(ai_rows),errors=[])
     print(json.dumps(report,ensure_ascii=True))

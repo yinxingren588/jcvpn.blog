@@ -213,12 +213,12 @@
       "url": "https://varnexa.wavenetaff.com/#/?code=j468t9eF",
       "profile_path": "brand-langwang.html",
       "profile_status": "core_materials_provided_more_details_pending",
-      "source_type": "博客站长提供并逐项确认的浪网品牌、9款套餐、BGP与年付IPLC说明、60节点、四端客户端、优惠及业务规则资料",
+      "source_type": "博客站长提供并逐项确认的浪网品牌、9款套餐、BGP与年付IPLC说明、60节点、四端客户端、优惠、业务规则及ChatGPT使用反馈",
       "source_date": "2026-11-03",
       "verification_status": "core_materials_provided_more_details_pending",
       "commercial_relationship": "推广入口；具体合作条件未提供",
       "materials_updated_on": "2026-11-03",
-      "materials_source": "博客站长提供并逐项确认的浪网品牌、9款套餐、BGP与年付IPLC说明、60节点、四端客户端、优惠及业务规则资料",
+      "materials_source": "博客站长提供并逐项确认的浪网品牌、9款套餐、BGP与年付IPLC说明、60节点、四端客户端、优惠、业务规则及ChatGPT使用反馈",
       "overview_path": "data/langwang-overview.json",
       "latency_path": "data/langwang-latency.json",
       "coverage_path": "data/langwang-coverage.json",
@@ -227,7 +227,8 @@
       "node_profile_ready": true,
       "clients_path": "data/langwang-clients.json",
       "coupon_path": "data/langwang-coupon.json",
-      "service_rules_path": "data/langwang-service-rules.json"
+      "service_rules_path": "data/langwang-service-rules.json",
+      "access_records_path": "data/langwang-access-records.json"
     }
   ],
   "updated_on": "2026-11-03"

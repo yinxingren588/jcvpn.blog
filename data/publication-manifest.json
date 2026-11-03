@@ -448,8 +448,8 @@
     },
     "https://jcvpn.blog/brand-langwang": {
       "file": "brand-langwang.html",
-      "sha256": "16be2b64253a1b38d032da8942073b8632cad6adccf5851761ba3d23ddaf51bb",
-      "lastmod": "2026-11-03T21:52:53+08:00"
+      "sha256": "c9dc7aad1c7dd5909662f5140f1ffc9b6af27ab6273f14feb2795b0a5ea24736",
+      "lastmod": "2026-11-03T22:20:52+08:00"
     },
     "https://jcvpn.blog/brand-lingdongyun": {
       "file": "brand-lingdongyun.html",
@@ -473,8 +473,8 @@
     },
     "https://jcvpn.blog/brands": {
       "file": "brands.html",
-      "sha256": "ba6aa923945c2fd072dc3f9458ce8c23d01ba74ca975db9e24b4bd9e0bf39962",
-      "lastmod": "2026-11-03T21:52:53+08:00"
+      "sha256": "27ead23c85a864763cd734288311110703f1bb7b924b2785d6e7c8fbd9513f13",
+      "lastmod": "2026-11-03T22:19:18+08:00"
     },
     "https://jcvpn.blog/contact": {
       "file": "contact.html",
@@ -728,8 +728,8 @@
     },
     "https://jcvpn.blog/": {
       "file": "index.html",
-      "sha256": "8d9706da9b6c7f01ed5e8496eb2802a8b54ff4e6bec8032a46468f51c947efa0",
-      "lastmod": "2026-11-03T21:52:53+08:00"
+      "sha256": "3512abd1fa3f30a103c3b996718ed925357ffaf59afba83cb38739b0dd225d25",
+      "lastmod": "2026-11-03T22:19:18+08:00"
     },
     "https://jcvpn.blog/topic-basics": {
       "file": "topic-basics.html",
@@ -773,13 +773,13 @@
     },
     "https://jcvpn.blog/topic-recommendations": {
       "file": "topic-recommendations.html",
-      "sha256": "1844cf43b671a345fd8039a877bc2616d4ac04249b953e5ea6303cef1a7c3acd",
-      "lastmod": "2026-11-03T21:52:53+08:00"
+      "sha256": "0133193052c796a017b58f56301f8da7bc4dfe7ebc992fc92b730eda28e58e6c",
+      "lastmod": "2026-11-03T22:19:18+08:00"
     },
     "https://jcvpn.blog/topic-reviews-guide": {
       "file": "topic-reviews-guide.html",
-      "sha256": "b0a41a2a372d08487cebc51cd8699b052600d79c3dac3bb275bd2c10ed87589c",
-      "lastmod": "2026-11-03T15:47:41+08:00"
+      "sha256": "ef552b421818683cbdaf68d012b50cf35c3f9c9de3d2793e41cc73beee440c4b",
+      "lastmod": "2026-11-03T22:19:18+08:00"
     },
     "https://jcvpn.blog/topic-testing": {
       "file": "topic-testing.html",

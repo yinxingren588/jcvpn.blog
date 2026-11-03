@@ -67,7 +67,7 @@ def build_brand_intake(root):
     for b in brands:
         status,description,action=intake_copy(b)
         cards.append('<a class="intake-card" href="'+b['profile_path']+'" aria-label="查看'+e(b['name'],quote=True)+'品牌资料">'+brand_mark(b)+'<span class="intake-status">'+e(status)+'</span><h3>'+e(b['name'])+'</h3><p>'+e((b['english_name'] or '品牌资料')+' · '+description)+'</p><span class="intake-cta">'+e(action)+' <span>→</span></span></a>')
-    section='<section class="section brand-intake-section" id="brand-intake"><div class="sectionhead"><div><span class="overline">NEW BRAND ENTRANCES</span><h2>新增品牌，逐步补全资料。</h2><p>飞v已补充9款套餐、fly20八折优惠（续费、重置包除外，不叠加）与晚高峰延迟记录；梯子云已整理9款套餐、2hy85八五折优惠（年付保活、3款买断除外，不叠加），并列明客户端、流量规则、技术问题退款条件与50节点下午截图。浪网已整理9款套餐、lw888八折优惠、BGP与年付IPLC说明及60节点午间记录，并列明四端教程、支付宝、流量规则与24小时技术问题退款条件；周期续费与五款普通周期重置包可用该码，不能叠加其他优惠。</p></div></div><div class="intake-grid">'+''.join(cards)+'</div></section>'
+    section='<section class="section brand-intake-section" id="brand-intake"><div class="sectionhead"><div><span class="overline">NEW BRAND ENTRANCES</span><h2>新增品牌，逐步补全资料。</h2><p>飞v已补充9款套餐、fly20八折优惠（续费、重置包除外，不叠加）与晚高峰延迟记录；梯子云已整理9款套餐、2hy85八五折优惠（年付保活、3款买断除外，不叠加），并列明客户端、流量规则、技术问题退款条件与50节点下午截图。浪网已整理9款套餐、lw888八折优惠、BGP与年付IPLC说明及60节点午间记录，并列明四端教程、支付宝、流量规则与24小时技术问题退款条件；周期续费与五款普通周期重置包可用该码，不能叠加其他优惠。另有11月3日19点上海电信、新加坡节点的ChatGPT问答反馈。</p></div></div><div class="intake-grid">'+''.join(cards)+'</div></section>'
     for filename in ['index.html','brands.html']:
         p=root/filename; html=p.read_text(encoding='utf-8')
         html=re.sub(r'<section class="section brand-intake-section".*?</section>','',html,flags=re.S)
