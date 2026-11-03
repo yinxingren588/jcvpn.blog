@@ -26,7 +26,7 @@
 
 | 品牌 | 已提供套餐 | 资料方向 | 套餐源文件 |
 | --- | --- | --- | --- |
-| 隐形人机场 | 9款 | IEPL专线资料 | invisible-plans.json |
+| 隐形人 | 9款 | IEPL专线资料 | invisible-plans.json |
 | 微风网络 | 6款 | IPLC与原生IP资料 | breezenet-plans.json |
 | 飞猫云 | 7款 | IPLC与学生年付方案 | feimaoyun-plans.json |
 | 暮光网络 | 9款 | IPLC与独享定制 | muguang-plans.json |

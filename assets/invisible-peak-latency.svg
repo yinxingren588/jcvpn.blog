@@ -2,8 +2,8 @@
 <!DOCTYPE svg
   PUBLIC '-//W3C//DTD SVG 1.0//EN'
   'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
-<svg role="img" aria-label="隐形人机场晚高峰延迟记录" width="1400" height="1060" preserveAspectRatio="xMinYMin meet" viewBox="0 0 1400 1060" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
-	<title>隐形人机场晚高峰延迟记录</title><style>text{font-family:"Microsoft YaHei","Noto Sans CJK SC",sans-serif!important}</style>
+<svg role="img" aria-label="隐形人晚高峰延迟记录" width="1400" height="1060" preserveAspectRatio="xMinYMin meet" viewBox="0 0 1400 1060" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>隐形人晚高峰延迟记录</title><style>text{font-family:"Microsoft YaHei","Noto Sans CJK SC",sans-serif!important}</style>
 	<desc>2026年10月28日19:00北京时间，上海电信网络，依据第三方截图整理60个节点的延迟记录，其中58条数值、2条超时。客户端为Windows版隐形人。不是实时监测。</desc>
 	<clipPath id="clip">
 		<rect x="0" y="0" width="1400" height="1060"/>
@@ -13,7 +13,7 @@
 			<rect x="0" y="0" width="1400" height="1060" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(94%,96%,98%); fill-rule: evenodd;"/>
 			<rect x="30" y="30" width="1340" height="1000" rx="22" ry="22" style="stroke: rgb(86%,90%,94%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
 			<text x="74" y="987" style="font-family: Helvetica; font-size: 13px;fill: rgb(27%,52%,67%); stroke:none;" transform="translate(0,1974) scale(1,-1)">INVISIBLE NETWORK  /  PEAK-HOUR LATENCY</text>
-			<text x="74" y="934" style="font-family: STSong-Light; font-size: 37px;fill: rgb(8%,23%,35%); stroke:none;" transform="translate(0,1868) scale(1,-1)">隐形人机场 · 晚高峰延迟记录</text>
+			<text x="74" y="934" style="font-family: STSong-Light; font-size: 37px;fill: rgb(8%,23%,35%); stroke:none;" transform="translate(0,1868) scale(1,-1)">隐形人 · 晚高峰延迟记录</text>
 			<text x="74" y="898" style="font-family: STSong-Light; font-size: 17px;fill: rgb(40%,52%,61%); stroke:none;" transform="translate(0,1796) scale(1,-1)">第三方截图数据重绘  |  非实时监测  |  延迟单位 ms</text>
 			<rect x="74" y="765" width="298" height="101" rx="14" ry="14" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(94%,97%,100%); fill-rule: evenodd;"/>
 			<text x="96" y="830" style="font-family: STSong-Light; font-size: 15px;fill: rgb(40%,52%,61%); stroke:none;" transform="translate(0,1660) scale(1,-1)">记录节点</text>

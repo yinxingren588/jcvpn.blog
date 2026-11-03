@@ -70,7 +70,7 @@ def render_directory(name, chapters):
     return '''<aside class="home-directory-root" id="home-directory-root" data-open="auto" aria-label="页面快捷目录">
 <section class="home-directory-panel" id="home-directory-panel" aria-labelledby="home-directory-title">
 <div class="home-directory-head"><div><span>QUICK NAVIGATION</span><h2 id="home-directory-title">快捷目录</h2></div><button type="button" class="home-directory-close" aria-label="收起快捷目录" title="收起目录">×</button></div>
-<a class="site-directory-feature" href="brand-yinxingren.html" aria-label="查看隐形人机场品牌资料"''' + current + '''><img src="assets/invisible-network-logo.jpg" width="512" height="512" alt="隐形人机场Logo" decoding="async"><span><small>本站主推</small><strong>隐形人机场</strong></span><span aria-hidden="true">→</span></a>
+<a class="site-directory-feature" href="brand-yinxingren.html" aria-label="查看隐形人品牌资料"''' + current + '''><img src="assets/invisible-network-logo.jpg" width="512" height="512" alt="隐形人Logo" decoding="async"><span><small>本站主推</small><strong>隐形人</strong></span><span aria-hidden="true">→</span></a>
 <nav class="home-directory-links" aria-label="页面快捷导航"><div class="home-directory-group"><h3>本页目录</h3>''' + toc + '''</div><div class="home-directory-group"><h3>网站导航</h3>''' + route_links + '''</div><div class="home-directory-group"><h3>其他品牌</h3>''' + brand_links + '''</div></nav>
 <p class="home-directory-foot">点击目录，快速找到你想看的内容。</p></section><button class="home-directory-launcher" type="button" aria-controls="home-directory-panel" aria-expanded="false" aria-label="展开快捷目录"><span aria-hidden="true">☷</span>快捷目录</button></aside>'''
 

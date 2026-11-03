@@ -9,7 +9,7 @@ from site_chrome import header, footer, write_changed
 from topic_hubs import load_hubs, hub_tables, render_hub
 
 DATE='2026-11-02'
-BRANDS=[('隐形人机场','brand-yinxingren.html'),('微风网络','brand-breezenet.html'),('飞猫云','brand-feimaoyun.html'),('暮光网络','brand-muguang.html'),('灵动云','brand-lingdongyun.html')]
+BRANDS=[('隐形人','brand-yinxingren.html'),('微风网络','brand-breezenet.html'),('飞猫云','brand-feimaoyun.html'),('暮光网络','brand-muguang.html'),('灵动云','brand-lingdongyun.html')]
 SOURCES={
  'brand-catalog':['五个品牌的独立资料入口','brands.html'],
  'brand-plans':['套餐来源与各品牌独立说明','brands.html'],
@@ -72,7 +72,7 @@ def tables(root):
       'clients':(['品牌','Windows/macOS/安卓显示名称','已确认连接流程','iOS应用','识别码'],[[b[0],['隐形人','微风网络','飞猫云','暮光加速','灵动云'][i],'官网账号登录→选节点→连接','Nextin',['yxr','wfwl','fmy','mgjs','ldy'][i]] for i,b in enumerate(BRANDS)]),
       'refunds':(['品牌','已确认条件','申请期限','客服入口'],[[b[0],'技术问题经协助仍完全无法使用，全额退款','期限未提供' if i==0 else '购买后24小时内','客服' if i==0 else '登录官网后台联系客服'] for i,b in enumerate(BRANDS)]),
       'coupons':(['品牌','优惠码','力度','范围','期限'],[
-        ['隐形人机场','yxr888','八折','全部9款','无到期限制'],['微风网络','weifeng90','九折','全部6款','期限未确认'],['飞猫云','flycat888','九折','学生版除外，其余6款','无到期限制'],['暮光网络','未提供','保留原价','不补造优惠规则','未提供'],['灵动云','wsj888','八折','穿云与至尊私人定制除外，其余7款','无到期限制']]),
+        ['隐形人','yxr888','八折','全部9款','无到期限制'],['微风网络','weifeng90','九折','全部6款','期限未确认'],['飞猫云','flycat888','九折','学生版除外，其余6款','无到期限制'],['暮光网络','未提供','保留原价','不补造优惠规则','未提供'],['灵动云','wsj888','八折','穿云与至尊私人定制除外，其余7款','无到期限制']]),
       'evidence-gaps':(['记录项目','现有覆盖','尚需补充'],[
         ['套餐与优惠','五个品牌均有单独资料','当前结算与活动变更需核对'],['客户端流程','五品牌四平台说明','具体版本与系统要求'],['节点延迟','四批截图快照','同条件、跨日期与探测方法'],['ChatGPT问答','五条不同条件反馈','部分时刻、客户端和重复样本'],['流媒体与稳定性','品牌支持方向','对应播放与连续观测资料']])}
 
@@ -127,7 +127,7 @@ def build_content_library(root):
     sources={**data['sources'],**SOURCES}; source_tables=tables(root)
     hubs=load_hubs(root); topic_tables=hub_tables(root,source_tables,BRANDS)
     corrected={
-      'brands-listed':'本站收录隐形人机场、微风网络、飞猫云、暮光网络和灵动云，均有套餐与客户端资料。隐形人为本站主推，实际反馈与延迟记录按各品牌的日期和条件分别阅读。',
+      'brands-listed':'本站收录隐形人、微风网络、飞猫云、暮光网络和灵动云，均有套餐与客户端资料。隐形人为本站主推，实际反馈与延迟记录按各品牌的日期和条件分别阅读。',
       'price-check':'五个品牌均已整理站长提供的套餐报价与额度。比较时先区分月付、年付和一次性总流量，查看优惠排除项，再到对应官网核对当前结算金额，不推算尚未提供的付款周期。',
       'brand-materials':'品牌页包含套餐、客户端与规则资料；部分另有截图延迟和ChatGPT反馈。品牌说明、用户反馈与独立复测不是同一种证据，记录应分别保留来源与日期。'}
     for f in faqs:

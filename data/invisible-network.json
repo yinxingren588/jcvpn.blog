@@ -1,6 +1,6 @@
 {
   "id": "yinxingren",
-  "name": "隐形人机场",
+  "name": "隐形人",
   "english_name": "Invisible Network",
   "source_type": "品牌所有者提供",
   "source_date": "2026-10-28",
@@ -76,9 +76,15 @@
   "editorial_source": "data/invisible-editorial.json",
   "logo": {
     "path": "assets/invisible-network-logo.jpg",
-    "alt": "隐形人机场Logo",
+    "alt": "隐形人Logo",
     "source": "品牌方提供的原始Logo",
     "provided_on": "2026-10-28",
     "preserved_original_file": true
-  }
+  },
+  "name_confirmed_on": "2026-11-03",
+  "search_keywords": [
+    "隐形人",
+    "隐形人机场"
+  ],
+  "brand_name_policy": "正式品牌名为隐形人；隐形人机场作为相关搜索关键词保留，不作为正式品牌名。"
 }

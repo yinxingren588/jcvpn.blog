@@ -7,7 +7,7 @@
   "brands": [
     {
       "id": "yinxingren",
-      "name": "隐形人机场",
+      "name": "隐形人",
       "url": "https://varnexa.invisibleaff.com/#/?code=JF4seZUy",
       "verification_status": "owner_provided_not_independently_tested",
       "commercial_relationship": "站长自有品牌；本站主推推广",
@@ -21,7 +21,12 @@
       "ownership": "站长自有品牌（用户确认）",
       "source_type": "品牌所有者提供",
       "source_date": "2026-10-28",
-      "logo_path": "assets/invisible-network-logo.jpg"
+      "logo_path": "assets/invisible-network-logo.jpg",
+      "name_confirmed_on": "2026-11-03",
+      "search_keywords": [
+        "隐形人",
+        "隐形人机场"
+      ]
     },
     {
       "id": "breezenet",

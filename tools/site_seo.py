@@ -37,8 +37,8 @@ def apply_site_seo(root):
         metadata[file]=dict(title=title if title.endswith(SUFFIX) else title+SUFFIX,
                             description=shorten(description),keywords=list(dict.fromkeys(keywords)),kind=kind,published_on=published)
     put('index.html','机场推荐与VPN推荐｜套餐对比、节点记录与Clash指南',
-        '叮当观察提供机场推荐、梯子推荐、VPN推荐与节点选择指南，整理隐形人等8个品牌的套餐和已提供的优惠、客户端与使用资料。飞v、梯子云、浪网各9款套餐分别展示，节点记录注明采样条件。通过机场测评、性价比机场、便宜机场推荐、Clash机场和稳定性专题，核对预算、售后与实际表现。',
-        ['机场推荐','梯子推荐','VPN推荐','机场测评','性价比机场','机场节点','Clash机场','稳定机场'],'WebSite')
+        '叮当观察提供机场推荐、梯子推荐、VPN推荐与节点选择指南。本站主推隐形人，整理隐形人机场套餐、优惠、客户端与使用资料，并收录其他7个品牌。通过机场测评、性价比机场、便宜机场推荐和Clash机场专题，核对预算、售后、节点记录与实际任务反馈。',
+        ['机场推荐','梯子推荐','VPN推荐','机场测评','性价比机场','机场节点','Clash机场','稳定机场','隐形人','隐形人机场'],'WebSite')
     put('blog.html','机场推荐与VPN文章｜节点、测评、性价比及Clash指南',
         '浏览叮当观察84篇独立文章，围绕机场推荐、梯子推荐、VPN推荐、机场节点、机场测评、性价比与Clash机场开展阅读。支持关键词搜索和12类专题筛选，查看五品牌报价表、优惠例外、退款条件与真实记录的适用范围。',
         ['机场推荐','梯子推荐','VPN推荐','机场测评','便宜机场推荐','Clash机场'],'CollectionPage')
@@ -50,9 +50,9 @@ def apply_site_seo(root):
         ['机场推荐','VPN推荐','机场节点','便宜机场','Clash机场','机场FAQ'],'CollectionPage')
     put('brands.html','机场品牌目录｜8个品牌入口与套餐资料',
         '浏览叮当观察8个品牌入口与套餐资料：隐形人独立主推，微风、飞猫、暮光和灵动保留各自资料；飞v、梯子云与浪网各9款套餐分别列出，梯子云50节点、浪网60节点记录注明采样条件。查看已提供的优惠、客户端与售后说明，主推展示不作为同条件测速排名。',
-        ['机场推荐','机场品牌','隐形人机场','性价比机场','机场测评资料'],'CollectionPage')
+        ['机场推荐','机场品牌','隐形人','隐形人机场','性价比机场','机场测评资料'],'CollectionPage')
     brand_specs=[
-      ('yinxingren','隐形人机场怎么样｜IEPL套餐、优惠码与节点记录','隐形人机场品牌页整理IEPL专线、9款套餐与yxr888八折优惠，包括109元年付、80GB每30天刷新方案。查看Windows、macOS、安卓及iOS使用流程、流量重置、退款条件、晚高峰延迟与ChatGPT使用反馈。',['隐形人机场','机场推荐','IEPL专线','机场节点','机场套餐']),
+      ('yinxingren','隐形人｜隐形人机场IEPL套餐、优惠码与节点记录','隐形人（Invisible Network）品牌资料，汇总隐形人机场的IEPL专线、9款套餐与yxr888八折优惠，包括109元年付、80GB每30天刷新方案。查看Windows、macOS、安卓及iOS教程、流量规则、退款条件、晚高峰延迟与ChatGPT反馈。',['隐形人','隐形人机场','隐形人套餐','隐形人优惠码','yxr888','机场推荐','IEPL专线','机场节点','机场套餐']),
       ('breezenet','微风网络机场资料｜套餐价格、节点与使用教程','微风网络Breezenet资料汇总6款套餐、IPLC与原生IP说明、weifeng90九折优惠及客户端教程。查看清风100GB年付方案、月付与一次性总流量、上海电信午间节点记录、ChatGPT反馈和技术问题退款条件。',['微风网络','机场推荐','性价比机场','机场节点']),
       ('feimaoyun','飞猫云机场测评资料｜学生年付、套餐与节点记录','飞猫云页面整理IPLC线路、7款套餐与flycat888九折规则，学生版84元年付不参与该优惠。核对月度和一次性流量、Windows与移动端教程、晚高峰节点延迟、ChatGPT反馈及购买后24小时内技术问题退款条件。',['飞猫云','机场测评','便宜机场','机场节点']),
       ('muguang','暮光网络机场｜IPLC套餐、节点记录与客户端教程','暮光网络介绍汇总9款套餐、IPLC专线、节点地区与暮光加速客户端教程，iOS使用Nextin识别码mgjs。查看年付轻量版、月付和不限时流量包、上海电信上午节点记录、ChatGPT反馈与技术问题退款条件。',['暮光网络','机场推荐','IPLC专线','机场节点']),
@@ -119,6 +119,8 @@ def apply_site_seo(root):
         for attr,name,value in [('property','og:title',m['title']),('property','og:description',m['description']),('property','og:url',url),('property','og:type','article' if m['kind']=='Article' else 'website'),('name','twitter:card','summary'),('name','twitter:title',m['title']),('name','twitter:description',m['description'])]:
             tags+='<meta '+attr+'="'+name+'" content="'+e(value,quote=True)+'">'
         structured={'@context':'https://schema.org','@type':m['kind'],'name':m['title'],'description':m['description'],'url':url,'inLanguage':'zh-CN'}
+        if path.name=='brand-yinxingren.html':
+            structured['about']={'@type':'Brand','name':'隐形人','alternateName':'Invisible Network'}
         if m['kind']=='Article':
             article=articlemap[path.stem.removeprefix('article-')]
             structured.update(headline=article['title'],datePublished=m['published_on'],author={'@type':'Organization','name':'叮当观察'},mainEntityOfPage=url)

@@ -21,10 +21,10 @@ def build_home_feature(root):
     entry = 'https://varnexa.invisibleaff.com/#/?code=JF4seZUy'
     card = f'''<aside class="home-invisible-feature" id="home-invisible-feature" aria-labelledby="home-invisible-title">
 <div class="home-feature-top" id="featured-brand"><span class="featured-label">本站主推</span><span>INVISIBLE NETWORK</span></div>
-<a class="home-feature-brand" href="brand-yinxingren.html"><span class="home-feature-logo invisible-brand-logo"><img class="invisible-logo-image" src="assets/invisible-network-logo.jpg" width="512" height="512" alt="隐形人机场Logo" decoding="async"></span><div><h2 id="home-invisible-title">隐形人机场</h2><p>IEPL专线 · 多设备连接</p></div></a>
+<a class="home-feature-brand" href="brand-yinxingren.html"><span class="home-feature-logo invisible-brand-logo"><img class="invisible-logo-image" src="assets/invisible-network-logo.jpg" width="512" height="512" alt="隐形人Logo" decoding="async"></span><div><h2 id="home-invisible-title">隐形人</h2><p>IEPL专线 · 多设备连接</p></div></a>
 <div class="home-feature-plan"><p class="home-feature-plan-label">推荐年付套餐</p><h3>{e(plan['name'])}</h3><div class="home-feature-offer"><div class="home-feature-quota"><strong>{plan['traffic_gb']}<small>GB</small></strong><span>每30天刷新</span></div><div class="home-feature-price"><span>八折后 · 年付折算</span><div><small>¥</small><strong>{monthly:.2f}</strong><span>/月</span></div></div></div><p class="home-feature-annual"><span>原价 <s>¥{plan['price']}/年</s></span><span>券后实付 <b>¥{annual:.2f}/年</b></span></p></div>
 <div class="home-feature-coupon" data-home-coupon><div class="home-feature-coupon-row"><div><label for="home-invisible-coupon">八折优惠码</label><input id="home-invisible-coupon" value="{e(coupon['code'],quote=True)}" readonly aria-label="隐形人八折优惠码"></div><button type="button" aria-label="复制首页隐形人优惠码">复制</button></div><p>全部套餐适用 · 无到期限制</p><span class="home-feature-copy-status" role="status" aria-live="polite"></span></div>
-<div class="home-feature-actions"><a class="btn" href="brand-yinxingren.html">了解隐形人机场 <span aria-hidden="true">→</span></a><a href="{entry}" target="_blank" rel="sponsored noopener noreferrer">前往官网 <span aria-hidden="true">↗</span></a></div>
+<div class="home-feature-actions"><a class="btn" href="brand-yinxingren.html">了解隐形人 <span aria-hidden="true">→</span></a><a href="{entry}" target="_blank" rel="sponsored noopener noreferrer">前往官网 <span aria-hidden="true">↗</span></a></div>
 <p class="home-feature-note">按年付款，每月金额为折算值；结算时填写优惠码。</p>
 </aside>'''
     path = root / 'index.html'

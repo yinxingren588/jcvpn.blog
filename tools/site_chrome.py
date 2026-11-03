@@ -41,7 +41,7 @@ def header(current):
 def footer():
     groups = [
         ('探索内容', [('topics.html', '博客专题'), ('blog.html', '全部文章'), ('faq.html', '常见问题 FAQ'), ('topic-basics.html', 'VPN 入门指南')]),
-        ('品牌与记录', [('brands.html', '全部品牌介绍'), ('brand-yinxingren.html', '隐形人机场'), ('brand-yinxingren.html#invisible-plans', '套餐与流量选择'), ('brand-yinxingren.html#peak-latency', '晚高峰延迟记录')]),
+        ('品牌与记录', [('brands.html', '全部品牌介绍'), ('brand-yinxingren.html', '隐形人'), ('brand-yinxingren.html#invisible-plans', '套餐与流量选择'), ('brand-yinxingren.html#peak-latency', '晚高峰延迟记录')]),
         ('认识本站', [('about.html', '关于叮当观察'), ('contact.html', '联系我们'), ('about.html#editorial-principles', '内容来源与编辑原则'), ('article-promotion-disclosure.html', '推广关系怎么看')])
     ]
     columns = ''.join('<nav class="footer-column" aria-label="' + title + '"><h3>' + title + '</h3><ul>' + ''.join('<li><a href="' + url + '">' + label + '</a></li>' for url, label in links) + '</ul></nav>' for title, links in groups)
