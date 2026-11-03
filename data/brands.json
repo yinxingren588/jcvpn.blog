@@ -199,7 +199,8 @@
       "coverage_path": "data/tiziyun-coverage.json",
       "latency_path": "data/tiziyun-latency.json",
       "plans_path": "data/tiziyun-plans.json",
-      "provided_plan_count": 9
+      "provided_plan_count": 9,
+      "clients_path": "data/tiziyun-clients.json"
     },
     {
       "id": "langwang",

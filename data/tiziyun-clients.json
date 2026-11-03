@@ -1,0 +1,95 @@
+{
+  "brand_id": "tiziyun",
+  "confirmed_on": "2026-11-03",
+  "source": "博客站长逐项确认的梯子云客户端资料",
+  "independently_verified": false,
+  "collection_status": "basic_flows_confirmed",
+  "platforms": {
+    "windows": {
+      "platform": "Windows",
+      "name": "梯子云",
+      "name_confirmed_on": "2026-11-03",
+      "development": null,
+      "download_entry": "官网首页直接下载",
+      "download_confirmed_on": "2026-11-03",
+      "version": null,
+      "system_requirements": null,
+      "login_method": "使用梯子云官网注册的账号登录",
+      "login_confirmed_on": "2026-11-03",
+      "connection_steps": [
+        {"title": "下载客户端", "description": "从梯子云官网首页直接下载Windows版梯子云客户端。"},
+        {"title": "登录账号", "description": "打开客户端，使用梯子云官网注册的账号登录。"},
+        {"title": "选择节点", "description": "在客户端节点列表中选择准备使用的节点。"},
+        {"title": "点击连接", "description": "选择节点后点击连接，即可开始使用。"}
+      ],
+      "connection_confirmed_on": "2026-11-03"
+    },
+    "macos": {
+      "platform": "macOS",
+      "name": "梯子云",
+      "name_confirmed_on": "2026-11-03",
+      "development": null,
+      "download_entry": "官网首页直接下载",
+      "download_confirmed_on": "2026-11-03",
+      "version": null,
+      "system_requirements": null,
+      "login_method": "使用梯子云官网注册的账号登录",
+      "login_confirmed_on": "2026-11-03",
+      "connection_steps": [
+        {"title": "下载客户端", "description": "从梯子云官网首页直接下载macOS版梯子云客户端。"},
+        {"title": "登录账号", "description": "打开客户端，使用梯子云官网注册的账号登录。"},
+        {"title": "选择节点", "description": "在客户端节点列表中选择准备使用的节点。"},
+        {"title": "点击连接", "description": "选择节点后点击连接，即可开始使用。"}
+      ],
+      "connection_confirmed_on": "2026-11-03"
+    },
+    "android": {
+      "platform": "Android",
+      "name": "梯子云",
+      "name_confirmed_on": "2026-11-03",
+      "development": null,
+      "download_entry": "官网首页直接下载",
+      "download_confirmed_on": "2026-11-03",
+      "version": null,
+      "system_requirements": null,
+      "login_method": "使用梯子云官网注册的账号登录",
+      "login_confirmed_on": "2026-11-03",
+      "connection_steps": [
+        {"title": "下载客户端", "description": "从梯子云官网首页直接下载安卓版梯子云客户端。"},
+        {"title": "登录账号", "description": "打开客户端，使用梯子云官网注册的账号登录。"},
+        {"title": "选择节点", "description": "在客户端节点列表中选择准备使用的节点。"},
+        {"title": "点击连接", "description": "选择节点后点击连接，即可开始使用。"}
+      ],
+      "connection_confirmed_on": "2026-11-03"
+    },
+    "ios": {
+      "platform": "iOS",
+      "collection_status": "basic_flow_confirmed",
+      "name": "Nextin",
+      "name_confirmed_on": "2026-11-03",
+      "identifier": "tzy",
+      "identifier_confirmed_on": "2026-11-03",
+      "download_entry": "使用海外Apple ID在App Store下载Nextin",
+      "download_confirmed_on": "2026-11-03",
+      "version": null,
+      "system_requirements": null,
+      "login_method": "填写品牌识别码tzy后，使用梯子云官网注册的账号登录",
+      "login_confirmed_on": "2026-11-03",
+      "connection_steps": [
+        {"title": "下载Nextin", "description": "使用海外Apple ID，在App Store下载Nextin。"},
+        {"title": "填写品牌识别码", "description": "打开Nextin，填写梯子云品牌识别码tzy。"},
+        {"title": "登录官网账号", "description": "填写识别码后，使用梯子云官网注册的账号登录。"},
+        {"title": "选择节点", "description": "在节点列表中选择准备使用的节点。"},
+        {"title": "点击连接", "description": "选择节点后点击连接，即可开始使用。"}
+      ],
+      "connection_confirmed_on": "2026-11-03"
+    }
+  },
+  "notes": [
+    "Windows版梯子云客户端名称此前已随节点采样条件确认；现已另行确认下载入口为官网首页直接下载。",
+    "Windows、macOS和安卓基础流程均已确认：从官网首页下载梯子云客户端，使用官网账号登录，选择节点后点击连接。",
+    "iOS完整流程已确认：使用海外Apple ID在App Store下载Nextin，填写品牌识别码tzy，使用梯子云官网账号登录，选择节点后点击连接。iOS客户端名称按站长更正后的Nextin保存。",
+    "Windows、macOS和安卓客户端的自研属性尚未确认。",
+    "不沿用其他品牌的客户端、账号规则、iOS识别码或使用流程。"
+  ]
+}
