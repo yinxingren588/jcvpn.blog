@@ -1,0 +1,469 @@
+{
+  "brand_id": "langwang",
+  "brand_name": "浪网 WaveNet",
+  "provided_on": "2026-11-03",
+  "source": "站长提供的2张浪网套餐截图及年付流量、定制价格更正确认",
+  "source_screenshot_count": 2,
+  "source_card_count": 12,
+  "source_unique_plan_count": 9,
+  "duplicate_card_count": 3,
+  "original_images_published": false,
+  "independently_verified": false,
+  "currency": "CNY",
+  "catalog_complete_confirmed": true,
+  "collection_status": "core_plan_quotes_and_terms_confirmed",
+  "entry_url": "https://varnexa.wavenetaff.com/#/?code=j468t9eF",
+  "plans": [
+    {
+      "id": "annual-standard",
+      "name": "浪网 年付标准",
+      "kind": "annual",
+      "price_cny": 119,
+      "price_status": "screenshot_quote",
+      "payment_unit": "年",
+      "traffic_display": "80GB",
+      "traffic_gb": 80,
+      "quota_scope": "每30天额度",
+      "available_cycles": [
+        "年付"
+      ],
+      "other_cycles_status": "未提供",
+      "device_limit_display": "不限",
+      "line_in_materials": "全IPLC专线",
+      "speed_policy_in_materials": "详情标注晚高峰不限速",
+      "traffic_multiplier": 1,
+      "features": [
+        "按年购买，购买日起算，每30天自动刷新流量。",
+        "详情列单节点峰值最高2.5Gbps，属于套餐说明，未提供对应带宽测试记录。",
+        "详情列原生IP、Netflix、Disney+、ChatGPT与TikTok等使用方向。",
+        "详情标注不限制同时使用的客户端数量。"
+      ],
+      "source_screenshots": [
+        1
+      ],
+      "source_positions": [
+        {
+          "screenshot": 1,
+          "row": 1,
+          "column": 1,
+          "visible_extent": "full_card"
+        }
+      ],
+      "subscription_months": 12,
+      "reset_rule": "购买日起算，每30天刷新80GB；流量额度由站长另行确认为80GB。",
+      "traffic_confirmed_on": "2026-11-03",
+      "traffic_confirmation_source": "站长针对80GB与60GB冲突明确采用80GB",
+      "traffic_quotes_in_materials": {
+        "headline_gb": 80,
+        "detail_gb": 60
+      },
+      "monthly_budget_claim_in_materials_cny": 8,
+      "monthly_budget_note": "截图约8元/月的宣传口径不直接用于预算；119元年费除以12约为9.92元/月，优惠资料未提供。",
+      "line_type_confirmation_status": "owner_confirmed",
+      "coverage_claim_in_materials": "香港×20、台湾×10、日本×10、新加坡×10、美国×10、韩国×2、阿根廷×2、马来西亚、越南、菲律宾、泰国、印度、德国、法国、英国等。",
+      "coverage_claim_status": "current_coverage_uses_owner_confirmed_60_node_snapshot",
+      "line_type": "IPLC",
+      "line_type_confirmed_on": "2026-11-03",
+      "line_confirmation_source": "站长确认年付标准的全IPLC说明准确，应按该套餐单独保留",
+      "coverage_confirmation_source": "站长确认当前覆盖以完整截图中的五地区60个节点为准",
+      "coverage_confirmed_on": "2026-11-03",
+      "effective_coverage_path": "data/langwang-coverage.json"
+    },
+    {
+      "id": "entry",
+      "name": "浪网 入门",
+      "kind": "monthly",
+      "price_cny": 30,
+      "price_status": "screenshot_quote",
+      "payment_unit": "月",
+      "traffic_display": "150GB",
+      "traffic_gb": 150,
+      "quota_scope": "每月额度",
+      "available_cycles": [
+        "月付"
+      ],
+      "other_cycles_status": "未提供",
+      "device_limit_display": "不限",
+      "line_in_materials": "BGP多线路智能调度与专线级出口架构",
+      "speed_policy_in_materials": "详情标注全程不限速",
+      "traffic_multiplier": 1,
+      "features": [
+        "资料面向日常网页、社交浏览及流媒体使用方向。",
+        "详情列Netflix、Hulu、HBO、Disney+与DAZN等平台，以及4K/8K资源方向。",
+        "详情列ChatGPT、Claude等AI与开发工具访问方向。",
+        "详情写明Shadowsocks协议，不限制同时在线设备数量。"
+      ],
+      "source_screenshots": [
+        1
+      ],
+      "source_positions": [
+        {
+          "screenshot": 1,
+          "row": 1,
+          "column": 2,
+          "visible_extent": "full_card"
+        }
+      ],
+      "reset_rule": "每月150GB；具体刷新日期与未用额度处理未提供。"
+    },
+    {
+      "id": "advanced",
+      "name": "浪网 进阶",
+      "kind": "monthly",
+      "price_cny": 70,
+      "price_status": "screenshot_quote",
+      "payment_unit": "月",
+      "traffic_display": "400GB",
+      "traffic_gb": 400,
+      "quota_scope": "每月额度",
+      "available_cycles": [
+        "月付"
+      ],
+      "other_cycles_status": "未提供",
+      "device_limit_display": null,
+      "line_in_materials": "BGP三网智能优化与纯专线出口",
+      "speed_policy_in_materials": "详情标注不限速使用",
+      "traffic_multiplier": 1,
+      "features": [
+        "资料面向日常办公、网页浏览及中等频率视频使用。",
+        "详情列4K流媒体与AI平台支持方向，未提供对应任务验证记录。"
+      ],
+      "source_screenshots": [
+        1
+      ],
+      "source_positions": [
+        {
+          "screenshot": 1,
+          "row": 1,
+          "column": 3,
+          "visible_extent": "full_card"
+        }
+      ],
+      "reset_rule": "每月400GB；具体刷新日期与未用额度处理未提供。"
+    },
+    {
+      "id": "high-end",
+      "name": "浪网 高端",
+      "kind": "monthly",
+      "price_cny": 120,
+      "price_status": "screenshot_quote",
+      "payment_unit": "月",
+      "traffic_display": "800GB",
+      "traffic_gb": 800,
+      "quota_scope": "每月额度",
+      "available_cycles": [
+        "月付"
+      ],
+      "other_cycles_status": "未提供",
+      "device_limit_display": null,
+      "line_in_materials": "BGP多线路融合调度与专线级网络出口",
+      "speed_policy_in_materials": null,
+      "traffic_multiplier": 1,
+      "features": [
+        "每月800GB，资料面向高频网络使用、流媒体、下载与远程办公。",
+        "详情标注三网智能优化、纯专线出口与节点统一1×计费。"
+      ],
+      "source_screenshots": [
+        1,
+        2
+      ],
+      "source_positions": [
+        {
+          "screenshot": 1,
+          "row": 2,
+          "column": 1,
+          "visible_extent": "header_and_partial_details"
+        },
+        {
+          "screenshot": 2,
+          "row": 1,
+          "column": 1,
+          "visible_extent": "full_card"
+        }
+      ],
+      "reset_rule": "每月800GB；具体刷新日期与未用额度处理未提供。"
+    },
+    {
+      "id": "business",
+      "name": "浪网 商业",
+      "kind": "monthly",
+      "price_cny": 200,
+      "price_status": "screenshot_quote",
+      "payment_unit": "月",
+      "traffic_display": "2.0TB",
+      "traffic_gb": 2000,
+      "quota_scope": "每月额度",
+      "available_cycles": [
+        "月付"
+      ],
+      "other_cycles_status": "未提供",
+      "device_limit_display": null,
+      "line_in_materials": "企业级BGP智能路由与专线出口方案",
+      "speed_policy_in_materials": "详情标注全程不限速",
+      "traffic_multiplier": null,
+      "features": [
+        "顶部标为2.0TB，详情同时写明2000GB，面向团队、长时间在线和高并发访问方向。",
+        "详情标注节点流量不放大，保留该原文口径。",
+        "资料列流媒体与内容平台及4K/8K播放方向，未提供对应实际播放记录。"
+      ],
+      "source_screenshots": [
+        1,
+        2
+      ],
+      "source_positions": [
+        {
+          "screenshot": 1,
+          "row": 2,
+          "column": 2,
+          "visible_extent": "header_and_partial_details"
+        },
+        {
+          "screenshot": 2,
+          "row": 1,
+          "column": 2,
+          "visible_extent": "full_card"
+        }
+      ],
+      "detail_traffic_gb_in_materials": 2000,
+      "reset_rule": "每月2.0TB；详情另写2000GB，具体刷新日期与未用额度处理未提供。"
+    },
+    {
+      "id": "once-small",
+      "name": "浪网 小流量包",
+      "kind": "one_time",
+      "price_cny": 239,
+      "price_status": "screenshot_quote",
+      "payment_unit": "一次性",
+      "traffic_display": "180GB",
+      "traffic_gb": 180,
+      "quota_scope": "整包总流量",
+      "available_cycles": [
+        "一次性"
+      ],
+      "other_cycles_status": "未提供",
+      "device_limit_display": "1台设备",
+      "line_in_materials": null,
+      "speed_policy_in_materials": null,
+      "traffic_multiplier": null,
+      "features": [
+        "一次性购买180GB总流量，不限时，用完即止，不按月补充。",
+        "本卡说明另列独立IP不共享、专人维护与TikTok使用方向，按该卡资料保留。",
+        "详情标注标准日常带宽，限1台设备。"
+      ],
+      "source_screenshots": [
+        1,
+        2
+      ],
+      "source_positions": [
+        {
+          "screenshot": 1,
+          "row": 2,
+          "column": 3,
+          "visible_extent": "header_and_partial_details"
+        },
+        {
+          "screenshot": 2,
+          "row": 1,
+          "column": 3,
+          "visible_extent": "full_card"
+        }
+      ],
+      "reset_rule": "180GB整包总流量，不限时，用完即止，不按月补充。",
+      "quota_header_label_in_materials": "月流量",
+      "expiry_in_materials": null,
+      "independent_ip_claim_in_materials": true,
+      "quota_scope_confirmed_on": "2026-11-03",
+      "expiry_policy": "不限时，用完即止",
+      "expiry_confirmed_on": "2026-11-03",
+      "refreshes_monthly": false
+    },
+    {
+      "id": "once-standard",
+      "name": "浪网 标准流量包",
+      "kind": "one_time",
+      "price_cny": 569,
+      "price_status": "screenshot_quote",
+      "payment_unit": "一次性",
+      "traffic_display": "450GB",
+      "traffic_gb": 450,
+      "quota_scope": "整包总流量",
+      "available_cycles": [
+        "一次性"
+      ],
+      "other_cycles_status": "未提供",
+      "device_limit_display": "2台同时在线",
+      "line_in_materials": null,
+      "speed_policy_in_materials": null,
+      "traffic_multiplier": null,
+      "features": [
+        "一次性购买450GB总流量，不限时，用完即止，不按月补充。",
+        "详情写明可两台设备同时在线。"
+      ],
+      "source_screenshots": [
+        2
+      ],
+      "source_positions": [
+        {
+          "screenshot": 2,
+          "row": 2,
+          "column": 1,
+          "visible_extent": "full_card"
+        }
+      ],
+      "reset_rule": "450GB整包总流量，不限时，用完即止，不按月补充。",
+      "quota_header_label_in_materials": "月流量",
+      "expiry_in_materials": "永不限时，用完即止",
+      "quota_scope_confirmed_on": "2026-11-03",
+      "expiry_policy": "不限时，用完即止",
+      "expiry_confirmed_on": "2026-11-03",
+      "refreshes_monthly": false
+    },
+    {
+      "id": "once-elite",
+      "name": "浪网 精英流量包",
+      "kind": "one_time",
+      "price_cny": 1099,
+      "price_status": "screenshot_quote",
+      "payment_unit": "一次性",
+      "traffic_display": "900GB",
+      "traffic_gb": 900,
+      "quota_scope": "整包总流量",
+      "available_cycles": [
+        "一次性"
+      ],
+      "other_cycles_status": "未提供",
+      "device_limit_display": null,
+      "line_in_materials": null,
+      "speed_policy_in_materials": null,
+      "traffic_multiplier": null,
+      "features": [
+        "一次性购买900GB总流量，不限时，用完即止，不按月补充。",
+        "资料面向商务与工作室等使用方向，具体设备数量尚未提供。"
+      ],
+      "source_screenshots": [
+        2
+      ],
+      "source_positions": [
+        {
+          "screenshot": 2,
+          "row": 2,
+          "column": 2,
+          "visible_extent": "full_card"
+        }
+      ],
+      "reset_rule": "900GB整包总流量，不限时，用完即止，不按月补充。",
+      "quota_header_label_in_materials": "月流量",
+      "expiry_in_materials": "没有时间限制",
+      "quota_scope_confirmed_on": "2026-11-03",
+      "expiry_policy": "不限时，用完即止",
+      "expiry_confirmed_on": "2026-11-03",
+      "refreshes_monthly": false
+    },
+    {
+      "id": "custom-line",
+      "name": "浪网 定制线路包",
+      "kind": "custom",
+      "price_cny": 680,
+      "price_status": "owner_confirmed",
+      "payment_unit": "月",
+      "traffic_display": "500GB",
+      "traffic_gb": 500,
+      "quota_scope": "每月额度",
+      "available_cycles": [
+        "月付"
+      ],
+      "other_cycles_status": "未提供",
+      "device_limit_display": null,
+      "line_in_materials": "详情列私人独享专线节点与独立公网IP",
+      "speed_policy_in_materials": null,
+      "traffic_multiplier": null,
+      "features": [
+        "每月500GB独享流量，详情列独立公网IP、专线独享与独占带宽。",
+        "资料列直播、短视频上传及TikTok等业务方向。",
+        "详情写明专人技术维护，下单后约2—3个工作日交付。"
+      ],
+      "source_screenshots": [
+        2
+      ],
+      "source_positions": [
+        {
+          "screenshot": 2,
+          "row": 2,
+          "column": 3,
+          "visible_extent": "full_card"
+        }
+      ],
+      "headline_price_cny": 680,
+      "detail_price_cny": 600,
+      "reset_rule": "每月500GB；具体刷新日期与未用额度处理未提供。",
+      "native_ip_status": null,
+      "residential_ip_status": null,
+      "estimated_delivery_workdays": [
+        2,
+        3
+      ],
+      "price_confirmed_on": "2026-11-03",
+      "price_confirmation_source": "站长针对680元与600元冲突明确采用680元/月"
+    }
+  ],
+  "resolved_confirmations": [
+    {
+      "id": "annual-traffic",
+      "value_gb": 80,
+      "confirmed_on": "2026-11-03",
+      "source": "站长明确采用80GB，保留截图60GB异文供来源核对"
+    },
+    {
+      "id": "custom-price",
+      "value_cny": 680,
+      "payment_unit": "月",
+      "confirmed_on": "2026-11-03",
+      "source": "站长明确采用680元/月，保留截图600元异文供来源核对"
+    },
+    {
+      "id": "catalog-completeness",
+      "confirmed_total": 9,
+      "confirmed_on": "2026-11-03",
+      "source": "站长确认两张截图包含当前全部9款套餐"
+    },
+    {
+      "id": "annual-iplc-versus-brand-bgp",
+      "value": "IPLC",
+      "scope_plan_id": "annual-standard",
+      "confirmed_on": "2026-11-03",
+      "source": "站长确认年付标准单独标注IPLC"
+    },
+    {
+      "id": "annual-extra-regions-versus-confirmed-60-node-list",
+      "basis": "complete_node_screenshots",
+      "confirmed_node_count": 60,
+      "confirmed_region_count": 5,
+      "confirmed_on": "2026-11-03",
+      "source": "站长确认当前覆盖以截图中的五地区60个节点为准"
+    },
+    {
+      "id": "one-time-total-quota-and-expiry",
+      "plan_ids": [
+        "once-small",
+        "once-standard",
+        "once-elite"
+      ],
+      "quota_scope": "整包总流量",
+      "unlimited_time": true,
+      "refreshes_monthly": false,
+      "confirmed_on": "2026-11-03",
+      "source": "站长确认180GB、450GB、900GB均为不限时总流量，用完即止，不按月补充"
+    }
+  ],
+  "pending_confirmations": [],
+  "notes": [
+    "两张图有3款重复展示，共9款不同套餐；站长已确认这9款为当前完整套餐列表。",
+    "119元年付标准流量按站长确认为80GB，购买日起算每30天刷新；详情60GB为截图异文，不作为当前额度。",
+    "定制线路包最终采用站长确认的680元/月；详情600元为截图异文，原值保留在来源字段。",
+    "年付标准单独标注IPLC；当前覆盖按站长确认的五地区60节点截图整理，年付详情中的额外地区文字保留为来源原文。",
+    "三款一次性流量包按站长确认为180GB、450GB、900GB整包总流量，不限时、用完即止，不按月补充；原图统一的月流量标签保留为来源字段。",
+    "仅记录截图可见付款单位，不沿用其他品牌的季付、半年付、年付报价、设备数量或优惠规则。"
+  ],
+  "catalog_complete_confirmed_on": "2026-11-03",
+  "reported_plan_count": 9
+}

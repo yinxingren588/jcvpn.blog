@@ -1,0 +1,46 @@
+{
+  "brand_id": "langwang",
+  "brand": "浪网 WaveNet",
+  "confirmed_on": "2026-11-03",
+  "source": "站长提供的6张节点截图，并确认其为完整60节点列表",
+  "independently_verified": false,
+  "collection_status": "regions_and_counts_confirmed",
+  "coverage_scope": "站长确认的本批完整节点列表",
+  "region_count": 5,
+  "total_node_count": 60,
+  "regions": [
+    {
+      "id": "hk",
+      "name": "香港",
+      "node_count": 20
+    },
+    {
+      "id": "tw",
+      "name": "台湾",
+      "node_count": 10
+    },
+    {
+      "id": "jp",
+      "name": "日本",
+      "node_count": 10
+    },
+    {
+      "id": "sg",
+      "name": "新加坡",
+      "node_count": 10
+    },
+    {
+      "id": "us",
+      "name": "美国",
+      "node_count": 10
+    }
+  ],
+  "source_snapshot_path": "data/langwang-latency.json",
+  "notes": [
+    "香港20个，台湾、日本、新加坡、美国各10个，共60个；按截图可辨识节点名称逐个统计。",
+    "完整性确认日期与截图采样日期分别记录；本批59条有数值，台湾04保留为超时。",
+    "年付详情另列韩国、阿根廷等地区；站长确认当前覆盖以截图为准，当前覆盖表按五地区60节点整理。"
+  ],
+  "current_coverage_basis": "站长另行确认当前覆盖以本批五地区60节点完整截图为准",
+  "current_coverage_basis_confirmed_on": "2026-11-03"
+}

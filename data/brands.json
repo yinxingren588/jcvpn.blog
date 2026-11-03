@@ -212,11 +212,19 @@
       "mark": "浪",
       "url": "https://varnexa.wavenetaff.com/#/?code=j468t9eF",
       "profile_path": "brand-langwang.html",
-      "profile_status": "entry_confirmed_details_pending",
-      "source_type": "博客站长提供并确认的品牌名及推广入口",
-      "source_date": "2026-11-02",
-      "verification_status": "entry_confirmed_details_pending",
-      "commercial_relationship": "推广入口；具体合作条件未提供"
+      "profile_status": "plans_overview_and_node_records_provided_more_details_pending",
+      "source_type": "博客站长提供并逐项确认的浪网品牌、9款套餐、BGP与年付IPLC说明、完整60节点截图及采样条件",
+      "source_date": "2026-11-03",
+      "verification_status": "plans_overview_and_node_records_provided_more_details_pending",
+      "commercial_relationship": "推广入口；具体合作条件未提供",
+      "materials_updated_on": "2026-11-03",
+      "materials_source": "博客站长提供并逐项确认的浪网品牌、9款套餐、BGP与年付IPLC说明、完整60节点截图及采样条件",
+      "overview_path": "data/langwang-overview.json",
+      "latency_path": "data/langwang-latency.json",
+      "coverage_path": "data/langwang-coverage.json",
+      "provided_plan_count": 9,
+      "plans_path": "data/langwang-plans.json",
+      "node_profile_ready": true
     }
   ],
   "updated_on": "2026-11-03"

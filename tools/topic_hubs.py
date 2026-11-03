@@ -47,6 +47,16 @@ def hub_tables(root, source_tables, brands):
     latency.append(['梯子云',time_label(ladder),ladder['location']+ladder['isp']+' · '+ladder['client'],
                     str(ls['node_count']),str(ls['response_count'])+' / '+str(ls['timeout_count']),
                     str(ls['min_ms'])+' / '+format(ls['median_ms'],'g')+' / '+str(ls['max_ms'])])
+    wave_path=Path(root)/'data/langwang-latency.json'
+    if wave_path.exists():
+        wave=json.loads(wave_path.read_text(encoding='utf-8'))
+        if wave['collection_status']=='core_context_confirmed':
+            from langwang_nodes import validate_snapshot as validate_wave, time_label as wave_time_label
+            validate_wave(wave)
+            ws=wave['summary']
+            latency.append(['浪网',wave_time_label(wave),wave['location']+wave['isp']+' · '+wave['client'],
+                            str(ws['node_count']),str(ws['response_count'])+' / '+str(ws['timeout_count']),
+                            str(ws['min_ms'])+' / '+format(ws['median_ms'],'g')+' / '+str(ws['max_ms'])])
     latency.append([brands[4][0],'尚未提供','尚未提供','—','—','—'])
     flyv_access=json.loads((Path(root)/'data/feiv-access-records.json').read_text(encoding='utf-8'))
     from flyv_access import access_record

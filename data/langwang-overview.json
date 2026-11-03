@@ -1,0 +1,73 @@
+{
+  "brand_id": "langwang",
+  "brand_name": "浪网 WaveNet",
+  "updated_on": "2026-11-03",
+  "source": "博客站长逐项确认的浪网品牌资料",
+  "independently_verified": false,
+  "collection_status": "core_description_coverage_and_snapshot_confirmed",
+  "entry_url": "https://varnexa.wavenetaff.com/#/?code=j468t9eF",
+  "provided_description": "浪网（WaveNet）是专注于高速国际互联网连接的成熟高品质加速服务商。拥有优质的 BGP 智能多线入口与专线中继互联，晚高峰实测表现平稳，广泛适配 4K 流媒体流畅播放、TikTok 跨境运营与 AI 生产力工具交互。",
+  "description_provided_on": "2026-11-03",
+  "editorial_description": "浪网 WaveNet 提供国际互联网连接服务，采用 BGP 智能多线入口与专线中继互联。品牌资料列出的使用方向包括 4K 流媒体、TikTok 跨境运营与 AI 生产力工具交互。",
+  "network": {
+    "line_type": "BGP",
+    "line_type_confirmed_on": "2026-11-03",
+    "line_description": "BGP 智能多线入口与专线中继互联",
+    "line_description_confirmed_on": "2026-11-03",
+    "protocol": "Shadowsocks（SS）",
+    "protocol_confirmed_on": "2026-11-03",
+    "plan_specific_line_notes": [
+      {
+        "plan_id": "annual-standard",
+        "description": "年付标准单独标注全IPLC专线，已由站长确认准确",
+        "source_screenshot": 1,
+        "confirmed_on": "2026-11-03"
+      }
+    ]
+  },
+  "features": [
+    "BGP 智能多线入口与专线中继互联",
+    "4K 流媒体播放",
+    "TikTok 跨境运营",
+    "AI 生产力工具交互"
+  ],
+  "features_source_type": "站长提供的品牌介绍，使用方向尚未由本站独立验证",
+  "performance_claims": [
+    {
+      "statement": "晚高峰实测表现平稳",
+      "source_context": "站长提供的浪网品牌介绍",
+      "independently_verified": false,
+      "related_records_provided": true,
+      "related_snapshot_path": "data/langwang-latency.json",
+      "evidence_status": "本批静态节点延迟截图采样于2026年11月3日12点，按小时提供，上海电信，Windows版浪网客户端；晚高峰及持续稳定性未由这些截图验证。"
+    }
+  ],
+  "notes": [
+    "已保存站长提供的浪网品牌介绍、BGP智能多线入口与专线中继互联说明；节点协议另已确认为Shadowsocks（SS）。",
+    "已收到并核对6张节点截图，站长确认完整60个节点；59条有数值，台湾04为超时，台湾01的1028ms等较高值按原样保留。",
+    "截图采样于2026年11月3日12点，按小时提供，上海电信，Windows版浪网客户端；日期、时段、环境与客户端均由站长逐项确认，版本与探测方法未提供。",
+    "4K、TikTok与AI使用方向按品牌说明归档，对应任务反馈继续逐项确认。",
+    "已确认完整9款套餐：年付119元、每30天80GB，年付标准单独标注IPLC；定制680元/月；三款买断为不限时总流量，当前覆盖以五地区60节点截图为准。客户端下载流程、优惠与售后等资料继续逐项补充。"
+  ],
+  "node_snapshot_path": "data/langwang-latency.json",
+  "coverage_path": "data/langwang-coverage.json",
+  "coverage_observations": {
+    "source_scope": "站长确认的6张完整节点列表截图",
+    "observed_regions": [
+      "香港",
+      "台湾",
+      "日本",
+      "新加坡",
+      "美国"
+    ],
+    "observed_node_count": 60,
+    "full_coverage_confirmed": true,
+    "confirmed_total_node_count": 60,
+    "completeness_confirmed_on": "2026-11-03",
+    "current_coverage_basis_confirmed_on": "2026-11-03"
+  },
+  "plans_path": "data/langwang-plans.json",
+  "provided_plan_count": 9,
+  "reported_plan_count": 9,
+  "plan_count_confirmed_on": "2026-11-03"
+}

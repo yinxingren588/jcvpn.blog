@@ -58,7 +58,7 @@ def audit():
         total_sections+=len(hub['sections'])
     # Validate that failure entries were not turned into zeroes or silently omitted.
     verified_records=0
-    for name in ('invisible','breezenet','feimaoyun','muguang','feiv','tiziyun'):
+    for name in ('invisible','breezenet','feimaoyun','muguang','feiv','tiziyun','langwang'):
         data=json.loads((ROOT/'data'/(name+'-latency.json')).read_text(encoding='utf-8'))
         records=data['records']
         verified_records+=len(records)
@@ -78,6 +78,10 @@ def audit():
     assert Decimal('199')*Decimal('.8')==Decimal('159.20')
     assert len(rendered_tables['hub-candidates'][1])==5
     assert rendered_tables['hub-latency'][1][-1][1]=='尚未提供'
+    assert len(rendered_tables['hub-latency'][1])==8
+    wave_latency=next(row for row in rendered_tables['hub-latency'][1] if row[0]=='浪网')
+    assert wave_latency[3:]==['60','59 / 1','50 / 169 / 1028']
+    assert '2026-11-03 12:00' in wave_latency[1] and '上海电信' in wave_latency[2]
     ai_rows=rendered_tables['hub-ai-records'][1]
     assert len(ai_rows)==7
     ladder_ai=next(row for row in ai_rows if row[0]=='梯子云')

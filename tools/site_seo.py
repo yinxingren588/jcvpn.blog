@@ -37,7 +37,7 @@ def apply_site_seo(root):
         metadata[file]=dict(title=title if title.endswith(SUFFIX) else title+SUFFIX,
                             description=shorten(description),keywords=list(dict.fromkeys(keywords)),kind=kind,published_on=published)
     put('index.html','机场推荐与VPN推荐｜套餐对比、节点记录与Clash指南',
-        '叮当观察提供机场推荐、梯子推荐、VPN推荐与节点选择指南，整理隐形人等五品牌的套餐、优惠与使用资料，另有飞v与梯子云各9款套餐、梯子云50节点记录及浪网入口。通过性价比机场、便宜机场推荐、Clash机场和稳定性专题，核对预算、客户端、售后条件与实际记录。',
+        '叮当观察提供机场推荐、梯子推荐、VPN推荐与节点选择指南，整理隐形人等8个品牌的套餐和已提供的优惠、客户端与使用资料。飞v、梯子云、浪网各9款套餐分别展示，节点记录注明采样条件。通过机场测评、性价比机场、便宜机场推荐、Clash机场和稳定性专题，核对预算、售后与实际表现。',
         ['机场推荐','梯子推荐','VPN推荐','机场测评','性价比机场','机场节点','Clash机场','稳定机场'],'WebSite')
     put('blog.html','机场推荐与VPN文章｜节点、测评、性价比及Clash指南',
         '浏览叮当观察84篇独立文章，围绕机场推荐、梯子推荐、VPN推荐、机场节点、机场测评、性价比与Clash机场开展阅读。支持关键词搜索和12类专题筛选，查看五品牌报价表、优惠例外、退款条件与真实记录的适用范围。',
@@ -49,7 +49,7 @@ def apply_site_seo(root):
         '查询248个机场与VPN常见问题，涵盖机场推荐、VPN推荐、节点选择、便宜机场、优惠范围、流量规则、退款条件和Clash客户端。支持搜索与专题筛选，新增48个问题可打开独立页面，继续查看核对步骤、来源和完整指南。',
         ['机场推荐','VPN推荐','机场节点','便宜机场','Clash机场','机场FAQ'],'CollectionPage')
     put('brands.html','机场品牌目录｜8个品牌入口与套餐资料',
-        '浏览叮当观察8个品牌入口：隐形人独立主推，微风、飞猫、暮光和灵动提供套餐与已有记录；飞v与梯子云均已整理9款套餐，梯子云另有BGP、SS及50节点下午截图，浪网资料继续补充。主推展示不作为同条件测速排名。',
+        '浏览叮当观察8个品牌入口与套餐资料：隐形人独立主推，微风、飞猫、暮光和灵动保留各自资料；飞v、梯子云与浪网各9款套餐分别列出，梯子云50节点、浪网60节点记录注明采样条件。查看已提供的优惠、客户端与售后说明，主推展示不作为同条件测速排名。',
         ['机场推荐','机场品牌','隐形人机场','性价比机场','机场测评资料'],'CollectionPage')
     brand_specs=[
       ('yinxingren','隐形人机场怎么样｜IEPL套餐、优惠码与节点记录','隐形人机场品牌页整理IEPL专线、9款套餐与yxr888八折优惠，包括109元年付、80GB每30天刷新方案。查看Windows、macOS、安卓及iOS使用流程、流量重置、退款条件、晚高峰延迟与ChatGPT使用反馈。',['隐形人机场','机场推荐','IEPL专线','机场节点','机场套餐']),
@@ -60,7 +60,15 @@ def apply_site_seo(root):
     for slug,title,description,keys in brand_specs:put('brand-'+slug+'.html',title,description,keys)
     intake=json.loads((root/'data/new-brands.json').read_text(encoding='utf-8'))['brands']
     for b in intake:
+        if b['id']=='langwang' and b.get('node_profile_ready'):
+            node_source=json.loads((root/b['overview_path']).read_text(encoding='utf-8'))
+            latest_source_date=max(latest_source_date,node_source['updated_on'])
+            put(b['profile_path'],'浪网 WaveNet套餐与节点｜9款价格、年付IPLC与午间记录',
+                '浪网WaveNet9款套餐：年付119元、每30天80GB，年付标准单独标注IPLC；四档月付30/70/120/200元，三款买断239/569/1099元，定制680元/月。另列BGP与SS说明、五地区60节点及11月3日12点上海电信Windows客户端截图记录。',
+                ['浪网','WaveNet','浪网套餐','浪网价格','浪网节点','浪网测速','BGP机场','IPLC专线','Shadowsocks','机场测评资料'])
+            continue
         if b.get('node_profile_ready'):
+            assert b['id']=='tiziyun','SEO metadata is required for this node profile.'
             node_source=json.loads((root/b['overview_path']).read_text(encoding='utf-8'))
             latest_source_date=max(latest_source_date,node_source['updated_on'])
             put(b['profile_path'],'梯子云 LadderCloud套餐与优惠码｜9款价格、BGP/IEPL及节点记录',

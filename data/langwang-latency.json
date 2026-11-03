@@ -1,0 +1,1259 @@
+{
+  "brand_id": "langwang",
+  "brand": "浪网 WaveNet",
+  "dataset_id": "wavenet-received-20261103-batch-01",
+  "mode": "snapshot",
+  "metric": "截图客户端显示的节点延迟",
+  "unit": "ms",
+  "source": "博客站长为浪网提供的6张节点列表截图",
+  "received_on": "2026-11-03",
+  "prepared_on": "2026-11-03",
+  "collection_status": "core_context_confirmed",
+  "source_screenshot_count": 6,
+  "source_card_count": 60,
+  "duplicate_card_count": 0,
+  "original_images_published": false,
+  "source_independence_verified": false,
+  "independent_measurement": false,
+  "coverage_scope": "站长确认的本批完整节点列表",
+  "coverage_completeness_confirmed": true,
+  "coverage_completeness_confirmed_on": "2026-11-03",
+  "measured_date": "2026-11-03",
+  "date_confirmed_on": "2026-11-03",
+  "measured_time": "12:00",
+  "time_confirmed_on": "2026-11-03",
+  "provided_time_text": "下午十二点",
+  "period": "下午",
+  "period_confirmed_on": "2026-11-03",
+  "reported_time_precision": "hour",
+  "timezone": "Asia/Shanghai",
+  "location": "上海",
+  "location_confirmed_on": "2026-11-03",
+  "isp": "电信",
+  "isp_confirmed_on": "2026-11-03",
+  "client": "浪网 Windows客户端",
+  "client_name": "浪网",
+  "client_platform": "Windows",
+  "client_confirmed_on": "2026-11-03",
+  "client_version": null,
+  "measurement_method": null,
+  "observations_per_visible_node": 1,
+  "live_endpoint": null,
+  "chart_axis_max_ms": 1100,
+  "summary": {
+    "node_count": 60,
+    "response_count": 59,
+    "timeout_count": 1,
+    "min_ms": 50,
+    "median_ms": 169,
+    "max_ms": 1028
+  },
+  "regions": [
+    {
+      "id": "hk",
+      "region": "香港",
+      "color": "#2088ba",
+      "node_count": 20,
+      "response_count": 20,
+      "timeout_count": 0,
+      "min_ms": 53,
+      "median_ms": 147.0,
+      "max_ms": 375
+    },
+    {
+      "id": "tw",
+      "region": "台湾",
+      "color": "#8270ac",
+      "node_count": 10,
+      "response_count": 9,
+      "timeout_count": 1,
+      "min_ms": 50,
+      "median_ms": 79,
+      "max_ms": 1028
+    },
+    {
+      "id": "jp",
+      "region": "日本",
+      "color": "#4b9c94",
+      "node_count": 10,
+      "response_count": 10,
+      "timeout_count": 0,
+      "min_ms": 72,
+      "median_ms": 176.0,
+      "max_ms": 270
+    },
+    {
+      "id": "sg",
+      "region": "新加坡",
+      "color": "#b99436",
+      "node_count": 10,
+      "response_count": 10,
+      "timeout_count": 0,
+      "min_ms": 78,
+      "median_ms": 192.0,
+      "max_ms": 426
+    },
+    {
+      "id": "us",
+      "region": "美国",
+      "color": "#6388ab",
+      "node_count": 10,
+      "response_count": 10,
+      "timeout_count": 0,
+      "min_ms": 140,
+      "median_ms": 169.5,
+      "max_ms": 565
+    }
+  ],
+  "records": [
+    {
+      "id": "hk-01",
+      "group_id": "hk",
+      "region": "香港",
+      "node_number": 1,
+      "label": "香港01",
+      "original_name": "香港01",
+      "source_order": 1,
+      "source_screenshots": [
+        1
+      ],
+      "source_position": {
+        "row": 1,
+        "column": 1
+      },
+      "latency_ms": 201,
+      "status": "numeric",
+      "display_order": 1
+    },
+    {
+      "id": "hk-02",
+      "group_id": "hk",
+      "region": "香港",
+      "node_number": 2,
+      "label": "香港02",
+      "original_name": "香港02",
+      "source_order": 8,
+      "source_screenshots": [
+        2
+      ],
+      "source_position": {
+        "row": 1,
+        "column": 1
+      },
+      "latency_ms": 103,
+      "status": "numeric",
+      "display_order": 2
+    },
+    {
+      "id": "hk-03",
+      "group_id": "hk",
+      "region": "香港",
+      "node_number": 3,
+      "label": "香港03",
+      "original_name": "香港03",
+      "source_order": 2,
+      "source_screenshots": [
+        1
+      ],
+      "source_position": {
+        "row": 2,
+        "column": 1
+      },
+      "latency_ms": 176,
+      "status": "numeric",
+      "display_order": 3
+    },
+    {
+      "id": "hk-04",
+      "group_id": "hk",
+      "region": "香港",
+      "node_number": 4,
+      "label": "香港04",
+      "original_name": "香港04",
+      "source_order": 9,
+      "source_screenshots": [
+        2
+      ],
+      "source_position": {
+        "row": 2,
+        "column": 1
+      },
+      "latency_ms": 73,
+      "status": "numeric",
+      "display_order": 4
+    },
+    {
+      "id": "hk-05",
+      "group_id": "hk",
+      "region": "香港",
+      "node_number": 5,
+      "label": "香港05",
+      "original_name": "香港05",
+      "source_order": 3,
+      "source_screenshots": [
+        1
+      ],
+      "source_position": {
+        "row": 3,
+        "column": 1
+      },
+      "latency_ms": 147,
+      "status": "numeric",
+      "display_order": 5
+    },
+    {
+      "id": "hk-06",
+      "group_id": "hk",
+      "region": "香港",
+      "node_number": 6,
+      "label": "香港06",
+      "original_name": "香港06",
+      "source_order": 60,
+      "source_screenshots": [
+        6
+      ],
+      "source_position": {
+        "row": 3,
+        "column": 1
+      },
+      "latency_ms": 375,
+      "status": "numeric",
+      "display_order": 6
+    },
+    {
+      "id": "hk-07",
+      "group_id": "hk",
+      "region": "香港",
+      "node_number": 7,
+      "label": "香港07",
+      "original_name": "香港07",
+      "source_order": 59,
+      "source_screenshots": [
+        6
+      ],
+      "source_position": {
+        "row": 2,
+        "column": 2
+      },
+      "latency_ms": 71,
+      "status": "numeric",
+      "display_order": 7
+    },
+    {
+      "id": "hk-08",
+      "group_id": "hk",
+      "region": "香港",
+      "node_number": 8,
+      "label": "香港08",
+      "original_name": "香港08",
+      "source_order": 58,
+      "source_screenshots": [
+        6
+      ],
+      "source_position": {
+        "row": 2,
+        "column": 1
+      },
+      "latency_ms": 53,
+      "status": "numeric",
+      "display_order": 8
+    },
+    {
+      "id": "hk-09",
+      "group_id": "hk",
+      "region": "香港",
+      "node_number": 9,
+      "label": "香港09",
+      "original_name": "香港09",
+      "source_order": 57,
+      "source_screenshots": [
+        6
+      ],
+      "source_position": {
+        "row": 1,
+        "column": 2
+      },
+      "latency_ms": 60,
+      "status": "numeric",
+      "display_order": 9
+    },
+    {
+      "id": "hk-10",
+      "group_id": "hk",
+      "region": "香港",
+      "node_number": 10,
+      "label": "香港10",
+      "original_name": "香港10",
+      "source_order": 56,
+      "source_screenshots": [
+        6
+      ],
+      "source_position": {
+        "row": 1,
+        "column": 1
+      },
+      "latency_ms": 108,
+      "status": "numeric",
+      "display_order": 10
+    },
+    {
+      "id": "hk-11",
+      "group_id": "hk",
+      "region": "香港",
+      "node_number": 11,
+      "label": "香港11",
+      "original_name": "香港11",
+      "source_order": 55,
+      "source_screenshots": [
+        5
+      ],
+      "source_position": {
+        "row": 7,
+        "column": 2
+      },
+      "latency_ms": 104,
+      "status": "numeric",
+      "display_order": 11
+    },
+    {
+      "id": "hk-12",
+      "group_id": "hk",
+      "region": "香港",
+      "node_number": 12,
+      "label": "香港12",
+      "original_name": "香港12",
+      "source_order": 54,
+      "source_screenshots": [
+        5
+      ],
+      "source_position": {
+        "row": 7,
+        "column": 1
+      },
+      "latency_ms": 104,
+      "status": "numeric",
+      "display_order": 12
+    },
+    {
+      "id": "hk-13",
+      "group_id": "hk",
+      "region": "香港",
+      "node_number": 13,
+      "label": "香港13",
+      "original_name": "香港13",
+      "source_order": 53,
+      "source_screenshots": [
+        5
+      ],
+      "source_position": {
+        "row": 6,
+        "column": 2
+      },
+      "latency_ms": 206,
+      "status": "numeric",
+      "display_order": 13
+    },
+    {
+      "id": "hk-14",
+      "group_id": "hk",
+      "region": "香港",
+      "node_number": 14,
+      "label": "香港14",
+      "original_name": "香港14",
+      "source_order": 52,
+      "source_screenshots": [
+        5
+      ],
+      "source_position": {
+        "row": 6,
+        "column": 1
+      },
+      "latency_ms": 163,
+      "status": "numeric",
+      "display_order": 14
+    },
+    {
+      "id": "hk-15",
+      "group_id": "hk",
+      "region": "香港",
+      "node_number": 15,
+      "label": "香港15",
+      "original_name": "香港15",
+      "source_order": 51,
+      "source_screenshots": [
+        5
+      ],
+      "source_position": {
+        "row": 5,
+        "column": 2
+      },
+      "latency_ms": 165,
+      "status": "numeric",
+      "display_order": 15
+    },
+    {
+      "id": "hk-16",
+      "group_id": "hk",
+      "region": "香港",
+      "node_number": 16,
+      "label": "香港16",
+      "original_name": "香港16",
+      "source_order": 50,
+      "source_screenshots": [
+        5
+      ],
+      "source_position": {
+        "row": 5,
+        "column": 1
+      },
+      "latency_ms": 215,
+      "status": "numeric",
+      "display_order": 16
+    },
+    {
+      "id": "hk-17",
+      "group_id": "hk",
+      "region": "香港",
+      "node_number": 17,
+      "label": "香港17",
+      "original_name": "香港17",
+      "source_order": 34,
+      "source_screenshots": [
+        4
+      ],
+      "source_position": {
+        "row": 4,
+        "column": 1
+      },
+      "latency_ms": 103,
+      "status": "numeric",
+      "display_order": 17
+    },
+    {
+      "id": "hk-18",
+      "group_id": "hk",
+      "region": "香港",
+      "node_number": 18,
+      "label": "香港18",
+      "original_name": "香港18",
+      "source_order": 35,
+      "source_screenshots": [
+        4
+      ],
+      "source_position": {
+        "row": 4,
+        "column": 2
+      },
+      "latency_ms": 166,
+      "status": "numeric",
+      "display_order": 18
+    },
+    {
+      "id": "hk-19",
+      "group_id": "hk",
+      "region": "香港",
+      "node_number": 19,
+      "label": "香港19",
+      "original_name": "香港19",
+      "source_order": 36,
+      "source_screenshots": [
+        4
+      ],
+      "source_position": {
+        "row": 5,
+        "column": 1
+      },
+      "latency_ms": 210,
+      "status": "numeric",
+      "display_order": 19
+    },
+    {
+      "id": "hk-20",
+      "group_id": "hk",
+      "region": "香港",
+      "node_number": 20,
+      "label": "香港20",
+      "original_name": "香港20",
+      "source_order": 37,
+      "source_screenshots": [
+        4
+      ],
+      "source_position": {
+        "row": 5,
+        "column": 2
+      },
+      "latency_ms": 147,
+      "status": "numeric",
+      "display_order": 20
+    },
+    {
+      "id": "tw-01",
+      "group_id": "tw",
+      "region": "台湾",
+      "node_number": 1,
+      "label": "台湾01",
+      "original_name": "台湾01",
+      "source_order": 38,
+      "source_screenshots": [
+        4
+      ],
+      "source_position": {
+        "row": 6,
+        "column": 1
+      },
+      "latency_ms": 1028,
+      "status": "numeric",
+      "display_order": 21
+    },
+    {
+      "id": "tw-02",
+      "group_id": "tw",
+      "region": "台湾",
+      "node_number": 2,
+      "label": "台湾02",
+      "original_name": "台湾02",
+      "source_order": 39,
+      "source_screenshots": [
+        4
+      ],
+      "source_position": {
+        "row": 6,
+        "column": 2
+      },
+      "latency_ms": 79,
+      "status": "numeric",
+      "display_order": 22
+    },
+    {
+      "id": "tw-03",
+      "group_id": "tw",
+      "region": "台湾",
+      "node_number": 3,
+      "label": "台湾03",
+      "original_name": "台湾03",
+      "source_order": 40,
+      "source_screenshots": [
+        4
+      ],
+      "source_position": {
+        "row": 7,
+        "column": 1
+      },
+      "latency_ms": 50,
+      "status": "numeric",
+      "display_order": 23
+    },
+    {
+      "id": "tw-04",
+      "group_id": "tw",
+      "region": "台湾",
+      "node_number": 4,
+      "label": "台湾04",
+      "original_name": "台湾04",
+      "source_order": 41,
+      "source_screenshots": [
+        4
+      ],
+      "source_position": {
+        "row": 7,
+        "column": 2
+      },
+      "latency_ms": null,
+      "status": "timeout",
+      "display_order": 24
+    },
+    {
+      "id": "tw-05",
+      "group_id": "tw",
+      "region": "台湾",
+      "node_number": 5,
+      "label": "台湾05",
+      "original_name": "台湾05",
+      "source_order": 49,
+      "source_screenshots": [
+        5
+      ],
+      "source_position": {
+        "row": 4,
+        "column": 2
+      },
+      "latency_ms": 237,
+      "status": "numeric",
+      "display_order": 25
+    },
+    {
+      "id": "tw-06",
+      "group_id": "tw",
+      "region": "台湾",
+      "node_number": 6,
+      "label": "台湾06",
+      "original_name": "台湾06",
+      "source_order": 42,
+      "source_screenshots": [
+        5
+      ],
+      "source_position": {
+        "row": 1,
+        "column": 1
+      },
+      "latency_ms": 67,
+      "status": "numeric",
+      "display_order": 26
+    },
+    {
+      "id": "tw-07",
+      "group_id": "tw",
+      "region": "台湾",
+      "node_number": 7,
+      "label": "台湾07",
+      "original_name": "台湾07",
+      "source_order": 43,
+      "source_screenshots": [
+        5
+      ],
+      "source_position": {
+        "row": 1,
+        "column": 2
+      },
+      "latency_ms": 74,
+      "status": "numeric",
+      "display_order": 27
+    },
+    {
+      "id": "tw-08",
+      "group_id": "tw",
+      "region": "台湾",
+      "node_number": 8,
+      "label": "台湾08",
+      "original_name": "台湾08",
+      "source_order": 44,
+      "source_screenshots": [
+        5
+      ],
+      "source_position": {
+        "row": 2,
+        "column": 1
+      },
+      "latency_ms": 83,
+      "status": "numeric",
+      "display_order": 28
+    },
+    {
+      "id": "tw-09",
+      "group_id": "tw",
+      "region": "台湾",
+      "node_number": 9,
+      "label": "台湾09",
+      "original_name": "台湾09",
+      "source_order": 45,
+      "source_screenshots": [
+        5
+      ],
+      "source_position": {
+        "row": 2,
+        "column": 2
+      },
+      "latency_ms": 440,
+      "status": "numeric",
+      "display_order": 29
+    },
+    {
+      "id": "tw-10",
+      "group_id": "tw",
+      "region": "台湾",
+      "node_number": 10,
+      "label": "台湾10",
+      "original_name": "台湾10",
+      "source_order": 46,
+      "source_screenshots": [
+        5
+      ],
+      "source_position": {
+        "row": 3,
+        "column": 1
+      },
+      "latency_ms": 76,
+      "status": "numeric",
+      "display_order": 30
+    },
+    {
+      "id": "jp-01",
+      "group_id": "jp",
+      "region": "日本",
+      "node_number": 1,
+      "label": "日本01",
+      "original_name": "日本01",
+      "source_order": 47,
+      "source_screenshots": [
+        5
+      ],
+      "source_position": {
+        "row": 3,
+        "column": 2
+      },
+      "latency_ms": 181,
+      "status": "numeric",
+      "display_order": 31
+    },
+    {
+      "id": "jp-02",
+      "group_id": "jp",
+      "region": "日本",
+      "node_number": 2,
+      "label": "日本02",
+      "original_name": "日本02",
+      "source_order": 33,
+      "source_screenshots": [
+        4
+      ],
+      "source_position": {
+        "row": 3,
+        "column": 2
+      },
+      "latency_ms": 185,
+      "status": "numeric",
+      "display_order": 32
+    },
+    {
+      "id": "jp-03",
+      "group_id": "jp",
+      "region": "日本",
+      "node_number": 3,
+      "label": "日本03",
+      "original_name": "日本03",
+      "source_order": 48,
+      "source_screenshots": [
+        5
+      ],
+      "source_position": {
+        "row": 4,
+        "column": 1
+      },
+      "latency_ms": 171,
+      "status": "numeric",
+      "display_order": 33
+    },
+    {
+      "id": "jp-04",
+      "group_id": "jp",
+      "region": "日本",
+      "node_number": 4,
+      "label": "日本04",
+      "original_name": "日本04",
+      "source_order": 4,
+      "source_screenshots": [
+        1
+      ],
+      "source_position": {
+        "row": 4,
+        "column": 1
+      },
+      "latency_ms": 185,
+      "status": "numeric",
+      "display_order": 34
+    },
+    {
+      "id": "jp-05",
+      "group_id": "jp",
+      "region": "日本",
+      "node_number": 5,
+      "label": "日本05",
+      "original_name": "日本05",
+      "source_order": 18,
+      "source_screenshots": [
+        3
+      ],
+      "source_position": {
+        "row": 3,
+        "column": 1
+      },
+      "latency_ms": 165,
+      "status": "numeric",
+      "display_order": 35
+    },
+    {
+      "id": "jp-06",
+      "group_id": "jp",
+      "region": "日本",
+      "node_number": 6,
+      "label": "日本06",
+      "original_name": "日本06",
+      "source_order": 17,
+      "source_screenshots": [
+        3
+      ],
+      "source_position": {
+        "row": 2,
+        "column": 2
+      },
+      "latency_ms": 72,
+      "status": "numeric",
+      "display_order": 36
+    },
+    {
+      "id": "jp-07",
+      "group_id": "jp",
+      "region": "日本",
+      "node_number": 7,
+      "label": "日本07",
+      "original_name": "日本07",
+      "source_order": 16,
+      "source_screenshots": [
+        3
+      ],
+      "source_position": {
+        "row": 2,
+        "column": 1
+      },
+      "latency_ms": 101,
+      "status": "numeric",
+      "display_order": 37
+    },
+    {
+      "id": "jp-08",
+      "group_id": "jp",
+      "region": "日本",
+      "node_number": 8,
+      "label": "日本08",
+      "original_name": "日本08",
+      "source_order": 15,
+      "source_screenshots": [
+        3
+      ],
+      "source_position": {
+        "row": 1,
+        "column": 2
+      },
+      "latency_ms": 189,
+      "status": "numeric",
+      "display_order": 38
+    },
+    {
+      "id": "jp-09",
+      "group_id": "jp",
+      "region": "日本",
+      "node_number": 9,
+      "label": "日本09",
+      "original_name": "日本09",
+      "source_order": 14,
+      "source_screenshots": [
+        3
+      ],
+      "source_position": {
+        "row": 1,
+        "column": 1
+      },
+      "latency_ms": 169,
+      "status": "numeric",
+      "display_order": 39
+    },
+    {
+      "id": "jp-10",
+      "group_id": "jp",
+      "region": "日本",
+      "node_number": 10,
+      "label": "日本10",
+      "original_name": "日本10",
+      "source_order": 7,
+      "source_screenshots": [
+        1
+      ],
+      "source_position": {
+        "row": 7,
+        "column": 1
+      },
+      "latency_ms": 270,
+      "status": "numeric",
+      "display_order": 40
+    },
+    {
+      "id": "sg-01",
+      "group_id": "sg",
+      "region": "新加坡",
+      "node_number": 1,
+      "label": "新加坡01",
+      "original_name": "新加坡01",
+      "source_order": 13,
+      "source_screenshots": [
+        2
+      ],
+      "source_position": {
+        "row": 6,
+        "column": 1
+      },
+      "latency_ms": 234,
+      "status": "numeric",
+      "display_order": 41
+    },
+    {
+      "id": "sg-02",
+      "group_id": "sg",
+      "region": "新加坡",
+      "node_number": 2,
+      "label": "新加坡02",
+      "original_name": "新加坡02",
+      "source_order": 6,
+      "source_screenshots": [
+        1
+      ],
+      "source_position": {
+        "row": 6,
+        "column": 1
+      },
+      "latency_ms": 319,
+      "status": "numeric",
+      "display_order": 42
+    },
+    {
+      "id": "sg-03",
+      "group_id": "sg",
+      "region": "新加坡",
+      "node_number": 3,
+      "label": "新加坡03",
+      "original_name": "新加坡03",
+      "source_order": 12,
+      "source_screenshots": [
+        2
+      ],
+      "source_position": {
+        "row": 5,
+        "column": 1
+      },
+      "latency_ms": 169,
+      "status": "numeric",
+      "display_order": 43
+    },
+    {
+      "id": "sg-04",
+      "group_id": "sg",
+      "region": "新加坡",
+      "node_number": 4,
+      "label": "新加坡04",
+      "original_name": "新加坡04",
+      "source_order": 5,
+      "source_screenshots": [
+        1
+      ],
+      "source_position": {
+        "row": 5,
+        "column": 1
+      },
+      "latency_ms": 225,
+      "status": "numeric",
+      "display_order": 44
+    },
+    {
+      "id": "sg-05",
+      "group_id": "sg",
+      "region": "新加坡",
+      "node_number": 5,
+      "label": "新加坡05",
+      "original_name": "新加坡05",
+      "source_order": 11,
+      "source_screenshots": [
+        2
+      ],
+      "source_position": {
+        "row": 4,
+        "column": 1
+      },
+      "latency_ms": 426,
+      "status": "numeric",
+      "display_order": 45
+    },
+    {
+      "id": "sg-06",
+      "group_id": "sg",
+      "region": "新加坡",
+      "node_number": 6,
+      "label": "新加坡06",
+      "original_name": "新加坡06",
+      "source_order": 10,
+      "source_screenshots": [
+        2
+      ],
+      "source_position": {
+        "row": 3,
+        "column": 1
+      },
+      "latency_ms": 198,
+      "status": "numeric",
+      "display_order": 46
+    },
+    {
+      "id": "sg-07",
+      "group_id": "sg",
+      "region": "新加坡",
+      "node_number": 7,
+      "label": "新加坡07",
+      "original_name": "新加坡07",
+      "source_order": 20,
+      "source_screenshots": [
+        3
+      ],
+      "source_position": {
+        "row": 4,
+        "column": 1
+      },
+      "latency_ms": 181,
+      "status": "numeric",
+      "display_order": 47
+    },
+    {
+      "id": "sg-08",
+      "group_id": "sg",
+      "region": "新加坡",
+      "node_number": 8,
+      "label": "新加坡08",
+      "original_name": "新加坡08",
+      "source_order": 21,
+      "source_screenshots": [
+        3
+      ],
+      "source_position": {
+        "row": 4,
+        "column": 2
+      },
+      "latency_ms": 186,
+      "status": "numeric",
+      "display_order": 48
+    },
+    {
+      "id": "sg-09",
+      "group_id": "sg",
+      "region": "新加坡",
+      "node_number": 9,
+      "label": "新加坡09",
+      "original_name": "新加坡09",
+      "source_order": 22,
+      "source_screenshots": [
+        3
+      ],
+      "source_position": {
+        "row": 5,
+        "column": 1
+      },
+      "latency_ms": 111,
+      "status": "numeric",
+      "display_order": 49
+    },
+    {
+      "id": "sg-10",
+      "group_id": "sg",
+      "region": "新加坡",
+      "node_number": 10,
+      "label": "新加坡10",
+      "original_name": "新加坡10",
+      "source_order": 23,
+      "source_screenshots": [
+        3
+      ],
+      "source_position": {
+        "row": 5,
+        "column": 2
+      },
+      "latency_ms": 78,
+      "status": "numeric",
+      "display_order": 50
+    },
+    {
+      "id": "us-01",
+      "group_id": "us",
+      "region": "美国",
+      "node_number": 1,
+      "label": "美国01",
+      "original_name": "美国01",
+      "source_order": 24,
+      "source_screenshots": [
+        3
+      ],
+      "source_position": {
+        "row": 6,
+        "column": 1
+      },
+      "latency_ms": 565,
+      "status": "numeric",
+      "display_order": 51
+    },
+    {
+      "id": "us-02",
+      "group_id": "us",
+      "region": "美国",
+      "node_number": 2,
+      "label": "美国02",
+      "original_name": "美国02",
+      "source_order": 25,
+      "source_screenshots": [
+        3
+      ],
+      "source_position": {
+        "row": 6,
+        "column": 2
+      },
+      "latency_ms": 175,
+      "status": "numeric",
+      "display_order": 52
+    },
+    {
+      "id": "us-03",
+      "group_id": "us",
+      "region": "美国",
+      "node_number": 3,
+      "label": "美国03",
+      "original_name": "美国03",
+      "source_order": 26,
+      "source_screenshots": [
+        3
+      ],
+      "source_position": {
+        "row": 7,
+        "column": 1
+      },
+      "latency_ms": 229,
+      "status": "numeric",
+      "display_order": 53
+    },
+    {
+      "id": "us-04",
+      "group_id": "us",
+      "region": "美国",
+      "node_number": 4,
+      "label": "美国04",
+      "original_name": "美国04",
+      "source_order": 27,
+      "source_screenshots": [
+        3
+      ],
+      "source_position": {
+        "row": 7,
+        "column": 2
+      },
+      "latency_ms": 195,
+      "status": "numeric",
+      "display_order": 54
+    },
+    {
+      "id": "us-05",
+      "group_id": "us",
+      "region": "美国",
+      "node_number": 5,
+      "label": "美国05",
+      "original_name": "美国05",
+      "source_order": 28,
+      "source_screenshots": [
+        4
+      ],
+      "source_position": {
+        "row": 1,
+        "column": 1
+      },
+      "latency_ms": 169,
+      "status": "numeric",
+      "display_order": 55
+    },
+    {
+      "id": "us-06",
+      "group_id": "us",
+      "region": "美国",
+      "node_number": 6,
+      "label": "美国06",
+      "original_name": "美国06",
+      "source_order": 29,
+      "source_screenshots": [
+        4
+      ],
+      "source_position": {
+        "row": 1,
+        "column": 2
+      },
+      "latency_ms": 166,
+      "status": "numeric",
+      "display_order": 56
+    },
+    {
+      "id": "us-07",
+      "group_id": "us",
+      "region": "美国",
+      "node_number": 7,
+      "label": "美国07",
+      "original_name": "美国07",
+      "source_order": 30,
+      "source_screenshots": [
+        4
+      ],
+      "source_position": {
+        "row": 2,
+        "column": 1
+      },
+      "latency_ms": 140,
+      "status": "numeric",
+      "display_order": 57
+    },
+    {
+      "id": "us-08",
+      "group_id": "us",
+      "region": "美国",
+      "node_number": 8,
+      "label": "美国08",
+      "original_name": "美国08",
+      "source_order": 31,
+      "source_screenshots": [
+        4
+      ],
+      "source_position": {
+        "row": 2,
+        "column": 2
+      },
+      "latency_ms": 170,
+      "status": "numeric",
+      "display_order": 58
+    },
+    {
+      "id": "us-09",
+      "group_id": "us",
+      "region": "美国",
+      "node_number": 9,
+      "label": "美国09",
+      "original_name": "美国09",
+      "source_order": 32,
+      "source_screenshots": [
+        4
+      ],
+      "source_position": {
+        "row": 3,
+        "column": 1
+      },
+      "latency_ms": 164,
+      "status": "numeric",
+      "display_order": 59
+    },
+    {
+      "id": "us-10",
+      "group_id": "us",
+      "region": "美国",
+      "node_number": 10,
+      "label": "美国10",
+      "original_name": "美国10",
+      "source_order": 19,
+      "source_screenshots": [
+        3
+      ],
+      "source_position": {
+        "row": 3,
+        "column": 2
+      },
+      "latency_ms": 159,
+      "status": "numeric",
+      "display_order": 60
+    }
+  ],
+  "unobserved_labels_within_observed_numbering": {},
+  "method_notes": [
+    "6张截图按接收顺序逐图读取，图内按行从左至右记录，共60个不同名称的节点；边缘不含完整可辨信息的卡片片段不另计数。",
+    "台湾04显示Timeout，延迟以null保存，不按0ms参与数值范围与中位数计算。",
+    "台湾01的1028ms、美国01的565ms、台湾09的440ms等较高数值按原值保留。",
+    "站长确认这6张截图为完整60节点列表：香港20个，台湾、日本、新加坡、美国各10个。",
+    "站长逐项确认采样于2026年11月3日12点，时间原话为“下午十二点”，按小时精度保存，上海电信，Windows版浪网客户端；具体版本与探测方法未提供。",
+    "截图的ms为节点延迟，不据此换算下载速度、丢包率或长期可用率。"
+  ]
+}
