@@ -1,0 +1,69 @@
+{
+  "brand_id": "tiziyun",
+  "brand_name": "梯子云 LadderCloud",
+  "updated_on": "2026-11-03",
+  "source": "博客站长逐项确认的梯子云品牌资料",
+  "independently_verified": false,
+  "collection_status": "core_description_coverage_and_snapshot_confirmed",
+  "entry_url": "https://varnexa.ladderaff.com/#/?code=KSmLLEnR",
+  "provided_description": "梯子云（LadderCloud）是专注于高速国际互联网连接的成熟高品质加速服务商。拥有优质的 BGP 智能多线入口与专线中继互联，晚高峰实测表现平稳，广泛适配 4K 流媒体流畅播放、TikTok 跨境运营与 AI 生产力工具交互。",
+  "description_provided_on": "2026-11-03",
+  "editorial_description": "梯子云 LadderCloud 提供国际互联网连接服务，采用 BGP 智能多线入口与专线中继互联。品牌资料列出的使用方向包括 4K 流媒体、TikTok 跨境运营与 AI 生产力工具交互。",
+  "network": {
+    "line_type": "BGP",
+    "line_type_confirmed_on": "2026-11-03",
+    "line_description": "BGP 智能多线入口与专线中继互联",
+    "line_description_confirmed_on": "2026-11-03",
+    "protocol": "Shadowsocks（SS）",
+    "protocol_confirmed_on": "2026-11-03",
+    "plan_specific_line_notes": [
+      {
+        "plan_id": "global-smart",
+        "description": "高阶方案详情另列核心骨干网IEPL专线与专线级网络出口",
+        "source_screenshot": 2
+      }
+    ]
+  },
+  "features": [
+    "BGP 智能多线入口与专线中继互联",
+    "4K 流媒体播放",
+    "TikTok 跨境运营",
+    "AI 生产力工具交互"
+  ],
+  "features_source_type": "站长提供的品牌介绍，使用方向尚未由本站独立验证",
+  "performance_claims": [
+    {
+      "statement": "晚高峰实测表现平稳",
+      "source_context": "站长提供的品牌介绍",
+      "independently_verified": false,
+      "related_records_provided": true,
+      "related_snapshot_path": "data/tiziyun-latency.json",
+      "evidence_status": "相关截图为2026年11月3日下午上海电信的静态节点延迟；晚高峰及持续稳定性尚未由这些截图验证"
+    }
+  ],
+  "notes": [
+    "已保存站长提供的品牌介绍与BGP智能多线入口、专线中继说明；站长另已确认节点使用Shadowsocks（SS）协议。",
+    "站长确认5张截图为完整列表，共50个节点、5个地区；采样于2026年11月3日下午，上海电信，Windows版梯子云客户端。具体时刻、版本和探测方法未提供。流媒体、TikTok与AI方向按品牌说明归档。",
+    "不沿用其他品牌的套餐、优惠、客户端、售后规则或测试结果。"
+  ],
+  "node_snapshot_path": "data/tiziyun-latency.json",
+  "coverage_observations": {
+    "source_scope": "站长确认的5张完整节点列表截图",
+    "observed_regions": [
+      "香港",
+      "台湾",
+      "日本",
+      "新加坡",
+      "美国"
+    ],
+    "observed_node_count": 50,
+    "full_coverage_confirmed": true,
+    "confirmed_total_node_count": 50,
+    "completeness_confirmed_on": "2026-11-03"
+  },
+  "coverage_path": "data/tiziyun-coverage.json",
+  "plans_path": "data/tiziyun-plans.json",
+  "provided_plan_count": 9,
+  "reported_plan_count": 9,
+  "plan_count_confirmed_on": "2026-11-03"
+}

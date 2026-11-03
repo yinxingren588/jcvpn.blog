@@ -456,6 +456,11 @@
       "sha256": "5f7717db82dd55210138b8e5d86c2e1b693611ec2092d6a7f5a3d71c974f8a4b",
       "lastmod": "2026-11-02T18:10:40+08:00"
     },
+    "https://jcvpn.blog/brand-tiziyun": {
+      "file": "brand-tiziyun.html",
+      "sha256": "b8ead4c19d91d15e35adaebe96c4e969be7118f6ca116292be6d0605e45629b7",
+      "lastmod": "2026-11-03T12:02:14+08:00"
+    },
     "https://jcvpn.blog/brand-yinxingren": {
       "file": "brand-yinxingren.html",
       "sha256": "b504d20bd094295c348007fe5702aff341827411f64277bd30b9108edd0d0c65",
@@ -463,8 +468,8 @@
     },
     "https://jcvpn.blog/brands": {
       "file": "brands.html",
-      "sha256": "4115d6e1ec73775ccfc406ef86263b106ad8e9c6a28889dbe13296b2d99b350c",
-      "lastmod": "2026-11-03T10:35:16+08:00"
+      "sha256": "2f2e18e2d9209426d439f6d6f9fc413a457ec194146b094f0337ff63994e85c0",
+      "lastmod": "2026-11-03T12:02:14+08:00"
     },
     "https://jcvpn.blog/contact": {
       "file": "contact.html",
@@ -718,8 +723,8 @@
     },
     "https://jcvpn.blog/": {
       "file": "index.html",
-      "sha256": "9888dc578a3e666225def80ef2ba76bc1c2087cc29cf6f6d2e72b7af859c761d",
-      "lastmod": "2026-11-03T10:35:16+08:00"
+      "sha256": "24deec2046d9d5877d332e7e9eb02c4a176bbd14813b63dcfec06cb512a94887",
+      "lastmod": "2026-11-03T12:02:14+08:00"
     },
     "https://jcvpn.blog/topic-basics": {
       "file": "topic-basics.html",
@@ -763,13 +768,13 @@
     },
     "https://jcvpn.blog/topic-recommendations": {
       "file": "topic-recommendations.html",
-      "sha256": "716a99382ec3d79c0f30da6f6f1f55989a838bcd913f989958ae3082ee2505c5",
-      "lastmod": "2026-11-03T10:35:16+08:00"
+      "sha256": "c744f04fb8745420c73aa87161bbc36c0d40c29224b570d0a347a17aa90894d4",
+      "lastmod": "2026-11-03T12:02:14+08:00"
     },
     "https://jcvpn.blog/topic-reviews-guide": {
       "file": "topic-reviews-guide.html",
-      "sha256": "c65460131339a7d2b3231b6d028d7f1e0a2540879ea65d3c0f0a0cf59338d5fa",
-      "lastmod": "2026-11-02T23:21:47+08:00"
+      "sha256": "78ead4f28719d2d8b08665612dc028d0d1627069ee0e7dcaf790cf64ba7cfe43",
+      "lastmod": "2026-11-03T12:02:14+08:00"
     },
     "https://jcvpn.blog/topic-testing": {
       "file": "topic-testing.html",

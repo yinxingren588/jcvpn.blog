@@ -18,6 +18,7 @@ SOURCES={
  'brand-rules':['流量、升级与退款：各品牌规则入口','brands.html'],
  'node-records':['四批节点延迟记录与来源','article-airport-review-records-overview.html'],
  'flyv-node-records':['飞v晚高峰节点延迟记录与来源','brand-feiv.html#flyv-latency'],
+ 'tiziyun-node-records':['梯子云下午节点延迟记录与来源','brand-tiziyun.html#tiziyun-latency'],
  'ai-records':['五条ChatGPT使用反馈与条件','article-vpn-ai-use-records.html'],
  'flyv-ai-records':['飞v新加坡节点ChatGPT使用反馈与条件','brand-feiv.html#flyv-access'],
  'timeout-guide':['隐形人客服排查资料','data/invisible-support.json'],
@@ -99,7 +100,7 @@ def render_table(table,snapshot=False,caption=None):
     heads,rows=table
     def cell(value):
         text=str(value)
-        for name,url in BRANDS+[('飞v','brand-feiv.html')]:
+        for name,url in BRANDS+[('飞v','brand-feiv.html'),('梯子云','brand-tiziyun.html')]:
             if text==name:return '<a href="'+url+'">'+e(text)+'</a>'
         if text.endswith('.json') and text in ['invisible-plans.json','breezenet-plans.json','feimaoyun-plans.json','muguang-plans.json','lingdongyun-plans.json']:
             return '<a href="data/'+text+'">资料JSON</a>'
@@ -243,7 +244,7 @@ def build_content_library(root):
     home=re.sub(r'<link rel="stylesheet" href="assets/search-library\.css">','',home)
     home=home.replace('</head>','<link rel="stylesheet" href="assets/search-library.css"></head>',1)
     write_changed(root/'index.html',home)
-    data.update(topics=topic_list,sources=sources,articles=articles,faqs=faqs,updated_on=DATE,
+    data.update(topics=topic_list,sources=sources,articles=articles,faqs=faqs,updated_on=max([DATE]+[hub['reviewed_on'] for hub in hubs.values()]),
                 authorship='AI辅助撰写与资料整理；品牌说明、使用反馈与独立测试分开记录')
     write_changed(root/'data/library.json',json.dumps(data,ensure_ascii=False,indent=2)+'\n')
     write_changed(root/'data/topics.json',json.dumps(dict(topics=topic_list,faqs=faqs,article_catalog='library.json'),ensure_ascii=False,indent=2)+'\n')

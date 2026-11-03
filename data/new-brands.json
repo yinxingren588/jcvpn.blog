@@ -33,7 +33,15 @@
       "mark": "梯",
       "url": "https://varnexa.ladderaff.com/#/?code=KSmLLEnR",
       "profile_path": "brand-tiziyun.html",
-      "profile_status": "entry_confirmed_details_pending"
+      "profile_status": "plans_overview_and_node_records_provided_more_details_pending",
+      "node_profile_ready": true,
+      "materials_updated_on": "2026-11-03",
+      "materials_source": "博客站长提供的梯子云品牌介绍、完整节点截图及采样条件确认",
+      "overview_path": "data/tiziyun-overview.json",
+      "coverage_path": "data/tiziyun-coverage.json",
+      "latency_path": "data/tiziyun-latency.json",
+      "plans_path": "data/tiziyun-plans.json",
+      "provided_plan_count": 9
     },
     {
       "id": "langwang",

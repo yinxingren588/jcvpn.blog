@@ -131,8 +131,8 @@
       ],
       "audience": "想判断测速图、晚高峰与稳定性结论是否有依据的读者",
       "seo_title": "机场测评与稳定机场判断｜节点记录、超时统计与验证方法",
-      "seo_description": "对照隐形人、微风、飞猫、暮光与飞v五批节点快照，保留数值、超时、采样时间与方法缺口；灵动云暂无延迟资料。结合六品牌ChatGPT问答反馈与尚未执行的连续观察计划，了解稳定机场需要哪些证据。",
-      "reviewed_on": "2026-11-02",
+      "seo_description": "对照隐形人、微风、飞猫、暮光、飞v与梯子云六批节点快照，保留数值、超时、采样日期与方法缺口；灵动云暂无延迟资料。另列原有六品牌ChatGPT问答反馈及尚未执行的连续观察计划，了解稳定机场需要哪些证据。",
+      "reviewed_on": "2026-11-03",
       "steps": [
         "找出数据来源与采样窗口",
         "核对统计口径和失败样本",
@@ -823,6 +823,10 @@
     "flyv-ai-records": [
       "飞v新加坡节点ChatGPT使用反馈与条件",
       "brand-feiv.html#flyv-access"
+    ],
+    "tiziyun-node-records": [
+      "梯子云下午节点延迟记录与来源",
+      "brand-tiziyun.html#tiziyun-latency"
     ]
   },
   "articles": [
@@ -11576,5 +11580,5 @@
       "file": "faq-clash-airport-migration-native-2.html"
     }
   ],
-  "updated_on": "2026-11-02"
+  "updated_on": "2026-11-03"
 }

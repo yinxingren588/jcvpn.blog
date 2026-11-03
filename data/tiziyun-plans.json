@@ -1,0 +1,318 @@
+{
+  "brand_id": "tiziyun",
+  "brand_name": "梯子云 LadderCloud",
+  "provided_on": "2026-11-03",
+  "source": "站长提供的3张梯子云套餐截图",
+  "source_screenshot_count": 3,
+  "source_card_count": 9,
+  "original_images_published": false,
+  "independently_verified": false,
+  "currency": "CNY",
+  "catalog_complete_confirmed": true,
+  "entry_url": "https://varnexa.ladderaff.com/#/?code=KSmLLEnR",
+  "plans": [
+    {
+      "id": "annual-maintenance",
+      "name": "天梯随行·年度保活方案",
+      "kind": "annual",
+      "price_cny": 89,
+      "payment_unit": "年",
+      "traffic_display": "60GB",
+      "traffic_gb": 60,
+      "quota_scope": "每月额度",
+      "available_cycles": [
+        "年付"
+      ],
+      "device_limit_display": "不限",
+      "line_in_materials": null,
+      "speed_policy_in_materials": null,
+      "traffic_multiplier": null,
+      "reset_rule": "每月自动刷新60GB；具体刷新日期及未用额度处理尚未提供。",
+      "features": [
+        "每月60GB自动刷新，按年支付。",
+        "资料面向查询资料、日常社交与偶尔观看视频等轻量使用方向。"
+      ],
+      "last_visible_sentence_truncated": false,
+      "source_screenshots": [
+        1
+      ],
+      "source_position": {
+        "column": 1
+      },
+      "subscription_months": 12
+    },
+    {
+      "id": "basic-view",
+      "name": "初阶网络·基础视界",
+      "kind": "monthly",
+      "price_cny": 25,
+      "payment_unit": "月",
+      "traffic_display": "125GB",
+      "traffic_gb": 125,
+      "quota_scope": "每月额度",
+      "available_cycles": [
+        "月付",
+        "季付",
+        "半年付",
+        "年付"
+      ],
+      "device_limit_display": "不限",
+      "line_in_materials": "基础中转方案与多入口智能调度",
+      "speed_policy_in_materials": "详情标注全程不限速",
+      "traffic_multiplier": 1,
+      "reset_rule": "每月125GB；具体刷新日期与未用额度处理尚未提供。",
+      "features": [
+        "基础中转方案与多入口智能调度。",
+        "详情标注全程不限速，全节点统一1×流量计费。",
+        "资料列Netflix、YouTube与ChatGPT等平台方向。",
+        "详情明确采用Shadowsocks（SS）协议，并标注不限制同时在线设备数。"
+      ],
+      "last_visible_sentence_truncated": false,
+      "source_screenshots": [
+        1
+      ],
+      "source_position": {
+        "column": 2
+      }
+    },
+    {
+      "id": "clear-multiline",
+      "name": "中阶加速·极清多线",
+      "kind": "monthly",
+      "price_cny": 60,
+      "payment_unit": "月",
+      "traffic_display": "350GB",
+      "traffic_gb": 350,
+      "quota_scope": "每月额度",
+      "available_cycles": [
+        "月付",
+        "季付",
+        "半年付",
+        "年付"
+      ],
+      "device_limit_display": "不限",
+      "line_in_materials": "BGP三网智能优化与高速中转出口",
+      "speed_policy_in_materials": "详情标注不设速度上限",
+      "traffic_multiplier": null,
+      "reset_rule": "每月350GB；具体刷新日期与未用额度处理尚未提供。",
+      "features": [
+        "BGP三网智能优化与高速中转出口。",
+        "资料标注晚高峰稳定优先、不设速度上限，属于套餐说明。",
+        "详情列4K/8K流媒体、ChatGPT语音与Claude等使用方向，未提供对应任务测试记录。"
+      ],
+      "last_visible_sentence_truncated": false,
+      "source_screenshots": [
+        1
+      ],
+      "source_position": {
+        "column": 3
+      }
+    },
+    {
+      "id": "global-smart",
+      "name": "高阶专线·全球智联",
+      "kind": "monthly",
+      "price_cny": 110,
+      "payment_unit": "月",
+      "traffic_display": "750GB",
+      "traffic_gb": 750,
+      "quota_scope": "每月额度",
+      "available_cycles": [
+        "月付",
+        "季付",
+        "半年付",
+        "年付"
+      ],
+      "device_limit_display": "不限",
+      "line_in_materials": "核心骨干网IEPL专线与专线级网络出口",
+      "speed_policy_in_materials": null,
+      "traffic_multiplier": null,
+      "reset_rule": "每月750GB；具体刷新日期与未用额度处理尚未提供。",
+      "features": [
+        "资料面向重度网络使用、跨境电商、外贸与高频AI场景。",
+        "详情明确列出核心骨干网IEPL专线与专线级网络出口。",
+        "资料标注节点不放大计费；原生IP流媒体解锁支持方向按可见文字保留。"
+      ],
+      "last_visible_sentence_truncated": true,
+      "source_screenshots": [
+        2
+      ],
+      "source_position": {
+        "column": 1
+      },
+      "multiplier_note": "资料标注节点不放大计费，未另提供倍率数值。"
+    },
+    {
+      "id": "global-backbone",
+      "name": "顶阶商业·全球骨干",
+      "kind": "monthly",
+      "price_cny": 190,
+      "payment_unit": "月",
+      "traffic_display": "1.6TB",
+      "traffic_gb": null,
+      "quota_scope": "每月额度",
+      "available_cycles": [
+        "月付",
+        "季付",
+        "半年付",
+        "年付"
+      ],
+      "device_limit_display": "不限",
+      "line_in_materials": "企业级专线集群与多活容灾方案",
+      "speed_policy_in_materials": null,
+      "traffic_multiplier": null,
+      "reset_rule": "每月1.6TB，保留截图原单位，未换算为GB；具体刷新日期与未用额度处理尚未提供。",
+      "features": [
+        "资料面向中小企业、外贸团队、技术开发与高并发场景。",
+        "企业级专线集群与多活容灾方案。",
+        "介绍列SLA连通性保障与最高优先级调度，具体SLA指标和条款未提供。",
+        "流媒体与内容运营平台解锁为资料中的使用方向。"
+      ],
+      "last_visible_sentence_truncated": true,
+      "source_screenshots": [
+        2
+      ],
+      "source_position": {
+        "column": 2
+      },
+      "traffic_unit_note": "保留1.6TB原单位，GB换算口径未确认。"
+    },
+    {
+      "id": "once-light",
+      "name": "云端买断·永不限时轻量包",
+      "kind": "one_time",
+      "price_cny": 169,
+      "payment_unit": "一次性",
+      "traffic_display": "120GB",
+      "traffic_gb": 120,
+      "quota_scope": "整包总额度",
+      "available_cycles": [
+        "一次性"
+      ],
+      "device_limit_display": "不限",
+      "line_in_materials": null,
+      "speed_policy_in_materials": null,
+      "traffic_multiplier": null,
+      "reset_rule": "不限时总流量，按累计用量消耗，用完即止，不按月自动补充。",
+      "features": [
+        "一次购买120GB总流量，资料标注不限时，流量用完即止。",
+        "面向日常轻量访问、间歇使用与备用连接等方向。"
+      ],
+      "last_visible_sentence_truncated": true,
+      "source_screenshots": [
+        2
+      ],
+      "source_position": {
+        "column": 3
+      }
+    },
+    {
+      "id": "once-standard",
+      "name": "云端买断·永不限时标准包",
+      "kind": "one_time",
+      "price_cny": 449,
+      "payment_unit": "一次性",
+      "traffic_display": "350GB",
+      "traffic_gb": 350,
+      "quota_scope": "整包总额度",
+      "available_cycles": [
+        "一次性"
+      ],
+      "device_limit_display": "不限",
+      "line_in_materials": null,
+      "speed_policy_in_materials": null,
+      "traffic_multiplier": null,
+      "reset_rule": "不限时总流量，按累计用量消耗，用完即止，不按月自动补充。",
+      "features": [
+        "一次购买350GB总流量，资料标注不限时，流量用完即止。",
+        "资料面向商务、外贸、AI交互、学术查询等中长期或间歇使用方向。",
+        "详情列进阶优质带宽架构，未给出具体速度指标。"
+      ],
+      "last_visible_sentence_truncated": false,
+      "source_screenshots": [
+        3
+      ],
+      "source_position": {
+        "column": 1
+      }
+    },
+    {
+      "id": "once-elite",
+      "name": "云端买断·永不限时精英包",
+      "kind": "one_time",
+      "price_cny": 849,
+      "payment_unit": "一次性",
+      "traffic_display": "700GB",
+      "traffic_gb": 700,
+      "quota_scope": "整包总额度",
+      "available_cycles": [
+        "一次性"
+      ],
+      "device_limit_display": "不限",
+      "line_in_materials": null,
+      "speed_policy_in_materials": null,
+      "traffic_multiplier": null,
+      "reset_rule": "不限时总流量，按累计用量消耗，用完即止，不按月自动补充。",
+      "features": [
+        "一次购买700GB总流量，资料标注不限时，流量用完即止。",
+        "资料面向多终端、大文件与较大流量需求。",
+        "介绍列旗舰骨干网络与高优先级调度，未给出具体速度指标。"
+      ],
+      "last_visible_sentence_truncated": false,
+      "source_screenshots": [
+        3
+      ],
+      "source_position": {
+        "column": 2
+      }
+    },
+    {
+      "id": "private-line",
+      "name": "云端独享·私人定制专线",
+      "kind": "custom",
+      "price_cny": 680,
+      "payment_unit": "月",
+      "traffic_display": "500GB",
+      "traffic_gb": 500,
+      "quota_scope": "每月专属额度",
+      "available_cycles": [
+        "月付"
+      ],
+      "device_limit_display": "不限",
+      "line_in_materials": "骨干专线独享资源，具体传输类别未提供",
+      "speed_policy_in_materials": null,
+      "traffic_multiplier": null,
+      "reset_rule": "每月500GB专属额度；具体刷新日期与未用额度处理尚未提供。",
+      "features": [
+        "每月500GB骨干专线独享流量。",
+        "独享带宽资源与独享公网IP，资料标注不与他人共享。",
+        "面向TikTok直播、独立站矩阵与跨境业务等定制方向。",
+        "专属技术专家1对1维护，预计约2—3个工作日交付。",
+        "特殊定制或多节点集群需求可通过工单咨询客服。"
+      ],
+      "last_visible_sentence_truncated": false,
+      "source_screenshots": [
+        3
+      ],
+      "source_position": {
+        "column": 3
+      },
+      "delivery_working_days": [
+        2,
+        3
+      ],
+      "ip_in_materials": "独享公网IP",
+      "native_ip_confirmed": null,
+      "residential_ip_confirmed": null
+    }
+  ],
+  "notes": [
+    "站长已确认这3张图包含梯子云目前的全部9款套餐。",
+    "年付89元的60GB是每月额度；三款买断包120GB、350GB、700GB分别为整包总量。",
+    "四款常规周期套餐显示月付、季付、半年付及年付选项，目前只提供月价，不推算其他周期总额。",
+    "高阶详情另列IEPL骨干，按该套餐保留，不把所有方案统一写成同一种传输线路。",
+    "只整理画面内的完整可见说明，不补全被截断的句子；企业方案保留1.6TB原单位，独享方案仅明确独享公网IP。",
+    "优惠、付款、续费重置与退款规则尚未针对梯子云提供，不沿用其他品牌。"
+  ],
+  "catalog_complete_confirmed_on": "2026-11-03"
+}

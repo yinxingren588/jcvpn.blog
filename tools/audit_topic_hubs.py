@@ -58,7 +58,7 @@ def audit():
         total_sections+=len(hub['sections'])
     # Validate that failure entries were not turned into zeroes or silently omitted.
     verified_records=0
-    for name in ('invisible','breezenet','feimaoyun','muguang','feiv'):
+    for name in ('invisible','breezenet','feimaoyun','muguang','feiv','tiziyun'):
         data=json.loads((ROOT/'data'/(name+'-latency.json')).read_text(encoding='utf-8'))
         records=data['records']
         verified_records+=len(records)

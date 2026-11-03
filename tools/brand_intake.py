@@ -10,16 +10,30 @@ def brand_mark(brand):
         return '<span class="intake-mark intake-logo"><img src="'+e(brand['logo_path'],quote=True)+'" width="'+str(brand['logo_width'])+'" height="'+str(brand['logo_height'])+'" alt="'+e(brand['name'],quote=True)+'Logo" decoding="async"></span>'
     return '<span class="intake-mark" aria-hidden="true">'+e(brand['mark'])+'</span>'
 
+def intake_copy(brand):
+    if brand.get('coupon_path'):
+        return '9款套餐 · 八折优惠','fly20八折；续费及重置包除外，不叠加','查看套餐资料'
+    if brand.get('node_profile_ready'):
+        return '9款套餐 · 50个节点','BGP / 高阶IEPL · SS · 套餐与下午记录','查看套餐与节点'
+    if brand.get('plans_path'):
+        return '9款套餐已整理','年付、月付与一次性总流量','查看套餐资料'
+    return '入口已收录','套餐与介绍陆续补充','查看品牌页面'
+
 def build_brand_intake(root):
     root=Path(root)
     source=json.loads((root/'data/new-brands.json').read_text(encoding='utf-8'))
     brands=source['brands']
-    pending=[b for b in brands if not b.get('plans_path')]
+    pending=[b for b in brands if not b.get('plans_path') and not b.get('node_profile_ready')]
     catalog=json.loads((root/'data/brands.json').read_text(encoding='utf-8'))
     by_id={b['id']:b for b in catalog['brands']}
     for b in brands:
         material_status=b.get('profile_status','entry_provided_details_pending')
-        by_id[b['id']]={**by_id.get(b['id'],{}),**b,'source_type':source['source'],'source_date':source['confirmed_on'],'verification_status':material_status,'commercial_relationship':'推广入口；具体合作条件未提供'}
+        by_id[b['id']]={**by_id.get(b['id'],{}),**b,'source_type':b.get('materials_source',source['source']),'source_date':b.get('materials_updated_on',source['confirmed_on']),'verification_status':material_status,'commercial_relationship':'推广入口；具体合作条件未提供'}
+        if b.get('node_profile_ready'):
+            from tiziyun_profile import build_tiziyun_profile
+            assert b['id']=='tiziyun','A node profile builder is required for this brand.'
+            build_tiziyun_profile(root,b)
+            continue
         if b.get('plans_path'):
             from flyv_profile import build_flyv_profile
             assert b['id']=='feiv','A profile builder is required for this brand.'
@@ -34,12 +48,15 @@ def build_brand_intake(root):
         html=html.replace('</head>','<link rel="stylesheet" href="assets/brand-intake.css"></head>',1)
         write_changed(root/b['profile_path'],html)
     catalog['brands']=list(by_id.values())
-    catalog['updated_on']=source['confirmed_on']
+    catalog['updated_on']=max([source['confirmed_on']]+[b.get('materials_updated_on',source['confirmed_on']) for b in brands])
     write_changed(root/'data/brands.json',json.dumps(catalog,ensure_ascii=False,indent=2)+'\n')
     policy={'noindex_pages':{b['profile_path']:'仅确认品牌名与入口；补齐实质资料后再开放索引' for b in pending}}
     write_changed(root/'data/indexing-policy.json',json.dumps(policy,ensure_ascii=False,indent=2)+'\n')
-    cards=''.join('<a class="intake-card" href="'+b['profile_path']+'" aria-label="查看'+e(b['name'],quote=True)+'品牌资料">'+brand_mark(b)+'<span class="intake-status">'+('9款套餐 · 八折优惠' if b.get('coupon_path') else '9款套餐已整理' if b.get('plans_path') else '入口已收录')+'</span><h3>'+e(b['name'])+'</h3><p>'+e(b['english_name'] or '品牌资料')+' · '+('fly20八折；续费及重置包除外，不叠加' if b.get('coupon_path') else '年付、月付与一次性总流量' if b.get('plans_path') else '套餐与介绍陆续补充')+'</p><span class="intake-cta">'+('查看套餐资料' if b.get('plans_path') else '查看品牌页面')+' <span>→</span></span></a>' for b in brands)
-    section='<section class="section brand-intake-section" id="brand-intake"><div class="sectionhead"><div><span class="overline">NEW BRAND ENTRANCES</span><h2>新增品牌，逐步补全资料。</h2><p>飞v已补充9款套餐、fly20八折优惠（续费、重置包除外，不叠加）与晚高峰延迟记录；梯子云与浪网的服务详情待逐项确认。</p></div></div><div class="intake-grid">'+cards+'</div></section>'
+    cards=[]
+    for b in brands:
+        status,description,action=intake_copy(b)
+        cards.append('<a class="intake-card" href="'+b['profile_path']+'" aria-label="查看'+e(b['name'],quote=True)+'品牌资料">'+brand_mark(b)+'<span class="intake-status">'+e(status)+'</span><h3>'+e(b['name'])+'</h3><p>'+e((b['english_name'] or '品牌资料')+' · '+description)+'</p><span class="intake-cta">'+e(action)+' <span>→</span></span></a>')
+    section='<section class="section brand-intake-section" id="brand-intake"><div class="sectionhead"><div><span class="overline">NEW BRAND ENTRANCES</span><h2>新增品牌，逐步补全资料。</h2><p>飞v已补充9款套餐、fly20八折优惠（续费、重置包除外，不叠加）与晚高峰延迟记录；梯子云已整理9款套餐与五地区50节点的下午截图，浪网详情待逐项确认。</p></div></div><div class="intake-grid">'+''.join(cards)+'</div></section>'
     for filename in ['index.html','brands.html']:
         p=root/filename; html=p.read_text(encoding='utf-8')
         html=re.sub(r'<section class="section brand-intake-section".*?</section>','',html,flags=re.S)

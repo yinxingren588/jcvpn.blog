@@ -1,0 +1,44 @@
+{
+  "brand_id": "tiziyun",
+  "brand": "梯子云 LadderCloud",
+  "confirmed_on": "2026-11-03",
+  "source": "站长提供的5张节点截图，并逐项确认其为完整节点列表",
+  "independently_verified": false,
+  "collection_status": "regions_and_counts_confirmed",
+  "coverage_scope": "站长确认的本批完整节点列表",
+  "region_count": 5,
+  "total_node_count": 50,
+  "regions": [
+    {
+      "id": "hk",
+      "name": "香港",
+      "node_count": 13
+    },
+    {
+      "id": "tw",
+      "name": "台湾",
+      "node_count": 10
+    },
+    {
+      "id": "jp",
+      "name": "日本",
+      "node_count": 10
+    },
+    {
+      "id": "sg",
+      "name": "新加坡",
+      "node_count": 10
+    },
+    {
+      "id": "us",
+      "name": "美国",
+      "node_count": 7
+    }
+  ],
+  "source_snapshot_path": "data/tiziyun-latency.json",
+  "notes": [
+    "香港13个、台湾10个、日本10个、新加坡10个、美国7个，共50个节点。",
+    "节点数量按截图原名统计，保留编号空缺，不补号或将香港01改写为香港16。",
+    "列表完整性确认日期与截图采样日期分别记录；延迟截图中保留48条数值及2条超时。"
+  ]
+}

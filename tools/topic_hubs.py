@@ -40,6 +40,13 @@ def hub_tables(root, source_tables, brands):
                     flyv['location']+flyv['isp']+' · '+(flyv.get('client') or '客户端未提供'),
                     str(fs['node_count']),str(fs['response_count'])+' / '+str(fs['timeout_count']),
                     str(fs['min_ms'])+' / '+format(fs['median_ms'],'g')+' / '+str(fs['max_ms'])])
+    ladder=json.loads((Path(root)/'data/tiziyun-latency.json').read_text(encoding='utf-8'))
+    from tiziyun_nodes import validate_snapshot, time_label
+    validate_snapshot(ladder)
+    ls=ladder['summary']
+    latency.append(['梯子云',time_label(ladder),ladder['location']+ladder['isp']+' · '+ladder['client'],
+                    str(ls['node_count']),str(ls['response_count'])+' / '+str(ls['timeout_count']),
+                    str(ls['min_ms'])+' / '+format(ls['median_ms'],'g')+' / '+str(ls['max_ms'])])
     latency.append([brands[4][0],'尚未提供','尚未提供','—','—','—'])
     flyv_access=json.loads((Path(root)/'data/feiv-access-records.json').read_text(encoding='utf-8'))
     from flyv_access import access_record
@@ -48,7 +55,7 @@ def hub_tables(root, source_tables, brands):
                 record['test_location'],record['isp'],record['node_region'],'已报告能发送问题并收到回答']]
     return {**source_tables,
             'hub-candidates': (['品牌','线路资料','入门月付应付与额度','轻量年付应付与每期额度','优惠范围'], candidates),
-            'hub-latency': (['品牌','采样时刻（北京时间）','环境与客户端','记录数','有数值 / 超时','最小 / 中位 / 最大（ms）'], latency),
+            'hub-latency': (['品牌','采样日期 / 时段（北京时间）','环境与客户端','记录数','有数值 / 超时','最小 / 中位 / 最大（ms）'], latency),
             'hub-ai-records': (source_tables['ai-records'][0],ai_records)}
 
 
