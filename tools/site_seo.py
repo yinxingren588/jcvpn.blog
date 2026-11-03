@@ -63,9 +63,9 @@ def apply_site_seo(root):
         if b['id']=='langwang' and b.get('node_profile_ready'):
             node_source=json.loads((root/b['overview_path']).read_text(encoding='utf-8'))
             latest_source_date=max(latest_source_date,node_source['updated_on'])
-            put(b['profile_path'],'浪网 WaveNet套餐与节点｜9款价格、年付IPLC与午间记录',
-                '浪网WaveNet9款套餐与60节点午间记录，附BGP与SS说明、119元年付80GB每30天刷新及年付IPLC条目。查看Windows、macOS、安卓和iOS下载登录连接教程；iOS使用Nextin，品牌识别码lw3。另列30元起月付、三款不限时总流量与680元/月定制资料。',
-                ['浪网','WaveNet','浪网套餐','浪网价格','浪网节点','浪网测速','浪网客户端','Nextin lw3','BGP机场','IPLC专线','Shadowsocks','机场测评资料'])
+            put(b['profile_path'],'浪网 WaveNet套餐与优惠｜lw888八折、60节点与使用教程',
+                '浪网WaveNet全部9款套餐可用lw888享八折，无到期限制，周期续费及五款普通周期重置包可用，不叠加。年付优惠后95.20元、每30天80GB，年付IPLC单列；附60节点午间记录、Nextin lw3等四端教程、支付宝与购买后24小时内技术问题退款条件。',
+                ['浪网','WaveNet','浪网优惠码','lw888','浪网套餐','浪网价格','浪网节点','浪网测速','浪网客户端','Nextin lw3','BGP机场','IPLC专线','Shadowsocks','机场测评资料'])
             continue
         if b.get('node_profile_ready'):
             assert b['id']=='tiziyun','SEO metadata is required for this node profile.'

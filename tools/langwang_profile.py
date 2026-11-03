@@ -7,6 +7,8 @@ from site_chrome import shell, write_changed
 from langwang_nodes import validate_snapshot, build_snapshot_assets, render_snapshot, time_label
 from langwang_plans import validate_plans, build_plan_csv, render_plans, plan_faqs
 from langwang_clients import render_clients, client_faqs
+from langwang_coupon import validate_coupon, render_coupon, coupon_faqs
+from langwang_service import validate_service, render_service, render_refund, service_faqs
 
 
 def load(root, path):
@@ -21,13 +23,22 @@ def build_langwang_profile(root, brand):
     plans = load(root, brand['plans_path'])
     clients = load(root, brand['clients_path']) if brand.get('clients_path') else None
     clients_ready = clients is not None and clients['collection_status'] == 'basic_flows_confirmed'
+    coupon = load(root, brand['coupon_path']) if brand.get('coupon_path') else None
+    coupon_ready = coupon is not None and coupon['collection_status'] == 'confirmed'
+    rules = load(root, brand['service_rules_path']) if brand.get('service_rules_path') else None
+    service_ready = rules is not None and rules['collection_status'] == 'core_rules_confirmed' and coupon_ready
+    active_coupon = coupon if coupon_ready else None
+    if coupon_ready:
+        validate_coupon(coupon, plans['plans'])
+    if service_ready:
+        validate_service(rules, plans['plans'], coupon)
     validate_snapshot(snapshot)
     validate_plans(plans)
     assert overview['brand_id'] == coverage['brand_id'] == 'langwang'
     assert coverage['total_node_count'] == snapshot['summary']['node_count'] == 60
     assert {g['id']: g['node_count'] for g in coverage['regions']} == {g['id']: g['node_count'] for g in snapshot['regions']}
     build_snapshot_assets(root, snapshot)
-    build_plan_csv(root, plans)
+    build_plan_csv(root, plans, active_coupon)
     entry = e(brand['url'], quote=True)
     mark = ('<img class="langwang-mark" src="'+e(brand['logo_path'], quote=True)+'" width="'+str(brand['logo_width'])
             +'" height="'+str(brand['logo_height'])+'" alt="浪网Logo" decoding="async">' if brand.get('logo_path')
@@ -47,8 +58,8 @@ def build_langwang_profile(root, brand):
         ('超时和1028ms这类较高数值怎样统计？', '台湾04保留为Timeout，不按0ms参与数值统计。其余59条数值范围50—1028ms，中位数169ms；台湾01的1028ms、美国01的565ms等按原值保留。'),
         ('这批截图能证明晚高峰一直稳定吗？', '本批为11月3日12点的静态节点截图。品牌介绍中的晚高峰表现说明仍需要对应时段和连续观察材料；当前记录不生成长期可用率或同条件性能排名。'),
         ('浪网已有4K、TikTok和ChatGPT的实际任务结果吗？', '这些是品牌介绍与套餐材料列明的使用方向，目前尚未提供对应平台的实际播放、账号任务或问答记录。客户端显示的延迟与实际任务结果分别记录。'),
-        ('浪网的优惠、付款、使用与退款规则在哪里查看？', '四个平台的基础使用教程已列明，具体版本和最低系统要求请查看下载页。优惠、付款、流量与售后规则继续按浪网资料补充，选购时请核对官网订单与客服说明。' if clients_ready else '本页已整理9款套餐和60节点记录。各平台完整使用流程、优惠、付款与售后规则按后续提供的浪网资料继续补充，选购时请核对官网订单与客服说明。')
-    ] + plan_faqs(plans) + (client_faqs(clients) if clients_ready else [])
+        ('浪网的优惠、付款、使用与退款规则在哪里查看？', '本页已列lw888八折优惠、支付宝付款、四个平台使用教程、普通周期套餐流量规则与购买后24小时内的技术问题退款条件。选购时请核对官网订单与客服说明。' if service_ready else ('四个平台的基础使用教程已列明，具体版本和最低系统要求请查看下载页。优惠、付款、流量与售后规则继续按浪网资料补充，选购时请核对官网订单与客服说明。' if clients_ready else '本页已整理9款套餐和60节点记录。各平台完整使用流程、优惠、付款与售后规则按后续提供的浪网资料继续补充，选购时请核对官网订单与客服说明。'))
+    ] + plan_faqs(plans, active_coupon) + (client_faqs(clients) if clients_ready else []) + (coupon_faqs(coupon) if coupon_ready else []) + (service_faqs(rules, coupon) if service_ready else [])
     faq = ''.join('<details class="langwang-faq"><summary>'+e(question)+'</summary><p>'+e(answer)+'</p></details>' for question, answer in questions)
     body = ('<section class="info-hero langwang-hero" id="langwang-about"><span class="info-kicker">WAVENET / BGP & SS</span>'
             '<div class="langwang-heading">'+mark+'<div><h1>浪网 WaveNet</h1><p>BGP智能多线入口 · SS协议 · 年付标准单独列IPLC</p></div></div>'
@@ -63,7 +74,7 @@ def build_langwang_profile(root, brand):
             '<a href="#langwang-materials">使用与售后资料</a><a href="#langwang-faq">常见问题</a><a href="#langwang-sources">资料来源</a></nav>'
             '<section class="section" id="langwang-intro"><span class="overline">CONFIRMED BRAND MATERIALS</span><h2 id="quick-section-1">目前已确认的资料</h2>'
             '<div class="langwang-feature-grid">'+feature_cards+'</div><p class="langwang-note">线路、协议和平台方向按站长提供的资料整理，下方截图注明独立的采样条件与统计范围。</p></section>'
-            +render_plans(plans, brand['url'])+
+            +render_plans(plans, brand['url'], active_coupon)+
             '<section class="section" id="langwang-coverage" aria-labelledby="langwang-coverage-title"><span class="overline">5 REGIONS / 60 NODES</span>'
             '<h2 id="langwang-coverage-title">5个地区，60个节点。</h2><p class="langwang-lead">站长于'+e(coverage['confirmed_on'])
             +'确认这6张截图为完整列表，并确认当前覆盖以截图为准：香港20个，台湾、日本、新加坡、美国各10个。</p>'
@@ -88,7 +99,23 @@ def build_langwang_profile(root, brand):
         body = body.replace('本次采样已确认使用Windows版浪网；各平台完整使用流程、优惠、付款与售后条件继续补充。选购前请在官网订单和客服说明中核对相应细则。', '四个平台的基础下载、登录与连接流程已在上方列出。具体版本和最低系统要求以下载页说明为准；优惠、付款、流量与售后条件继续按浪网资料补充。', 1)
         body = body.replace('本页为资料整理，本站未独立复测。', '各平台下载、登录与连接步骤另由站长逐项确认。本页为资料整理，本站未独立复测。', 1)
         body = body.replace('<a href="data/langwang-overview.json">品牌资料 JSON ↓</a>', '<a href="data/langwang-overview.json">品牌资料 JSON ↓</a><a href="data/langwang-clients.json">各平台使用资料 JSON ↓</a>', 1)
-    html = shell('浪网 WaveNet套餐与节点｜9款价格、年付IPLC与午间记录', '浪网9款套餐与60节点记录，附BGP、SS、年付IPLC及各平台使用教程。', body)
+    if coupon_ready:
+        marker = '<section class="section" id="langwang-plans"'
+        body = body.replace(marker, render_coupon(coupon)+'\n'+marker, 1)
+        body = body.replace('<a href="#langwang-plans">9款套餐</a>', '<a href="#langwang-coupon">lw888八折优惠</a><a href="#langwang-plans">9款套餐</a>', 1)
+        body = body.replace('<a class="contact-action" href="#langwang-plans">查看9款套餐 →</a>', '<a class="contact-action" href="#langwang-coupon">查看八折优惠 →</a><a class="copy-contact" href="#langwang-plans">查看9款套餐 →</a>', 1)
+        body = body.replace('<a href="data/langwang-plans.json">套餐来源与确认 JSON ↓</a>', '<a href="data/langwang-plans.json">套餐来源与确认 JSON ↓</a><a href="data/langwang-coupon.json">优惠范围与使用规则 JSON ↓</a>', 1)
+    if service_ready:
+        marker = '<section class="section" id="langwang-materials">'
+        body = body.replace(marker, render_service(rules, coupon)+'\n'+render_refund(rules, brand['url'])+'\n'+marker, 1)
+        body = body.replace('<a href="#langwang-faq">常见问题</a>', '<a href="#langwang-service">流量与付款规则</a><a href="#langwang-refund">技术问题退款</a><a href="#langwang-faq">常见问题</a>', 1)
+        body = body.replace('优惠、流量与售后规则继续补充', '选购前核对订单说明', 1)
+        body = body.replace('四个平台的基础下载、登录与连接流程已在上方列出。具体版本和最低系统要求以下载页说明为准；优惠、付款、流量与售后条件继续按浪网资料补充。', '已整理四个平台基础流程、lw888八折优惠、支付宝付款、普通周期套餐的重置与升级规则，以及技术问题退款条件。其他付款周期、版本与系统要求、重置对有效期的影响、升级差价算法和退款到账安排，请在官网订单与客服说明中核对。', 1)
+        body = body.replace('本页为资料整理，本站未独立复测。', '优惠、付款、流量与技术问题退款条件亦由站长逐项确认。本页为资料整理，本站未独立复测。', 1)
+        body = body.replace('<a href="data/langwang-overview.json">品牌资料 JSON ↓</a>', '<a href="data/langwang-overview.json">品牌资料 JSON ↓</a><a href="data/langwang-service-rules.json">流量、付款与售后规则 JSON ↓</a>', 1)
+    html = shell('浪网 WaveNet套餐与优惠｜lw888八折、60节点与使用教程', '浪网9款套餐与lw888八折优惠，附60节点午间记录、四端教程、流量和退款规则。', body)
     html = html.replace('</head>', '<link rel="stylesheet" href="assets/langwang-profile.css"><link rel="stylesheet" href="assets/invisible-latency.css"><link rel="stylesheet" href="assets/langwang-latency.css"></head>', 1)
     html = html.replace('</body>', '<script src="assets/langwang-latency.js" defer></script></body>', 1)
+    if coupon_ready:
+        html = html.replace('</body>', '<script src="assets/langwang-coupon.js" defer></script></body>', 1)
     write_changed(root/brand['profile_path'], html)

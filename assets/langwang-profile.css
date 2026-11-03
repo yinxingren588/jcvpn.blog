@@ -13,3 +13,18 @@
 .langwang-client-entry{display:inline-flex;align-items:center;min-height:44px;margin-top:15px;color:#197eae;font-size:14px;text-decoration:underline;text-underline-offset:3px}
 .langwang-client-entry:focus-visible{outline:3px solid #1686b9;outline-offset:4px}
 @media(max-width:700px){.langwang-client-grid{grid-template-columns:1fr;gap:16px}.langwang-client{padding:22px}}
+.langwang-coupon-panel{display:grid;grid-template-columns:minmax(0,1fr) minmax(240px,.65fr);gap:26px;border:1px solid #e5cc89;border-radius:20px;background:#fffbef;padding:28px;margin-top:25px}
+.langwang-coupon-panel p{font-size:14px;line-height:1.95;color:#516f83;overflow-wrap:anywhere}
+.langwang-coupon-copy{min-width:0;align-self:center}.langwang-coupon-copy label{display:block;font-size:14px;font-weight:650;color:#416b85;margin-bottom:12px}
+.langwang-coupon-copy>div{display:flex;gap:8px}.langwang-coupon-copy input{min-width:0;width:0;flex:1;min-height:48px;border:1px solid #c5ddea;border-radius:10px;background:#fff;padding:10px 12px;font-family:monospace;font-size:23px;letter-spacing:1px;color:#2179a6}
+.langwang-coupon-copy button{min-height:48px;flex-shrink:0;padding:10px 14px;border:0;border-radius:10px;background:#176f9b;color:#fff;font-size:13px;cursor:pointer}
+.langwang-coupon-copy [role=status]{min-height:24px;margin:8px 0 0;font-size:12px}
+.langwang-coupon-copy input:focus-visible,.langwang-coupon-copy button:focus-visible{outline:3px solid #1686b9;outline-offset:3px}
+.langwang-plan-discount{border:1px solid #c7e1ef;border-radius:10px;background:#eaf7ff;padding:10px 12px;font-size:12px;line-height:1.8;color:#4a7790;margin:12px 0 0}
+.langwang-plan-discount strong{display:block;font-size:22px;color:#197dac}.langwang-plan-excluded{font-size:12px;line-height:1.9;color:#6a8294;margin:12px 0 0}.langwang-table-discount{font-weight:650;color:#197dac}
+.langwang-service-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:26px}.langwang-service-grid article{min-width:0;border:1px solid #cce2f1;border-radius:19px;background:#f6fbff;padding:25px}
+.langwang-service-grid h3,.langwang-refund-panel h3{font-size:20px;line-height:1.7;color:#2b6382;margin:15px 0}.langwang-service-grid p,.langwang-service-grid ol,.langwang-refund-panel p{font-size:14px;line-height:1.95;color:#55758e}.langwang-service-grid ol{padding-left:20px}.langwang-service-grid li+li{margin-top:10px}
+.langwang-payment{border:1px solid #c7e1ef;border-radius:12px;background:#edf8ff;padding:16px 20px;font-size:14px;line-height:1.95;color:#456e88;margin-top:24px}
+.langwang-refund-panel{border:1px solid #e5d196;border-radius:19px;background:#fffbef;padding:26px;margin-top:25px}
+@media(max-width:1000px){.langwang-coupon-panel{grid-template-columns:1fr}.langwang-coupon-copy{max-width:460px;width:100%}.langwang-service-grid{grid-template-columns:1fr}}
+@media(max-width:700px){.langwang-coupon-panel,.langwang-service-grid article,.langwang-refund-panel{padding:22px}.langwang-coupon-copy input{font-size:21px}.langwang-coupon-copy button{padding:10px 12px}}

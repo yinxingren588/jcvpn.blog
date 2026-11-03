@@ -22,7 +22,7 @@ SOURCES={
  'tiziyun-materials':['梯子云优惠、客户端与业务规则：站长逐项确认的资料','brand-tiziyun.html#tiziyun-sources'],
  'tiziyun-ai-records':['梯子云新加坡节点ChatGPT使用反馈与条件','brand-tiziyun.html#tiziyun-access'],
  'langwang-node-records':['浪网11月3日12点节点延迟记录与条件','brand-langwang.html#langwang-latency'],
- 'langwang-materials':['浪网9款套餐、节点与各平台使用资料','brand-langwang.html#langwang-sources'],
+ 'langwang-materials':['浪网9款套餐、lw888优惠、客户端与业务规则资料','brand-langwang.html#langwang-sources'],
  'ai-records':['五条ChatGPT使用反馈与条件','article-vpn-ai-use-records.html'],
  'flyv-ai-records':['飞v新加坡节点ChatGPT使用反馈与条件','brand-feiv.html#flyv-access'],
  'timeout-guide':['隐形人客服排查资料','data/invisible-support.json'],

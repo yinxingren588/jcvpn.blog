@@ -7,6 +7,7 @@ from pathlib import Path
 import csv
 
 from site_chrome import write_changed
+from langwang_coupon import discounted_price
 
 
 def money(value):
@@ -31,11 +32,11 @@ def validate_plans(data):
             assert p['expiry_policy'] == '不限时，用完即止'
 
 
-def plan_faqs(data):
+def plan_faqs(data, coupon=None):
     validate_plans(data)
     return [
-        ('浪网9款套餐的价格和流量分别是多少？', '年付标准119元/年，每30天80GB；入门30元/月150GB、进阶70元/月400GB、高端120元/月800GB、商业200元/月2.0TB。三款买断包分别为239元180GB、569元450GB、1099元900GB；定制线路680元/月500GB。'),
-        ('浪网年付标准能按月购买吗，流量怎样刷新？', '年付报价119元，全年支付，折合约9.92元/月，仅作预算换算。购买日起算，每30天刷新80GB；9.92元不是单月购买价格。年付标准的IPLC说明已由站长单独确认。'),
+        ('浪网9款套餐的价格和流量分别是多少？', '年付标准119元/年，每30天80GB；入门30元/月150GB、进阶70元/月400GB、高端120元/月800GB、商业200元/月2.0TB。三款买断包分别为239元180GB、569元450GB、1099元900GB；定制线路680元/月500GB。' + ('全部9款可使用lw888享八折，页面另列优惠后价格。' if coupon else '')),
+        ('浪网年付标准能按月购买吗，流量怎样刷新？', '年付报价119元，全年支付，折合约9.92元/月，仅作预算换算。购买日起算，每30天刷新80GB；年付标准的IPLC说明已由站长单独确认。' + ('使用lw888后全年支付95.20元，折合约7.93元/月，仍按年购买。' if coupon else '9.92元不是单月购买价格。')),
         ('浪网三款一次性流量包会每月补充吗？', '不会。180GB、450GB和900GB均已由站长确认为不限时整包总流量，用完即止，按累计消耗使用。原图的统一流量字段标签不作为按月增加额度的依据。'),
         ('浪网每款套餐的设备数量都一样吗？', '已提供的说明为：年付标准与入门不限；180GB小流量包限1台设备；450GB标准包可2台同时在线。进阶、高端、商业、900GB精英包及定制线路的具体数量未提供。'),
         ('浪网整体BGP介绍与年付标准IPLC怎样阅读？', 'BGP智能多线入口与专线中继互联来自品牌介绍；年付标准的全IPLC说明另由站长确认。其余套餐的出口与线路描述按各自材料保留。'),
@@ -45,21 +46,33 @@ def plan_faqs(data):
     ]
 
 
-def build_plan_csv(root, data):
+def build_plan_csv(root, data, coupon=None):
     validate_plans(data)
     stream = StringIO(newline='')
     writer = csv.writer(stream, lineterminator='\n')
-    writer.writerow(['套餐', '采用报价（元）', '付款单位', '流量原单位', '流量GB（材料明示）', '额度范围', '已提供付款选项', '设备说明', '线路说明', '速度政策原文范围', '流量倍率', '刷新或使用说明', '来源截图编号', '资料接收日期'])
+    headers = ['套餐', '采用报价（元）', '付款单位', '流量原单位', '流量GB（材料明示）', '额度范围', '已提供付款选项', '设备说明', '线路说明', '速度政策原文范围', '流量倍率', '刷新或使用说明', '来源截图编号', '资料接收日期']
+    if coupon:
+        headers += ['优惠码', '优惠适用', '优惠后报价（元）', '优惠力度', '续费使用', '重置包使用', '优惠到期规则', '优惠叠加', '优惠确认日期']
+    writer.writerow(headers)
     for p in data['plans']:
-        writer.writerow([p['name'], money(p['price_cny']), p['payment_unit'], p['traffic_display'], p['traffic_gb'],
+        row = [p['name'], money(p['price_cny']), p['payment_unit'], p['traffic_display'], p['traffic_gb'],
                          p['quota_scope'], '/'.join(p['available_cycles']), p['device_limit_display'] or '未提供',
                          p['line_in_materials'] or '未提供', p['speed_policy_in_materials'] or '未提供',
                          p['traffic_multiplier'] if p['traffic_multiplier'] is not None else '未提供',
-                         p['reset_rule'], '/'.join(map(str, p['source_screenshots'])), data['provided_on']])
+                         p['reset_rule'], '/'.join(map(str, p['source_screenshots'])), data['provided_on']]
+        if coupon:
+            c = coupon['coupon']
+            price = discounted_price(p, coupon)
+            reset = '可使用' if p['id'] in c['traffic_reset_applies_to_plan_ids'] else '重置包服务未确认'
+            renewal = '一次性买断，不按周期续费' if p['kind'] == 'one_time' else '可使用'
+            row += [c['code'], '适用' if price is not None else '不适用',
+                    money(price) if price is not None else '', c['display_discount'], renewal, reset,
+                    c['expiry_policy'], '不能叠加其他优惠', coupon['updated_on']]
+        writer.writerow(row)
     write_changed(Path(root)/'data/langwang-plans.csv', '\ufeff'+stream.getvalue())
 
 
-def render_plans(data, entry_url):
+def render_plans(data, entry_url, coupon=None):
     validate_plans(data)
     kinds = {'annual': '年付标准', 'monthly': '月付报价', 'one_time': '不限时总流量', 'custom': '独享定制'}
     cards, rows = [], []
@@ -72,6 +85,17 @@ def render_plans(data, entry_url):
             billing = '一次购买整包总流量；不限时、用完即止，不按月补充'
         else:
             billing = '独占带宽与独立公网IP；预计约2—3个工作日交付'
+        discount_html, discount_cell = '', ''
+        if coupon:
+            price = discounted_price(p, coupon)
+            if price is not None:
+                price_text = '¥'+money(price)+'/'+p['payment_unit']
+                discount_html = '<p class="langwang-plan-discount">'+e(coupon['coupon']['code'])+'八折后 <strong>'+e(price_text)+'</strong></p>'
+                discount_cell = '<td class="langwang-table-discount">'+e(price_text)+'</td>'
+                if p['kind'] == 'annual':
+                    billing = '优惠后全年支付 ¥'+money(price)+'，折合约 ¥'+money(price/12)+'/月；按年购买'
+            else:
+                discount_cell = '<td>不适用该优惠码</td>'
         device = p['device_limit_display'] or '未提供'
         cycles = ''.join('<span>'+e(cycle)+'</span>' for cycle in p['available_cycles'])
         line = '<p class="langwang-plan-line"><b>线路说明</b>'+e(p['line_in_materials'])+'</p>' if p['line_in_materials'] else ''
@@ -80,16 +104,16 @@ def render_plans(data, entry_url):
         cards.append('<article class="langwang-plan" id="langwang-plan-'+p['id']+'" data-plan-kind="'+p['kind']+'">'
                      '<span class="langwang-plan-kind">'+kinds[p['kind']]+'</span><h3>'+e(p['name'])+'</h3>'
                      '<p class="langwang-plan-price"><strong>¥'+money(p['price_cny'])+'</strong><span>/'+e(p['payment_unit'])+'</span></p>'
-                     '<p class="langwang-plan-billing">'+e(billing)+'</p><div class="langwang-plan-cycles" aria-label="已提供的付款选项">'+cycles+'</div>'
+                     +discount_html+'<p class="langwang-plan-billing">'+e(billing)+'</p><div class="langwang-plan-cycles" aria-label="已提供的付款选项">'+cycles+'</div>'
                      '<dl class="langwang-plan-metrics"><div><dt>'+e(p['quota_scope'])+'</dt><dd>'+e(p['traffic_display'])+'</dd></div>'
                      '<div><dt>设备说明</dt><dd>'+e(device)+'</dd></div></dl>'+line+speed+'<ul>'+features+'</ul>'
                      '<p class="langwang-plan-reset">'+e(p['reset_rule'])+'</p><a class="langwang-plan-action" href="'+e(entry_url, quote=True)
                      +'" target="_blank" rel="sponsored noopener noreferrer">'+('咨询定制线路' if p['kind']=='custom' else '查看官网套餐')
                      +' <span aria-hidden="true">↗</span></a></article>')
         rows.append('<tr><th scope="row"><a href="#langwang-plan-'+p['id']+'">'+e(p['name'])+'</a></th><td>¥'
-                    +money(p['price_cny'])+'/'+e(p['payment_unit'])+'</td><td>'+e(p['traffic_display']+' · '+p['quota_scope'])
+                    +money(p['price_cny'])+'/'+e(p['payment_unit'])+'</td>'+discount_cell+'<td>'+e(p['traffic_display']+' · '+p['quota_scope'])
                     +'</td><td>'+e(device)+'</td><td>'+e('、'.join(p['available_cycles']))+'</td><td>'+e(p['reset_rule'])+'</td></tr>')
-    return ('<section class="section" id="langwang-plans" aria-labelledby="langwang-plans-title"><span class="overline">9 PLANS / PRICES & QUOTAS</span>'
+    result = ('<section class="section" id="langwang-plans" aria-labelledby="langwang-plans-title"><span class="overline">9 PLANS / PRICES & QUOTAS</span>'
             '<h2 id="langwang-plans-title">9款套餐，分清付款周期与流量范围。</h2>'
             '<p class="langwang-lead">按站长于'+e(data['provided_on'])+'提供的两张套餐图及后续确认整理，共9款。'
             '年付标准采用80GB，定制采用680元/月，三款买断按不限时总流量列出。优惠与其他使用规则继续逐项补充。</p>'
@@ -103,3 +127,8 @@ def render_plans(data, entry_url):
             '<th scope="col">已提供付款选项</th><th scope="col">刷新或使用说明</th></tr></thead><tbody>'+''.join(rows)+'</tbody></table></div>'
             '<div class="langwang-source-links"><a href="data/langwang-plans.csv" download>下载9款套餐对照表 CSV ↓</a>'
             '<a href="data/langwang-plans.json">套餐源资料及补充确认 JSON ↓</a></div></section>')
+    if coupon:
+        result = result.replace('优惠与其他使用规则继续逐项补充。', '原始报价与lw888八折价格分列，续费与普通周期重置包优惠、流量和退款规则已另列。', 1)
+        result = result.replace('<th scope="col">流量与范围</th>', '<th scope="col">lw888八折后</th><th scope="col">流量与范围</th>', 1)
+        result = result.replace('采用站长确认的当前报价与额度；', '原始报价与lw888八折优惠分列；', 1)
+    return result

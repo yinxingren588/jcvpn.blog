@@ -1,0 +1,116 @@
+{
+  "brand_id": "langwang",
+  "confirmed_on": "2026-11-03",
+  "updated_on": "2026-11-03",
+  "source": "博客站长逐项确认的浪网业务规则",
+  "independently_verified": false,
+  "collection_status": "core_rules_confirmed",
+  "periodic_traffic_reset": {
+    "supported": true,
+    "applies_to_plan_ids": [
+      "annual-standard",
+      "entry",
+      "advanced",
+      "high-end",
+      "business"
+    ],
+    "scope": "普通周期套餐：年付标准及四款月付方案",
+    "price_basis": "与所购套餐价格相同",
+    "effective_immediately": true,
+    "restores_full_plan_quota": true,
+    "confirmed_on": "2026-11-03",
+    "validity_effect": null,
+    "scheduled_refresh_effect": null,
+    "discount_applicability": {
+      "coupon_code": "lw888",
+      "applies_to_plan_ids": [
+        "annual-standard",
+        "entry",
+        "advanced",
+        "high-end",
+        "business"
+      ],
+      "excluded_plan_ids": [],
+      "confirmed_on": "2026-11-03"
+    }
+  },
+  "early_renewal": {
+    "applies_to_plan_ids": [
+      "annual-standard",
+      "entry",
+      "advanced",
+      "high-end",
+      "business"
+    ],
+    "scope": "普通周期套餐：年付标准及四款月付方案",
+    "extends_validity": true,
+    "refreshes_traffic_immediately": false,
+    "traffic_refresh": "仍按原定流量刷新日期更新",
+    "confirmed_on": "2026-11-03"
+  },
+  "upgrade": {
+    "supported": true,
+    "applies_to_plan_ids": [
+      "annual-standard",
+      "entry",
+      "advanced",
+      "high-end",
+      "business"
+    ],
+    "scope": "普通周期套餐：年付标准及四款月付方案",
+    "payment_and_difference_refund": "先支付新套餐全价，再由平台退回原套餐差价。",
+    "confirmed_on": "2026-11-03",
+    "difference_calculation": null,
+    "refund_destination": null,
+    "refund_processing_time": null,
+    "cycle_start": "升级成功当天作为新套餐起算日，重新计算所选周期的有效期。",
+    "cycle_start_confirmed_on": "2026-11-03",
+    "used_traffic_handling": "升级后的可用流量按新套餐额度减去本周期已用流量计算。",
+    "used_traffic_handling_confirmed_on": "2026-11-03"
+  },
+  "refund": {
+    "supported": true,
+    "full_refund": true,
+    "conditions": [
+      "因技术问题",
+      "经客服协助后仍完全无法使用"
+    ],
+    "confirmed_on": "2026-11-03",
+    "deadline_hours_after_purchase": 24,
+    "deadline_confirmed_on": "2026-11-03",
+    "application_channel": "登录官网后台联系客服办理",
+    "application_login_required": true,
+    "application_channel_confirmed_on": "2026-11-03",
+    "refund_method": null,
+    "processing_time": null
+  },
+  "customer_support": {
+    "channel": "官网后台客服",
+    "login_required": true,
+    "scope": "技术问题退款办理",
+    "instructions": "申请此类技术问题退款时，登录浪网官网后台联系客服办理。",
+    "direct_url": null,
+    "confirmed_on": "2026-11-03"
+  },
+  "payment_methods": [
+    "支付宝"
+  ],
+  "payment_confirmed_on": "2026-11-03",
+  "coupon_rules_path": "data/langwang-coupon.json",
+  "one_time_traffic_reset": null,
+  "custom_plan_traffic_reset": null,
+  "notes": [
+    "已确认五款普通周期套餐可购买同价重置包，购买后立即恢复该套餐完整流量额度。",
+    "本次确认范围为年付标准及四款月付方案；三款一次性流量包与定制线路包的重置规则尚未提供。",
+    "重置对有效期及原定刷新日的影响尚未提供。",
+    "年付标准及四款月付方案的重置包可使用lw888享八折。",
+    "普通周期套餐提前续费只延长有效期，不立即补充流量，仍按原定刷新日期更新。",
+    "普通周期套餐升级先支付新套餐全价，再由平台退回原套餐差价。",
+    "升级成功当天重新起算套餐周期，可用流量为新套餐额度减去本周期已用流量。",
+    "升级差价的具体计算、退回渠道与处理时间尚未提供。",
+    "因技术问题，经客服协助后仍完全无法使用时，支持申请全额退款。",
+    "上述技术问题退款须在购买后24小时内申请。",
+    "上述退款通过登录浪网官网后台后联系客服办理；退款方式与处理时间尚未提供。",
+    "已确认支持支付宝付款；lw888八折码适用于全部9款套餐，无到期限制，周期套餐续费及五款普通周期套餐的流量重置包均可使用，不能叠加其他优惠。"
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "brand_id": "langwang",
+  "confirmed_on": "2026-11-03",
+  "updated_on": "2026-11-03",
+  "source": "博客站长逐项确认的浪网优惠资料",
+  "independently_verified": false,
+  "collection_status": "confirmed",
+  "coupon": {
+    "provided_text": "{lw888} 八折",
+    "provided_code": "{lw888}",
+    "provided_on": "2026-11-03",
+    "code": "lw888",
+    "code_confirmed_on": "2026-11-03",
+    "discount_type": "percentage",
+    "pay_multiplier": "0.8",
+    "display_discount": "八折",
+    "discount_confirmed_on": "2026-11-03",
+    "applies_to_plan_ids": [
+      "annual-standard",
+      "entry",
+      "advanced",
+      "high-end",
+      "business",
+      "once-small",
+      "once-standard",
+      "once-elite",
+      "custom-line"
+    ],
+    "excluded_plan_ids": [],
+    "scope": "适用于全部9款套餐：年付标准、四款月付方案、三款一次性流量包及定制线路包",
+    "scope_confirmed_on": "2026-11-03",
+    "expires_on": null,
+    "expiry_policy": "无到期限制",
+    "expiry_confirmed_on": "2026-11-03",
+    "renewal_applicability": true,
+    "renewal_confirmed_on": "2026-11-03",
+    "traffic_reset_applicability": true,
+    "traffic_reset_applies_to_plan_ids": [
+      "annual-standard",
+      "entry",
+      "advanced",
+      "high-end",
+      "business"
+    ],
+    "traffic_reset_confirmed_on": "2026-11-03",
+    "stackability": false,
+    "stackability_confirmed_on": "2026-11-03"
+  },
+  "notes": [
+    "站长提供的原文为“{lw888} 八折”，已确认八折，按0.8计算。",
+    "站长已确认优惠码实际输入为lw888，不含大括号。",
+    "已确认全部9款套餐均适用lw888八折优惠。",
+    "站长确认优惠码无到期限制，原话为“永久有效”。",
+    "已确认老用户续费浪网周期套餐也可使用lw888享八折。",
+    "已确认年付标准及四款月付方案的流量重置包可使用lw888享八折；定制线路包的流量重置规则尚未提供。",
+    "已确认lw888不能与其他优惠活动叠加使用。"
+  ]
+}
