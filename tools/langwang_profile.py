@@ -6,6 +6,7 @@ import json
 from site_chrome import shell, write_changed
 from langwang_nodes import validate_snapshot, build_snapshot_assets, render_snapshot, time_label
 from langwang_plans import validate_plans, build_plan_csv, render_plans, plan_faqs
+from langwang_clients import render_clients, client_faqs
 
 
 def load(root, path):
@@ -18,6 +19,8 @@ def build_langwang_profile(root, brand):
     coverage = load(root, brand['coverage_path'])
     snapshot = load(root, brand['latency_path'])
     plans = load(root, brand['plans_path'])
+    clients = load(root, brand['clients_path']) if brand.get('clients_path') else None
+    clients_ready = clients is not None and clients['collection_status'] == 'basic_flows_confirmed'
     validate_snapshot(snapshot)
     validate_plans(plans)
     assert overview['brand_id'] == coverage['brand_id'] == 'langwang'
@@ -44,8 +47,8 @@ def build_langwang_profile(root, brand):
         ('超时和1028ms这类较高数值怎样统计？', '台湾04保留为Timeout，不按0ms参与数值统计。其余59条数值范围50—1028ms，中位数169ms；台湾01的1028ms、美国01的565ms等按原值保留。'),
         ('这批截图能证明晚高峰一直稳定吗？', '本批为11月3日12点的静态节点截图。品牌介绍中的晚高峰表现说明仍需要对应时段和连续观察材料；当前记录不生成长期可用率或同条件性能排名。'),
         ('浪网已有4K、TikTok和ChatGPT的实际任务结果吗？', '这些是品牌介绍与套餐材料列明的使用方向，目前尚未提供对应平台的实际播放、账号任务或问答记录。客户端显示的延迟与实际任务结果分别记录。'),
-        ('浪网的优惠、付款、使用与退款规则在哪里查看？', '本页已整理9款套餐和60节点记录。各平台完整使用流程、优惠、付款与售后规则按后续提供的浪网资料继续补充，选购时请核对官网订单与客服说明。')
-    ] + plan_faqs(plans)
+        ('浪网的优惠、付款、使用与退款规则在哪里查看？', '四个平台的基础使用教程已列明，具体版本和最低系统要求请查看下载页。优惠、付款、流量与售后规则继续按浪网资料补充，选购时请核对官网订单与客服说明。' if clients_ready else '本页已整理9款套餐和60节点记录。各平台完整使用流程、优惠、付款与售后规则按后续提供的浪网资料继续补充，选购时请核对官网订单与客服说明。')
+    ] + plan_faqs(plans) + (client_faqs(clients) if clients_ready else [])
     faq = ''.join('<details class="langwang-faq"><summary>'+e(question)+'</summary><p>'+e(answer)+'</p></details>' for question, answer in questions)
     body = ('<section class="info-hero langwang-hero" id="langwang-about"><span class="info-kicker">WAVENET / BGP & SS</span>'
             '<div class="langwang-heading">'+mark+'<div><h1>浪网 WaveNet</h1><p>BGP智能多线入口 · SS协议 · 年付标准单独列IPLC</p></div></div>'
@@ -77,7 +80,15 @@ def build_langwang_profile(root, brand):
             '<a href="data/langwang-plans.csv" download>套餐对照表 CSV ↓</a><a href="data/langwang-latency.json">节点记录与统计 JSON ↓</a>'
             '<a href="data/langwang-latency.csv" download>60节点对照表 CSV ↓</a><a href="assets/langwang-latency-overview.svg" download>高清概览图 SVG ↓</a>'
             '<a href="topic-reviews-guide.html">机场测评与证据范围 →</a><a href="brands.html">返回品牌目录 →</a></div></section>')
-    html = shell('浪网 WaveNet套餐与节点｜9款价格、年付IPLC与午间记录', '浪网9款套餐及2026年11月3日12点上海电信的60节点记录，附BGP、SS与年付IPLC说明。', body)
+    if clients_ready:
+        marker = '<section class="section" id="langwang-materials">'
+        body = body.replace(marker, render_clients(clients, brand['url'])+'\n'+marker, 1)
+        body = body.replace('<a href="#langwang-materials">使用与售后资料</a>', '<a href="#langwang-clients">各平台使用教程</a><a href="#langwang-materials">使用与售后资料</a>', 1)
+        body = body.replace('客户端下载与服务规则继续补充', '优惠、流量与售后规则继续补充', 1)
+        body = body.replace('本次采样已确认使用Windows版浪网；各平台完整使用流程、优惠、付款与售后条件继续补充。选购前请在官网订单和客服说明中核对相应细则。', '四个平台的基础下载、登录与连接流程已在上方列出。具体版本和最低系统要求以下载页说明为准；优惠、付款、流量与售后条件继续按浪网资料补充。', 1)
+        body = body.replace('本页为资料整理，本站未独立复测。', '各平台下载、登录与连接步骤另由站长逐项确认。本页为资料整理，本站未独立复测。', 1)
+        body = body.replace('<a href="data/langwang-overview.json">品牌资料 JSON ↓</a>', '<a href="data/langwang-overview.json">品牌资料 JSON ↓</a><a href="data/langwang-clients.json">各平台使用资料 JSON ↓</a>', 1)
+    html = shell('浪网 WaveNet套餐与节点｜9款价格、年付IPLC与午间记录', '浪网9款套餐与60节点记录，附BGP、SS、年付IPLC及各平台使用教程。', body)
     html = html.replace('</head>', '<link rel="stylesheet" href="assets/langwang-profile.css"><link rel="stylesheet" href="assets/invisible-latency.css"><link rel="stylesheet" href="assets/langwang-latency.css"></head>', 1)
     html = html.replace('</body>', '<script src="assets/langwang-latency.js" defer></script></body>', 1)
     write_changed(root/brand['profile_path'], html)

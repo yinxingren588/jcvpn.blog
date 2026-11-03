@@ -1,0 +1,146 @@
+{
+  "brand_id": "langwang",
+  "confirmed_on": "2026-11-03",
+  "source": "博客站长逐项确认的浪网客户端资料",
+  "independently_verified": false,
+  "collection_status": "basic_flows_confirmed",
+  "platforms": {
+    "windows": {
+      "platform": "Windows",
+      "name": "浪网",
+      "name_confirmed_on": "2026-11-03",
+      "development": null,
+      "download_entry": "官网首页直接下载",
+      "download_confirmed_on": "2026-11-03",
+      "version": null,
+      "system_requirements": null,
+      "login_method": "使用浪网官网注册的账号登录",
+      "login_confirmed_on": "2026-11-03",
+      "connection_steps": [
+        {
+          "title": "下载客户端",
+          "description": "从浪网官网首页直接下载Windows版浪网客户端。"
+        },
+        {
+          "title": "登录账号",
+          "description": "打开客户端，使用浪网官网注册的账号登录。"
+        },
+        {
+          "title": "选择节点",
+          "description": "在客户端节点列表中选择准备使用的节点。"
+        },
+        {
+          "title": "点击连接",
+          "description": "选择节点后点击连接，即可开始使用。"
+        }
+      ],
+      "connection_confirmed_on": "2026-11-03"
+    },
+    "macos": {
+      "platform": "macOS",
+      "name": "浪网",
+      "name_confirmed_on": "2026-11-03",
+      "development": null,
+      "download_entry": "官网首页直接下载",
+      "download_confirmed_on": "2026-11-03",
+      "version": null,
+      "system_requirements": null,
+      "login_method": "使用浪网官网注册的账号登录",
+      "login_confirmed_on": "2026-11-03",
+      "connection_steps": [
+        {
+          "title": "下载客户端",
+          "description": "从浪网官网首页直接下载macOS版浪网客户端。"
+        },
+        {
+          "title": "登录账号",
+          "description": "打开客户端，使用浪网官网注册的账号登录。"
+        },
+        {
+          "title": "选择节点",
+          "description": "在客户端节点列表中选择准备使用的节点。"
+        },
+        {
+          "title": "点击连接",
+          "description": "选择节点后点击连接，即可开始使用。"
+        }
+      ],
+      "connection_confirmed_on": "2026-11-03"
+    },
+    "android": {
+      "platform": "Android",
+      "name": "浪网",
+      "name_confirmed_on": "2026-11-03",
+      "development": null,
+      "download_entry": "官网首页直接下载",
+      "download_confirmed_on": "2026-11-03",
+      "version": null,
+      "system_requirements": null,
+      "login_method": "使用浪网官网注册的账号登录",
+      "login_confirmed_on": "2026-11-03",
+      "connection_steps": [
+        {
+          "title": "下载客户端",
+          "description": "从浪网官网首页直接下载安卓版浪网客户端。"
+        },
+        {
+          "title": "登录账号",
+          "description": "打开客户端，使用浪网官网注册的账号登录。"
+        },
+        {
+          "title": "选择节点",
+          "description": "在客户端节点列表中选择准备使用的节点。"
+        },
+        {
+          "title": "点击连接",
+          "description": "选择节点后点击连接，即可开始使用。"
+        }
+      ],
+      "connection_confirmed_on": "2026-11-03"
+    },
+    "ios": {
+      "platform": "iOS",
+      "collection_status": "basic_flow_confirmed",
+      "name": "Nextin",
+      "name_confirmed_on": "2026-11-03",
+      "identifier": "lw3",
+      "identifier_confirmed_on": "2026-11-03",
+      "download_entry": "使用海外Apple ID在App Store下载Nextin",
+      "download_confirmed_on": "2026-11-03",
+      "version": null,
+      "system_requirements": null,
+      "login_method": "填写品牌识别码lw3后，使用浪网官网注册的账号登录",
+      "login_confirmed_on": "2026-11-03",
+      "connection_steps": [
+        {
+          "title": "下载Nextin",
+          "description": "使用海外Apple ID，在App Store下载Nextin。"
+        },
+        {
+          "title": "填写品牌识别码",
+          "description": "打开Nextin，填写浪网品牌识别码lw3。"
+        },
+        {
+          "title": "登录官网账号",
+          "description": "填写识别码后，使用浪网官网注册的账号登录。"
+        },
+        {
+          "title": "选择节点",
+          "description": "在节点列表中选择准备使用的节点。"
+        },
+        {
+          "title": "点击连接",
+          "description": "选择节点后点击连接，即可开始使用。"
+        }
+      ],
+      "connection_confirmed_on": "2026-11-03"
+    }
+  },
+  "notes": [
+    "Windows版浪网客户端名称与采样条件此前已单独确认，官网首页下载入口现已另行确认。",
+    "Windows、macOS和安卓均使用浪网客户端，官网首页下载，使用官网账号登录，选择节点后点击连接。",
+    "iOS使用海外Apple ID在App Store下载Nextin，填写lw3，再使用浪网官网账号登录，选择节点后点击连接。",
+    "Windows、macOS和安卓客户端的自研属性尚未确认，四个平台的具体版本与最低系统要求尚未提供。",
+    "通用使用流程与节点截图的采样条件分别保存，不以客户端教程反填具体记录。"
+  ]
+}
