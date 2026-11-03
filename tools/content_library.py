@@ -19,6 +19,7 @@ SOURCES={
  'node-records':['四批节点延迟记录与来源','article-airport-review-records-overview.html'],
  'flyv-node-records':['飞v晚高峰节点延迟记录与来源','brand-feiv.html#flyv-latency'],
  'tiziyun-node-records':['梯子云下午节点延迟记录与来源','brand-tiziyun.html#tiziyun-latency'],
+ 'tiziyun-materials':['梯子云优惠、客户端与业务规则：站长逐项确认的资料','brand-tiziyun.html#tiziyun-sources'],
  'ai-records':['五条ChatGPT使用反馈与条件','article-vpn-ai-use-records.html'],
  'flyv-ai-records':['飞v新加坡节点ChatGPT使用反馈与条件','brand-feiv.html#flyv-access'],
  'timeout-guide':['隐形人客服排查资料','data/invisible-support.json'],

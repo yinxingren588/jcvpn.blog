@@ -1,0 +1,60 @@
+{
+  "brand_id": "tiziyun",
+  "confirmed_on": "2026-11-03",
+  "updated_on": "2026-11-03",
+  "source": "博客站长逐项确认的梯子云优惠资料",
+  "independently_verified": false,
+  "collection_status": "confirmed",
+  "coupon": {
+    "code": "2hy85",
+    "code_confirmed_on": "2026-11-03",
+    "discount_type": "percentage",
+    "pay_multiplier": "0.85",
+    "display_discount": "八五折",
+    "discount_confirmed_on": "2026-11-03",
+    "applies_to_plan_ids": [
+      "basic-view",
+      "clear-multiline",
+      "global-smart",
+      "global-backbone",
+      "private-line"
+    ],
+    "excluded_plan_ids": [
+      "annual-maintenance",
+      "once-light",
+      "once-standard",
+      "once-elite"
+    ],
+    "scope": "适用于四款月付方案及私人定制专线；89元/年的年度保活方案与三款一次性流量包不适用",
+    "provided_scope_description": "年付以下的配套可以使用",
+    "scope_description_provided_on": "2026-11-03",
+    "scope_confirmed_on": "2026-11-03",
+    "scope_clarifications": [
+      "站长确认私人定制专线可用，89元年付保活方案不可用。",
+      "站长随后补充：一次性流量包也不能用，按三款一次性流量包全部排除。"
+    ],
+    "expires_on": null,
+    "expiry_policy": "无到期限制",
+    "expiry_confirmed_on": "2026-11-03",
+    "renewal_applicability": true,
+    "renewal_confirmed_on": "2026-11-03",
+    "traffic_reset_applicability": true,
+    "traffic_reset_applies_to_plan_ids": [
+      "basic-view",
+      "clear-multiline",
+      "global-smart",
+      "global-backbone"
+    ],
+    "traffic_reset_confirmed_on": "2026-11-03",
+    "stackability": false,
+    "stackability_confirmed_on": "2026-11-03"
+  },
+  "notes": [
+    "已确认梯子云优惠码2hy85为八五折，对符合使用条件的价格按0.85计算。",
+    "适用范围以站长后续澄清为准：四款月付方案及私人定制专线可用；89元年付保活方案和三款一次性流量包不可用，共5款适用、4款排除。",
+    "站长已确认优惠码无到期限制，原话为“永久有效”。",
+    "适用范围内的5款套餐已确认老用户续费也可使用2hy85享八五折。",
+    "四款月付方案的流量重置包已确认可以使用2hy85享八五折；私人定制专线是否提供重置包尚未确认。",
+    "已确认2hy85不能与其他优惠活动叠加使用，不沿用其他品牌规则。"
+  ]
+}

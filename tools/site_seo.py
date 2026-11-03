@@ -63,9 +63,9 @@ def apply_site_seo(root):
         if b.get('node_profile_ready'):
             node_source=json.loads((root/b['overview_path']).read_text(encoding='utf-8'))
             latest_source_date=max(latest_source_date,node_source['updated_on'])
-            put(b['profile_path'],'梯子云 LadderCloud套餐与节点｜9款价格、BGP/IEPL及下午记录',
-                '梯子云LadderCloud9款套餐：年付89元、每月60GB；四档月付25/60/110/190元，三款买断169/449/849元，私人定制680元/月。另列BGP与高阶IEPL说明、SS协议、五地区50节点及11月3日下午上海电信截图记录。',
-                ['梯子云','LadderCloud','梯子云套餐','梯子云价格','梯子云节点','梯子云测速','BGP机场','IEPL专线','SS协议','机场测评资料'])
+            put(b['profile_path'],'梯子云 LadderCloud套餐与优惠码｜9款价格、BGP/IEPL及节点记录',
+                '梯子云LadderCloud的9款套餐、BGP/高阶IEPL与50节点下午记录。2hy85八五折适用四款月付及私人专线，排除89元年付保活和三款买断；续费可用，四款月付重置包可用，不能叠加。附价格对照、客户端教程、支付宝与24小时技术问题退款条件。',
+                ['梯子云','LadderCloud','梯子云套餐','梯子云优惠码','2hy85','梯子云价格','梯子云节点','梯子云测速','BGP机场','IEPL专线','SS协议','机场测评资料'])
             continue
         if b.get('plans_path'):
             coupon_source=json.loads((root/b['coupon_path']).read_text(encoding='utf-8'))
