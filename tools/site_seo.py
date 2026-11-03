@@ -64,8 +64,8 @@ def apply_site_seo(root):
             node_source=json.loads((root/b['overview_path']).read_text(encoding='utf-8'))
             latest_source_date=max(latest_source_date,node_source['updated_on'])
             put(b['profile_path'],'梯子云 LadderCloud套餐与优惠码｜9款价格、BGP/IEPL及节点记录',
-                '梯子云LadderCloud的9款套餐、BGP/高阶IEPL与50节点下午记录。2hy85八五折适用四款月付及私人专线，排除89元年付保活和三款买断；续费可用，四款月付重置包可用，不能叠加。附价格对照、客户端教程、支付宝与24小时技术问题退款条件。',
-                ['梯子云','LadderCloud','梯子云套餐','梯子云优惠码','2hy85','梯子云价格','梯子云节点','梯子云测速','BGP机场','IEPL专线','SS协议','机场测评资料'])
+                '梯子云LadderCloud的9款套餐、2hy85八五折、BGP/高阶IEPL及50节点下午记录。优惠适用四款月付与私人专线，年付保活和三款买断除外；续费、四款月付重置包可用，不叠加。附新加坡ChatGPT问答反馈、客户端教程、支付宝及24小时技术问题退款条件。',
+                ['梯子云','LadderCloud','梯子云套餐','梯子云优惠码','2hy85','梯子云价格','梯子云节点','梯子云测速','梯子云ChatGPT','Nextin tzy','BGP机场','IEPL专线','SS协议','机场测评资料'])
             continue
         if b.get('plans_path'):
             coupon_source=json.loads((root/b['coupon_path']).read_text(encoding='utf-8'))

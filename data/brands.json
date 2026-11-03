@@ -188,13 +188,13 @@
       "url": "https://varnexa.ladderaff.com/#/?code=KSmLLEnR",
       "profile_path": "brand-tiziyun.html",
       "profile_status": "core_materials_provided_more_details_pending",
-      "source_type": "博客站长提供并逐项确认的梯子云品牌、套餐、节点、客户端、优惠与业务规则资料",
+      "source_type": "博客站长提供并逐项确认的梯子云品牌、套餐、节点、客户端、优惠、业务规则与ChatGPT使用反馈",
       "source_date": "2026-11-03",
       "verification_status": "core_materials_provided_more_details_pending",
       "commercial_relationship": "推广入口；具体合作条件未提供",
       "node_profile_ready": true,
       "materials_updated_on": "2026-11-03",
-      "materials_source": "博客站长提供并逐项确认的梯子云品牌、套餐、节点、客户端、优惠与业务规则资料",
+      "materials_source": "博客站长提供并逐项确认的梯子云品牌、套餐、节点、客户端、优惠、业务规则与ChatGPT使用反馈",
       "overview_path": "data/tiziyun-overview.json",
       "coverage_path": "data/tiziyun-coverage.json",
       "latency_path": "data/tiziyun-latency.json",
@@ -202,7 +202,8 @@
       "provided_plan_count": 9,
       "clients_path": "data/tiziyun-clients.json",
       "service_rules_path": "data/tiziyun-service-rules.json",
-      "coupon_path": "data/tiziyun-coupon.json"
+      "coupon_path": "data/tiziyun-coupon.json",
+      "access_records_path": "data/tiziyun-access-records.json"
     },
     {
       "id": "langwang",

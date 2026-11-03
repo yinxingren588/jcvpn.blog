@@ -9,6 +9,7 @@ from tiziyun_plans import build_plan_csv, render_plans, plan_faqs
 from tiziyun_clients import render_clients, client_faqs
 from tiziyun_coupon import validate_coupon, render_coupon, coupon_faqs
 from tiziyun_service import validate_service, render_service, render_refund, service_faqs
+from tiziyun_access import access_record, render_access, access_faqs
 
 
 def load(root,path):
@@ -28,6 +29,9 @@ def build_tiziyun_profile(root,brand):
     rules=load(root,brand['service_rules_path']) if brand.get('service_rules_path') else None
     service_ready=rules is not None and rules['collection_status']=='core_rules_confirmed' and coupon_ready
     active_coupon=coupon if coupon_ready else None
+    access=load(root,brand['access_records_path']) if brand.get('access_records_path') else None
+    access_ready=access is not None and access['collection_status']=='core_conditions_confirmed'
+    if access_ready:access_record(access)
     if coupon_ready:validate_coupon(coupon,plans['plans'])
     if service_ready:validate_service(rules,plans['plans'],coupon)
     validate_snapshot(snapshot)
@@ -43,6 +47,8 @@ def build_tiziyun_profile(root,brand):
     features=[('BGP 多线入口','品牌介绍列明智能多线入口与专线中继互联；高阶套餐详情另列IEPL骨干，线路条目按各套餐资料保留。'),
               ('SS 节点协议','站长已确认节点使用 Shadowsocks（SS）协议。'),
               ('平台使用方向','品牌资料列出4K流媒体、TikTok跨境运营与AI生产力工具交互等方向；相应任务反馈继续补充。')]
+    if access_ready:
+        features[2]=('平台方向与任务反馈','品牌资料列出4K流媒体、TikTok与AI工具等方向。已另列新加坡节点的ChatGPT问答反馈，其他平台任务按各自记录核对。')
     feature_cards=''.join('<article><span class="overline">0'+str(i)+' / BRAND MATERIAL</span><h3>'+e(title)+'</h3><p>'+e(text)+'</p></article>' for i,(title,text) in enumerate(features,1))
     region_cards=''.join('<li><h3>'+e(r['name'])+'</h3><p><strong>'+str(r['node_count'])+'</strong><span>个节点</span></p></li>' for r in coverage['regions'])
     counts='、'.join(r['name']+str(r['node_count'])+'个' for r in coverage['regions'])
@@ -56,8 +62,8 @@ def build_tiziyun_profile(root,brand):
         ('哪些节点显示超时，统计时如何处理？','新加坡09与香港13显示Timeout。50个节点中48条有数值，范围51—479ms，中位数143.5ms；超时保留为独立状态，不按0ms参与数值统计。'),
         ('香港01为什么没有按位置改成香港16？','截图4第五行左侧原名为香港01，数值147ms，因此按原名保留。列表中未出现的编号不补写，避免把整理者的推测当作原始数据。'),
         ('下午的截图能说明晚高峰长期表现吗？','本批记录对应2026年11月3日下午的一次截图。品牌介绍中的晚高峰表现说明还需要对应时段与连续观察材料；本页保留下午数值与超时，不据此生成长期可用率或性能排名。'),
-        ('梯子云支持4K播放、TikTok和AI工具，是否都有实际任务记录？','这些是品牌介绍中列出的使用方向。目前提供的是客户端节点延迟截图；实际播放、账号任务或AI问答结果需按具体平台、日期和节点另行记录。'),
-        ('梯子云有没有已确认的优惠与售后规则？','已确认2hy85八五折优惠的适用范围、续费和四款月付重置包优惠，支持支付宝付款，并列明普通周期套餐的流量规则与购买后24小时内的技术问题退款条件。' if service_ready else '当前已提供9款截图报价，优惠、付款、续费重置及退款规则继续逐项确认。选购时请核对官网订单和服务条件。')]+plan_faqs(plans,active_coupon)+(client_faqs(clients) if clients_ready else [])+(coupon_faqs(coupon) if coupon_ready else [])+(service_faqs(rules,coupon) if service_ready else [])
+        ('梯子云支持4K播放、TikTok和AI工具，是否都有实际任务记录？','已补充新加坡节点的ChatGPT发送问题并收到回答反馈。4K播放、TikTok及其他AI任务仍按品牌列明的方向阅读，需要各自的实际任务记录。' if access_ready else '这些是品牌介绍中列出的使用方向。目前提供的是客户端节点延迟截图；实际播放、账号任务或AI问答结果需按具体平台、日期和节点另行记录。'),
+        ('梯子云有没有已确认的优惠与售后规则？','已确认2hy85八五折优惠的适用范围、续费和四款月付重置包优惠，支持支付宝付款，并列明普通周期套餐的流量规则与购买后24小时内的技术问题退款条件。' if service_ready else '当前已提供9款截图报价，优惠、付款、续费重置及退款规则继续逐项确认。选购时请核对官网订单和服务条件。')]+plan_faqs(plans,active_coupon)+(client_faqs(clients) if clients_ready else [])+(coupon_faqs(coupon) if coupon_ready else [])+(service_faqs(rules,coupon) if service_ready else [])+(access_faqs(access) if access_ready else [])
     faq=''.join('<details class="tiziyun-faq"><summary>'+e(q)+'</summary><p>'+e(answer)+'</p></details>' for q,answer in questions)
     body='''<section class="info-hero tiziyun-hero" id="tiziyun-about"><span class="info-kicker">LADDERCLOUD / BGP & SS</span><div class="tiziyun-heading">'''+mark+'''<div><h1>梯子云 LadderCloud</h1><p>BGP智能多线入口 · 专线中继互联 · SS节点协议</p></div></div><p>'''+e(overview['editorial_description'])+'''</p><div class="contact-buttons"><a class="contact-action" href="#tiziyun-latency">查看50节点文字图表 →</a><a class="copy-contact" href="'''+entry+'''" target="_blank" rel="sponsored noopener noreferrer">访问梯子云推广入口 ↗</a></div><p class="tiziyun-source-date">资料由站长提供并逐项确认 · 更新：'''+e(overview['updated_on'])+'''</p></section>
 <nav class="tiziyun-jumps" aria-label="梯子云页面重点内容"><a href="#tiziyun-intro">线路与使用方向</a><a href="#tiziyun-coverage">五地区节点覆盖</a><a href="#tiziyun-latency">下午延迟记录</a><a href="#tiziyun-materials">套餐与待补资料</a><a href="#tiziyun-faq">常见问题</a><a href="#tiziyun-sources">资料来源</a></nav>
@@ -90,7 +96,16 @@ def build_tiziyun_profile(root,brand):
         body=body.replace('各平台下载、登录与连接流程已整理于上方教程。付款方式、优惠以及流量重置、续费、升级和退款条件，继续按梯子云自身资料逐项确认。选购前请查看所选套餐的官网说明。','各平台基础流程、支付宝付款、优惠及普通周期套餐的重置、续费、升级和技术问题退款条件已整理。其他付款周期总额、版本要求与退款到账安排，请在官网订单和客服说明中核对。',1)
         body=body.replace('本页为资料整理，本站未独立复测。','优惠、付款、流量与技术问题退款规则由站长于'+e(rules['confirmed_on'])+'逐项确认。本页为资料整理，本站未独立复测。',1)
         body=body.replace('<a href="data/tiziyun-plans.json">9款套餐源资料 JSON ↓</a>','<a href="data/tiziyun-plans.json">9款套餐源资料 JSON ↓</a><a href="data/tiziyun-service-rules.json">付款、流量与售后规则 JSON ↓</a>',1)
-    html=shell('梯子云 LadderCloud套餐与优惠码｜9款价格及节点记录','梯子云9款套餐、2hy85八五折适用范围及50节点下午记录，附各平台使用流程与技术问题退款条件。',body)
+    if access_ready:
+        marker='<section class="section" id="tiziyun-clients"'
+        if clients_ready:
+            body=body.replace(marker,render_access(access)+'\n'+marker,1)
+        else:
+            body=body.replace('<section class="section" id="tiziyun-materials">',render_access(access)+'\n<section class="section" id="tiziyun-materials">',1)
+        body=body.replace('<a href="#tiziyun-latency">下午延迟记录</a>','<a href="#tiziyun-latency">下午延迟记录</a><a href="#tiziyun-access">ChatGPT使用反馈</a>',1)
+        body=body.replace('<a href="data/tiziyun-overview.json">品牌介绍源资料 JSON ↓</a>','<a href="data/tiziyun-overview.json">品牌介绍源资料 JSON ↓</a><a href="data/tiziyun-access-records.json">ChatGPT问答反馈 JSON ↓</a>',1)
+        body=body.replace('本页为资料整理，本站未独立复测。','ChatGPT问答为站长另行提供并逐项确认条件的实际使用反馈。本页为资料整理，本站未独立复测。',1)
+    html=shell('梯子云 LadderCloud套餐与优惠码｜9款价格及节点记录','梯子云9款套餐、2hy85八五折适用范围及50节点下午记录，附各平台使用流程、ChatGPT反馈与技术问题退款条件。',body)
     styles='<link rel="stylesheet" href="assets/tiziyun-profile.css"><link rel="stylesheet" href="assets/invisible-latency.css"><link rel="stylesheet" href="assets/tiziyun-latency.css">'
     html=html.replace('</head>',styles+'</head>',1)
     html=html.replace('</body>','<script src="assets/tiziyun-latency.js" defer></script></body>',1)

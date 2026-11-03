@@ -78,8 +78,12 @@ def audit():
     assert Decimal('199')*Decimal('.8')==Decimal('159.20')
     assert len(rendered_tables['hub-candidates'][1])==5
     assert rendered_tables['hub-latency'][1][-1][1]=='尚未提供'
+    ai_rows=rendered_tables['hub-ai-records'][1]
+    assert len(ai_rows)==7
+    ladder_ai=next(row for row in ai_rows if row[0]=='梯子云')
+    assert ladder_ai[1:6]==['2026-11-03','12:00','上海','电信','新加坡']
     report=dict(substantive_hubs=len(hubs),authored_sections=total_sections,legacy_anchors_preserved=9,
-                verified_latency_records=verified_records,errors=[])
+                verified_latency_records=verified_records,verified_ai_records=len(ai_rows),errors=[])
     print(json.dumps(report,ensure_ascii=True))
     return report
 

@@ -36,7 +36,7 @@
       "profile_status": "core_materials_provided_more_details_pending",
       "node_profile_ready": true,
       "materials_updated_on": "2026-11-03",
-      "materials_source": "博客站长提供并逐项确认的梯子云品牌、套餐、节点、客户端、优惠与业务规则资料",
+      "materials_source": "博客站长提供并逐项确认的梯子云品牌、套餐、节点、客户端、优惠、业务规则与ChatGPT使用反馈",
       "overview_path": "data/tiziyun-overview.json",
       "coverage_path": "data/tiziyun-coverage.json",
       "latency_path": "data/tiziyun-latency.json",
@@ -44,6 +44,7 @@
       "clients_path": "data/tiziyun-clients.json",
       "service_rules_path": "data/tiziyun-service-rules.json",
       "coupon_path": "data/tiziyun-coupon.json",
+      "access_records_path": "data/tiziyun-access-records.json",
       "provided_plan_count": 9
     },
     {
