@@ -1,6 +1,7 @@
 {
   "brand_id": "feiv",
   "confirmed_on": "2026-11-02",
+  "updated_on": "2026-11-03",
   "source": "博客站长逐项确认的飞v优惠资料",
   "independently_verified": false,
   "collection_status": "confirmed",
@@ -18,13 +19,16 @@
     "expires_on": null,
     "expiry_policy": "无到期限制",
     "expiry_confirmed_on": "2026-11-02",
-    "renewal_applicability": null,
-    "traffic_reset_applicability": null,
-    "stackability": null
+    "renewal_applicability": false,
+    "renewal_confirmed_on": "2026-11-03",
+    "traffic_reset_applicability": false,
+    "traffic_reset_confirmed_on": "2026-11-03",
+    "stackability": false,
+    "stackability_confirmed_on": "2026-11-03"
   },
   "notes": [
-    "站长已逐项确认：优惠码fly20为八折，适用于全部9款套餐，无到期限制。",
+    "站长已逐项确认：优惠码fly20为八折，适用于全部9款套餐，无到期限制；2026年11月3日另确认不能用于老用户续费及流量重置包。",
     "券后价格按已提供套餐报价乘以0.80计算；尚未提供的其他付款周期报价不推算。",
-    "续费、重置包是否可用及能否叠加其他优惠尚未确认。"
+    "续费订单及流量重置包不适用，也不能叠加其他优惠；上述使用限制由站长于2026年11月3日逐项确认。"
   ]
 }

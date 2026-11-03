@@ -6,7 +6,13 @@
   "collection_status": "core_rules_confirmed",
   "periodic_traffic_reset": {
     "supported": true,
-    "applies_to_plan_ids": ["annual-light", "entry", "advanced", "high-end", "business"],
+    "applies_to_plan_ids": [
+      "annual-light",
+      "entry",
+      "advanced",
+      "high-end",
+      "business"
+    ],
     "scope": "普通周期套餐：年付标准轻量版及四款月付方案",
     "price_basis": "与所购套餐价格相同",
     "effective_immediately": true,
@@ -37,7 +43,10 @@
   "refund": {
     "supported": true,
     "full_refund": true,
-    "conditions": ["因技术问题", "经客服协助后仍完全无法使用"],
+    "conditions": [
+      "因技术问题",
+      "经客服协助后仍完全无法使用"
+    ],
     "confirmed_on": "2026-11-02",
     "deadline_hours_after_purchase": 24,
     "deadline_confirmed_on": "2026-11-02",
@@ -54,7 +63,9 @@
     "direct_url": null,
     "confirmed_on": "2026-11-02"
   },
-  "payment_methods": ["支付宝"],
+  "payment_methods": [
+    "支付宝"
+  ],
   "payment_confirmed_on": "2026-11-02",
   "one_time_traffic_reset": null,
   "custom_plan_traffic_reset": null,
@@ -70,5 +81,7 @@
     "上述技术问题退款须在购买后24小时内申请。",
     "退款通过登录飞v官网后台后联系客服办理。",
     "已确认支持支付宝付款；不沿用其他品牌的付款或优惠规则。"
-  ]
+  ],
+  "updated_on": "2026-11-03",
+  "coupon_rules_path": "data/feiv-coupon.json"
 }

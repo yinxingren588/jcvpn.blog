@@ -32,6 +32,7 @@ def shorten(text,limit=145):
 def apply_site_seo(root):
     root=Path(root); data=json.loads((root/'data/library.json').read_text(encoding='utf-8'))
     metadata={}
+    latest_source_date=DATE
     def put(file,title,description,keywords,kind='WebPage',published=None):
         metadata[file]=dict(title=title if title.endswith(SUFFIX) else title+SUFFIX,
                             description=shorten(description),keywords=list(dict.fromkeys(keywords)),kind=kind,published_on=published)
@@ -60,8 +61,10 @@ def apply_site_seo(root):
     intake=json.loads((root/'data/new-brands.json').read_text(encoding='utf-8'))['brands']
     for b in intake:
         if b.get('plans_path'):
+            coupon_source=json.loads((root/b['coupon_path']).read_text(encoding='utf-8'))
+            latest_source_date=max(latest_source_date,coupon_source.get('updated_on',coupon_source['confirmed_on']))
             put(b['profile_path'],'飞v FlyV优惠与套餐｜fly20八折、9款价格及测速记录',
-                '飞v FlyV9款套餐及fly20八折优惠，全部适用、无到期限制。覆盖香港、台湾、日本、新加坡、美国，共60个节点。查看券后价格、晚高峰延迟、新加坡ChatGPT反馈与四端教程，支持支付宝。技术问题经客服协助仍完全无法使用，可在购买后24小时内申请全额退款。',
+                '飞v FlyV的9款套餐、五地区60个节点资料与fly20八折优惠，无到期限制；续费和流量重置包不适用，不能叠加优惠。查看券后价格、节点延迟、ChatGPT反馈和四端教程。支持支付宝；技术问题经客服协助仍完全无法使用，可在购买后24小时内申请全额退款。',
                 ['飞v','FlyV','飞v套餐','飞v优惠码','fly20','飞v节点','飞v测速','飞v客户端','飞v ChatGPT','Nextin flyv','机场套餐价格','晚高峰节点延迟'])
             continue
         put(b['profile_path'],b['name']+(' '+b['english_name'] if b['english_name'] else '')+'品牌入口｜套餐与资料陆续补充',
@@ -118,7 +121,7 @@ def apply_site_seo(root):
         descriptions[path.name]=m['description']
     assert len({m['title'] for m in metadata.values()})==len(metadata),'Duplicate page titles'
     write_changed(root/'data/page-descriptions.json',json.dumps(descriptions,ensure_ascii=False,indent=2)+'\n')
-    write_changed(root/'data/seo-metadata.json',json.dumps(dict(updated_on=DATE,pages=metadata),ensure_ascii=False,indent=2)+'\n')
+    write_changed(root/'data/seo-metadata.json',json.dumps(dict(updated_on=latest_source_date,pages=metadata),ensure_ascii=False,indent=2)+'\n')
     out=io.StringIO(newline=''); writer=csv.writer(out,lineterminator='\n')
     writer.writerow(['页面','标题Title','描述Description','关键词Keywords'])
     for name,m in metadata.items():writer.writerow([name,m['title'],m['description'],'、'.join(m['keywords'])])

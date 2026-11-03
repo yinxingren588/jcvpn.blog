@@ -1,11 +1,12 @@
 """Render FlyV's confirmed periodic rules, technical refund and payment method."""
 from html import escape as e
+from flyv_coupon import coupon_rules
 
 
-def service_faqs(data):
+def service_faqs(data,coupon):
     return [
-        ('飞v普通周期套餐的流量用完后怎样重置？','年付标准轻量版及四款月付方案支持购买与所购套餐同价的流量重置包，购买后立即恢复该套餐完整额度。'),
-        ('提前续费飞v会立即补充流量吗？','不会。普通周期套餐提前续费只延长有效期，流量仍按原定刷新日期更新。需要立即恢复额度时，应区分续费与流量重置。'),
+        ('飞v普通周期套餐的流量用完后怎样重置？','年付标准轻量版及四款月付方案支持购买与所购套餐同价的流量重置包，购买后立即恢复该套餐完整额度。'+('fly20不能用于流量重置包，具体重置金额核对后台。' if coupon['coupon']['traffic_reset_applicability'] is False else '')),
+        ('提前续费飞v会立即补充流量吗？','不会。普通周期套餐提前续费只延长有效期，流量仍按原定刷新日期更新。需要立即恢复额度时，应区分续费与流量重置。'+('fly20不能用于续费订单，具体续费金额核对后台。' if coupon['coupon']['renewal_applicability'] is False else '')),
         ('飞v升级套餐的费用、周期和流量怎样处理？',data['upgrade']['payment_and_difference_refund']+data['upgrade']['cycle_start']+data['upgrade']['used_traffic_handling']),
         ('飞v什么情况下支持全额退款，多久内申请？','因技术问题，经客服协助后仍完全无法使用时，可在购买后24小时内申请全额退款。申请时登录飞v官网后台联系客服办理。'),
         ('飞v客服从哪里联系？',data['customer_support']['instructions']),
@@ -14,10 +15,10 @@ def service_faqs(data):
     ]
 
 
-def render_service(data):
+def render_service(data,coupon):
     assert data['collection_status']=='core_rules_confirmed'
     steps=''.join('<li>'+e(data['upgrade'][key])+'</li>' for key in ('payment_and_difference_refund','cycle_start','used_traffic_handling'))
-    return '<section class="section" id="flyv-service" aria-labelledby="flyv-service-title"><span class="overline">PERIODIC PLANS / RESET, RENEWAL & UPGRADE</span><h2 id="flyv-service-title">重置、续费、升级，分别怎样处理？</h2><p class="flyv-section-lead">以下适用于已确认的普通周期套餐：年付标准轻量版、入门、进阶、高端与商业方案。</p><div class="flyv-service-grid"><article class="flyv-service-card"><span class="overline">01 / RESET</span><h3>重置：立即恢复额度</h3><p>流量用完后，可购买与所购套餐同价的流量重置包，购买后立即恢复该套餐的完整流量额度。</p><span class="flyv-rule-tag">同价购买 · 立即恢复</span></article><article class="flyv-service-card"><span class="overline">02 / RENEWAL</span><h3>续费：延长有效期</h3><p>提前续费只延长套餐有效期，不会立即补充流量，仍按原定流量刷新日期更新。</p><span class="flyv-rule-tag">流量仍按原定日期刷新</span></article><article class="flyv-service-card"><span class="overline">03 / UPGRADE</span><h3>升级：核对费用、周期与用量</h3><ol>'+steps+'</ol></article></div><p class="flyv-material-note">同价重置包的优惠适用、对有效期和原定刷新日的影响，以及升级差价的具体算法、退回渠道和到账时间，尚需向平台确认。本节不把普通周期规则扩展到三款一次性包或独享黄金专线。</p><a class="flyv-client-source" href="data/feiv-service-rules.json">查看飞v周期套餐与售后规则 JSON ↓</a></section>'
+    return '<section class="section" id="flyv-service" aria-labelledby="flyv-service-title"><span class="overline">PERIODIC PLANS / RESET, RENEWAL & UPGRADE</span><h2 id="flyv-service-title">重置、续费、升级，分别怎样处理？</h2><p class="flyv-section-lead">以下适用于已确认的普通周期套餐：年付标准轻量版、入门、进阶、高端与商业方案。</p><div class="flyv-service-grid"><article class="flyv-service-card"><span class="overline">01 / RESET</span><h3>重置：立即恢复额度</h3><p>流量用完后，可购买与所购套餐同价的流量重置包，购买后立即恢复该套餐的完整流量额度。</p><span class="flyv-rule-tag">同价购买 · 立即恢复</span></article><article class="flyv-service-card"><span class="overline">02 / RENEWAL</span><h3>续费：延长有效期</h3><p>提前续费只延长套餐有效期，不会立即补充流量，仍按原定流量刷新日期更新。</p><span class="flyv-rule-tag">流量仍按原定日期刷新</span></article><article class="flyv-service-card"><span class="overline">03 / UPGRADE</span><h3>升级：核对费用、周期与用量</h3><ol>'+steps+'</ol></article></div><p class="flyv-material-note">'+e(coupon_rules(coupon))+'<a href="#flyv-coupon">查看优惠适用范围 →</a></p><p class="flyv-material-note">重置包对有效期和原定刷新日的影响，以及升级差价的具体算法、退回渠道和到账时间，尚需向平台确认。本节不把普通周期规则扩展到三款一次性包或独享黄金专线。</p><a class="flyv-client-source" href="data/feiv-service-rules.json">查看飞v周期套餐与售后规则 JSON ↓</a></section>'
 
 
 def render_refund(data,entry_url):
