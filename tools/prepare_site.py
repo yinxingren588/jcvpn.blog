@@ -73,6 +73,8 @@ def prepare() -> dict:
         apply_site_seo(ROOT)
     from site_assets import apply_site_assets
     apply_site_assets(ROOT)
+    from site_favicon import apply_site_favicon
+    apply_site_favicon(ROOT)
     config_path = ROOT / 'site.config.json'
     config = read_json(config_path)
     origin = config['origin'].rstrip('/')
@@ -121,7 +123,8 @@ def prepare() -> dict:
         pages[canonical] = {'file': path.name, 'sha256': digest, 'lastmod': modified}
 
     # Preserve the old bookmark as a small alias; it is not a second indexable home.
-    alias = '<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>叮当观察</title><meta name="robots" content="noindex,follow"><link rel="canonical" href="' + origin + '/"><meta http-equiv="refresh" content="0;url=./"></head><body><h1>叮当观察</h1><p><a href="index.html">前往首页</a></p></body></html>\n'
+    from site_favicon import favicon_links
+    alias = '<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">' + favicon_links(ROOT) + '<title>叮当观察</title><meta name="robots" content="noindex,follow"><link rel="canonical" href="' + origin + '/"><meta http-equiv="refresh" content="0;url=./"></head><body><h1>叮当观察</h1><p><a href="index.html">前往首页</a></p></body></html>\n'
     write_changed(ROOT / ALIAS, alias)
     robots = 'User-agent: *\nAllow: /\n\nSitemap: ' + origin + '/sitemap.xml\n'
     write_changed(ROOT / 'robots.txt', robots)
@@ -144,7 +147,7 @@ def prepare() -> dict:
 
 def archive(path: Path, key: str) -> int:
     files = list(ROOT.glob('*.html'))
-    files += [ROOT / name for name in (*DOCS, '_headers', 'robots.txt', 'sitemap.xml', '.nojekyll', key + '.txt')]
+    files += [ROOT / name for name in (*DOCS, '_headers', 'robots.txt', 'sitemap.xml', '.nojekyll', 'favicon.ico', key + '.txt')]
     for directory in ('assets', 'data'):
         files.extend(p for p in (ROOT / directory).rglob('*') if p.is_file())
     path.parent.mkdir(parents=True, exist_ok=True)

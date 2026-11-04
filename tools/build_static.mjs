@@ -37,7 +37,7 @@ for (const file of excludedPages) {
   assert.ok((await readFile(join(root, file), 'utf8')).includes('name="robots" content="noindex,follow"'), `Draft indexing rule missing: ${file}`);
 }
 assert.equal(files.length, Object.keys(manifest.pages).length + 2 + excludedPages.length, 'Refresh publication metadata for new or removed pages');
-files.push('_headers', 'robots.txt', 'sitemap.xml', '.nojekyll', config.indexnow_key + '.txt');
+files.push('_headers', 'robots.txt', 'sitemap.xml', '.nojekyll', 'favicon.ico', config.indexnow_key + '.txt');
 async function collect(directory) {
   for (const entry of await readdir(join(root, directory), { withFileTypes: true })) {
     assert.ok(!entry.isSymbolicLink(), `Symlink is not a publication asset: ${entry.name}`);
