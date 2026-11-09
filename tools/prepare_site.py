@@ -24,7 +24,15 @@ def write_changed(path: Path, value: str) -> None:
     if path.exists() and path.read_text(encoding='utf-8') == value:
         return
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(value, encoding='utf-8', newline='\n')
+    for attempt in range(5):
+        try:
+            path.write_text(value, encoding='utf-8', newline='\n')
+            break
+        except OSError:
+            if attempt == 4:
+                raise
+            import time
+            time.sleep(0.05)
 
 
 def read_json(path: Path, default=None):

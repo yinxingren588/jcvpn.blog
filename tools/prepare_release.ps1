@@ -1,4 +1,5 @@
 $ErrorActionPreference = 'Stop'
+$env:PYTHONUTF8 = '1'
 $taskRoot = Split-Path -Parent $PSScriptRoot
 $taskPython = Get-Command python -ErrorAction SilentlyContinue
 if (-not $taskPython) { throw 'Python 3 is required. Please install Python 3 and retry.' }
