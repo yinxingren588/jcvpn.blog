@@ -37,7 +37,7 @@ def faqs(data, latency=None, coupon=None, profile=None, clients=None, rules=None
     ]
     if latency:
         questions += [
-            ('微风网络有节点延迟记录吗？', '本页新增一批第三方截图记录：用户说明采样时间为2026-10-29 12:00（北京时间），上海电信，Windows版“微风网络”客户端。共52个节点，39条数值、13条超时；图表依据截图重绘，本站没有重新测量。'),
+            ('微风网络有节点延迟记录吗？', '本页新增一批第三方截图记录：用户说明采样时间为2026-11-12 12:00（北京时间），上海电信，Windows版“微风网络”客户端。共52个节点，39条数值、13条超时；图表依据截图重绘，本站没有重新测量。'),
             ('为什么日本节点同时有超时和可用数值？', '截图中的日本01—10本次均为超时；名称明确带“直连”的日本01—04显示57、64、58、58ms。本页将两组分开，不把直连记录用来代替前10个节点，也不凭截图推断具体网络故障原因。'),
             ('为什么明细里没有香港13？', '这批资料展示香港01—12及香港14，没有展示香港13。本页只记录可见节点；未展示不等于已确认超时、下线或不存在。'),
             ('图表中的ms能否换算为下载速度？', '不能直接换算。ms是这次客户端显示的延迟单位，下载或上传速度需要另行测量。每节点只有一条记录，也不能据此计算全天可用率或持续稳定性。')
@@ -132,9 +132,9 @@ def build_breezenet_profile(root):
         from breeze_latency import build_module as latency_html
         body = body.replace('<section class="section" id="breeze-plans"', latency_html(root) + '<section class="section" id="breeze-plans"', 1)
         body = body.replace('<nav class="breeze-jumps" aria-label="微风页面目录">', '<nav class="breeze-jumps" aria-label="微风页面目录"><a href="#peak-latency">延迟记录</a>', 1)
-        body = body.replace('方便按实际用量和付费方式选择。</p>', '方便按实际用量和付费方式选择。另附10月29日12:00上海电信的第三方节点延迟记录，数值与超时分别展示。</p>', 1)
+        body = body.replace('方便按实际用量和付费方式选择。</p>', '方便按实际用量和付费方式选择。另附11月12日12:00上海电信的第三方节点延迟记录，数值与超时分别展示。</p>', 1)
         body = body.replace('本次未提供微风的节点地区、客户端、优惠码及售后规则，本页没有使用其他品牌资料代填。', '套餐与延迟记录按各自资料来源分别整理；客户端使用方式、优惠活动和售后规则请以微风后台现行指引为准。')
-        description = '查看微风网络Breezenet的6款套餐、IPLC线路资料及第三方节点延迟记录。2026年10月29日12:00，上海电信、Windows版微风网络客户端共记录52个节点，39条数值和13条超时，日本直连单列，并提供完整明细与图表下载。'
+        description = '查看微风网络Breezenet的6款套餐、IPLC线路资料及第三方节点延迟记录。2026年11月12日12:00，上海电信、Windows版微风网络客户端共记录52个节点，39条数值和13条超时，日本直连单列，并提供完整明细与图表下载。'
     if profile:
         introduction = e(profile['intro'])
         body = re.sub(r'(<div class="breeze-intro">.*?<p>).*?(</p>)', lambda match: match[1] + introduction + match[2], body, count=1, flags=re.S)
@@ -240,7 +240,7 @@ def build_breezenet_profile(root):
     brand = next(item for item in catalog['brands'] if item['id'] == 'breezenet')
     brand.update(profile_status='third_party_plan_catalog', verification_status='third_party_materials_not_independently_verified', source_type='第三方套餐截图，经站长转交', source_date=data['updated_on'], plan_count=len(plans), line_type_from_materials='IPLC专线', page_checked_on=data['updated_on'], page_observation='入口经线路检测后可跳转微风网络注册页，并保留邀请码；套餐数据来自第三方截图，未登录后台独立核价。')
     if latency_data:
-        brand.update(source_type='第三方套餐及延迟截图，经站长转交', latency_node_count=52, latency_recorded_at='2026-10-29 12:00（北京时间）')
+        brand.update(source_type='第三方套餐及延迟截图，经站长转交', latency_node_count=52, latency_recorded_at='2026-11-12 12:00（北京时间）')
     if logo:
         brand.update(logo_path=logo['path'], logo_source=logo['source'], logo_provided_on=logo['provided_on'])
     write_changed(brands_path, json.dumps(catalog, ensure_ascii=False, indent=2) + '\n')

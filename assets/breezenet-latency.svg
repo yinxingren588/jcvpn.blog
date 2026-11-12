@@ -3,8 +3,8 @@
   PUBLIC '-//W3C//DTD SVG 1.0//EN'
   'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
 <svg role="img" aria-label="微风网络午间节点延迟记录" width="1400" height="1060" preserveAspectRatio="xMinYMin meet" viewBox="0 0 1400 1060" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
-	<title>微风网络2026年10月29日午间延迟记录</title><style>text{font-family:"Microsoft YaHei","Noto Sans CJK SC",sans-serif!important}</style>
-	<desc>2026年10月29日12:00北京时间，上海电信，Windows版微风网络客户端，第三方截图记录52个节点，39条数值、13条超时；日本直连单列。不是实时监测。</desc>
+	<title>微风网络2026年11月12日午间延迟记录</title><style>text{font-family:"Microsoft YaHei","Noto Sans CJK SC",sans-serif!important}</style>
+	<desc>2026年11月12日12:00北京时间，上海电信，Windows版微风网络客户端，第三方截图记录52个节点，39条数值、13条超时；日本直连单列。不是实时监测。</desc>
 	<clipPath id="clip">
 		<rect x="0" y="0" width="1400" height="1060"/>
 	</clipPath>
@@ -14,7 +14,7 @@
 			<rect x="30" y="30" width="1340" height="1000" rx="22" ry="22" style="stroke: rgb(86%,90%,94%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
 			<text x="74" y="987" style="font-family: Helvetica; font-size: 13px;fill: rgb(27%,53%,57%); stroke:none;" transform="translate(0,1974) scale(1,-1)">BREEZENET  /  MIDDAY NODE LATENCY</text>
 			<text x="74" y="934" style="font-family: STSong-Light; font-size: 37px;fill: rgb(8%,23%,35%); stroke:none;" transform="translate(0,1868) scale(1,-1)">微风网络 · 午间节点延迟记录</text>
-			<text x="74" y="898" style="font-family: STSong-Light; font-size: 17px;fill: rgb(40%,52%,61%); stroke:none;" transform="translate(0,1796) scale(1,-1)">第三方截图数据重绘  |  2026-10-29 12:00（北京时间）  |  单位 ms</text>
+			<text x="74" y="898" style="font-family: STSong-Light; font-size: 17px;fill: rgb(40%,52%,61%); stroke:none;" transform="translate(0,1796) scale(1,-1)">第三方截图数据重绘  |  2026-11-12 12:00（北京时间）  |  单位 ms</text>
 			<rect x="74" y="765" width="298" height="101" rx="14" ry="14" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(94%,97%,100%); fill-rule: evenodd;"/>
 			<text x="96" y="830" style="font-family: STSong-Light; font-size: 15px;fill: rgb(40%,52%,61%); stroke:none;" transform="translate(0,1660) scale(1,-1)">记录节点</text>
 			<text x="96" y="790" style="font-family: Helvetica-Bold; font-size: 29px;fill: rgb(13%,42%,63%); stroke:none;" transform="translate(0,1580) scale(1,-1)">52</text>
@@ -82,7 +82,7 @@
 			<text x="96" y="215" style="font-family: STSong-Light; font-size: 15px;fill: rgb(39%,51%,60%); stroke:none;" transform="translate(0,430) scale(1,-1)">超时不作0ms；单次延迟不代表下载速度、长期可用率或实时监测。</text>
 			<text x="74" y="146" style="font-family: STSong-Light; font-size: 13px;fill: rgb(47%,57%,65%); stroke:none;" transform="translate(0,292) scale(1,-1)">依据第三方提供的5张截图整理，未重新测量，未发布原照片。</text>
 			<text x="74" y="110" style="font-family: STSong-Light; font-size: 15px;fill: rgb(25%,43%,55%); stroke:none;" transform="translate(0,220) scale(1,-1)">叮当观察  /  jcvpn.blog</text>
-			<text x="1106.164" y="110" style="font-family: STSong-Light; font-size: 12px;fill: rgb(49%,59%,66%); stroke:none;" transform="translate(0,220) scale(1,-1)">2026-10-29 12:00（北京时间） · 上海电信</text>
+			<text x="1106.164" y="110" style="font-family: STSong-Light; font-size: 12px;fill: rgb(49%,59%,66%); stroke:none;" transform="translate(0,220) scale(1,-1)">2026-11-12 12:00（北京时间） · 上海电信</text>
 		</g>
 	</g>
 </svg>

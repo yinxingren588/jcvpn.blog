@@ -51,7 +51,7 @@ def build_flyv_profile(root,brand):
         ('进阶方案和标准流量包都是380GB，有什么区别？','进阶为50元/月、每月380GB；单次标准流量包为479元一次性、380GB总额度。两者付款周期与流量范围不同，不应只按380GB这个数字比较。'),
         ('独享黄金专线的价格和配置是什么？','采用站长补充确认的680元/月，包含每月500GB专属流量、独立原生公网IP和独享带宽。资料列明1对1技术协助，预计约2—3个工作日交付，具体部署要求通过工单沟通。'),
         ('飞v是否所有套餐均为IPLC、IEPL或同一种协议？','不能从本批资料这样推定。进阶列明BGP三网调度搭配IEPL/IPLC传输；高端与商业分别列明多线路调度或冗余专线出口，进阶、高端、商业另列Shadowsocks。其他套餐按各自说明阅读。'),
-        ('资料中的平台支持与不限速是否已经实测？','平台支持与不限速来自套餐资料。本页另列2026年11月2日19点上海电信的60个节点延迟记录，以及站长使用新加坡节点完成ChatGPT问答的反馈，两类记录分别注明条件。尚未提供下载速度或连续播放记录，不能由延迟数值或一次问答推断这些任务结果。四端使用流程、周期套餐、技术问题退款规则及fly20八折优惠已由站长逐项确认。')
+        ('资料中的平台支持与不限速是否已经实测？','平台支持与不限速来自套餐资料。本页另列2026年11月12日19点上海电信的60个节点延迟记录，以及站长使用新加坡节点完成ChatGPT问答的反馈，两类记录分别注明条件。尚未提供下载速度或连续播放记录，不能由延迟数值或一次问答推断这些任务结果。四端使用流程、周期套餐、技术问题退款规则及fly20八折优惠已由站长逐项确认。')
     ]+coupon_faqs(coupon)+coverage_faqs(coverage)+latency_faqs(latency)+access_faqs(access)+client_faqs(clients)+service_faqs(rules,coupon)
     faq=''.join('<details class="flyv-faq"><summary>'+e(q)+'</summary><p>'+e(answer)+'</p></details>' for q,answer in questions)
     body='''<section class="info-hero flyv-hero" id="flyv-about"><span class="info-kicker">FLYV / PLANS & QUOTAS</span><div class="flyv-brand-heading"><img src="'''+e(brand['logo_path'],quote=True)+'''" width="1024" height="1024" alt="飞vLogo" decoding="async"><div><h1>飞v FlyV</h1><p>从轻量年付，到月度用量与独享部署。</p></div></div><p>按已提供资料整理9款套餐：1款轻量年付、4款月付报价、3款一次性总流量包，以及1款独享黄金专线。先分清付款周期和额度范围，再比较适合自己的方案。</p><div class="contact-buttons"><a class="contact-action" href="#flyv-plans">查看9款套餐 →</a><a class="copy-contact" href="'''+url+'''" target="_blank" rel="sponsored noopener noreferrer">访问飞v推广入口 ↗</a></div><p class="flyv-source-date">资料由博客站长提供 · 整理日期：'''+data['provided_on']+'''</p></section>
@@ -69,7 +69,7 @@ def build_flyv_profile(root,brand):
         body=body.replace('<div class="'+grid+'">','<p class="flyv-material-note">'+e(coupon_rules(coupon))+'</p><div class="'+grid+'">',1)
     body=body.replace('<section class="section" id="flyv-plans">',render_coupon(coupon)+'\n<section class="section" id="flyv-plans">',1)
     body=body.replace('<section class="section" id="flyv-faq">',render_coverage(coverage)+'\n'+render_latency(latency)+'\n'+render_access(access)+'\n'+render_clients(clients,brand['url'])+'\n'+render_service(rules,coupon)+render_refund(rules,brand['url'])+'\n<section class="section" id="flyv-faq">',1)
-    body=body.replace('客户端名称与下载流程、节点地区清单、支付方式、优惠及重置、续费、升级和退款规则尚待提供，后续按飞v自身资料补充。','另按站长提供的6张新截图整理2026年11月2日19点上海电信的节点延迟，重复卡片去重，超时独立保留。ChatGPT记录为站长针对当次新加坡节点问答逐项确认的反馈，本站未独立复测。Windows、macOS与安卓的飞v客户端流程，以及iOS Nextin的flyv识别码、下载与登录连接流程，均由站长逐项确认。普通周期套餐的重置、续费和升级规则，以及购买后24小时内的技术问题退款条件与后台客服入口，均已确认；付款已确认支持支付宝。优惠码fly20八折、9款套餐适用、无到期限制亦已确认；站长于2026年11月3日另确认续费订单及流量重置包不适用，也不能叠加其他优惠。完整节点地区与数量已由站长另行确认，共5个地区、60个节点。具体客户端版本按后续资料补充。',1)
+    body=body.replace('客户端名称与下载流程、节点地区清单、支付方式、优惠及重置、续费、升级和退款规则尚待提供，后续按飞v自身资料补充。','另按站长提供的6张新截图整理2026年11月12日19点上海电信的节点延迟，重复卡片去重，超时独立保留。ChatGPT记录为站长针对当次新加坡节点问答逐项确认的反馈，本站未独立复测。Windows、macOS与安卓的飞v客户端流程，以及iOS Nextin的flyv识别码、下载与登录连接流程，均由站长逐项确认。普通周期套餐的重置、续费和升级规则，以及购买后24小时内的技术问题退款条件与后台客服入口，均已确认；付款已确认支持支付宝。优惠码fly20八折、9款套餐适用、无到期限制亦已确认；站长于2026年11月3日另确认续费订单及流量重置包不适用，也不能叠加其他优惠。完整节点地区与数量已由站长另行确认，共5个地区、60个节点。具体客户端版本按后续资料补充。',1)
     payment_badge='<span class="flyv-payment-badge" id="flyv-payment">支持'+e('、'.join(rules['payment_methods']))+'付款</span>'
     body=body.replace('访问飞v推广入口 ↗</a></div>','访问飞v推广入口 ↗</a>'+payment_badge+'</div>',1)
     html=shell('飞v FlyV套餐与晚高峰节点延迟','飞v9款套餐及晚高峰上海电信节点延迟记录。',body)

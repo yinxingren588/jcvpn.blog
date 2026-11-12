@@ -63,7 +63,7 @@ def build_langwang_profile(root, brand):
         ('浪网当前覆盖哪些地区，有多少个节点？', '以站长确认的完整截图为准，共60个：香港20个，台湾、日本、新加坡、美国各10个。年付详情另列地区的原文保留在源资料，当前覆盖表依据后续确认的截图整理。'),
         ('这批浪网节点延迟的采样条件是什么？', time_label(snapshot)+'，上海电信，Windows版浪网客户端。日期、时间、城市、运营商与客户端均由站长逐项确认，客户端版本和探测方法未提供。'),
         ('超时和1028ms这类较高数值怎样统计？', '台湾04保留为Timeout，不按0ms参与数值统计。其余59条数值范围50—1028ms，中位数169ms；台湾01的1028ms、美国01的565ms等按原值保留。'),
-        ('这批截图能证明晚高峰一直稳定吗？', '本批为11月3日12点的静态节点截图。品牌介绍中的晚高峰表现说明仍需要对应时段和连续观察材料；当前记录不生成长期可用率或同条件性能排名。'),
+        ('这批截图能证明晚高峰一直稳定吗？', '本批为11月12日12点的静态节点截图。品牌介绍中的晚高峰表现说明仍需要对应时段和连续观察材料；当前记录不生成长期可用率或同条件性能排名。'),
         ('浪网已有4K、TikTok和ChatGPT的实际任务结果吗？', '已补充11月3日19点、上海电信、Windows版浪网客户端连接新加坡节点的ChatGPT正常问答反馈。4K播放、TikTok及其他AI任务继续按品牌列明方向阅读，需补充各自的实际记录。' if access_ready else '这些是品牌介绍与套餐材料列明的使用方向，目前尚未提供对应平台的实际播放、账号任务或问答记录。客户端显示的延迟与实际任务结果分别记录。'),
         ('浪网的优惠、付款、使用与退款规则在哪里查看？', '本页已列lw888八折优惠、支付宝付款、四个平台使用教程、普通周期套餐流量规则与购买后24小时内的技术问题退款条件。选购时请核对官网订单与客服说明。' if service_ready else ('四个平台的基础使用教程已列明，具体版本和最低系统要求请查看下载页。优惠、付款、流量与售后规则继续按浪网资料补充，选购时请核对官网订单与客服说明。' if clients_ready else '本页已整理9款套餐和60节点记录。各平台完整使用流程、优惠、付款与售后规则按后续提供的浪网资料继续补充，选购时请核对官网订单与客服说明。'))
     ] + plan_faqs(plans, active_coupon) + (client_faqs(clients) if clients_ready else []) + (coupon_faqs(coupon) if coupon_ready else []) + (service_faqs(rules, coupon) if service_ready else []) + (access_faqs(access) if access_ready else [])
@@ -93,7 +93,7 @@ def build_langwang_profile(root, brand):
             '<section class="section" id="langwang-faq"><span class="overline">WAVENET QUESTIONS</span><h2 id="langwang-faq-title">浪网套餐与节点常见问题</h2>'+faq+'</section>'
             '<section class="section" id="langwang-sources"><span class="overline">SOURCES & SCOPE</span><h2 id="langwang-sources-title">资料来源与适用范围</h2>'
             '<p class="langwang-lead">品牌介绍、BGP与SS说明由站长提供。9款套餐来自两张截图，三款重复展示合并计数；年付80GB、定制680元/月、年付IPLC、一次性总流量与当前节点覆盖均另行确认。'
-            '延迟记录来自6张截图，采样于2026年11月3日12点，上海电信，Windows版浪网客户端，时间按小时提供。本页为资料整理，本站未独立复测。</p>'
+            '延迟记录来自6张截图，采样于2026年11月12日12点，上海电信，Windows版浪网客户端，时间按小时提供。本页为资料整理，本站未独立复测。</p>'
             '<div class="langwang-source-links"><a href="data/langwang-overview.json">品牌资料 JSON ↓</a><a href="data/langwang-plans.json">套餐来源与确认 JSON ↓</a>'
             '<a href="data/langwang-plans.csv" download>套餐对照表 CSV ↓</a><a href="data/langwang-latency.json">节点记录与统计 JSON ↓</a>'
             '<a href="data/langwang-latency.csv" download>60节点对照表 CSV ↓</a><a href="assets/langwang-latency-overview.svg" download>高清概览图 SVG ↓</a>'

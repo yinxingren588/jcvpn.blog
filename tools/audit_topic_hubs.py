@@ -81,7 +81,7 @@ def audit():
     assert len(rendered_tables['hub-latency'][1])==8
     wave_latency=next(row for row in rendered_tables['hub-latency'][1] if row[0]=='浪网')
     assert wave_latency[3:]==['60','59 / 1','50 / 169 / 1028']
-    assert '2026-11-03 12:00' in wave_latency[1] and '上海电信' in wave_latency[2]
+    assert '2026-11-12 12:00' in wave_latency[1] and '上海电信' in wave_latency[2]
     ai_rows=rendered_tables['hub-ai-records'][1]
     assert len(ai_rows)==8
     ladder_ai=next(row for row in ai_rows if row[0]=='梯子云')

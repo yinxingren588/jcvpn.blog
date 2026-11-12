@@ -61,7 +61,7 @@ def build_tiziyun_profile(root,brand):
         ('这批延迟记录是在什么条件下取得的？',time_label(snapshot)+'，'+snapshot['location']+snapshot['isp']+'，'+snapshot['client']+'。日期、下午时段、所在地、运营商与客户端由站长逐项确认；具体时刻、版本和探测方法未提供。'),
         ('哪些节点显示超时，统计时如何处理？','新加坡09与香港13显示Timeout。50个节点中48条有数值，范围51—479ms，中位数143.5ms；超时保留为独立状态，不按0ms参与数值统计。'),
         ('香港01为什么没有按位置改成香港16？','截图4第五行左侧原名为香港01，数值147ms，因此按原名保留。列表中未出现的编号不补写，避免把整理者的推测当作原始数据。'),
-        ('下午的截图能说明晚高峰长期表现吗？','本批记录对应2026年11月3日下午的一次截图。品牌介绍中的晚高峰表现说明还需要对应时段与连续观察材料；本页保留下午数值与超时，不据此生成长期可用率或性能排名。'),
+        ('下午的截图能说明晚高峰长期表现吗？','本批记录对应2026年11月12日下午的一次截图。品牌介绍中的晚高峰表现说明还需要对应时段与连续观察材料；本页保留下午数值与超时，不据此生成长期可用率或性能排名。'),
         ('梯子云支持4K播放、TikTok和AI工具，是否都有实际任务记录？','已补充新加坡节点的ChatGPT发送问题并收到回答反馈。4K播放、TikTok及其他AI任务仍按品牌列明的方向阅读，需要各自的实际任务记录。' if access_ready else '这些是品牌介绍中列出的使用方向。目前提供的是客户端节点延迟截图；实际播放、账号任务或AI问答结果需按具体平台、日期和节点另行记录。'),
         ('梯子云有没有已确认的优惠与售后规则？','已确认2hy85八五折优惠的适用范围、续费和四款月付重置包优惠，支持支付宝付款，并列明普通周期套餐的流量规则与购买后24小时内的技术问题退款条件。' if service_ready else '当前已提供9款截图报价，优惠、付款、续费重置及退款规则继续逐项确认。选购时请核对官网订单和服务条件。')]+plan_faqs(plans,active_coupon)+(client_faqs(clients) if clients_ready else [])+(coupon_faqs(coupon) if coupon_ready else [])+(service_faqs(rules,coupon) if service_ready else [])+(access_faqs(access) if access_ready else [])
     faq=''.join('<details class="tiziyun-faq"><summary>'+e(q)+'</summary><p>'+e(answer)+'</p></details>' for q,answer in questions)

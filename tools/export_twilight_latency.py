@@ -9,7 +9,7 @@ data=json.loads((ROOT/'data/muguang-latency.json').read_text(encoding='utf-8'))
 W,H=1600,1120
 canvas=Image.new('RGB',(W,H),'#f5f2fa')
 draw=ImageDraw.Draw(canvas)
-svg=[f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" aria-labelledby="title desc"><title id="title">暮光网络上午节点延迟记录</title><desc id="desc">2026年10月30日10时，上海电信，Windows版暮光加速客户端，60条数值，0条超时。</desc>']
+svg=[f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" aria-labelledby="title desc"><title id="title">暮光网络上午节点延迟记录</title><desc id="desc">2026年11月12日10时，上海电信，Windows版暮光加速客户端，60条数值，0条超时。</desc>']
 fonts={}
 
 
@@ -35,7 +35,7 @@ s=data['summary']
 box(36,36,1528,1048,'#fff','#e3d9ed',24)
 text(90,99,'TWILIGHT / MORNING NODE LATENCY',17,'#9782b1',True)
 text(90,160,'暮光网络 · 上午节点延迟记录',42,'#53406f',True)
-text(90,204,'2026-10-30 10:00（北京时间）  |  上海电信  |  Windows版暮光加速客户端',19,'#8b8199')
+text(90,204,'2026-11-12 10:00（北京时间）  |  上海电信  |  Windows版暮光加速客户端',19,'#8b8199')
 stats=[('截图记录',str(s['node_count'])+' 条'),('有延迟数值',str(s['response_count'])+' 条'),('本次超时','0 条'),('最低延迟',str(s['min_ms'])+' ms')]
 for i,(label,value) in enumerate(stats):
     x=90+i*361
@@ -62,7 +62,7 @@ text(116,909,f"60条数值范围{s['min_ms']}—{s['max_ms']}ms，总体中位�
 text(116,945,'每节点仅一条记录，不推算下载速度、长期可用率或实时状态。',18,'#8e819a')
 text(116,977,'根据6张客户端截图重绘，未重新测量；原截图不在博客发布。',18,'#8e819a')
 text(90,1047,'叮当观察 / jcvpn.blog',18,'#857197',True)
-text(1510,1047,'2026-10-30 10:00 · 上海电信 · 上午记录',16,'#9b90a7',anchor='end')
+text(1510,1047,'2026-11-12 10:00 · 上海电信 · 上午记录',16,'#9b90a7',anchor='end')
 svg.append('</svg>')
 (ROOT/'assets/muguang-latency-overview.svg').write_text('\n'.join(svg)+'\n',encoding='utf-8')
 canvas.save(ROOT/'assets/muguang-latency-overview.png',optimize=True)

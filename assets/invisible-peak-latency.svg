@@ -4,7 +4,7 @@
   'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
 <svg role="img" aria-label="隐形人晚高峰延迟记录" width="1400" height="1060" preserveAspectRatio="xMinYMin meet" viewBox="0 0 1400 1060" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
 	<title>隐形人晚高峰延迟记录</title><style>text{font-family:"Microsoft YaHei","Noto Sans CJK SC",sans-serif!important}</style>
-	<desc>2026年10月28日19:00北京时间，上海电信网络，依据第三方截图整理60个节点的延迟记录，其中58条数值、2条超时。客户端为Windows版隐形人。不是实时监测。</desc>
+	<desc>2026年11月12日19:00北京时间，上海电信网络，依据第三方截图整理60个节点的延迟记录，其中58条数值、2条超时。客户端为Windows版隐形人。不是实时监测。</desc>
 	<clipPath id="clip">
 		<rect x="0" y="0" width="1400" height="1060"/>
 	</clipPath>
@@ -124,11 +124,11 @@
 			<rect x="74" y="204" width="1250" height="151" rx="14" ry="14" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(96%,97%,99%); fill-rule: evenodd;"/>
 			<text x="96" y="320" style="font-family: STSong-Light; font-size: 18px;fill: rgb(20%,37%,49%); stroke:none;" transform="translate(0,640) scale(1,-1)">统计口径与采样信息</text>
 			<text x="96" y="288" style="font-family: STSong-Light; font-size: 15px;fill: rgb(39%,51%,60%); stroke:none;" transform="translate(0,576) scale(1,-1)">每个节点一条记录，范围 10—102 ms；两条超时为新加坡08、新加坡09。</text>
-			<text x="96" y="260" style="font-family: STSong-Light; font-size: 15px;fill: rgb(39%,51%,60%); stroke:none;" transform="translate(0,520) scale(1,-1)">采样：2026-10-28 19:00（北京时间） · 上海电信 · Windows版“隐形人”客户端。</text>
+			<text x="96" y="260" style="font-family: STSong-Light; font-size: 15px;fill: rgb(39%,51%,60%); stroke:none;" transform="translate(0,520) scale(1,-1)">采样：2026-11-12 19:00（北京时间） · 上海电信 · Windows版“隐形人”客户端。</text>
 			<text x="96" y="232" style="font-family: STSong-Light; font-size: 15px;fill: rgb(39%,51%,60%); stroke:none;" transform="translate(0,464) scale(1,-1)">版本及检测方式未提供；延迟记录不表示速度、丢包率或长期可用率。</text>
 			<text x="74" y="153" style="font-family: STSong-Light; font-size: 13px;fill: rgb(47%,57%,65%); stroke:none;" transform="translate(0,306) scale(1,-1)">数据来自第三方提供的6张晚高峰截图，由站方转交整理；账户流量展示项已排除。</text>
 			<text x="74" y="119" style="font-family: STSong-Light; font-size: 15px;fill: rgb(25%,43%,55%); stroke:none;" transform="translate(0,238) scale(1,-1)">叮当观察  /  jcvpn.blog</text>
-			<text x="1106.164" y="119" style="font-family: STSong-Light; font-size: 12px;fill: rgb(49%,59%,66%); stroke:none;" transform="translate(0,238) scale(1,-1)">2026-10-28 19:00（北京时间） · 上海电信</text>
+			<text x="1106.164" y="119" style="font-family: STSong-Light; font-size: 12px;fill: rgb(49%,59%,66%); stroke:none;" transform="translate(0,238) scale(1,-1)">2026-11-12 19:00（北京时间） · 上海电信</text>
 		</g>
 	</g>
 </svg>

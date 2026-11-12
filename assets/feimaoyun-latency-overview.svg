@@ -1,8 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1500" viewBox="0 0 1600 1500" role="img" aria-labelledby="title desc"><title id="title">飞猫云晚高峰节点延迟记录</title><desc id="desc">2026年10月29日20时，上海电信，Windows版飞猫云客户端，69条截图记录，63条数值，6条超时，延迟29至345ms。</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1500" viewBox="0 0 1600 1500" role="img" aria-labelledby="title desc"><title id="title">飞猫云晚高峰节点延迟记录</title><desc id="desc">2026年11月12日20时，上海电信，Windows版飞猫云客户端，69条截图记录，63条数值，6条超时，延迟29至345ms。</desc>
 <rect x="36" y="36" width="1528" height="1428" rx="24" fill="#ffffff" stroke="#d9e7f2"/>
 <text x="90" y="99" fill="#a17b3e" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="17" font-weight="700" text-anchor="start">FLYCAT / PEAK-HOUR NODE LATENCY</text>
 <text x="90" y="163" fill="#1e506f" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="42" font-weight="700" text-anchor="start">飞猫云 · 晚高峰节点延迟记录</text>
-<text x="90" y="205" fill="#708c9e" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="19" font-weight="400" text-anchor="start">2026-10-29 20:00（北京时间）  |  上海电信  |  Windows版飞猫云客户端</text>
+<text x="90" y="205" fill="#708c9e" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="19" font-weight="400" text-anchor="start">2026-11-12 20:00（北京时间）  |  上海电信  |  Windows版飞猫云客户端</text>
 <rect x="90" y="245" width="337" height="120" rx="15" fill="#eff6fc"/>
 <text x="114" y="282" fill="#738d9f" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="17" font-weight="400" text-anchor="start">截图记录</text>
 <text x="114" y="335" fill="#28769f" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="37" font-weight="700" text-anchor="start">69 条</text>
@@ -90,5 +90,5 @@
 <text x="116" y="1279" fill="#718b9c" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" font-weight="400" text-anchor="start">截图名称含IEPL字样，品牌介绍仍按站长确认保留IPLC；原始名称见完整数据。</text>
 <text x="116" y="1315" fill="#718b9c" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" font-weight="400" text-anchor="start">本图依据6张客户端截图重绘，未重新测量；单次延迟不推断下载速度或长期可用率。</text>
 <text x="90" y="1415" fill="#47748c" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="19" font-weight="700" text-anchor="start">叮当观察  /  jcvpn.blog</text>
-<text x="1510" y="1415" fill="#8199a8" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="16" font-weight="400" text-anchor="end">2026-10-29 20:00 · 上海电信 · 晚高峰快照</text>
+<text x="1510" y="1415" fill="#8199a8" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="16" font-weight="400" text-anchor="end">2026-11-12 20:00 · 上海电信 · 晚高峰快照</text>
 </svg>

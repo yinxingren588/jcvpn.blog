@@ -17,7 +17,7 @@
   "independent_measurement": false,
   "coverage_scope": "站长确认的本批完整节点列表",
   "coverage_completeness_confirmed": true,
-  "measured_date": "2026-11-03",
+  "measured_date": "2026-11-12",
   "measured_time": null,
   "period": "下午",
   "timezone": "Asia/Shanghai",
@@ -1065,7 +1065,7 @@
     "新加坡09和香港13显示Timeout，以null保存，不按0ms计入延迟数值的范围与中位数。",
     "截图4第五行左侧显示香港01，按原名和147ms保留，不按排列顺序改写名称。",
     "站长确认这5张截图为完整节点列表。节点名称编号不连续，按原名统计，不依据编号大小补号、改名或推定更多节点。",
-    "站长逐项确认2026年11月3日下午、上海电信及Windows版梯子云客户端；具体时刻、客户端版本与探测方法未提供。",
+    "站长逐项确认2026年11月12日下午、上海电信及Windows版梯子云客户端；具体时刻、客户端版本与探测方法未提供。",
     "截图显示的ms是延迟记录，不转换成下载速度，也不能据一次截面判断晚高峰持续稳定性。"
   ],
   "coverage_completeness_confirmed_on": "2026-11-03",

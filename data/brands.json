@@ -44,7 +44,7 @@
       "plan_count": 6,
       "line_type_from_materials": "IPLC专线",
       "latency_node_count": 52,
-      "latency_recorded_at": "2026-10-29 12:00（北京时间）",
+      "latency_recorded_at": "2026-11-12 12:00（北京时间）",
       "logo_path": "assets/breezenet-logo-hd.png",
       "logo_source": "博客站长提供原图，并要求制作透明背景的清晰重制版",
       "logo_provided_on": "2026-10-29"
@@ -78,7 +78,7 @@
       },
       "latency_record_count": 69,
       "latency_record_source": "博客站长提供的6张飞猫云客户端截图",
-      "latency_snapshot_local_time": "2026-10-29 20:00 Asia/Shanghai"
+      "latency_snapshot_local_time": "2026-11-12 20:00 Asia/Shanghai"
     },
     {
       "id": "muguang",

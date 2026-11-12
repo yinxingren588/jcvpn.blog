@@ -38,12 +38,12 @@
       "independently_verified": false,
       "related_records_provided": true,
       "related_snapshot_path": "data/tiziyun-latency.json",
-      "evidence_status": "相关截图为2026年11月3日下午上海电信的静态节点延迟；晚高峰及持续稳定性尚未由这些截图验证"
+      "evidence_status": "相关截图为2026年11月12日下午上海电信的静态节点延迟；晚高峰及持续稳定性尚未由这些截图验证"
     }
   ],
   "notes": [
     "已保存站长提供的品牌介绍与BGP智能多线入口、专线中继说明；站长另已确认节点使用Shadowsocks（SS）协议。",
-    "站长确认5张截图为完整列表，共50个节点、5个地区；采样于2026年11月3日下午，上海电信，Windows版梯子云客户端。具体时刻、版本和探测方法未提供。流媒体、TikTok与AI方向按品牌说明归档。",
+    "站长确认5张截图为完整列表，共50个节点、5个地区；采样于2026年11月12日下午，上海电信，Windows版梯子云客户端。具体时刻、版本和探测方法未提供。流媒体、TikTok与AI方向按品牌说明归档。",
     "不沿用其他品牌的套餐、优惠、客户端、售后规则或测试结果。"
   ],
   "node_snapshot_path": "data/tiziyun-latency.json",
