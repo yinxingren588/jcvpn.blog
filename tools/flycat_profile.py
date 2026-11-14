@@ -22,7 +22,7 @@ def faqs(data, plans, clients, service, access, coupon, latency):
         ('飞猫云有哪些节点地区？', '本次资料列明：' + counted + '；另外包括' + others + '等地区。后九个地区未提供节点数量，具体可用节点以后台当时显示为准。'),
         ('飞猫云限制连接设备数量吗？', '站长提供的品牌介绍说明不限制设备连接数量，支持多端同时登录使用。Windows、macOS和安卓使用品牌自研客户端，iOS使用Nextin；套餐额度可在本页套餐区对比。'),
         ('飞猫云支持哪些流媒体和AI平台？', '品牌介绍列明Netflix、Disney+、ChatGPT与TikTok等平台支持方向。本页另有2026-10-29上海电信网络、连接新加坡节点的ChatGPT成功问答反馈；其余平台按服务说明列示。'),
-        ('这份飞猫云介绍是否包含实际测速？', '本页已整理69条晚高峰客户端延迟记录，以及ChatGPT问答使用反馈。延迟记录来自2026-11-12 20:00上海电信、Windows版飞猫云客户端的截图；尚未提供下载或上传速度，不将ms换算为带宽。')
+        ('这份飞猫云介绍是否包含实际测速？', '本页已整理69条晚高峰客户端延迟记录，以及ChatGPT问答使用反馈。延迟记录来自2026-11-14 20:00上海电信、Windows版飞猫云客户端的截图；尚未提供下载或上传速度，不将ms换算为带宽。')
     ] + plan_faqs(plans) + client_faqs(clients) + service_faqs(service) + access_faqs(access) + coupon_faqs(coupon) + latency_faqs(latency)
 
 
@@ -64,9 +64,9 @@ def build_flycat_profile(root):
 {access_section}
 {service_section}
 <section class="section" id="flycat-faq"><div class="flycat-section-title"><span class="overline">FLYCAT QUESTIONS & ANSWERS</span><h2>飞猫云常见问题</h2></div><div class="flycat-faqs">{faq_html}</div></section>
-<section class="section" id="flycat-sources"><div class="flycat-section-title"><span class="overline">SOURCES & REVISIONS</span><h2>资料来源与更新说明</h2><p>{e(data['source'])}；另有站长提供的3张套餐截图、价格确认，以及客户端类型、识别码、各平台登录连接流程和流量重置、续费、升级、退款规则和官网内置客服入口，并已确认九折码flycat888（学生版除外，其余6款适用，无到期限制）；另有站长提供的上海电信网络、新加坡节点下的ChatGPT问答使用反馈，以及2026-11-12 20:00上海电信、Windows版飞猫云客户端的6张延迟截图，整理日期为{data['updated_on']}。本页据此整理线路、设备、节点分布、套餐、客户端与平台支持方向。</p></div><p class="flycat-note">iOS具体下载页面、其他平台使用记录及下载速度数据，将按飞猫云自身资料补充。学生版最终年价与其余四款周期套餐仅列月价的方式，已由站长确认。访问入口保留站长提供的推广参数。</p><div class="flycat-source-links"><a href="data/feimaoyun-profile.json">品牌资料 JSON ↓</a><a href="data/feimaoyun-plans.json">套餐资料 JSON ↓</a><a href="data/feimaoyun-coupon.json">优惠码规则 JSON ↓</a><a href="data/feimaoyun-clients.json">客户端资料 JSON ↓</a><a href="data/feimaoyun-service-rules.json">流量规则 JSON ↓</a><a href="data/feimaoyun-access-records.json">ChatGPT使用记录 JSON ↓</a><a href="data/feimaoyun-latency.json">69条延迟记录 JSON ↓</a><a href="data/feimaoyun-plans.csv" download>套餐价格表 CSV ↓</a><a href="{url}" target="_blank" rel="sponsored noopener noreferrer">飞猫云访问入口 ↗</a><a href="brands.html">返回品牌目录 →</a></div></section>'''
+<section class="section" id="flycat-sources"><div class="flycat-section-title"><span class="overline">SOURCES & REVISIONS</span><h2>资料来源与更新说明</h2><p>{e(data['source'])}；另有站长提供的3张套餐截图、价格确认，以及客户端类型、识别码、各平台登录连接流程和流量重置、续费、升级、退款规则和官网内置客服入口，并已确认九折码flycat888（学生版除外，其余6款适用，无到期限制）；另有站长提供的上海电信网络、新加坡节点下的ChatGPT问答使用反馈，以及2026-11-14 20:00上海电信、Windows版飞猫云客户端的6张延迟截图，整理日期为{data['updated_on']}。本页据此整理线路、设备、节点分布、套餐、客户端与平台支持方向。</p></div><p class="flycat-note">iOS具体下载页面、其他平台使用记录及下载速度数据，将按飞猫云自身资料补充。学生版最终年价与其余四款周期套餐仅列月价的方式，已由站长确认。访问入口保留站长提供的推广参数。</p><div class="flycat-source-links"><a href="data/feimaoyun-profile.json">品牌资料 JSON ↓</a><a href="data/feimaoyun-plans.json">套餐资料 JSON ↓</a><a href="data/feimaoyun-coupon.json">优惠码规则 JSON ↓</a><a href="data/feimaoyun-clients.json">客户端资料 JSON ↓</a><a href="data/feimaoyun-service-rules.json">流量规则 JSON ↓</a><a href="data/feimaoyun-access-records.json">ChatGPT使用记录 JSON ↓</a><a href="data/feimaoyun-latency.json">69条延迟记录 JSON ↓</a><a href="data/feimaoyun-plans.csv" download>套餐价格表 CSV ↓</a><a href="{url}" target="_blank" rel="sponsored noopener noreferrer">飞猫云访问入口 ↗</a><a href="brands.html">返回品牌目录 →</a></div></section>'''
     revision = sha256((root / 'assets/flycat.css').read_bytes()).hexdigest()[:12]
-    description = '飞猫云机场资料：7款套餐对比、九折码flycat888（学生版除外），IPLC专线与各平台客户端教程。收录2026年11月12日20:00上海电信的69条节点延迟记录，并说明流量重置、续费、升级、技术问题退款与ChatGPT使用反馈。'
+    description = '飞猫云机场资料：7款套餐对比、九折码flycat888（学生版除外），IPLC专线与各平台客户端教程。收录2026年11月14日20:00上海电信的69条节点延迟记录，并说明流量重置、续费、升级、技术问题退款与ChatGPT使用反馈。'
     floating_revision = sha256((root / 'assets/flycat-floating.js').read_bytes()).hexdigest()[:12]
     floating_css_revision = sha256((root / 'assets/invisible-floating.css').read_bytes()).hexdigest()[:12]
     latency_css_revision = sha256((root / 'assets/flycat-latency.css').read_bytes()).hexdigest()[:12]

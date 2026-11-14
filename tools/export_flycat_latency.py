@@ -9,7 +9,7 @@ data=json.loads((ROOT/'data/feimaoyun-latency.json').read_text(encoding='utf-8')
 W,H=1600,1500
 image=Image.new('RGB',(W,H),'#f2f7fc')
 draw=ImageDraw.Draw(image)
-svg=[f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" aria-labelledby="title desc"><title id="title">飞猫云晚高峰节点延迟记录</title><desc id="desc">2026年11月12日20时，上海电信，Windows版飞猫云客户端，69条截图记录，63条数值，6条超时，延迟29至345ms。</desc>']
+svg=[f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" aria-labelledby="title desc"><title id="title">飞猫云晚高峰节点延迟记录</title><desc id="desc">2026年11月14日20时，上海电信，Windows版飞猫云客户端，69条截图记录，63条数值，6条超时，延迟29至345ms。</desc>']
 fonts={}
 
 
@@ -34,7 +34,7 @@ def line(x1,y1,x2,y2,color='#e5eef5',width=1):
 box(36,36,1528,1428,'#ffffff','#d9e7f2',24)
 text(90,99,'FLYCAT / PEAK-HOUR NODE LATENCY',17,'#a17b3e',True)
 text(90,163,'飞猫云 · 晚高峰节点延迟记录',42,'#1e506f',True)
-text(90,205,'2026-11-12 20:00（北京时间）  |  上海电信  |  Windows版飞猫云客户端',19,'#708c9e')
+text(90,205,'2026-11-14 20:00（北京时间）  |  上海电信  |  Windows版飞猫云客户端',19,'#708c9e')
 s=data['summary']
 stats=[('截图记录',str(s['node_count'])+' 条'),('有延迟数值',str(s['response_count'])+' 条'),('本次超时',str(s['timeout_count'])+' 条'),('最低延迟',str(s['min_ms'])+' ms')]
 for i,(label,value) in enumerate(stats):
@@ -69,7 +69,7 @@ text(116,1243,'两组直连代码与中文地区矛盾，按截图原名分组�
 text(116,1279,'截图名称含IEPL字样，品牌介绍仍按站长确认保留IPLC；原始名称见完整数据。',18,'#718b9c')
 text(116,1315,'本图依据6张客户端截图重绘，未重新测量；单次延迟不推断下载速度或长期可用率。',18,'#718b9c')
 text(90,1415,'叮当观察  /  jcvpn.blog',19,'#47748c',True)
-text(1510,1415,'2026-11-12 20:00 · 上海电信 · 晚高峰快照',16,'#8199a8',anchor='end')
+text(1510,1415,'2026-11-14 20:00 · 上海电信 · 晚高峰快照',16,'#8199a8',anchor='end')
 svg.append('</svg>')
 (ROOT/'assets/feimaoyun-latency-overview.svg').write_text('\n'.join(svg)+'\n',encoding='utf-8')
 image.save(ROOT/'assets/feimaoyun-latency-overview.png',optimize=True)

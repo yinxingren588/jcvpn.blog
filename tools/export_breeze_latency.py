@@ -26,7 +26,7 @@ box(0, 0, 1400, 1060, '#f2f7fc')
 box(30, 30, 1340, 1000, '#ffffff', '#dce8f2', 22)
 text(74, 987, 'BREEZENET  /  MIDDAY NODE LATENCY', 13, '#468993', 'Helvetica')
 text(74, 934, '微风网络 · 午间节点延迟记录', 37, '#163d5b')
-text(74, 898, '第三方截图数据重绘  |  2026-11-12 12:00（北京时间）  |  单位 ms', 17, '#66879e')
+text(74, 898, '第三方截图数据重绘  |  2026-11-14 12:00（北京时间）  |  单位 ms', 17, '#66879e')
 stats = data['summary']
 cards = [('记录节点', str(stats['node_count'])), ('有延迟数值', str(stats['response_count'])), ('超时记录', str(stats['timeout_count'])), ('最低延迟', str(stats['min_ms']) + ' ms')]
 for index, (label, value) in enumerate(cards):
@@ -63,12 +63,12 @@ text(96, 243, '日本01—10本次均超时，日本01—04-直连另列；香�
 text(96, 215, '超时不作0ms；单次延迟不代表下载速度、长期可用率或实时监测。', 15, '#64839b')
 text(74, 146, '依据第三方提供的5张截图整理，未重新测量，未发布原照片。', 13, '#7893a7')
 text(74, 110, '叮当观察  /  jcvpn.blog', 15, '#416e8d')
-text(1324, 110, '2026-11-12 12:00（北京时间） · 上海电信', 12, '#7e97a9', anchor='end')
+text(1324, 110, '2026-11-14 12:00（北京时间） · 上海电信', 12, '#7e97a9', anchor='end')
 path = root / 'assets/breezenet-latency.svg'
 renderSVG.drawToFile(chart, str(path))
 svg = path.read_text(encoding='utf-8')
 svg = svg.replace('<svg ', '<svg role="img" aria-label="微风网络午间节点延迟记录" ', 1)
-svg = svg.replace('<title>...</title>', '<title>微风网络2026年11月12日午间延迟记录</title><style>text{font-family:"Microsoft YaHei","Noto Sans CJK SC",sans-serif!important}</style>', 1)
-svg = svg.replace('<desc>...</desc>', '<desc>2026年11月12日12:00北京时间，上海电信，Windows版微风网络客户端，第三方截图记录52个节点，39条数值、13条超时；日本直连单列。不是实时监测。</desc>', 1)
+svg = svg.replace('<title>...</title>', '<title>微风网络2026年11月14日午间延迟记录</title><style>text{font-family:"Microsoft YaHei","Noto Sans CJK SC",sans-serif!important}</style>', 1)
+svg = svg.replace('<desc>...</desc>', '<desc>2026年11月14日12:00北京时间，上海电信，Windows版微风网络客户端，第三方截图记录52个节点，39条数值、13条超时；日本直连单列。不是实时监测。</desc>', 1)
 path.write_text(svg, encoding='utf-8')
 print('Breezenet standalone SVG chart exported: 1400 x 1060.')
