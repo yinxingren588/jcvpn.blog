@@ -9,7 +9,7 @@ import re
 
 from site_chrome import write_changed
 
-DATE='2026-11-02'
+DATE='2026-11-24'
 SUFFIX='｜叮当观察'
 KEYS={
  'recommendations':['机场推荐','梯子推荐'], 'vpn-choice':['VPN','VPN推荐'],
@@ -119,6 +119,8 @@ def apply_site_seo(root):
         for attr,name,value in [('property','og:title',m['title']),('property','og:description',m['description']),('property','og:url',url),('property','og:type','article' if m['kind']=='Article' else 'website'),('name','twitter:card','summary'),('name','twitter:title',m['title']),('name','twitter:description',m['description'])]:
             tags+='<meta '+attr+'="'+name+'" content="'+e(value,quote=True)+'">'
         structured={'@context':'https://schema.org','@type':m['kind'],'name':m['title'],'description':m['description'],'url':url,'inLanguage':'zh-CN'}
+        if path.name=='index.html':
+            structured['dateModified']=DATE
         if path.name=='brand-yinxingren.html':
             structured['about']={'@type':'Brand','name':'隐形人','alternateName':'Invisible Network'}
         if m['kind']=='Article':
