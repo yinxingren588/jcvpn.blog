@@ -53,8 +53,8 @@
     },
     "https://jcvpn.blog/article-airport-review-records-overview": {
       "file": "article-airport-review-records-overview.html",
-      "sha256": "f2846d21d59521a7e622273a834feec11809ad2c343735adb17f3c6ecaf36879",
-      "lastmod": "2026-11-27T23:19:43+08:00"
+      "sha256": "1d00505a6f972ec7ffd45c36d16163f3cf8c011fcf02f73c085c834f9a1fe881",
+      "lastmod": "2026-11-27T23:27:38+08:00"
     },
     "https://jcvpn.blog/article-audit-report-reading": {
       "file": "article-audit-report-reading.html",
@@ -433,23 +433,23 @@
     },
     "https://jcvpn.blog/brand-breezenet": {
       "file": "brand-breezenet.html",
-      "sha256": "37b05d1379201aa20703d960d26e532307490a1b369fd880043e53a7368cc1fd",
-      "lastmod": "2026-11-26T10:46:44+08:00"
+      "sha256": "9a8951062ec0ff7fff7307f40d770bbc92c0de3e2d54415b7e1c13e320f3e0d8",
+      "lastmod": "2026-11-27T23:27:38+08:00"
     },
     "https://jcvpn.blog/brand-feimaoyun": {
       "file": "brand-feimaoyun.html",
-      "sha256": "ec681f92c121f0a0896d76f1e2e47fe88346e56cdb4c40d5e04eadd4ea9ca98e",
-      "lastmod": "2026-11-26T10:46:44+08:00"
+      "sha256": "831ee43dafccdb1277e47dba1a39cbe27158e472757d25434002fe70c510c053",
+      "lastmod": "2026-11-27T23:27:38+08:00"
     },
     "https://jcvpn.blog/brand-feiv": {
       "file": "brand-feiv.html",
-      "sha256": "c5ab0a1d6179ce9c5905a64d88aa9de521d2e71b777fdf2f280fae37f37d4dbf",
-      "lastmod": "2026-11-26T10:46:44+08:00"
+      "sha256": "91b3b16be8ab78fe01ca648fe3d9f4a6ae04a23bd8fe7cd6138ed5d03cbb7e7a",
+      "lastmod": "2026-11-27T23:27:38+08:00"
     },
     "https://jcvpn.blog/brand-langwang": {
       "file": "brand-langwang.html",
-      "sha256": "6466178172ce0c5d469f0aae3810a6a78221d04604015436524bcf5fe9f668b3",
-      "lastmod": "2026-11-26T10:46:44+08:00"
+      "sha256": "cd41f2057e6f65210fc4cba9b4c22a4dbbe41b92154b6368a2c54977c1e12af2",
+      "lastmod": "2026-11-27T23:27:38+08:00"
     },
     "https://jcvpn.blog/brand-lingdongyun": {
       "file": "brand-lingdongyun.html",
@@ -458,18 +458,18 @@
     },
     "https://jcvpn.blog/brand-muguang": {
       "file": "brand-muguang.html",
-      "sha256": "7f17a392966c180049e6a1c6c26a31c0df50214b7cc8f43e8a14c5d357ef2ec9",
-      "lastmod": "2026-11-26T10:46:44+08:00"
+      "sha256": "a5a485f6327c13eb5df382bb751a5963f6c69dc8ea596fb088c0cc6ca5fea6b1",
+      "lastmod": "2026-11-27T23:27:38+08:00"
     },
     "https://jcvpn.blog/brand-tiziyun": {
       "file": "brand-tiziyun.html",
-      "sha256": "8193399612d8a20904337ab33397156a7213eff9b55a29ed65f6cf67c3b31b18",
-      "lastmod": "2026-11-26T10:46:44+08:00"
+      "sha256": "fb701739173e93e1cd98556a71f5a5a1a5db11e66b3687bb2896b1fc4a8226ea",
+      "lastmod": "2026-11-27T23:27:38+08:00"
     },
     "https://jcvpn.blog/brand-yinxingren": {
       "file": "brand-yinxingren.html",
-      "sha256": "d31a169697752c643083fae914308190cab43e0cf3974966b1c949b8bf3dc92b",
-      "lastmod": "2026-11-26T10:46:44+08:00"
+      "sha256": "f62f1fdb789c0451045302c1ed2635c58fcbbe92e2046be466ec1882d6ac01ec",
+      "lastmod": "2026-11-27T23:27:38+08:00"
     },
     "https://jcvpn.blog/brands": {
       "file": "brands.html",
@@ -728,8 +728,8 @@
     },
     "https://jcvpn.blog/": {
       "file": "index.html",
-      "sha256": "f8c77a30637cd7dc51cbc6b27d7d45f2e7f9b703513fce1744b87502ebcf2b78",
-      "lastmod": "2026-11-27T23:19:43+08:00"
+      "sha256": "720049d263f1734cbe6f711f617e5794467f697b6e44f80ee771c437ae1fb8fb",
+      "lastmod": "2026-11-27T23:27:38+08:00"
     },
     "https://jcvpn.blog/topic-basics": {
       "file": "topic-basics.html",
@@ -773,13 +773,13 @@
     },
     "https://jcvpn.blog/topic-recommendations": {
       "file": "topic-recommendations.html",
-      "sha256": "c217ae1fb8a5206f84477ef1bca4aaec8dfbdc038045b3a37b20c877f325c1c0",
-      "lastmod": "2026-11-27T23:19:43+08:00"
+      "sha256": "e3820c7e3a6ab6b499e3ddb8f2e7d3fbd43eabeeb9fef2141f427b2ce43a3446",
+      "lastmod": "2026-11-27T23:27:38+08:00"
     },
     "https://jcvpn.blog/topic-reviews-guide": {
       "file": "topic-reviews-guide.html",
-      "sha256": "db92084b8a953df682fd44b0d47334ab7e96269559267da1f89b97996e3066e7",
-      "lastmod": "2026-11-27T23:19:43+08:00"
+      "sha256": "f10c7349135aa7f68d1076135782dfc8e2523aa50eaac2a82a727b7470a09de8",
+      "lastmod": "2026-11-27T23:27:38+08:00"
     },
     "https://jcvpn.blog/topic-testing": {
       "file": "topic-testing.html",

@@ -9,15 +9,15 @@ from urllib.parse import urlsplit, quote
 
 def write_changed(path, text):
     if not path.exists() or path.read_text(encoding='utf-8') != text:
-        for attempt in range(5):
+        for attempt in range(12):
             try:
                 path.write_text(text, encoding='utf-8', newline='\n')
                 break
             except OSError:
-                if attempt == 4:
+                if attempt == 11:
                     raise
                 import time
-                time.sleep(0.05)
+                time.sleep(0.15)
 
 
 def read_contact(root):
