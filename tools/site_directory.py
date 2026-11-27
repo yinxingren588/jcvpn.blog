@@ -15,7 +15,7 @@ def plain_text(markup):
 def add_chapters(html, name):
     if name == 'index.html':
         return html, [('home-overview', '首页介绍'), ('home-invisible-feature', '隐形人主推'),
-                      ('search-guides', '按需求选专题'), ('brands', '品牌档案'), ('reading', '精选文章'), ('brand-intake', '新增品牌')]
+                      ('search-guides', '按需求选专题'), ('brands', '品牌档案'), ('reading', '精选文章'), ('home-faq', '常见问题'), ('brand-intake', '新增品牌')]
     main = re.search(r'<main\b[^>]*>(.*?)</main>', html, re.S)
     if not main:
         return html, [('top', '返回页首')]

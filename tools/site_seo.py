@@ -9,7 +9,7 @@ import re
 
 from site_chrome import write_changed
 
-DATE='2026-11-24'
+DATE='2026-11-27'
 SUFFIX='｜叮当观察'
 KEYS={
  'recommendations':['机场推荐','梯子推荐'], 'vpn-choice':['VPN','VPN推荐'],
@@ -36,9 +36,9 @@ def apply_site_seo(root):
     def put(file,title,description,keywords,kind='WebPage',published=None):
         metadata[file]=dict(title=title if title.endswith(SUFFIX) else title+SUFFIX,
                             description=shorten(description),keywords=list(dict.fromkeys(keywords)),kind=kind,published_on=published)
-    put('index.html','机场推荐与VPN推荐｜套餐对比、节点记录与Clash指南',
-        '叮当观察提供机场推荐、梯子推荐、VPN推荐与节点选择指南。本站主推隐形人，整理隐形人机场套餐、优惠、客户端与使用资料，并收录其他7个品牌。通过机场测评、性价比机场、便宜机场推荐和Clash机场专题，核对预算、售后、节点记录与实际任务反馈。',
-        ['机场推荐','梯子推荐','VPN推荐','机场测评','性价比机场','机场节点','Clash机场','稳定机场','隐形人','隐形人机场'],'WebSite')
+    put('index.html','机场推荐：优质机场、稳定节点与套餐对比指南',
+        '寻找可靠的机场推荐？叮当观察整理机场套餐、节点线路、连接稳定性、速度测试与使用体验，帮助用户比较不同机场服务，选择适合自己的 VPN 代理服务。',
+        ['机场推荐','VPN推荐','节点推荐','机场测评','优质机场推荐','稳定机场推荐','性价比机场'],'WebSite')
     put('blog.html','机场推荐与VPN文章｜节点、测评、性价比及Clash指南',
         '浏览叮当观察84篇独立文章，围绕机场推荐、梯子推荐、VPN推荐、机场节点、机场测评、性价比与Clash机场开展阅读。支持关键词搜索和12类专题筛选，查看五品牌报价表、优惠例外、退款条件与真实记录的适用范围。',
         ['机场推荐','梯子推荐','VPN推荐','机场测评','便宜机场推荐','Clash机场'],'CollectionPage')
@@ -133,8 +133,8 @@ def apply_site_seo(root):
         text=re.sub(r'<script type="application/ld\+json" id="site-seo-structured-data">.*?</script>','',text,flags=re.S)
         tags+='<script type="application/ld+json" id="site-seo-structured-data">'+json.dumps(structured,ensure_ascii=False).replace('</',r'<\/')+'</script>'
         if path.name=='index.html':
-            text=re.sub(r'<h1>.*?</h1>','<h1>机场推荐与VPN推荐，<br><em>先看套餐与节点，<br>再做适合自己的选择。</em></h1>',text,count=1,flags=re.S)
-            text=text.replace('关于 VPN 与机场VPN，我们从原理、使用问题和真实依据出发，把复杂的连接，讲得清楚一点。','从机场套餐、节点记录到Clash客户端与常见问题，按预算和真实使用需求，找到值得继续核对的方案。')
+            text=re.sub(r'<h1>.*?</h1>','<h1>机场推荐：如何选择稳定、安全、<br><em>性价比高的机场？</em></h1>',text,count=1,flags=re.S)
+            text=re.sub(r'(<div class="hero-copy">.*?</h1>\s*<p>).*?(</p>)',r'\1围绕机场推荐核心需求，整理8个品牌套餐对比、线路节点延迟记录、连接稳定性与售后评价标准，帮您按真实预算与使用场景选出适合自己的 VPN 代理服务。\2',text,count=1,flags=re.S)
         text=text.replace('</head>',tags+'</head>',1)
         write_changed(path,text)
         descriptions[path.name]=m['description']

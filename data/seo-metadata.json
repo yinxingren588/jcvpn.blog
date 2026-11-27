@@ -1,20 +1,17 @@
 {
-  "updated_on": "2026-11-24",
+  "updated_on": "2026-11-27",
   "pages": {
     "index.html": {
-      "title": "机场推荐与VPN推荐｜套餐对比、节点记录与Clash指南｜叮当观察",
-      "description": "叮当观察提供机场推荐、梯子推荐、VPN推荐与节点选择指南。本站主推隐形人，整理隐形人机场套餐、优惠、客户端与使用资料，并收录其他7个品牌。通过机场测评、性价比机场、便宜机场推荐和Clash机场专题，核对预算、售后、节点记录与实际任务反馈。",
+      "title": "机场推荐：优质机场、稳定节点与套餐对比指南｜叮当观察",
+      "description": "寻找可靠的机场推荐？叮当观察整理机场套餐、节点线路、连接稳定性、速度测试与使用体验，帮助用户比较不同机场服务，选择适合自己的 VPN 代理服务。",
       "keywords": [
         "机场推荐",
-        "梯子推荐",
         "VPN推荐",
+        "节点推荐",
         "机场测评",
-        "性价比机场",
-        "机场节点",
-        "Clash机场",
-        "稳定机场",
-        "隐形人",
-        "隐形人机场"
+        "优质机场推荐",
+        "稳定机场推荐",
+        "性价比机场"
       ],
       "kind": "WebSite",
       "published_on": null
@@ -206,8 +203,8 @@
       "published_on": null
     },
     "topic-recommendations.html": {
-      "title": "机场推荐与梯子推荐｜五品牌套餐对比、客户端与售后｜叮当观察",
-      "description": "按用量、预算和设备选择机场：对照隐形人、微风、飞猫、暮光、灵动五品牌的入门月付与轻量年付，核对优惠例外、客户端流程、退款条件和验证步骤。报价注明来源日期，主推展示与已有测试分别说明。",
+      "title": "优质机场推荐与梯子推荐｜五品牌套餐、客户端与售后对比｜叮当观察",
+      "description": "优质机场推荐怎么选？按用量、预算和设备对照隐形人、微风、飞猫、暮光、灵动五品牌的入门月付与轻量年付，核对优惠例外、客户端流程、退款条件和验证步骤。报价注明来源日期，主推展示与已有测试分别说明。",
       "keywords": [
         "机场推荐",
         "梯子推荐"
@@ -236,8 +233,8 @@
       "published_on": null
     },
     "topic-reviews-guide.html": {
-      "title": "机场测评与稳定机场判断｜节点记录、超时统计与验证方法｜叮当观察",
-      "description": "对照隐形人、微风、飞猫、暮光、飞v、梯子云与浪网七批节点快照，保留超时和采样条件；灵动云暂无延迟资料。另列八品牌ChatGPT问答反馈与尚未执行的连续观察计划，说明稳定机场判断的证据和范围。",
+      "title": "机场测评与稳定机场推荐｜节点延迟快照、超时统计与验证方法｜叮当观察",
+      "description": "围绕机场测评与稳定机场推荐，对照隐形人、微风、飞猫、暮光、飞v、梯子云与浪网七批节点快照，保留超时和采样条件；灵动云暂无延迟资料。另列八品牌ChatGPT问答反馈，说明稳定性判断的真实依据与边界。",
       "keywords": [
         "机场测评",
         "稳定机场"
@@ -1217,7 +1214,7 @@
         "梯子推荐"
       ],
       "kind": "FAQPage",
-      "published_on": "2026-11-24"
+      "published_on": "2026-11-27"
     },
     "faq-airport-recommendation-by-needs-2.html": {
       "title": "本站主推隐形人是否表示它测速第一？｜叮当观察",
@@ -1227,7 +1224,7 @@
         "梯子推荐"
       ],
       "kind": "FAQPage",
-      "published_on": "2026-11-24"
+      "published_on": "2026-11-27"
     },
     "faq-ladder-recommendation-devices-1.html": {
       "title": "五个机场的iOS识别码可以通用吗？｜叮当观察",
@@ -1237,7 +1234,7 @@
         "梯子推荐"
       ],
       "kind": "FAQPage",
-      "published_on": "2026-11-24"
+      "published_on": "2026-11-27"
     },
     "faq-ladder-recommendation-devices-2.html": {
       "title": "官网客户端登录成功后就能直接使用吗？｜叮当观察",
@@ -1247,7 +1244,7 @@
         "梯子推荐"
       ],
       "kind": "FAQPage",
-      "published_on": "2026-11-24"
+      "published_on": "2026-11-27"
     },
     "faq-airport-low-usage-selection-1.html": {
       "title": "便宜年付套餐的80GB是全年只能用80GB吗？｜叮当观察",
@@ -1257,7 +1254,7 @@
         "梯子推荐"
       ],
       "kind": "FAQPage",
-      "published_on": "2026-11-24"
+      "published_on": "2026-11-27"
     },
     "faq-airport-low-usage-selection-2.html": {
       "title": "飞猫学生版和灵动穿云都能用优惠码吗？｜叮当观察",
@@ -1267,7 +1264,7 @@
         "梯子推荐"
       ],
       "kind": "FAQPage",
-      "published_on": "2026-11-24"
+      "published_on": "2026-11-27"
     },
     "faq-airport-refund-comparison-1.html": {
       "title": "机场购买后24小时内一定可以无理由退款吗？｜叮当观察",
@@ -1277,7 +1274,7 @@
         "梯子推荐"
       ],
       "kind": "FAQPage",
-      "published_on": "2026-11-24"
+      "published_on": "2026-11-27"
     },
     "faq-airport-refund-comparison-2.html": {
       "title": "隐形人也有24小时退款限制吗？｜叮当观察",
@@ -1287,7 +1284,7 @@
         "梯子推荐"
       ],
       "kind": "FAQPage",
-      "published_on": "2026-11-24"
+      "published_on": "2026-11-27"
     },
     "faq-vpn-recommendation-usage-1.html": {
       "title": "VPN推荐和机场推荐是一回事吗？｜叮当观察",
@@ -1297,7 +1294,7 @@
         "VPN推荐"
       ],
       "kind": "FAQPage",
-      "published_on": "2026-11-24"
+      "published_on": "2026-11-27"
     },
     "faq-vpn-recommendation-usage-2.html": {
       "title": "买了机场服务就能获得目标平台的账号权限吗？｜叮当观察",
@@ -1307,7 +1304,7 @@
         "VPN推荐"
       ],
       "kind": "FAQPage",
-      "published_on": "2026-11-24"
+      "published_on": "2026-11-27"
     },
     "faq-vpn-recommendation-work-study-1.html": {
       "title": "办公或学习用户应该固定买多少GB？｜叮当观察",
@@ -1317,7 +1314,7 @@
         "VPN推荐"
       ],
       "kind": "FAQPage",
-      "published_on": "2026-11-24"
+      "published_on": "2026-11-27"
     },
     "faq-vpn-recommendation-work-study-2.html": {
       "title": "网络测速很快就能保证视频会议稳定吗？｜叮当观察",
@@ -1327,7 +1324,7 @@
         "VPN推荐"
       ],
       "kind": "FAQPage",
-      "published_on": "2026-11-24"
+      "published_on": "2026-11-27"
     },
     "faq-vpn-ai-use-records-1.html": {
       "title": "机场能打开ChatGPT就说明API也能用吗？｜叮当观察",
@@ -1337,7 +1334,7 @@
         "VPN推荐"
       ],
       "kind": "FAQPage",
-      "published_on": "2026-11-24"
+      "published_on": "2026-11-27"
     },
     "faq-vpn-ai-use-records-2.html": {
       "title": "五个品牌的ChatGPT记录可以直接排出速度名次吗？｜叮当观察",
@@ -1347,7 +1344,7 @@
         "VPN推荐"
       ],
       "kind": "FAQPage",
-      "published_on": "2026-11-24"
+      "published_on": "2026-11-27"
     },
     "faq-vpn-streaming-verification-1.html": {
       "title": "节点延迟低就代表Netflix可以4K播放吗？｜叮当观察",
@@ -1357,7 +1354,7 @@
         "VPN推荐"
       ],
       "kind": "FAQPage",
-      "published_on": "2026-11-24"
+      "published_on": "2026-11-27"
     },
     "faq-vpn-streaming-verification-2.html": {
       "title": "原生IP能保证所有流媒体一直解锁吗？｜叮当观察",
@@ -1367,7 +1364,7 @@
         "VPN推荐"
       ],
       "kind": "FAQPage",
-      "published_on": "2026-11-24"
+      "published_on": "2026-11-27"
     },
     "faq-node-recommendation-task-1.html": {
       "title": "节点推荐是不是选择延迟最低的就够了？｜叮当观察",
@@ -1377,7 +1374,7 @@
         "机场节点"
       ],
       "kind": "FAQPage",
-      "published_on": "2026-11-24"
+      "published_on": "2026-11-27"
     },
     "faq-node-recommendation-task-2.html": {
       "title": "选择节点时要一次测试完整个列表吗？｜叮当观察",
@@ -1387,7 +1384,7 @@
         "机场节点"
       ],
       "kind": "FAQPage",
-      "published_on": "2026-11-24"
+      "published_on": "2026-11-27"
     },
     "faq-airport-node-region-choice-1.html": {
       "title": "人在上海就一定选香港节点更快吗？｜叮当观察",
@@ -1397,7 +1394,7 @@
         "机场节点"
       ],
       "kind": "FAQPage",
-      "published_on": "2026-11-24"
+      "published_on": "2026-11-27"
     },
     "faq-airport-node-region-choice-2.html": {
       "title": "节点名字里写IEPL就证明线路一定是IEPL吗？｜叮当观察",
@@ -1407,7 +1404,7 @@
         "机场节点"
       ],
       "kind": "FAQPage",
-      "published_on": "2026-11-24"
+      "published_on": "2026-11-27"
     },
     "faq-airport-node-timeout-check-1.html": {
       "title": "所有机场节点超时就一定是机场停服了吗？｜叮当观察",
@@ -1417,7 +1414,7 @@
         "机场节点"
       ],
       "kind": "FAQPage",
-      "published_on": "2026-11-24"
+      "published_on": "2026-11-27"
     },
     "faq-airport-node-timeout-check-2.html": {
       "title": "更换热点能保证解决全部超时吗？｜叮当观察",
@@ -1427,7 +1424,7 @@
         "机场节点"
       ],
       "kind": "FAQPage",
-      "published_on": "2026-11-24"
+      "published_on": "2026-11-27"
     },
     "faq-airport-node-ip-requirements-1.html": {
       "title": "原生IP就是一个人独享的住宅IP吗？｜叮当观察",
@@ -1437,7 +1434,7 @@
         "机场节点"
       ],
       "kind": "FAQPage",
-      "published_on": "2026-11-24"
+      "published_on": "2026-11-27"
     },
     "faq-airport-node-ip-requirements-2.html": {
       "title": "灵动云所有套餐都提供独享公网IP吗？｜叮当观察",
@@ -1447,7 +1444,7 @@
         "机场节点"
       ],
       "kind": "FAQPage",
-      "published_on": "2026-11-24"
+      "published_on": "2026-11-27"
     },
     "faq-airport-review-records-overview-1.html": {
       "title": "本站的机场测评记录都是现场实时测速吗？｜叮当观察",
@@ -1457,7 +1454,7 @@
         "稳定机场"
       ],
       "kind": "FAQPage",
-      "published_on": "2026-11-24"
+      "published_on": "2026-11-27"
     },
     "faq-airport-review-records-overview-2.html": {
       "title": "某批截图没有超时就能证明长期零故障吗？｜叮当观察",
@@ -1467,7 +1464,7 @@
         "稳定机场"
       ],
       "kind": "FAQPage",
-      "published_on": "2026-11-24"
+      "published_on": "2026-11-27"
     },
     "faq-stable-airport-peak-review-1.html": {
       "title": "稳定机场应该测几次才能确认？｜叮当观察",
@@ -1477,7 +1474,7 @@
         "稳定机场"
       ],
       "kind": "FAQPage",
-      "published_on": "2026-11-24"
+      "published_on": "2026-11-27"
     },
     "faq-stable-airport-peak-review-2.html": {
       "title": "IEPL或IPLC专线就能保证晚高峰稳定吗？｜叮当观察",
@@ -1487,7 +1484,7 @@
         "稳定机场"
       ],
       "kind": "FAQPage",
-      "published_on": "2026-11-24"
+      "published_on": "2026-11-27"
     },
     "faq-airport-review-method-snapshot-1.html": {
       "title": "Timeout可以按0ms算进平均值吗？｜叮当观察",
@@ -1497,7 +1494,7 @@
         "稳定机场"
       ],
       "kind": "FAQPage",
-      "published_on": "2026-11-24"
+      "published_on": "2026-11-27"
     },
     "faq-airport-review-method-snapshot-2.html": {
       "title": "延迟中位数可以换算成下载速度吗？｜叮当观察",
@@ -1507,7 +1504,7 @@
         "稳定机场"
       ],
       "kind": "FAQPage",
-      "published_on": "2026-11-24"
+      "published_on": "2026-11-27"
     },
     "faq-airport-review-evidence-gaps-1.html": {
       "title": "没有某品牌测速图是不是说明它不能用？｜叮当观察",
@@ -1517,7 +1514,7 @@
         "稳定机场"
       ],
       "kind": "FAQPage",
-      "published_on": "2026-11-24"
+      "published_on": "2026-11-27"
     },
     "faq-airport-review-evidence-gaps-2.html": {
       "title": "机场测评应该优先补哪些资料？｜叮当观察",
@@ -1527,7 +1524,7 @@
         "稳定机场"
       ],
       "kind": "FAQPage",
-      "published_on": "2026-11-24"
+      "published_on": "2026-11-27"
     },
     "faq-value-airport-monthly-table-1.html": {
       "title": "性价比机场就是每GB单价最低吗？｜叮当观察",
@@ -1538,7 +1535,7 @@
         "便宜机场推荐"
       ],
       "kind": "FAQPage",
-      "published_on": "2026-11-24"
+      "published_on": "2026-11-27"
     },
     "faq-value-airport-monthly-table-2.html": {
       "title": "五个品牌的入门月付最低券后价是多少？｜叮当观察",
@@ -1549,7 +1546,7 @@
         "便宜机场推荐"
       ],
       "kind": "FAQPage",
-      "published_on": "2026-11-24"
+      "published_on": "2026-11-27"
     },
     "faq-cheap-airport-annual-table-1.html": {
       "title": "看到7.27元/月，是不是每个月只付款7.27元？｜叮当观察",
@@ -1560,7 +1557,7 @@
         "便宜机场推荐"
       ],
       "kind": "FAQPage",
-      "published_on": "2026-11-24"
+      "published_on": "2026-11-27"
     },
     "faq-cheap-airport-annual-table-2.html": {
       "title": "便宜机场推荐为什么不能只按年价排序？｜叮当观察",
@@ -1571,7 +1568,7 @@
         "便宜机场推荐"
       ],
       "kind": "FAQPage",
-      "published_on": "2026-11-24"
+      "published_on": "2026-11-27"
     },
     "faq-cheap-airport-once-usage-1.html": {
       "title": "不限时机场套餐是不是每月都会重新给流量？｜叮当观察",
@@ -1582,7 +1579,7 @@
         "便宜机场推荐"
       ],
       "kind": "FAQPage",
-      "published_on": "2026-11-24"
+      "published_on": "2026-11-27"
     },
     "faq-cheap-airport-once-usage-2.html": {
       "title": "飞猫不限时套餐重置价可以再自动打九折吗？｜叮当观察",
@@ -1593,7 +1590,7 @@
         "便宜机场推荐"
       ],
       "kind": "FAQPage",
-      "published_on": "2026-11-24"
+      "published_on": "2026-11-27"
     },
     "faq-cheap-airport-coupon-exclusions-1.html": {
       "title": "灵动云wsj888八折适用哪些套餐？｜叮当观察",
@@ -1604,7 +1601,7 @@
         "便宜机场推荐"
       ],
       "kind": "FAQPage",
-      "published_on": "2026-11-24"
+      "published_on": "2026-11-27"
     },
     "faq-cheap-airport-coupon-exclusions-2.html": {
       "title": "微风weifeng90现在还是七折吗？｜叮当观察",
@@ -1615,7 +1612,7 @@
         "便宜机场推荐"
       ],
       "kind": "FAQPage",
-      "published_on": "2026-11-24"
+      "published_on": "2026-11-27"
     },
     "faq-clash-airport-compatibility-1.html": {
       "title": "支持Clash是不是所有Clash客户端都能使用？｜叮当观察",
@@ -1624,7 +1621,7 @@
         "Clash机场"
       ],
       "kind": "FAQPage",
-      "published_on": "2026-11-24"
+      "published_on": "2026-11-27"
     },
     "faq-clash-airport-compatibility-2.html": {
       "title": "五个品牌都有官网客户端，是否就证明Clash兼容？｜叮当观察",
@@ -1633,7 +1630,7 @@
         "Clash机场"
       ],
       "kind": "FAQPage",
-      "published_on": "2026-11-24"
+      "published_on": "2026-11-27"
     },
     "faq-clash-airport-provider-update-1.html": {
       "title": "Clash订阅更新成功是否表示套餐已经续费？｜叮当观察",
@@ -1642,7 +1639,7 @@
         "Clash机场"
       ],
       "kind": "FAQPage",
-      "published_on": "2026-11-24"
+      "published_on": "2026-11-27"
     },
     "faq-clash-airport-provider-update-2.html": {
       "title": "Clash导入报错时能公开发送完整订阅URL吗？｜叮当观察",
@@ -1651,7 +1648,7 @@
         "Clash机场"
       ],
       "kind": "FAQPage",
-      "published_on": "2026-11-24"
+      "published_on": "2026-11-27"
     },
     "faq-clash-airport-rule-check-1.html": {
       "title": "Clash已连接但一个网站打不开，先做什么？｜叮当观察",
@@ -1660,7 +1657,7 @@
         "Clash机场"
       ],
       "kind": "FAQPage",
-      "published_on": "2026-11-24"
+      "published_on": "2026-11-27"
     },
     "faq-clash-airport-rule-check-2.html": {
       "title": "切换全局模式成功就说明所有应用都走同一路径吗？｜叮当观察",
@@ -1669,7 +1666,7 @@
         "Clash机场"
       ],
       "kind": "FAQPage",
-      "published_on": "2026-11-24"
+      "published_on": "2026-11-27"
     },
     "faq-clash-airport-migration-native-1.html": {
       "title": "从Clash换到官网客户端，规则会自动迁移吗？｜叮当观察",
@@ -1678,7 +1675,7 @@
         "Clash机场"
       ],
       "kind": "FAQPage",
-      "published_on": "2026-11-24"
+      "published_on": "2026-11-27"
     },
     "faq-clash-airport-migration-native-2.html": {
       "title": "更换客户端成功后可以认定原机场有问题吗？｜叮当观察",
@@ -1687,7 +1684,7 @@
         "Clash机场"
       ],
       "kind": "FAQPage",
-      "published_on": "2026-11-24"
+      "published_on": "2026-11-27"
     },
     "about.html": {
       "title": "关于叮当观察｜机场与VPN内容来源、编辑原则｜叮当观察",
